@@ -1,0 +1,31 @@
+{
+  "common": { "siteName": "VioraPlay" },
+  "nav": { "home": "Início", "categories": "Categorias", "search": "Buscar" },
+  "home": {
+    "title": "Jogue Jogos Online Grátis",
+    "subtitle": "Jogos de browser instantâneos — sem download, sem instalação.",
+    "featured": "Jogos em Destaque",
+    "browseByCategory": "Navegar por Categoria",
+    "allGames": "Todos os Jogos",
+    "playFree": "Jogar Grátis"
+  },
+  "categories": { "title": "Categorias de Jogos" },
+  "game": {
+    "playNow": "Jogar Agora",
+    "backHome": "Voltar ao Início",
+    "youMightLike": "Você Também Pode Gostar",
+    "about": "Sobre este jogo"
+  },
+  "search": {
+    "title": "Buscar Jogos",
+    "placeholder": "Buscar jogos...",
+    "submit": "Buscar",
+    "resultsFor": "Resultados para",
+    "noResults": "Nenhum jogo encontrado.",
+    "noQuery": "Digite um nome de jogo para buscar."
+  },
+  "meta": {
+    "homeTitle": "VioraPlay — Jogue Jogos Online Grátis",
+    "homeDescription": "Jogue milhares de jogos HTML5 grátis direto no navegador. Sem download, sem instalação. Puzzle, ação, io, multiplayer e mais."
+  }
+}

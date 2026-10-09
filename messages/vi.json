@@ -1,0 +1,31 @@
+{
+  "common": { "siteName": "VioraPlay" },
+  "nav": { "home": "Trang chủ", "categories": "Thể loại", "search": "Tìm" },
+  "home": {
+    "title": "Chơi Game Online Miễn Phí",
+    "subtitle": "Game trình duyệt tức thì — không tải, không cài đặt.",
+    "featured": "Game Nổi Bật",
+    "browseByCategory": "Duyệt theo Thể loại",
+    "allGames": "Tất Cả Game",
+    "playFree": "Chơi Miễn Phí"
+  },
+  "categories": { "title": "Thể Loại Game" },
+  "game": {
+    "playNow": "Chơi Ngay",
+    "backHome": "Về Trang chủ",
+    "youMightLike": "Có Thể Bạn Thích",
+    "about": "Về game này"
+  },
+  "search": {
+    "title": "Tìm Game",
+    "placeholder": "Tìm game...",
+    "submit": "Tìm",
+    "resultsFor": "Kết quả cho",
+    "noResults": "Không tìm thấy game.",
+    "noQuery": "Nhập tên game để tìm."
+  },
+  "meta": {
+    "homeTitle": "VioraPlay — Chơi Game Online Miễn Phí",
+    "homeDescription": "Chơi hàng ngàn game HTML5 miễn phí ngay trên trình duyệt. Không tải, không cài đặt. Puzzle, hành động, io, nhiều người chơi và hơn thế nữa."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "common": { "siteName": "VioraPlay" },
+  "nav": { "home": "Home", "categories": "Categories", "search": "Search" },
+  "home": {
+    "title": "Play Free Online Games",
+    "subtitle": "Instant browser games — no download, no install.",
+    "featured": "Featured Games",
+    "browseByCategory": "Browse by Category",
+    "allGames": "All Games",
+    "playFree": "Play Free"
+  },
+  "categories": { "title": "Game Categories" },
+  "game": {
+    "playNow": "Play Now",
+    "backHome": "Back to Home",
+    "youMightLike": "You Might Also Like",
+    "about": "About this game"
+  },
+  "search": {
+    "title": "Search Games",
+    "placeholder": "Search games...",
+    "submit": "Search",
+    "resultsFor": "Results for",
+    "noResults": "No games found.",
+    "noQuery": "Type a game name to search."
+  },
+  "meta": {
+    "homeTitle": "VioraPlay — Play Free Online Games",
+    "homeDescription": "Play thousands of free HTML5 games instantly in your browser. No download, no install. Puzzle, action, io, multiplayer and more."
+  }
+}

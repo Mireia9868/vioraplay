@@ -1,0 +1,31 @@
+{
+  "common": { "siteName": "VioraPlay" },
+  "nav": { "home": "Ana Sayfa", "categories": "Kategoriler", "search": "Ara" },
+  "home": {
+    "title": "Ücretsiz Online Oyun Oyna",
+    "subtitle": "Anında yüklenen tarayıcı oyunları — indirme, kurulum yok.",
+    "featured": "Öne Çıkan Oyunlar",
+    "browseByCategory": "Kategoriye Göre Ara",
+    "allGames": "Tüm Oyunlar",
+    "playFree": "Ücretsiz Oyna"
+  },
+  "categories": { "title": "Oyun Kategorileri" },
+  "game": {
+    "playNow": "Hemen Oyna",
+    "backHome": "Ana Sayfaya Dön",
+    "youMightLike": "Bunları Da Beğenebilirsin",
+    "about": "Oyun hakkında"
+  },
+  "search": {
+    "title": "Oyun Ara",
+    "placeholder": "Oyun ara...",
+    "submit": "Ara",
+    "resultsFor": "Sonuçlar:",
+    "noResults": "Oyun bulunamadı.",
+    "noQuery": "Aramak için bir oyun adı yazın."
+  },
+  "meta": {
+    "homeTitle": "VioraPlay — Ücretsiz Online Oyun Oyna",
+    "homeDescription": "Binlerce ücretsiz HTML5 oyununu tarayıcında anında oyna. İndirme, kurulum yok. Bulmaca, aksiyon, io, çok oyunculu ve daha fazlası."
+  }
+}

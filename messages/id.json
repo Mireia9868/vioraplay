@@ -1,0 +1,31 @@
+{
+  "common": { "siteName": "VioraPlay" },
+  "nav": { "home": "Beranda", "categories": "Kategori", "search": "Cari" },
+  "home": {
+    "title": "Main Game Online Gratis",
+    "subtitle": "Game browser instan — tanpa unduh, tanpa instal.",
+    "featured": "Game Pilihan",
+    "browseByCategory": "Jelajahi Kategori",
+    "allGames": "Semua Game",
+    "playFree": "Main Gratis"
+  },
+  "categories": { "title": "Kategori Game" },
+  "game": {
+    "playNow": "Main Sekarang",
+    "backHome": "Kembali ke Beranda",
+    "youMightLike": "Mungkin Kamu Suka",
+    "about": "Tentang game ini"
+  },
+  "search": {
+    "title": "Cari Game",
+    "placeholder": "Cari game...",
+    "submit": "Cari",
+    "resultsFor": "Hasil untuk",
+    "noResults": "Game tidak ditemukan.",
+    "noQuery": "Ketik nama game untuk mencari."
+  },
+  "meta": {
+    "homeTitle": "VioraPlay — Main Game Online Gratis",
+    "homeDescription": "Mainkan ribuan game HTML5 gratis langsung di browser. Tanpa unduh, tanpa instal. Puzzle, aksi, io, multiplayer, dan lainnya."
+  }
+}
