@@ -1,11 +1,23 @@
+/*
+ * Light theme tokens. The palette is a warm mint/cream base with a teal
+ * accent — bright enough to feel playful, but contrast against --fg stays
+ * above 7:1 so body text remains AAA on the lightest surface.
+ *
+ * If you add a component, use these vars. Hard-coded hex/rgba here breaks
+ * theming: the play-overlay scrim and the game-frame letterbox must stay
+ * dark regardless of theme, since they sit on top of third-party imagery.
+ */
 :root {
-  --bg: #0f1115;
-  --fg: #e8eaed;
-  --muted: #9aa0a6;
-  --accent: #5b8cff;
-  --accent-soft: rgba(91, 140, 255, 0.14);
-  --card: #171a21;
-  --border: #262b34;
+  --bg: #f2fbf6;
+  --bg-alt: #e8f6ee;
+  --fg: #14312a;
+  --muted: #486158;
+  --accent: #0a8062;
+  --accent-strong: #087556;
+  --accent-soft: rgba(10, 128, 98, 0.11);
+  --card: #ffffff;
+  --card-alt: #f7fdfa;
+  --border: #c3ded3;
   --max: 1200px;
 }
 
@@ -49,7 +61,7 @@ a {
   padding: 12px 20px;
   width: 100%;
   border-bottom: 1px solid var(--border);
-  background: rgba(15, 17, 21, 0.92);
+  background: rgba(242, 251, 246, 0.88);
   backdrop-filter: blur(10px);
 }
 
@@ -90,14 +102,35 @@ a {
 /* ---------- Hero: search + categories above the fold ---------- */
 
 .hero {
+  position: relative;
   text-align: center;
-  padding: 40px 0 8px;
+  padding: 44px 0 20px;
+}
+
+/* Soft wash so the first screen reads warmer than the rest of the page */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -24px -50vw 0;
+  background: radial-gradient(
+      ellipse 70% 60% at 50% 0%,
+      rgba(255, 214, 102, 0.22),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 50% at 15% 30%,
+      rgba(10, 128, 98, 0.12),
+      transparent 70%
+    );
+  pointer-events: none;
+  z-index: -1;
 }
 
 .hero h1 {
   font-size: clamp(26px, 4.5vw, 40px);
   margin-bottom: 8px;
   letter-spacing: -0.02em;
+  color: var(--accent-strong);
 }
 
 .hero-sub {
@@ -281,12 +314,13 @@ h2 {
 .game-card:hover {
   transform: translateY(-3px);
   border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(10, 128, 98, 0.12);
 }
 
 .game-card-thumb {
   position: relative;
   aspect-ratio: 16 / 9;
-  background: #222;
+  background: #e4efe9;
 }
 
 .game-card-thumb img {
@@ -303,7 +337,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(10, 12, 16, 0.5);
+  background: rgba(10, 12, 16, 0.45);
   opacity: 0;
   transition: opacity 0.15s;
 }
