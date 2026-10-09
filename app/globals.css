@@ -3,6 +3,7 @@
   --fg: #e8eaed;
   --muted: #9aa0a6;
   --accent: #5b8cff;
+  --accent-soft: rgba(91, 140, 255, 0.14);
   --card: #171a21;
   --border: #262b34;
   --max: 1200px;
@@ -36,21 +37,27 @@ a {
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 14px 20px;
+  padding: 12px 20px;
   width: 100%;
   border-bottom: 1px solid var(--border);
+  background: rgba(15, 17, 21, 0.92);
+  backdrop-filter: blur(10px);
 }
 
 .brand {
   font-weight: 800;
   font-size: 20px;
   color: var(--accent);
+  letter-spacing: -0.02em;
 }
 
 .site-nav {
@@ -80,23 +87,150 @@ a {
   padding: 20px;
 }
 
+/* ---------- Hero: search + categories above the fold ---------- */
+
 .hero {
   text-align: center;
-  padding: 32px 0 24px;
+  padding: 40px 0 8px;
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: clamp(26px, 4.5vw, 40px);
   margin-bottom: 8px;
+  letter-spacing: -0.02em;
 }
 
-.hero p {
+.hero-sub {
   color: var(--muted);
+  margin-bottom: 24px;
+  font-size: 15px;
+}
+
+/* Search bar — the single primary action on the homepage */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.search-bar:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.search-bar-icon {
+  flex-shrink: 0;
+  color: var(--muted);
+}
+
+.search-bar--default {
+  max-width: 340px;
+  padding: 8px 14px;
+}
+
+.search-bar--default .search-bar-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.search-bar--large {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  border-radius: 16px;
+}
+
+.search-bar--large .search-bar-icon {
+  width: 21px;
+  height: 21px;
+}
+
+.search-bar input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--fg);
+  font-size: 15px;
+  outline: none;
+}
+
+.search-bar--large input {
+  font-size: 16px;
+}
+
+.search-bar input::placeholder {
+  color: var(--muted);
+}
+
+.search-bar input::-webkit-search-cancel-button {
+  filter: invert(0.6);
+}
+
+/* Category shortcuts under the search box */
+
+.quick-cats {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.quick-cat {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: capitalize;
+  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+}
+
+.quick-cat:hover {
+  color: var(--fg);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  margin-top: 36px;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.section-more {
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.section-more:hover {
+  color: var(--accent);
 }
 
 h2 {
   font-size: 20px;
   margin: 28px 0 14px;
+}
+
+.section-head h2 {
+  margin: 0;
 }
 
 .cat-grid {
@@ -109,15 +243,19 @@ h2 {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 16px;
+  padding: 14px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: border-color 0.15s;
+  gap: 10px;
+  font-size: 15px;
+  text-transform: capitalize;
+  transition: border-color 0.15s, background-color 0.15s;
 }
 
 .cat-card:hover {
   border-color: var(--accent);
+  background: var(--accent-soft);
 }
 
 .cat-count {
@@ -127,11 +265,12 @@ h2 {
 
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
 }
 
 .game-card {
+  display: block;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -144,26 +283,63 @@ h2 {
   border-color: var(--accent);
 }
 
-.game-card img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  display: block;
+.game-card-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
   background: #222;
 }
 
+.game-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Play affordance on hover — signals one click leads straight into the game */
+.game-card-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 12, 16, 0.5);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.game-card-play svg {
+  width: 38px;
+  height: 38px;
+  color: #fff;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+.game-card:hover .game-card-play {
+  opacity: 1;
+}
+
 .game-card-body {
-  padding: 10px 12px;
+  padding: 9px 11px 11px;
 }
 
 .game-card-body h3 {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
+  line-height: 1.35;
+  /* Two-line clamp keeps every tile in a row the same height */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .game-card-cat {
-  font-size: 12px;
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
   color: var(--muted);
+  text-transform: capitalize;
 }
 
 .game-frame {
@@ -186,20 +362,28 @@ h2 {
   display: flex;
   gap: 8px;
   margin: 16px 0;
+  max-width: 620px;
 }
 
 .search-form input {
   flex: 1;
-  padding: 10px 12px;
+  min-width: 0;
+  padding: 11px 14px;
   border-radius: 10px;
   border: 1px solid var(--border);
   background: var(--card);
   color: var(--fg);
   font-size: 15px;
+  outline: none;
+}
+
+.search-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
 .search-form button {
-  padding: 10px 18px;
+  padding: 11px 20px;
   border: 0;
   border-radius: 10px;
   background: var(--accent);
@@ -211,4 +395,78 @@ h2 {
 .ad-placeholder {
   display: block;
   min-height: 1px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 720px) {
+  .site-main {
+    padding: 16px 14px 36px;
+  }
+
+  .hero {
+    padding: 24px 0 4px;
+  }
+
+  .hero-sub {
+    margin-bottom: 18px;
+    font-size: 14px;
+  }
+
+  .search-bar--large {
+    padding: 11px 16px;
+  }
+
+  .quick-cats {
+    margin-top: 16px;
+    gap: 6px;
+  }
+
+  .quick-cat {
+    padding: 6px 11px;
+    font-size: 12px;
+  }
+
+  .section {
+    margin-top: 28px;
+  }
+
+  /* 3-up on phones keeps tiles tappable without eating vertical space */
+  .game-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .game-card-body {
+    padding: 7px 8px 9px;
+  }
+
+  .game-card-body h3 {
+    font-size: 12px;
+  }
+
+  .game-card-cat {
+    font-size: 10px;
+  }
+
+  .cat-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  .cat-card {
+    padding: 12px 13px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    gap: 10px;
+  }
+
+  .site-nav {
+    gap: 12px;
+    font-size: 13px;
+  }
 }

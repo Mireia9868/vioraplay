@@ -52,6 +52,7 @@ export default async function SearchPage({
           name="q"
           placeholder={t("placeholder")}
           defaultValue={q ?? ""}
+          aria-label={t("label")}
         />
         <button type="submit">{t("submit")}</button>
       </form>

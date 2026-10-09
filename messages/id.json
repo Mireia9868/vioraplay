@@ -7,7 +7,12 @@
     "featured": "Game Pilihan",
     "browseByCategory": "Jelajahi Kategori",
     "allGames": "Semua Game",
-    "playFree": "Main Gratis"
+    "playFree": "Main Gratis",
+    "searchPlaceholder": "Cari 2.400+ game...",
+    "searchLabel": "Cari game",
+    "browseAll": "Semua kategori",
+    "popularCategories": "Kategori Populer",
+    "moreGames": "Game Lainnya"
   },
   "categories": { "title": "Kategori Game" },
   "game": {
@@ -22,7 +27,8 @@
     "submit": "Cari",
     "resultsFor": "Hasil untuk",
     "noResults": "Game tidak ditemukan.",
-    "noQuery": "Ketik nama game untuk mencari."
+    "noQuery": "Ketik nama game untuk mencari.",
+    "label": "Cari game"
   },
   "meta": {
     "homeTitle": "VioraPlay — Main Game Online Gratis",

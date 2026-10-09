@@ -7,7 +7,12 @@
     "featured": "Featured Games",
     "browseByCategory": "Browse by Category",
     "allGames": "All Games",
-    "playFree": "Play Free"
+    "playFree": "Play Free",
+    "searchPlaceholder": "Search 2,400+ games...",
+    "searchLabel": "Search games",
+    "browseAll": "All categories",
+    "popularCategories": "Browse Popular Categories",
+    "moreGames": "More Games"
   },
   "categories": { "title": "Game Categories" },
   "game": {
@@ -22,7 +27,8 @@
     "submit": "Search",
     "resultsFor": "Results for",
     "noResults": "No games found.",
-    "noQuery": "Type a game name to search."
+    "noQuery": "Type a game name to search.",
+    "label": "Search games"
   },
   "meta": {
     "homeTitle": "VioraPlay — Play Free Online Games",

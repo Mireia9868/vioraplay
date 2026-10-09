@@ -6,6 +6,7 @@ import { routing, type Locale } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { Adsterra } from "@/components/Adsterra";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { SearchBar } from "@/components/SearchBar";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
 import "../globals.css";
 
@@ -54,6 +55,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const tNav = await getTranslations("nav");
   const tCommon = await getTranslations("common");
+  const tSearch = await getTranslations("search");
 
   return (
     <html lang={locale}>
@@ -63,6 +65,11 @@ export default async function LocaleLayout({
             <Link href="/" className="brand">
               {tCommon("siteName")}
             </Link>
+            <SearchBar
+              locale={locale}
+              placeholder={tSearch("placeholder")}
+              label={tSearch("label")}
+            />
             <nav className="site-nav">
               <Link href="/">{tNav("home")}</Link>
               <Link href="/categories">{tNav("categories")}</Link>

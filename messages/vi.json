@@ -7,7 +7,12 @@
     "featured": "Game Nổi Bật",
     "browseByCategory": "Duyệt theo Thể loại",
     "allGames": "Tất Cả Game",
-    "playFree": "Chơi Miễn Phí"
+    "playFree": "Chơi Miễn Phí",
+    "searchPlaceholder": "Tìm trong 2.400+ game...",
+    "searchLabel": "Tìm game",
+    "browseAll": "Tất cả thể loại",
+    "popularCategories": "Thể Loại Phổ Biến",
+    "moreGames": "Game Khác"
   },
   "categories": { "title": "Thể Loại Game" },
   "game": {
@@ -22,7 +27,8 @@
     "submit": "Tìm",
     "resultsFor": "Kết quả cho",
     "noResults": "Không tìm thấy game.",
-    "noQuery": "Nhập tên game để tìm."
+    "noQuery": "Nhập tên game để tìm.",
+    "label": "Tìm game"
   },
   "meta": {
     "homeTitle": "VioraPlay — Chơi Game Online Miễn Phí",

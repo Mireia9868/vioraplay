@@ -7,7 +7,12 @@
     "featured": "Öne Çıkan Oyunlar",
     "browseByCategory": "Kategoriye Göre Ara",
     "allGames": "Tüm Oyunlar",
-    "playFree": "Ücretsiz Oyna"
+    "playFree": "Ücretsiz Oyna",
+    "searchPlaceholder": "2.400+ oyun arasında ara...",
+    "searchLabel": "Oyun ara",
+    "browseAll": "Tüm kategoriler",
+    "popularCategories": "Popüler Kategoriler",
+    "moreGames": "Diğer Oyunlar"
   },
   "categories": { "title": "Oyun Kategorileri" },
   "game": {
@@ -22,7 +27,8 @@
     "submit": "Ara",
     "resultsFor": "Sonuçlar:",
     "noResults": "Oyun bulunamadı.",
-    "noQuery": "Aramak için bir oyun adı yazın."
+    "noQuery": "Aramak için bir oyun adı yazın.",
+    "label": "Oyun ara"
   },
   "meta": {
     "homeTitle": "VioraPlay — Ücretsiz Online Oyun Oyna",

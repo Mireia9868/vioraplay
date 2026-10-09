@@ -7,7 +7,12 @@
     "featured": "Jogos em Destaque",
     "browseByCategory": "Navegar por Categoria",
     "allGames": "Todos os Jogos",
-    "playFree": "Jogar Grátis"
+    "playFree": "Jogar Grátis",
+    "searchPlaceholder": "Buscar entre 2.400+ jogos...",
+    "searchLabel": "Buscar jogos",
+    "browseAll": "Todas as categorias",
+    "popularCategories": "Categorias Populares",
+    "moreGames": "Mais Jogos"
   },
   "categories": { "title": "Categorias de Jogos" },
   "game": {
@@ -22,7 +27,8 @@
     "submit": "Buscar",
     "resultsFor": "Resultados para",
     "noResults": "Nenhum jogo encontrado.",
-    "noQuery": "Digite um nome de jogo para buscar."
+    "noQuery": "Digite um nome de jogo para buscar.",
+    "label": "Buscar jogos"
   },
   "meta": {
     "homeTitle": "VioraPlay — Jogue Jogos Online Grátis",
