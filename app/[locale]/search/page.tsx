@@ -1,6 +1,33 @@
 import { getTranslations } from "next-intl/server";
 import { searchGames } from "@/lib/games";
 import { GameCard } from "@/components/GameCard";
+import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  const path = (l: string) => `/${l}/search`;
+
+  return {
+    metadataBase,
+    title: t("searchTitle"),
+    description: t("searchDescription"),
+    alternates: {
+      canonical: path(locale),
+      languages: buildLanguageAlternates((l) => path(l)),
+    },
+    // /search?q=<anything> is an unbounded URL space. Without noindex,
+    // every query string becomes an indexable duplicate of the same page.
+    robots: {
+      index: false,
+      follow: true,
+    },
+  };
+}
 
 export default async function SearchPage({
   params,

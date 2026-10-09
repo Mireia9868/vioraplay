@@ -5,6 +5,11 @@ import { GameCard } from "@/components/GameCard";
 import { JsonLd } from "@/components/JsonLd";
 import { Adsterra } from "@/components/Adsterra";
 import { GameViewTracker } from "@/components/GameViewTracker";
+import {
+  metadataBase,
+  buildLanguageAlternates,
+  truncateDescription,
+} from "@/lib/seo";
 
 export async function generateStaticParams() {
   return getAllGames().map((g) => ({ slug: g.slug }));
@@ -18,9 +23,27 @@ export async function generateMetadata({
   const { slug } = await params;
   const game = getGameBySlug(slug);
   if (!game) return {};
+
+  // Titles are English-only source data, so only the site name suffix is
+  // localized. Descriptions are long scraped blurbs and must be clipped or
+  // Google truncates mid-sentence.
+  const path = (l: string) => `/${l}/game/${game.slug}`;
+
   return {
-    title: `${game.title} — Play Free Online`,
-    description: game.description,
+    metadataBase,
+    title: `${game.title} — Play Free Online | VioraPlay`,
+    description: truncateDescription(game.description, 155),
+    alternates: {
+      canonical: path("en"),
+      languages: buildLanguageAlternates((l) => path(l)),
+    },
+    openGraph: {
+      title: `${game.title} — Play Free Online`,
+      description: truncateDescription(game.description, 155),
+      url: path("en"),
+      type: "website" as const,
+      images: game.thumb ? [{ url: game.thumb }] : undefined,
+    },
   };
 }
 

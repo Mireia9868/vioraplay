@@ -6,6 +6,7 @@ import { routing, type Locale } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { Adsterra } from "@/components/Adsterra";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -19,11 +20,23 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
+
+  // Site-level defaults only. Every page below overrides title/description/
+  // canonical with its own; keeping this as a template avoids the previous
+  // side effect where all ~2,400 game pages inherited one shared title.
   return {
+    metadataBase,
     title: t("homeTitle"),
     description: t("homeDescription"),
     alternates: {
-      languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])),
+      canonical: `/${locale}`,
+      languages: buildLanguageAlternates((l) => `/${l}`),
+    },
+    openGraph: {
+      siteName: t("siteName"),
+      locale,
+      url: `/${locale}`,
+      type: "website" as const,
     },
   };
 }

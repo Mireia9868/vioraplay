@@ -26,6 +26,11 @@
   },
   "meta": {
     "homeTitle": "VioraPlay — Main Game Online Gratis",
-    "homeDescription": "Mainkan ribuan game HTML5 gratis langsung di browser. Tanpa unduh, tanpa instal. Puzzle, aksi, io, multiplayer, dan lainnya."
+    "homeDescription": "Mainkan ribuan game HTML5 gratis langsung di browser. Tanpa unduh, tanpa instal. Puzzle, aksi, io, multiplayer, dan lainnya.",
+    "siteName": "VioraPlay",
+    "categoriesTitle": "Kategori Game — Jelajahi Game Online Gratis | VioraPlay",
+    "categoriesDescription": "Telusuri semua kategori game VioraPlay — puzzle, aksi, balapan, io dan lainnya. Mainkan ribuan game gratis langsung di browser.",
+    "searchTitle": "Cari Game | VioraPlay",
+    "searchDescription": "Cari ribuan game gratis di VioraPlay. Temukan game favoritmu dan apache langsung di browser, tanpa unduh atau instal."
   }
 }

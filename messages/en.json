@@ -26,6 +26,11 @@
   },
   "meta": {
     "homeTitle": "VioraPlay — Play Free Online Games",
-    "homeDescription": "Play thousands of free HTML5 games instantly in your browser. No download, no install. Puzzle, action, io, multiplayer and more."
+    "homeDescription": "Play thousands of free HTML5 games instantly in your browser. No download, no install. Puzzle, action, io, multiplayer and more.",
+    "siteName": "VioraPlay",
+    "categoriesTitle": "Game Categories — Browse Free Online Games | VioraPlay",
+    "categoriesDescription": "Browse all VioraPlay game categories — puzzle, action, racing, io and more. Play thousands of free browser games instantly, no download needed.",
+    "searchTitle": "Search Games | VioraPlay",
+    "searchDescription": "Search thousands of free browser games on VioraPlay. Find your next favourite game and play instantly, no download or install."
   }
 }

@@ -26,6 +26,11 @@
   },
   "meta": {
     "homeTitle": "VioraPlay — Ücretsiz Online Oyun Oyna",
-    "homeDescription": "Binlerce ücretsiz HTML5 oyununu tarayıcında anında oyna. İndirme, kurulum yok. Bulmaca, aksiyon, io, çok oyunculu ve daha fazlası."
+    "homeDescription": "Binlerce ücretsiz HTML5 oyununu tarayıcında anında oyna. İndirme, kurulum yok. Bulmaca, aksiyon, io, çok oyunculu ve daha fazlası.",
+    "siteName": "VioraPlay",
+    "categoriesTitle": "Oyun Kategorileri — Ücretsiz Online Oyunlar | VioraPlay",
+    "categoriesDescription": "VioraPlay'in tüm oyun kategorilerine göz atın — bulmaca, aksiyon, yarış, io ve daha fazlası. Tarayıcıda binlerce ücretsiz oyun oynayın.",
+    "searchTitle": "Oyun Ara | VioraPlay",
+    "searchDescription": "VioraPlay'de binlerce ücretsiz oyun arasında arama yapın. Bir sonraki favori oyununuzu bulun ve indirme gerekmeden hemen oynayın."
   }
 }

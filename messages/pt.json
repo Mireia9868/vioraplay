@@ -26,6 +26,11 @@
   },
   "meta": {
     "homeTitle": "VioraPlay — Jogue Jogos Online Grátis",
-    "homeDescription": "Jogue milhares de jogos HTML5 grátis direto no navegador. Sem download, sem instalação. Puzzle, ação, io, multiplayer e mais."
+    "homeDescription": "Jogue milhares de jogos HTML5 grátis direto no navegador. Sem download, sem instalação. Puzzle, ação, io, multiplayer e mais.",
+    "siteName": "VioraPlay",
+    "categoriesTitle": "Categorias de Jogos — Navegue Jogos Online Grátis | VioraPlay",
+    "categoriesDescription": "Navegue por todas as categorias de jogos do VioraPlay — puzzle, ação, corrida, io e mais. Jogue milhares de jogos grátis direto no navegador.",
+    "searchTitle": "Buscar Jogos | VioraPlay",
+    "searchDescription": "Busque milhares de jogos grátis no VioraPlay. Encontre seu próximo jogo favorito e jogue instantaneamente, sem download ou instalação."
   }
 }
