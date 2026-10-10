@@ -30,6 +30,11 @@ export async function generateMetadata({
     metadataBase,
     title: t("homeTitle"),
     description: t("homeDescription"),
+    // Google Search Console — HTML tag verification method.
+    // Emits <meta name="google-site-verification" content="1H4ZKk_..." /> on every page.
+    verification: {
+      google: "1H4ZKk_iaKkO2UluhdMBcS21u5WFjLAaRZDb09l9IwM",
+    },
     alternates: {
       canonical: `/${locale}`,
       languages: buildLanguageAlternates((l) => `/${l}`),
