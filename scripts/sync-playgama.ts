@@ -53,8 +53,15 @@ function firstStr(v: unknown): string {
 
 function ensureClid(url: string): string {
   if (!CLID) return url;
-  if (/[?&]clid=/.test(url)) return url;
-  return url + (url.includes("?") ? "&" : "?") + `clid=${CLID}`;
+  // Always overwrite, never skip. The exported catalog carries whatever clid
+  // the logged-in dashboard session had, which may belong to a different
+  // account than the one we intend to get paid by. Returning early when a clid
+  // is already present would silently attribute every game to the wrong
+  // partner — which looks identical to "wired up correctly, earning nothing".
+  const u = new URL(url);
+  u.searchParams.delete("clid");
+  u.searchParams.append("clid", CLID);
+  return u.toString();
 }
 
 function slugFromUrl(url: string, fallback: string): string {
