@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { getCategories } from "@/lib/games";
 import { Link } from "@/i18n/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -25,10 +26,17 @@ export async function generateMetadata({
 
 export default async function CategoriesPage() {
   const t = await getTranslations("categories");
+  const tn = await getTranslations("nav");
   const categories = getCategories();
 
   return (
     <div>
+      <Breadcrumbs
+        items={[
+          { label: tn("home"), href: "/" },
+          { label: t("title"), href: "/categories" },
+        ]}
+      />
       <h1>{t("title")}</h1>
       <div className="cat-grid">
         {categories.map((c) => (

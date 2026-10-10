@@ -12,14 +12,27 @@
     "searchLabel": "Search games",
     "browseAll": "All categories",
     "popularCategories": "Browse Popular Categories",
-    "moreGames": "More Games"
+    "moreGames": "More Games",
+    "recentlyVisited": "Recently Visited"
   },
-  "categories": { "title": "Game Categories" },
+  "categories": {
+    "title": "Game Categories",
+    "pagination": "Pagination",
+    "prev": "Previous",
+    "next": "Next",
+    "relatedCategories": "Related Categories"
+  },
   "game": {
     "playNow": "Play Now",
     "backHome": "Back to Home",
     "youMightLike": "You Might Also Like",
-    "about": "About this game"
+    "about": "About this game",
+    "howToPlay": "How to play",
+    "controls": "Controls",
+    "fullscreen": "Fullscreen",
+    "reload": "Reload",
+    "loading": "Loading game…",
+    "adNote": "In-game ads and loading screens come from the game provider."
   },
   "search": {
     "title": "Search Games",

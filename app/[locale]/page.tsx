@@ -1,7 +1,12 @@
 import { getTranslations } from "next-intl/server";
-import { getAllGames, getCategories } from "@/lib/games";
+import {
+  getAllGames,
+  getCategories,
+  getFeaturedGames,
+} from "@/lib/games";
 import { GameCard } from "@/components/GameCard";
 import { SearchBar } from "@/components/SearchBar";
+import { RecentViews } from "@/components/RecentViews";
 import { Link } from "@/i18n/navigation";
 import { Adsterra } from "@/components/Adsterra";
 
@@ -12,14 +17,15 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   const t = await getTranslations("home");
-  const games = getAllGames();
+  const allGames = getAllGames();
   const categories = getCategories();
 
-  // Playgama exports the catalog in editorial/"specially for you" order, so the
-  // head of the list is the closest thing to a popularity ranking we have.
-  // There is no plays/rating data in games.json to sort on.
-  const featured = games.slice(0, 24);
-  const more = games.slice(24, 48);
+  // Hand-curated selection (NOT a popularity ranking — the catalog has no
+  // real play-count data, so we never fake "Top/Hot"). See FEATURED_SLUGS.
+  const featured = getFeaturedGames(12);
+  const featuredSlugs = new Set(featured.map((g) => g.slug));
+  // Sample of the wider catalog, excluding the curated tiles above.
+  const more = allGames.filter((g) => !featuredSlugs.has(g.slug)).slice(0, 48);
 
   // Categories worth surfacing near the top: the ones with real depth. The long
   // tail (30+ categories holding 1-3 games each) stays in the full grid below.
@@ -61,10 +67,13 @@ export default async function HomePage({
         </div>
         <div className="game-grid">
           {featured.map((g, i) => (
-            <GameCard key={g.id} game={g} priority={i < 8} />
+            <GameCard key={g.id} game={g} priority={i < 8} source="featured" />
           ))}
         </div>
       </section>
+
+      {/* Client-only: reads localStorage, hidden when empty, drops dead slugs. */}
+      <RecentViews games={allGames} />
 
       <Adsterra variant="banner" />
 

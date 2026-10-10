@@ -12,14 +12,27 @@
     "searchLabel": "Tìm game",
     "browseAll": "Tất cả thể loại",
     "popularCategories": "Thể Loại Phổ Biến",
-    "moreGames": "Game Khác"
+    "moreGames": "Game Khác",
+    "recentlyVisited": "Vừa Xem Gần Đây"
   },
-  "categories": { "title": "Thể Loại Game" },
+  "categories": {
+    "title": "Thể Loại Game",
+    "pagination": "Phân trang",
+    "prev": "Trước",
+    "next": "Sau",
+    "relatedCategories": "Thể Loại Liên Quan"
+  },
   "game": {
     "playNow": "Chơi Ngay",
     "backHome": "Về Trang chủ",
     "youMightLike": "Có Thể Bạn Thích",
-    "about": "Về game này"
+    "about": "Về game này",
+    "howToPlay": "Cách chơi",
+    "controls": "Điều khiển",
+    "fullscreen": "Toàn màn hình",
+    "reload": "Tải lại",
+    "loading": "Đang tải game…",
+    "adNote": "Quảng cáo trong game và màn hình tải đến từ nhà cung cấp game."
   },
   "search": {
     "title": "Tìm Game",

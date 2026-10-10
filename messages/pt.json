@@ -12,14 +12,27 @@
     "searchLabel": "Buscar jogos",
     "browseAll": "Todas as categorias",
     "popularCategories": "Categorias Populares",
-    "moreGames": "Mais Jogos"
+    "moreGames": "Mais Jogos",
+    "recentlyVisited": "Visitados Recentemente"
   },
-  "categories": { "title": "Categorias de Jogos" },
+  "categories": {
+    "title": "Categorias de Jogos",
+    "pagination": "Paginação",
+    "prev": "Anterior",
+    "next": "Próxima",
+    "relatedCategories": "Categorias Relacionadas"
+  },
   "game": {
     "playNow": "Jogar Agora",
     "backHome": "Voltar ao Início",
     "youMightLike": "Você Também Pode Gostar",
-    "about": "Sobre este jogo"
+    "about": "Sobre este jogo",
+    "howToPlay": "Como jogar",
+    "controls": "Controles",
+    "fullscreen": "Tela Cheia",
+    "reload": "Recarregar",
+    "loading": "Carregando o jogo…",
+    "adNote": "Anúncios dentro do jogo e telas de carregamento vêm do provedor do jogo."
   },
   "search": {
     "title": "Buscar Jogos",

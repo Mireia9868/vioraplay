@@ -13,5 +13,6 @@ export interface Game {
 export interface Category {
   slug: string;
   name: string;
+  fullName: string;
   count: number;
 }

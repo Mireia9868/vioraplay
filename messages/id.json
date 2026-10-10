@@ -12,14 +12,27 @@
     "searchLabel": "Cari game",
     "browseAll": "Semua kategori",
     "popularCategories": "Kategori Populer",
-    "moreGames": "Game Lainnya"
+    "moreGames": "Game Lainnya",
+    "recentlyVisited": "Terakhir Dikunjungi"
   },
-  "categories": { "title": "Kategori Game" },
+  "categories": {
+    "title": "Kategori Game",
+    "pagination": "Halaman",
+    "prev": "Sebelumnya",
+    "next": "Berikutnya",
+    "relatedCategories": "Kategori Terkait"
+  },
   "game": {
     "playNow": "Main Sekarang",
     "backHome": "Kembali ke Beranda",
     "youMightLike": "Mungkin Kamu Suka",
-    "about": "Tentang game ini"
+    "about": "Tentang game ini",
+    "howToPlay": "Cara bermain",
+    "controls": "Kontrol",
+    "fullscreen": "Layar Penuh",
+    "reload": "Muat Ulang",
+    "loading": "Memuat game…",
+    "adNote": "Iklan dalam game dan layar pemuatan berasal dari penyedia game."
   },
   "search": {
     "title": "Cari Game",

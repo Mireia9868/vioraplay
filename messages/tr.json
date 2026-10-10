@@ -12,14 +12,27 @@
     "searchLabel": "Oyun ara",
     "browseAll": "Tüm kategoriler",
     "popularCategories": "Popüler Kategoriler",
-    "moreGames": "Diğer Oyunlar"
+    "moreGames": "Diğer Oyunlar",
+    "recentlyVisited": "Son Ziyaret Edilenler"
   },
-  "categories": { "title": "Oyun Kategorileri" },
+  "categories": {
+    "title": "Oyun Kategorileri",
+    "pagination": "Sayfalama",
+    "prev": "Önceki",
+    "next": "Sonraki",
+    "relatedCategories": "İlgili Kategoriler"
+  },
   "game": {
     "playNow": "Hemen Oyna",
     "backHome": "Ana Sayfaya Dön",
     "youMightLike": "Bunları Da Beğenebilirsin",
-    "about": "Oyun hakkında"
+    "about": "Oyun hakkında",
+    "howToPlay": "Nasıl oynanır",
+    "controls": "Kontroller",
+    "fullscreen": "Tam Ekran",
+    "reload": "Yeniden Yükle",
+    "loading": "Oyun yükleniyor…",
+    "adNote": "Oyun içi reklamlar ve yükleme ekranları oyun sağlayıcısından gelir."
   },
   "search": {
     "title": "Oyun Ara",

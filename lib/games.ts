@@ -1,11 +1,31 @@
 import gamesData from "@/data/games.json";
+import { GAME_CONTENT, FEATURED_SLUGS } from "@/data/game-content";
 import type { Game, Category } from "./types";
+
+export const PER_PAGE = 48;
 
 export function slugify(s: string): string {
   return s
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
+}
+
+/**
+ * Title-case a raw feed genre ("puzzle" -> "Puzzle") for headings/titles.
+ * Slugs are unaffected (slugify lowercases anyway).
+ */
+export function displayCategory(raw: string): string {
+  return raw
+    .split(/[\s_-]+/)
+    .filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
+/** Full display name for a category, e.g. "puzzle" -> "Puzzle Games". */
+export function categoryFullName(raw: string): string {
+  return `${displayCategory(raw)} Games`;
 }
 
 export function getAllGames(): Game[] {
@@ -21,20 +41,160 @@ export function getCategories(): Category[] {
   for (const g of getAllGames()) {
     map.set(g.category, (map.get(g.category) ?? 0) + 1);
   }
-  return Array.from(map.entries()).map(([name, count]) => ({
-    slug: slugify(name),
-    name,
-    count,
-  }));
+  return Array.from(map.entries())
+    .map(([name, count]) => ({
+      slug: slugify(name),
+      name: displayCategory(name),
+      fullName: categoryFullName(name),
+      count,
+    }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getCategoryBySlug(slug: string): Category | undefined {
+  return getCategories().find((c) => c.slug === slug);
 }
 
 export function getGamesByCategory(categorySlug: string): Game[] {
   return getAllGames().filter((g) => slugify(g.category) === categorySlug);
 }
 
-export function getRelatedGames(game: Game, limit = 4): Game[] {
-  return getAllGames()
-    .filter((g) => g.category === game.category && g.slug !== game.slug)
+/** Map a raw category to implied tags so UNTAGGED games still match related
+ * games by category; curated games also contribute explicit gameplay tags. */
+function categoryTags(category: string): string[] {
+  const c = category.toLowerCase();
+  const map: Record<string, string[]> = {
+    "two-player": ["two-player", "board"],
+    chess: ["chess", "board", "strategy"],
+    "tower-defense": ["tower-defense", "strategy", "defense"],
+    "bubble-shooter": ["bubble", "shooter"],
+    bubble: ["bubble"],
+    sudoku: ["sudoku", "logic", "puzzle"],
+    solitaire: ["solitaire", "cards"],
+    cards: ["cards"],
+    racing: ["racing", "driving"],
+    driving: ["driving", "car"],
+    car: ["car", "driving"],
+    "io": ["io", "multiplayer"],
+    multiplayer: ["multiplayer"],
+    merge: ["merge", "puzzle"],
+    puzzle: ["puzzle"],
+    "match-3": ["match", "puzzle"],
+    snake: ["snake", "arcade"],
+    arcade: ["arcade"],
+    fashion: ["fashion", "dress-up"],
+    "dress-up": ["dress-up", "fashion"],
+    girls: ["girls", "dress-up"],
+    words: ["words"],
+    music: ["music"],
+    simulation: ["simulation"],
+    ragdoll: ["ragdoll", "sandbox"],
+    action: ["action"],
+    sniper: ["sniper", "shooting"],
+    shooter: ["shooter"],
+    runner: ["runner", "skill"],
+    skill: ["skill"],
+  };
+  return map[c] ?? [c];
+}
+
+function tagSetFor(game: Game): Set<string> {
+  const tags = new Set<string>(GAME_CONTENT[game.slug]?.tags ?? []);
+  categoryTags(game.category).forEach((t) => tags.add(t));
+  return tags;
+}
+
+/**
+ * Curated homepage "Featured Games" — hand-picked, NOT a popularity ranking
+ * (the catalog has no real play-count data, so we never fake "Top/Hot").
+ */
+export function getFeaturedGames(limit = 12): Game[] {
+  const bySlug = new Map(getAllGames().map((g) => [g.slug, g]));
+  return FEATURED_SLUGS.map((s) => bySlug.get(s))
+    .filter((g): g is Game => Boolean(g))
+    .slice(0, limit);
+}
+
+/**
+ * Related games: prioritize shared gameplay tags, then same category.
+ * Excludes the current game, duplicates, and only live catalog entries
+ * (delisted games are never recommended).
+ */
+export function getRelatedGames(game: Game, limit = 8): Game[] {
+  const baseTags = tagSetFor(game);
+  const others = getAllGames().filter((g) => g.slug !== game.slug);
+
+  const scored = others
+    .map((g) => {
+      const tags = tagSetFor(g);
+      let score = 0;
+      baseTags.forEach((t) => {
+        if (tags.has(t)) score += 1;
+      });
+      if (g.category === game.category) score += 0.5;
+      return { g, score };
+    })
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score);
+
+  const picked: Game[] = [];
+  const seen = new Set<string>();
+  for (const { g } of scored) {
+    if (picked.length >= limit) break;
+    if (seen.has(g.slug)) continue;
+    seen.add(g.slug);
+    picked.push(g);
+  }
+
+  // Fill remaining slots with same-category games if under the limit.
+  if (picked.length < limit) {
+    for (const g of others) {
+      if (picked.length >= limit) break;
+      if (g.category !== game.category) continue;
+      if (seen.has(g.slug)) continue;
+      seen.add(g.slug);
+      picked.push(g);
+    }
+  }
+
+  return picked;
+}
+
+/** Short, accurate one-line intro for a category. No invented stats. */
+const CATEGORY_INTRO: Record<string, string> = {
+  puzzle: "Puzzle games that train logic and pattern recognition — match, sort, and solve at your own pace.",
+  "bubble-shooter": "Aim and connect colored bubbles to clear the board in satisfying chain reactions.",
+  chess: "Classic chess boards to play against the computer or other people, turn by turn.",
+  sudoku: "Number-logic puzzles to fill the grid by deduction, from quick to expert.",
+  solitaire: "Single-player card games built around sequencing and patience.",
+  "tower-defense": "Place and upgrade defenses to stop waves of enemies before they break through.",
+  racing: "High-speed racing and driving challenges across tracks and open roads.",
+  driving: "Car and vehicle driving games, from lap races to crash sandboxes.",
+  merge: "Drop and combine matching items to build bigger, rarer objects.",
+  "two-player": "Games designed for head-to-head play against another person or the computer.",
+  fashion: "Dress-up and styling games for designing looks with clothes and accessories.",
+  "dress-up": "Dress-up and styling games for designing looks with clothes and accessories.",
+  girls: "Casual styling, caring, and creativity games popular with younger players.",
+  words: "Word and crossword puzzles that test vocabulary and spelling.",
+  music: "Make beats and experiment with sound in playful music toys.",
+  snake: "Guide a growing snake to collect items without crossing itself.",
+  io: "Lightweight multiplayer and arena games you can jump into instantly.",
+  action: "Fast reaction games with targets, obstacles, and quick decisions.",
+  shooting: "Aim-and-fire games focused on accuracy and timing.",
+  simulation: "Sandbox and simulation games that mimic real-world systems.",
+};
+
+export function getCategoryIntro(slug: string, fallbackName: string): string {
+  return (
+    CATEGORY_INTRO[slug] ??
+    `Play a curated set of ${fallbackName} online — no download, no install, free in your browser.`
+  );
+}
+
+/** A few other categories (by count) to cross-link from a category page. */
+export function getRelatedCategories(slug: string, limit = 6): Category[] {
+  return getCategories()
+    .filter((c) => c.slug !== slug)
     .slice(0, limit);
 }
 
