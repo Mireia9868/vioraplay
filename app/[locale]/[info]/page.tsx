@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
 
 const pages = ["about", "contact", "privacy", "terms"] as const;
@@ -14,9 +14,10 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
     canonical: `/${locale}/${info}`, languages: buildLanguageAlternates(l => `/${l}/${info}`)
   }};
 }
-export default async function InfoPage({params}: {params: Promise<{info: string}>}) {
-  const {info} = await params;
+export default async function InfoPage({params}: {params: Promise<{locale: string; info: string}>}) {
+  const {locale, info} = await params;
   if (!isInfo(info)) notFound();
+  setRequestLocale(locale);
   const titles = await getTranslations("footer");
   const content = await getTranslations("info");
   const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL;

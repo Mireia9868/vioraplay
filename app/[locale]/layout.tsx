@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
@@ -57,6 +57,11 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   if (!routing.locales.includes(locale as Locale)) notFound();
+
+  // Enable static rendering for this locale segment (next-intl v4). Without
+  // this every page under [locale] is server-rendered on demand, which slows
+  // Googlebot crawl and hurts Core Web Vitals.
+  setRequestLocale(locale);
 
   const messages = await getMessages();
   const tNav = await getTranslations("nav");

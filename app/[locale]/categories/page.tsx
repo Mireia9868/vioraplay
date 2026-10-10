@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getCategories } from "@/lib/games";
 import { Link } from "@/i18n/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -24,7 +24,13 @@ export async function generateMetadata({
   };
 }
 
-export default async function CategoriesPage() {
+export default async function CategoriesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("categories");
   const tn = await getTranslations("nav");
   const categories = getCategories();

@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { searchGames } from "@/lib/games";
 import { GameCard } from "@/components/GameCard";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
@@ -38,6 +38,7 @@ export default async function SearchPage({
 }) {
   const { locale } = await params;
   const { q } = await searchParams;
+  setRequestLocale(locale);
   const t = await getTranslations("search");
 
   const results = q ? searchGames(q) : [];

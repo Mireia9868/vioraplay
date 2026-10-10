@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import {
   getCategories,
@@ -76,6 +76,7 @@ export default async function CategoryPage({
 }) {
   const { slug, locale } = await params;
   const sp = await searchParams;
+  setRequestLocale(locale);
   const games = getGamesByCategory(slug);
   if (!games.length) notFound();
 

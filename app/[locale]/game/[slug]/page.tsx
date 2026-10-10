@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   getAllGames,
   getGameBySlug,
@@ -66,6 +66,7 @@ export default async function GamePage({
   const { slug, locale } = await params;
   const game = getGameBySlug(slug);
   if (!game) notFound();
+  setRequestLocale(locale);
 
   const t = await getTranslations("game");
   const tn = await getTranslations("nav");
