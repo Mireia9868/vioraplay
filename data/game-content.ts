@@ -146,7 +146,7 @@ export const GAME_CONTENT: Record<string, GameContent> = {
       "Position defensive units and use abilities to repel each wave. Balance economy and firepower to survive.",
     controls: "Mouse to place and upgrade units; some shortcuts via keyboard.",
   },
-  sprunki: {
+  "sprunki-2c27-1": {
     tags: ["music", "rhythm", "creative", "arcade"],
     intro:
       "Sprunki is a playful music-maker where you combine characters to build beats.",
@@ -162,7 +162,7 @@ export const GAME_CONTENT: Record<string, GameContent> = {
       "Pick clothes, hairstyles, and accessories to create looks. Mix pieces to design different outfits.",
     controls: "Mouse or touch to choose and place items.",
   },
-  "fashion-princess--dress-up-for-girls": {
+  "fashion-princess--dress-up-for-girls-e00c-1": {
     tags: ["dress-up", "fashion", "girls", "creative"],
     intro:
       "Fashion Princess is a dress-up game for designing princess looks with clothes and accessories.",
@@ -296,3 +296,4 @@ export const FEATURED_SLUGS: string[] = [
 export function getGameContent(slug: string): GameContent | undefined {
   return GAME_CONTENT[slug];
 }
+

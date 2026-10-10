@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { isFavorite, toggleFavorite } from "@/lib/storage";
 import { trackEvent } from "@/lib/analytics";
@@ -15,6 +16,7 @@ export function FavoriteButton({
   slug: string;
   className?: string;
 }) {
+  const t = useTranslations("favorites");
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -44,10 +46,11 @@ export function FavoriteButton({
       type="button"
       className={`fav-btn ${active ? "is-active" : ""} ${className}`}
       aria-pressed={active}
-      aria-label={active ? "Remove from favorites" : "Add to favorites"}
+      aria-label={active ? t("remove") : t("add")}
       onClick={onClick}
     >
       {active ? "♥" : "♡"}
     </button>
   );
 }
+

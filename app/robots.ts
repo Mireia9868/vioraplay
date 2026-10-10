@@ -7,9 +7,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        // /search?q=* is an unbounded URL space; the page also ships a
-        // noindex robots directive. Keep it out of crawl budget.
-        disallow: "/*/search",
+        // Allow crawling so search and paginated URLs expose their noindex.
+
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

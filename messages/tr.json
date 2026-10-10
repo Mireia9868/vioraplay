@@ -1,6 +1,12 @@
 {
-  "common": { "siteName": "VioraPlay" },
-  "nav": { "home": "Ana Sayfa", "categories": "Kategoriler", "search": "Ara" },
+  "common": {
+    "siteName": "VioraPlay"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "categories": "Kategoriler",
+    "search": "Ara"
+  },
   "home": {
     "title": "Ücretsiz Online Oyun Oyna",
     "subtitle": "Anında yüklenen tarayıcı oyunları — indirme, kurulum yok.",
@@ -32,7 +38,10 @@
     "fullscreen": "Tam Ekran",
     "reload": "Yeniden Yükle",
     "loading": "Oyun yükleniyor…",
-    "adNote": "Oyun içi reklamlar ve yükleme ekranları oyun sağlayıcısından gelir."
+    "adNote": "Oyun içi reklamlar ve yükleme ekranları oyun sağlayıcısından gelir.",
+    "exitFullscreen": "Tam ekrandan çık",
+    "fullscreenFallback": "Tarayıcınız tam ekranı açamadı. Genişletilmiş görünüm kullanılıyor; geri dönmek için çıkış düğmesine basın.",
+    "slowLoading": "Sağlayıcının yüklemesi uzun sürüyor. Bekleyebilir veya oyunu yeniden yükleyebilirsiniz."
   },
   "search": {
     "title": "Oyun Ara",
@@ -51,5 +60,23 @@
     "categoriesDescription": "VioraPlay'in tüm oyun kategorilerine göz atın — bulmaca, aksiyon, yarış, io ve daha fazlası. Tarayıcıda binlerce ücretsiz oyun oynayın.",
     "searchTitle": "Oyun Ara | VioraPlay",
     "searchDescription": "VioraPlay'de binlerce ücretsiz oyun arasında arama yapın. Bir sonraki favori oyununuzu bulun ve indirme gerekmeden hemen oynayın."
+  },
+  "footer": {
+    "label": "Site bilgileri",
+    "about": "Hakkında",
+    "contact": "İletişim",
+    "privacy": "Gizlilik",
+    "terms": "Koşullar"
+  },
+  "favorites": {
+    "title": "Favoriler",
+    "add": "Favorilere ekle",
+    "remove": "Favorilerden kaldır"
+  },
+  "info": {
+    "about": "VioraPlay bir tarayıcı oyunları kataloğudur. Oyunlar üçüncü taraf Playgama yerleştirmeleri üzerinden sağlanır. VioraPlay gezinme, arama, öneriler ve tarayıcıda saklanan favoriler sunar.",
+    "contact": "Bozuk bağlantılar veya site sorunları için GitHub sorun takipçimizi kullanın. Herkese açık raporlara parola, ödeme bilgileri veya özel bilgiler eklemeyin.",
+    "privacy": "Favoriler ve son ziyaret edilen oyunlar VioraPlay hesabı olmadan bu tarayıcıda saklanır. Site verilerini silmek bu kayıtları kaldırır. Site ziyaret ve etkileşimleri ölçmek için Google Analytics kullanır. Yerleştirilmiş oyunlar Playgama’ya bağlanır ve sağlayıcının gizlilik politikalarına göre reklam yükleyebilir veya depolama kullanabilir. VioraPlay farklı kaynaklı oyun çerçevelerinin içeriğini okuyamaz.",
+    "terms": "Oyunlar üçüncü taraflarca çalıştırılır ve reklam gösterebilir. Kullanılabilirlik, kurallar ve oyun hizmetleri sağlayıcıya bağlıdır. Oyun yaratıcılarının haklarına saygı gösterin ve siteyi yasal şekilde kullanın. Yeniden yükleme, sağlayıcının kaydetmediği ilerlemeyi sıfırlayabilir."
   }
 }

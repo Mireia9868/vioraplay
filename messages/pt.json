@@ -1,6 +1,12 @@
 {
-  "common": { "siteName": "VioraPlay" },
-  "nav": { "home": "Início", "categories": "Categorias", "search": "Buscar" },
+  "common": {
+    "siteName": "VioraPlay"
+  },
+  "nav": {
+    "home": "Início",
+    "categories": "Categorias",
+    "search": "Buscar"
+  },
   "home": {
     "title": "Jogue Jogos Online Grátis",
     "subtitle": "Jogos de browser instantâneos — sem download, sem instalação.",
@@ -32,7 +38,10 @@
     "fullscreen": "Tela Cheia",
     "reload": "Recarregar",
     "loading": "Carregando o jogo…",
-    "adNote": "Anúncios dentro do jogo e telas de carregamento vêm do provedor do jogo."
+    "adNote": "Anúncios dentro do jogo e telas de carregamento vêm do provedor do jogo.",
+    "exitFullscreen": "Sair da tela cheia",
+    "fullscreenFallback": "Seu navegador não pôde abrir a tela cheia. Usamos uma visualização ampliada; use o botão de saída para voltar.",
+    "slowLoading": "O provedor está demorando para carregar. Aguarde ou recarregue o jogo."
   },
   "search": {
     "title": "Buscar Jogos",
@@ -51,5 +60,23 @@
     "categoriesDescription": "Navegue por todas as categorias de jogos do VioraPlay — puzzle, ação, corrida, io e mais. Jogue milhares de jogos grátis direto no navegador.",
     "searchTitle": "Buscar Jogos | VioraPlay",
     "searchDescription": "Busque milhares de jogos grátis no VioraPlay. Encontre seu próximo jogo favorito e jogue instantaneamente, sem download ou instalação."
+  },
+  "footer": {
+    "label": "Informações do site",
+    "about": "Sobre",
+    "contact": "Contato",
+    "privacy": "Privacidade",
+    "terms": "Termos"
+  },
+  "favorites": {
+    "title": "Favoritos",
+    "add": "Adicionar aos favoritos",
+    "remove": "Remover dos favoritos"
+  },
+  "info": {
+    "about": "VioraPlay é um catálogo de jogos de navegador. Os jogos são fornecidos por incorporações de terceiros do Playgama. VioraPlay oferece navegação, busca, recomendações e favoritos locais.",
+    "contact": "Para links quebrados ou problemas do site, use nosso rastreador de problemas no GitHub. Não inclua senhas, dados de pagamento ou informações privadas em relatos públicos.",
+    "privacy": "Favoritos e jogos visitados recentemente são salvos neste navegador, sem conta VioraPlay. Limpar os dados do site apaga esses registros. O site usa Google Analytics para medir visitas e interações. Jogos incorporados conectam-se ao Playgama e podem carregar anúncios ou usar armazenamento conforme as políticas do provedor. VioraPlay não pode ler o conteúdo de frames de jogos de outra origem.",
+    "terms": "Os jogos são executados por terceiros e podem mostrar anúncios. Disponibilidade, regras e serviços dependem do provedor. Respeite os direitos dos criadores e use o site legalmente. Recarregar pode apagar o progresso ainda não salvo pelo provedor."
   }
 }

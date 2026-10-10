@@ -1,6 +1,12 @@
 {
-  "common": { "siteName": "VioraPlay" },
-  "nav": { "home": "Trang chủ", "categories": "Thể loại", "search": "Tìm" },
+  "common": {
+    "siteName": "VioraPlay"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "categories": "Thể loại",
+    "search": "Tìm"
+  },
   "home": {
     "title": "Chơi Game Online Miễn Phí",
     "subtitle": "Game trình duyệt tức thì — không tải, không cài đặt.",
@@ -32,7 +38,10 @@
     "fullscreen": "Toàn màn hình",
     "reload": "Tải lại",
     "loading": "Đang tải game…",
-    "adNote": "Quảng cáo trong game và màn hình tải đến từ nhà cung cấp game."
+    "adNote": "Quảng cáo trong game và màn hình tải đến từ nhà cung cấp game.",
+    "exitFullscreen": "Thoát toàn màn hình",
+    "fullscreenFallback": "Trình duyệt không thể mở toàn màn hình. Chế độ mở rộng được sử dụng; nhấn nút thoát để quay lại.",
+    "slowLoading": "Nhà cung cấp đang tải lâu hơn. Bạn có thể chờ hoặc tải lại trò chơi."
   },
   "search": {
     "title": "Tìm Game",
@@ -51,5 +60,23 @@
     "categoriesDescription": "Duyệt tất cả thể loại game của VioraPlay — puzzle, hành động, đua xe, io và hơn thế nữa. Chơi hàng ngàn game miễn phí ngay trên trình duyệt.",
     "searchTitle": "Tìm Game | VioraPlay",
     "searchDescription": "Tìm kiếm hàng ngàn game miễn phí trên VioraPlay. Tìm game yêu thích tiếp theo và chơi ngay lập tức, không cần tải hay cài đặt."
+  },
+  "footer": {
+    "label": "Thông tin trang web",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "privacy": "Quyền riêng tư",
+    "terms": "Điều khoản"
+  },
+  "favorites": {
+    "title": "Yêu thích",
+    "add": "Thêm vào yêu thích",
+    "remove": "Xóa khỏi yêu thích"
+  },
+  "info": {
+    "about": "VioraPlay là danh mục trò chơi trên trình duyệt. Trò chơi được cung cấp qua khung nhúng Playgama của bên thứ ba. VioraPlay cung cấp điều hướng, tìm kiếm, đề xuất và mục yêu thích lưu trên trình duyệt.",
+    "contact": "Để báo liên kết hỏng hoặc lỗi trang web, hãy dùng trình theo dõi vấn đề GitHub của chúng tôi. Không gửi mật khẩu, thông tin thanh toán hoặc thông tin riêng tư trong báo cáo công khai.",
+    "privacy": "Mục yêu thích và trò chơi đã truy cập được lưu trên trình duyệt này, không cần tài khoản VioraPlay. Xóa dữ liệu trang web sẽ xóa các mục này. Trang web dùng Google Analytics để đo lượt truy cập và tương tác. Trò chơi nhúng kết nối đến Playgama và có thể tải quảng cáo hoặc dùng bộ nhớ theo chính sách của nhà cung cấp. VioraPlay không thể đọc nội dung khung trò chơi khác nguồn.",
+    "terms": "Trò chơi do bên thứ ba vận hành và có thể hiển thị quảng cáo. Tính khả dụng, quy tắc và dịch vụ phụ thuộc vào nhà cung cấp. Tôn trọng quyền của nhà sáng tạo và sử dụng trang web hợp pháp. Tải lại có thể mất tiến độ chưa được nhà cung cấp lưu."
   }
 }

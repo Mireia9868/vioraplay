@@ -1,6 +1,12 @@
 {
-  "common": { "siteName": "VioraPlay" },
-  "nav": { "home": "Beranda", "categories": "Kategori", "search": "Cari" },
+  "common": {
+    "siteName": "VioraPlay"
+  },
+  "nav": {
+    "home": "Beranda",
+    "categories": "Kategori",
+    "search": "Cari"
+  },
   "home": {
     "title": "Main Game Online Gratis",
     "subtitle": "Game browser instan — tanpa unduh, tanpa instal.",
@@ -32,7 +38,10 @@
     "fullscreen": "Layar Penuh",
     "reload": "Muat Ulang",
     "loading": "Memuat game…",
-    "adNote": "Iklan dalam game dan layar pemuatan berasal dari penyedia game."
+    "adNote": "Iklan dalam game dan layar pemuatan berasal dari penyedia game.",
+    "exitFullscreen": "Keluar layar penuh",
+    "fullscreenFallback": "Browser tidak dapat membuka layar penuh. Tampilan diperbesar digunakan; tekan tombol keluar untuk kembali.",
+    "slowLoading": "Penyedia membutuhkan waktu lebih lama. Tunggu atau muat ulang game."
   },
   "search": {
     "title": "Cari Game",
@@ -51,5 +60,23 @@
     "categoriesDescription": "Telusuri semua kategori game VioraPlay — puzzle, aksi, balapan, io dan lainnya. Mainkan ribuan game gratis langsung di browser.",
     "searchTitle": "Cari Game | VioraPlay",
     "searchDescription": "Cari ribuan game gratis di VioraPlay. Temukan game favoritmu dan apache langsung di browser, tanpa unduh atau instal."
+  },
+  "footer": {
+    "label": "Informasi situs",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "privacy": "Privasi",
+    "terms": "Ketentuan"
+  },
+  "favorites": {
+    "title": "Favorit",
+    "add": "Tambahkan ke favorit",
+    "remove": "Hapus dari favorit"
+  },
+  "info": {
+    "about": "VioraPlay adalah direktori game browser. Game disediakan melalui sematan pihak ketiga Playgama. VioraPlay menyediakan navigasi, pencarian, rekomendasi, dan favorit lokal.",
+    "contact": "Laporkan tautan rusak atau masalah situs melalui pelacak isu GitHub kami. Jangan sertakan kata sandi, informasi pembayaran, atau informasi pribadi dalam laporan publik.",
+    "privacy": "Favorit dan game yang baru dikunjungi disimpan di browser ini tanpa akun VioraPlay. Menghapus data situs menghapus catatan tersebut. Situs menggunakan Google Analytics untuk mengukur kunjungan dan interaksi. Game tersemat terhubung ke Playgama dan dapat memuat iklan atau menggunakan penyimpanan sesuai kebijakan privasi penyedia. VioraPlay tidak dapat membaca isi frame game lintas asal.",
+    "terms": "Game dijalankan melalui penyedia pihak ketiga dan dapat menampilkan iklan. Ketersediaan, aturan, dan layanan game bergantung pada penyedia. Hormati hak pembuat game dan gunakan situs secara sah. Memuat ulang dapat menghapus kemajuan yang belum disimpan penyedia."
   }
 }

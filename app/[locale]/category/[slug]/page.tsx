@@ -31,10 +31,10 @@ export async function generateMetadata({
   params,
   searchParams,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
   searchParams: Promise<SearchParams>;
 }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const sp = await searchParams;
   const page = pageFrom(sp);
   const games = getGamesByCategory(slug);
@@ -43,7 +43,7 @@ export async function generateMetadata({
   const cat = getCategoryBySlug(slug);
   const fullName = cat?.fullName ?? categoryFullName(games[0].category);
   const count = games.length;
-  const path = (l: string) => `/${l}/category/${slug}`;
+  const path = (l: string) => `/${l}/category/${slug}${page > 1 ? `?page=${page}` : ""}`;
 
   return {
     metadataBase,
@@ -53,15 +53,15 @@ export async function generateMetadata({
       ""
     ) + ` Browse ${count} free ${fullName.toLowerCase()} — no download, instant play.`,
     alternates: {
-      canonical: path("en"),
+      canonical: path(locale),
       languages: buildLanguageAlternates((l) => path(l)),
     },
-    // Only the first page is indexable; deeper pages are paginated copies.
+    // Keep deeper pages crawlable but out of Search, per the site indexing policy.
     robots: page > 1 ? { index: false, follow: true } : undefined,
     openGraph: {
       title: `${fullName} — Play Free Online`,
       description: `Play ${count} free ${fullName.toLowerCase()} online. No download, no install.`,
-      url: path("en"),
+      url: path(locale),
       type: "website" as const,
     },
   };
@@ -71,24 +71,25 @@ export default async function CategoryPage({
   params,
   searchParams,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
   searchParams: Promise<SearchParams>;
 }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const sp = await searchParams;
   const games = getGamesByCategory(slug);
   if (!games.length) notFound();
 
   const t = await getTranslations("home");
   const tn = await getTranslations("nav");
-  const tc = await getTranslations("category");
+  const tc = await getTranslations("categories");
 
   const cat = getCategoryBySlug(slug);
   const fullName = cat?.fullName ?? categoryFullName(games[0].category);
 
   const page = pageFrom(sp);
   const totalPages = Math.max(1, Math.ceil(games.length / PER_PAGE));
-  const safePage = Math.min(page, totalPages);
+  if (page > totalPages) notFound();
+  const safePage = page;
   const start = (safePage - 1) * PER_PAGE;
   const pageGames = games.slice(start, start + PER_PAGE);
 
@@ -165,3 +166,4 @@ export default async function CategoryPage({
     </div>
   );
 }
+

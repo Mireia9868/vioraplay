@@ -24,8 +24,10 @@ export function RecentViews({ games }: { games: LightGame[] }) {
   const valid = useMemo(() => new Set(games.map((g) => g.slug)), [games]);
 
   useEffect(() => {
-    const recent = getRecent();
-    setSlugs(filterValid(recent, valid));
+    const sync = () => setSlugs(filterValid(getRecent(), valid));
+    sync();
+    window.addEventListener("storage", sync);
+    return () => window.removeEventListener("storage", sync);
   }, [valid]);
 
   // Server / first paint: render nothing (hidden when empty).
@@ -42,7 +44,7 @@ export function RecentViews({ games }: { games: LightGame[] }) {
         {recentGames.map((g) => (
           <GameCard
             key={g.slug}
-            game={g as Game}
+            game={g}
             source="recent"
           />
         ))}
@@ -50,3 +52,4 @@ export function RecentViews({ games }: { games: LightGame[] }) {
     </section>
   );
 }
+

@@ -5,6 +5,7 @@ import {
   getGameBySlug,
   getRelatedGames,
   slugify,
+  displayCategory,
 } from "@/lib/games";
 import { getGameContent } from "@/data/game-content";
 import { GameCard } from "@/components/GameCard";
@@ -26,9 +27,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const game = getGameBySlug(slug);
   if (!game) return {};
 
@@ -44,13 +45,13 @@ export async function generateMetadata({
     title: `${game.title} — Play Free Online | VioraPlay`,
     description,
     alternates: {
-      canonical: path("en"),
+      canonical: path(locale),
       languages: buildLanguageAlternates((l) => path(l)),
     },
     openGraph: {
       title: `${game.title} — Play Free Online`,
       description,
-      url: path("en"),
+      url: path(locale),
       type: "website" as const,
       images: game.thumb ? [{ url: game.thumb }] : undefined,
     },
@@ -60,9 +61,9 @@ export async function generateMetadata({
 export default async function GamePage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const game = getGameBySlug(slug);
   if (!game) notFound();
 
@@ -89,7 +90,7 @@ export default async function GamePage({
         items={[
           { label: tn("home"), href: "/" },
           { label: tn("categories"), href: "/categories" },
-          { label: game.category, href: `/category/${catSlug}` },
+          { label: displayCategory(game.category), href: `/category/${catSlug}` },
           { label: game.title, href: `/game/${game.slug}` },
         ]}
       />
@@ -136,3 +137,4 @@ export default async function GamePage({
     </div>
   );
 }
+

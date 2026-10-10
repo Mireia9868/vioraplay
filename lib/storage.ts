@@ -19,7 +19,7 @@ function read(key: string): string[] {
   try {
     const raw = window.localStorage.getItem(key);
     const arr = raw ? (JSON.parse(raw) as string[]) : [];
-    return Array.isArray(arr) ? arr : [];
+    return Array.isArray(arr) ? [...new Set(arr.filter((s): s is string => typeof s === "string" && s.length > 0))] : [];
   } catch {
     return [];
   }
@@ -66,3 +66,4 @@ export function addRecent(slug: string): string[] {
 export function filterValid(slugs: string[], valid: Set<string>): string[] {
   return slugs.filter((s) => valid.has(s));
 }
+

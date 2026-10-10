@@ -5,7 +5,7 @@ import { routing, type Locale } from "@/i18n/routing";
  * local dev and the robots/sitemap route working before the env var exists.
  */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://vioraplay.com"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.vioraplay.com"
 ).replace(/\/+$/, "");
 
 /**

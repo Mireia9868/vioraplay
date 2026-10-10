@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { trackEvent } from "@/lib/analytics";
 
 // Fires a GA4 event when a game page is viewed. Used later for RPM
@@ -14,9 +14,13 @@ export function GameViewTracker({
   slug: string;
   category: string;
 }) {
+  const lastSlug = useRef<string | null>(null);
   useEffect(() => {
+    if (lastSlug.current === slug) return;
+    lastSlug.current = slug;
     trackEvent("game_page_view", { slug, category });
   }, [slug, category]);
 
   return null;
 }
+

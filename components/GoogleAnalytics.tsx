@@ -15,13 +15,18 @@ export function GoogleAnalytics() {
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
           gtag('js', new Date());
           gtag('config', '${MEASUREMENT_ID}', {
             page_path: location.pathname,
             send_page_view: true
+          });
+          (window.__vp_q || []).splice(0).forEach(function(event) {
+            var name = event.name; delete event.name; gtag('event', name, event);
           });
         `}
       </Script>
     </>
   );
 }
+

@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/${locale}/categories`,
       changeFrequency: "weekly",
       priority: 0.8,
-      alternates,
+      alternates: { languages: Object.fromEntries(routing.locales.map(l => [l, `${SITE_URL}/${l}/categories`])) },
     });
 
     // /search is intentionally excluded: the page is noindex and every ?q=

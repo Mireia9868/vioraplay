@@ -5,8 +5,7 @@ import {
   getFeaturedGames,
 } from "@/lib/games";
 import { GameCard } from "@/components/GameCard";
-import { SearchBar } from "@/components/SearchBar";
-import { RecentViews } from "@/components/RecentViews";
+import { PersonalGames } from "@/components/PersonalGames";
 import { Link } from "@/i18n/navigation";
 import { Adsterra } from "@/components/Adsterra";
 
@@ -40,13 +39,6 @@ export default async function HomePage({
         <h1>{t("title")}</h1>
         <p className="hero-sub">{t("subtitle")}</p>
 
-        <SearchBar
-          locale={locale}
-          placeholder={t("searchPlaceholder")}
-          label={t("searchLabel")}
-          size="large"
-        />
-
         <ul className="quick-cats">
           {popularCategories.map((c) => (
             <li key={c.slug}>
@@ -73,7 +65,7 @@ export default async function HomePage({
       </section>
 
       {/* Client-only: reads localStorage, hidden when empty, drops dead slugs. */}
-      <RecentViews games={allGames} />
+      <PersonalGames games={allGames.map(({slug, title, thumb, category}) => ({slug, title, thumb, category}))} />
 
       <Adsterra variant="banner" />
 
@@ -111,3 +103,4 @@ export default async function HomePage({
     </div>
   );
 }
+

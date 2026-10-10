@@ -1,3 +1,4 @@
+import { getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/seo";
 import { JsonLd } from "./JsonLd";
@@ -11,12 +12,13 @@ export interface Crumb {
  * Visible breadcrumb trail + BreadcrumbList structured data.
  * Helps both users and crawlers/AI understand page hierarchy (GEO).
  */
-export function Breadcrumbs({ items }: { items: Crumb[] }) {
-  const list = items.map((it) => ({
+export async function Breadcrumbs({ items }: { items: Crumb[] }) {
+  const locale = await getLocale();
+  const list = items.map((it, i) => ({
     "@type": "ListItem",
-    position: items.indexOf(it) + 1,
+    position: i + 1,
     name: it.label,
-    item: `${SITE_URL}${it.href}`,
+    item: `${SITE_URL}/${locale}${it.href === "/" ? "" : it.href}`,
   }));
 
   return (
@@ -43,3 +45,4 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
     </nav>
   );
 }
+

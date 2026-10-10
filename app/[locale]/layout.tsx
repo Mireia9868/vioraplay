@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -55,6 +56,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const tNav = await getTranslations("nav");
   const tCommon = await getTranslations("common");
+  const tFooter = await getTranslations("footer");
   const tSearch = await getTranslations("search");
 
   return (
@@ -63,7 +65,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <header className="site-header">
             <Link href="/" className="brand">
-              {tCommon("siteName")}
+              <Image src="/vioraplay-logo.png" alt={tCommon("siteName")} width={2048} height={682} sizes="(max-width: 720px) 132px, 160px" priority />
             </Link>
             <SearchBar
               locale={locale}
@@ -80,6 +82,12 @@ export default async function LocaleLayout({
           <main className="site-main">{children}</main>
 
           <footer className="site-footer">
+            <nav aria-label={tFooter("label")} className="footer-links">
+              <Link href="/about">{tFooter("about")}</Link>
+              <Link href="/contact">{tFooter("contact")}</Link>
+              <Link href="/privacy">{tFooter("privacy")}</Link>
+              <Link href="/terms">{tFooter("terms")}</Link>
+            </nav>
             <p>
               © {new Date().getFullYear()} {tCommon("siteName")}
             </p>
@@ -95,3 +103,4 @@ export default async function LocaleLayout({
     </html>
   );
 }
+

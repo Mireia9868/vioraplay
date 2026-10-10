@@ -31,5 +31,7 @@ export function trackEvent(name: string, params: EventParams = {}) {
     // so early events during first paint aren't lost.
     if (!w.__vp_q) w.__vp_q = [];
     w.__vp_q.push({ name, ...params });
+    if (w.__vp_q.length > 100) w.__vp_q.shift();
   }
 }
+

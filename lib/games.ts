@@ -1,3 +1,4 @@
+import { displayCategory } from "./category-labels";
 import gamesData from "@/data/games.json";
 import { GAME_CONTENT, FEATURED_SLUGS } from "@/data/game-content";
 import type { Game, Category } from "./types";
@@ -15,13 +16,7 @@ export function slugify(s: string): string {
  * Title-case a raw feed genre ("puzzle" -> "Puzzle") for headings/titles.
  * Slugs are unaffected (slugify lowercases anyway).
  */
-export function displayCategory(raw: string): string {
-  return raw
-    .split(/[\s_-]+/)
-    .filter(Boolean)
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
-}
+export { displayCategory } from "./category-labels";
 
 /** Full display name for a category, e.g. "puzzle" -> "Puzzle Games". */
 export function categoryFullName(raw: string): string {
@@ -64,7 +59,7 @@ export function getGamesByCategory(categorySlug: string): Game[] {
 function categoryTags(category: string): string[] {
   const c = category.toLowerCase();
   const map: Record<string, string[]> = {
-    "two-player": ["two-player", "board"],
+    "two-player": ["two-player"],
     chess: ["chess", "board", "strategy"],
     "tower-defense": ["tower-defense", "strategy", "defense"],
     "bubble-shooter": ["bubble", "shooter"],
@@ -101,6 +96,12 @@ function categoryTags(category: string): string[] {
 function tagSetFor(game: Game): Set<string> {
   const tags = new Set<string>(GAME_CONTENT[game.slug]?.tags ?? []);
   categoryTags(game.category).forEach((t) => tags.add(t));
+  // Feed categories can be broad; infer specific game families from titles.
+  // A game with "chess" in its name is not automatically classic chess.
+  if (/\bchess\b/i.test(game.title) && game.slug !== "moon-chess") tags.add("chess");
+  if (/\bsudoku\b/i.test(game.title)) tags.add("sudoku");
+  if (/\bmahjong\b/i.test(game.title)) tags.add("mahjong");
+  if (/\bsolitaire\b/i.test(game.title)) tags.add("solitaire");
   return tags;
 }
 
@@ -129,7 +130,7 @@ export function getRelatedGames(game: Game, limit = 8): Game[] {
       const tags = tagSetFor(g);
       let score = 0;
       baseTags.forEach((t) => {
-        if (tags.has(t)) score += 1;
+        if (tags.has(t)) score += ["chess", "sudoku", "mahjong", "solitaire", "tower-defense", "bubble"].includes(t) ? 20 : 1;
       });
       if (g.category === game.category) score += 0.5;
       return { g, score };
@@ -206,3 +207,4 @@ export function searchGames(query: string): Game[] {
       g.title.toLowerCase().includes(q) || g.category.toLowerCase().includes(q)
   );
 }
+

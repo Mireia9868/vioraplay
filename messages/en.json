@@ -1,6 +1,12 @@
 {
-  "common": { "siteName": "VioraPlay" },
-  "nav": { "home": "Home", "categories": "Categories", "search": "Search" },
+  "common": {
+    "siteName": "VioraPlay"
+  },
+  "nav": {
+    "home": "Home",
+    "categories": "Categories",
+    "search": "Search"
+  },
   "home": {
     "title": "Play Free Online Games",
     "subtitle": "Instant browser games — no download, no install.",
@@ -32,7 +38,10 @@
     "fullscreen": "Fullscreen",
     "reload": "Reload",
     "loading": "Loading game…",
-    "adNote": "In-game ads and loading screens come from the game provider."
+    "adNote": "In-game ads and loading screens come from the game provider.",
+    "exitFullscreen": "Exit fullscreen",
+    "fullscreenFallback": "Your browser could not enter fullscreen. Expanded view is shown instead; use the exit button to return.",
+    "slowLoading": "The provider is taking longer to load. You can wait or reload the game."
   },
   "search": {
     "title": "Search Games",
@@ -51,5 +60,23 @@
     "categoriesDescription": "Browse all VioraPlay game categories — puzzle, action, racing, io and more. Play thousands of free browser games instantly, no download needed.",
     "searchTitle": "Search Games | VioraPlay",
     "searchDescription": "Search thousands of free browser games on VioraPlay. Find your next favourite game and play instantly, no download or install."
+  },
+  "footer": {
+    "label": "Site information",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "add": "Add to favorites",
+    "remove": "Remove from favorites"
+  },
+  "info": {
+    "about": "VioraPlay is a directory of browser games. Games are provided through third-party Playgama embeds; VioraPlay supplies navigation, search, recommendations and browser-local favorites.",
+    "contact": "For broken game links or website issues, use our GitHub issue tracker. Do not include passwords, payment details or other private information in public reports.",
+    "privacy": "Favorites and recently visited games are saved in this browser using local storage, without a VioraPlay account. Clearing site data removes these records. The site uses Google Analytics to measure visits and site interactions. Embedded games connect to Playgama and may load advertising or use storage under the provider’s privacy policies. VioraPlay cannot read the contents of cross-origin game frames.",
+    "terms": "Games run through third-party providers and may show ads. Availability, game rules and in-game services depend on the provider. Respect the rights of game creators and use the site lawfully. Reloading a game may reset progress that the provider has not saved."
   }
 }
