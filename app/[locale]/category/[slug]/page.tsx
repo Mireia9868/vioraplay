@@ -17,6 +17,18 @@ import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
+/**
+ * Minimum games a category needs before it is worth indexing on its own.
+ *
+ * 76 of 165 categories hold 3 or fewer games; 116 hold fewer than 10. Those
+ * pages duplicate the parent category's content with a handful of tiles, so
+ * indexing them dilutes the site's quality evaluation across the whole catalog.
+ * Threshold chosen at 10: it keeps 49 categories indexable while parking the
+ * thin tail. Games inside stay reachable via the parent category and homepage,
+ * and follow:true keeps their link equity flowing.
+ */
+const MIN_INDEXABLE_GAMES = 10;
+
 function pageFrom(sp: SearchParams | undefined): number {
   const raw = sp?.page;
   const n = Number(Array.isArray(raw) ? raw[0] : raw);
@@ -56,8 +68,12 @@ export async function generateMetadata({
       canonical: path(locale),
       languages: buildLanguageAlternates((l) => path(l)),
     },
-    // Keep deeper pages crawlable but out of Search, per the site indexing policy.
-    robots: page > 1 ? { index: false, follow: true } : undefined,
+    // Deeper pages: crawlable but out of the index. Thin categories: same, for
+    // the reason documented on MIN_INDEXABLE_GAMES above.
+    robots:
+      page > 1 || count < MIN_INDEXABLE_GAMES
+        ? { index: false, follow: true }
+        : undefined,
     openGraph: {
       title: `${fullName} — Play Free Online`,
       description: `Play ${count} free ${fullName.toLowerCase()} online. No download, no install.`,

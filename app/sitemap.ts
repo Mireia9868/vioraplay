@@ -5,6 +5,13 @@ import { FEATURED_SLUGS } from "@/data/game-content";
 import { SITE_URL } from "@/lib/seo";
 
 /**
+ * Minimum games a category needs before it is worth submitting for indexing.
+ * Kept in sync with MIN_INDEXABLE_GAMES in app/[locale]/category/[slug]/page.tsx —
+ * a noindex URL must never appear in the sitemap.
+ */
+const MIN_INDEXABLE_GAMES = 10;
+
+/**
  * Index of sitemap files. The actual URLs live in sitemap-<locale>.xml.
  *
  * WHY A SITEMAP INDEX
@@ -70,7 +77,13 @@ export function buildLocaleSitemap(locale: Locale): MetadataRoute.Sitemap {
   // /search stays out: the page is noindex, and every ?q= variant would
   // otherwise be submitted here.
 
+  /**
+   * Thin categories are excluded, matching the noindex on the category page.
+   * Submitting noindex URLs wastes crawl budget and contradicts the directive
+   * we serve. See MIN_INDEXABLE_GAMES in app/[locale]/category/[slug]/page.tsx.
+   */
   for (const c of getCategories()) {
+    if (c.count < MIN_INDEXABLE_GAMES) continue;
     urls.push({
       url: `${SITE_URL}/${locale}/category/${c.slug}`,
       lastModified,

@@ -29,8 +29,13 @@ export default async function HomePage({
 
   // Categories worth surfacing near the top: the ones with real depth. The long
   // tail (30+ categories holding 1-3 games each) stays in the full grid below.
+  //
+  // "Other" is excluded by name: it is the supplier's unclassified bucket (63
+  // games that carry no real theme), not a genre. Showing it as a top-level
+  // entry point reads as a broken category to a visitor and as a thin page to
+  // a crawler. Its games remain reachable from /categories and search.
   const popularCategories = categories
-    .filter((c) => c.count >= 40)
+    .filter((c) => c.count >= 40 && c.name.toLowerCase() !== "other")
     .sort((a, b) => b.count - a.count)
     .slice(0, 8);
 
