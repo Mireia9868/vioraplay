@@ -8,6 +8,12 @@ import {
   displayCategory,
 } from "@/lib/games";
 import { getGameContent } from "@/data/game-content";
+import {
+  getGameIntent,
+  gameTitle,
+  gameOgTitle,
+  type GameIntent,
+} from "@/data/game-intent";
 import { GameCard } from "@/components/GameCard";
 import { GameControls } from "@/components/GameControls";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -41,17 +47,18 @@ export async function generateMetadata({
   const content = getGameContent(slug);
   const description = content?.intro ?? truncateDescription(game.description, 155);
   const path = (l: string) => `/${l}/game/${game.slug}`;
+  const intent = getGameIntent(slug);
 
   return {
     metadataBase,
-    title: `${game.title} — Play Free Online | VioraPlay`,
+    title: gameTitle(game.title, intent),
     description,
     alternates: {
       canonical: path(locale),
       languages: buildLanguageAlternates((l) => path(l)),
     },
     openGraph: {
-      title: `${game.title} — Play Free Online`,
+      title: gameOgTitle(game.title, intent),
       description,
       url: path(locale),
       type: "website" as const,
