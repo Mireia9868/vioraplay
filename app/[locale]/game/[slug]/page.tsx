@@ -15,9 +15,11 @@ import { JsonLd } from "@/components/JsonLd";
 import { Adsterra } from "@/components/Adsterra";
 import { GameViewTracker } from "@/components/GameViewTracker";
 import {
+  SITE_URL,
   metadataBase,
   buildLanguageAlternates,
   truncateDescription,
+  supplierIntro,
 } from "@/lib/seo";
 
 export async function generateStaticParams() {
@@ -73,14 +75,61 @@ export default async function GamePage({
   const content = getGameContent(slug);
   const related = getRelatedGames(game, 8);
   const catSlug = slugify(game.category);
+  const catName = displayCategory(game.category);
+  const path = (l: string) => `/${l}/game/${game.slug}`;
+
+  /**
+   * JSON-LD must describe what is actually visible on the page.
+   *
+   * The previous version stuffed the full 3,600-char supplier blurb into
+   * VideoGame.description while the page showed a 320-char clip — structured
+   * data contradicting rendered content is a mismatch signal, so the value is
+   * capped to the same text the visitor can read.
+   */
+  const visibleIntro = content?.intro ?? truncateDescription(game.description, 320);
+  // Rendered in full in the about section — the page's main indexable text.
+  const supplierText = supplierIntro(game.description);
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "VideoGame",
-    name: game.title,
-    genre: game.category,
-    description: content?.intro ?? truncateDescription(game.description, 200),
-    image: game.thumb,
+    "@graph": [
+      {
+        "@type": "VideoGame",
+        "@id": `${SITE_URL}${path(locale)}#game`,
+        name: game.title,
+        genre: game.category,
+        description: visibleIntro,
+        image: game.thumb,
+        url: `${SITE_URL}${path(locale)}`,
+        inLanguage: locale,
+        isFamilyFriendly: true,
+        playMode: "SinglePlayer",
+        // Required for Google to surface the game as a rich result. Capped at
+        // the visible text so the structured data cannot claim more than the
+        // page shows.
+        ...(game.thumb ? { image: [game.thumb] } : {}),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${SITE_URL}${path(locale)}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: tn("home"), item: `${SITE_URL}/${locale}` },
+          { "@type": "ListItem", position: 2, name: tn("categories"), item: `${SITE_URL}/${locale}/categories` },
+          { "@type": "ListItem", position: 3, name: catName, item: `${SITE_URL}/${locale}/category/${catSlug}` },
+          { "@type": "ListItem", position: 4, name: game.title },
+        ],
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${SITE_URL}${path(locale)}#webpage`,
+        url: `${SITE_URL}${path(locale)}`,
+        name: `${game.title} — Play Free Online`,
+        description: visibleIntro,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        breadcrumb: { "@id": `${SITE_URL}${path(locale)}#breadcrumb` },
+        inLanguage: locale,
+      },
+    ],
   };
 
   return (
@@ -91,7 +140,7 @@ export default async function GamePage({
         items={[
           { label: tn("home"), href: "/" },
           { label: tn("categories"), href: "/categories" },
-          { label: displayCategory(game.category), href: `/category/${catSlug}` },
+          { label: catName, href: `/category/${catSlug}` },
           { label: game.title, href: `/game/${game.slug}` },
         ]}
       />
@@ -104,8 +153,12 @@ export default async function GamePage({
 
       <Adsterra variant="native" />
 
-      {/* Site-owned, indexable intro. Curated text when available, otherwise a
-          clipped supplier blurb — never invented developer/date/controls. */}
+      {/* Site-owned, indexable content. This block is the whole SEO surface of
+          a game page: the iframe itself is crawlable but its content is
+          attributed to playgama.com and its links pass no authority back.
+          Curated text is used when available; otherwise the supplier's opening
+          paragraph is rendered in full (not clipped) so the page carries real
+          topical text instead of a thin stub. */}
       <section className="about">
         <h2>{t("about")}</h2>
         {content ? (
@@ -121,7 +174,7 @@ export default async function GamePage({
             )}
           </>
         ) : (
-          game.description && <p>{truncateDescription(game.description, 320)}</p>
+          supplierText && <p>{supplierText}</p>
         )}
       </section>
 

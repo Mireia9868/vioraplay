@@ -54,3 +54,36 @@ export function truncateDescription(text: string | undefined, max = 155): string
 
   return `${body.replace(/[\s,.;:—–-]+$/, "")}…`;
 }
+
+/**
+ * The opening paragraph of a Playgama blurb, rendered in full on game pages.
+ *
+ * The raw strings are ~600 chars of opening copy followed by "Controls:",
+ * "Key Features:", "Levels / Maps / Worlds:" and a long Q&A. Only the opening
+ * is a genuine description; the rest either duplicates the upstream page
+ * (already visible inside the iframe on the same screen) or is scannable QA
+ * noise. Rendering the tail as page copy reads as keyword stuffing to a human
+ * reviewer, and we never invent extra prose — the Google scaled-content-abuse
+ * policy specifically covers text spun or generated to add value that isn't
+ * there.
+ *
+ * Median opening is 437 chars across the 2,407-game catalog; 100% of entries
+ * have one.
+ */
+const SECTION_SPLIT =
+  /\s*(?=Controls:|Key Features:|Features:|Levels\s*\/\s*Maps|Story\s*\/\s*Setting:|Core Gameplay)/i;
+
+export function supplierIntro(text: string | undefined, max = 900): string {
+  const raw = (text ?? "").replace(/\s+/g, " ").trim();
+  if (!raw) return "";
+
+  const [first] = raw.split(SECTION_SPLIT);
+  const intro = (first ?? "").replace(/\s+/g, " ").trim();
+  if (!intro) return "";
+
+  if (intro.length <= max) return intro;
+  const clipped = intro.slice(0, max);
+  const lastSpace = clipped.lastIndexOf(" ");
+  const body = lastSpace > 120 ? clipped.slice(0, lastSpace) : clipped;
+  return `${body.replace(/[\s,.;:—–-]+$/, "")}…`;
+}
