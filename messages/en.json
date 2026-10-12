@@ -19,7 +19,10 @@
     "browseAll": "All categories",
     "popularCategories": "Browse Popular Categories",
     "moreGames": "More Games",
-    "recentlyVisited": "Recently Visited"
+    "recentlyVisited": "Recently Visited",
+    "headline": "Small breaks. Big fun.",
+    "editorsPicks": "Editor’s picks",
+    "quickPicks": "Quick picks"
   },
   "categories": {
     "title": "Game Categories",

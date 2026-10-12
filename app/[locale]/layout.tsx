@@ -10,6 +10,7 @@ import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { SearchBar } from "@/components/SearchBar";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
 import "../globals.css";
+import "../retro.css";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

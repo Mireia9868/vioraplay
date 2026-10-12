@@ -75,6 +75,7 @@ async function main() {
       assert.equal(first.status,200);assert.equal(second.status,200);assert.equal(refresh.status,200);
       assert.ok(second.html.includes('content="noindex, follow"'));
       assert.ok(!first.html.includes('content="noindex, follow"'));
+      assert.ok(!first.html.includes('categories.deviceIos'), 'iOS filter label resolves in every locale');
       assert.ok(second.html.includes(`href="https://www.vioraplay.com/${locale}/category/puzzle?page=2"`));
       assert.equal((second.html.match(/class="game-card"/g)||[]).length,48);
       assert.ok(!second.html.includes('category.next')&&!second.html.includes('category.relatedCategories'));

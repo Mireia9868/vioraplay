@@ -168,7 +168,7 @@ export default async function CategoryPage({
           {DEVICE_FILTERS.map((d) => {
             const active = devices.includes(d.key);
             const n = deviceCounts[d.key];
-            const labelKey = `device${d.key[0].toUpperCase()}${d.key.slice(1)}`;
+            const labelKey = d.key === "ios" ? "deviceIOS" : `device${d.key[0].toUpperCase()}${d.key.slice(1)}`;
             return (
               <Link
                 key={d.key}

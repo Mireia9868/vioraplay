@@ -19,7 +19,10 @@
     "browseAll": "Tüm kategoriler",
     "popularCategories": "Popüler Kategoriler",
     "moreGames": "Diğer Oyunlar",
-    "recentlyVisited": "Son Ziyaret Edilenler"
+    "recentlyVisited": "Son Ziyaret Edilenler",
+    "headline": "Kısa molalar. Büyük eğlence.",
+    "editorsPicks": "Editörün seçtikleri",
+    "quickPicks": "Hızlı seçimler"
   },
   "categories": {
     "title": "Oyun Kategorileri",

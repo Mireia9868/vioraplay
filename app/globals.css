@@ -1,23 +1,18 @@
-/*
- * Light theme tokens. The palette is a warm mint/cream base with a teal
- * accent — bright enough to feel playful, but contrast against --fg stays
- * above 7:1 so body text remains AAA on the lightest surface.
- *
- * If you add a component, use these vars. Hard-coded hex/rgba here breaks
- * theming: the play-overlay scrim and the game-frame letterbox must stay
- * dark regardless of theme, since they sit on top of third-party imagery.
- */
+/* Retro editorial palette. Keep provider game frames dark. */
 :root {
-  --bg: #f2fbf6;
-  --bg-alt: #e8f6ee;
-  --fg: #14312a;
-  --muted: #486158;
-  --accent: #0a8062;
-  --accent-strong: #087556;
-  --accent-soft: rgba(10, 128, 98, 0.11);
-  --card: #ffffff;
-  --card-alt: #f7fdfa;
-  --border: #c3ded3;
+  --bg: #fff9ec;
+  --bg-alt: #f3ebd9;
+  --fg: #171713;
+  --muted: #57574f;
+  --accent: #0055ee;
+  --accent-strong: #0044c5;
+  --accent-soft: #e8efff;
+  --card: #fffdf7;
+  --card-alt: #fff4d5;
+  --border: #242420;
+  --yellow: #ffdf39;
+  --coral: #ff806b;
+  --green: #48c995;
   --max: 1200px;
 }
 
@@ -61,8 +56,8 @@ a {
   padding: 12px 20px;
   width: 100%;
   border-bottom: 1px solid var(--border);
-  background: rgba(242, 251, 246, 0.88);
-  backdrop-filter: blur(10px);
+  background: var(--bg);
+
 }
 
 .brand {
@@ -107,24 +102,7 @@ a {
   padding: 44px 0 20px;
 }
 
-/* Soft wash so the first screen reads warmer than the rest of the page */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: -24px -50vw 0;
-  background: radial-gradient(
-      ellipse 70% 60% at 50% 0%,
-      rgba(255, 214, 102, 0.22),
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 50% 50% at 15% 30%,
-      rgba(10, 128, 98, 0.12),
-      transparent 70%
-    );
-  pointer-events: none;
-  z-index: -1;
-}
+.hero::before { display: none; }
 
 .hero h1 {
   font-size: clamp(26px, 4.5vw, 40px);
@@ -314,7 +292,7 @@ h2 {
 .game-card:hover {
   transform: translateY(-3px);
   border-color: var(--accent);
-  box-shadow: 0 8px 20px rgba(10, 128, 98, 0.12);
+  box-shadow: none;
 }
 
 .game-card-thumb {

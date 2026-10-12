@@ -19,7 +19,10 @@
     "browseAll": "Todas as categorias",
     "popularCategories": "Categorias Populares",
     "moreGames": "Mais Jogos",
-    "recentlyVisited": "Visitados Recentemente"
+    "recentlyVisited": "Visitados Recentemente",
+    "headline": "Pequenas pausas. Grande diversão.",
+    "editorsPicks": "Escolhas da equipe",
+    "quickPicks": "Escolhas rápidas"
   },
   "categories": {
     "title": "Categorias de Jogos",

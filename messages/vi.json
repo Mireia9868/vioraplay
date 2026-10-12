@@ -19,7 +19,10 @@
     "browseAll": "Tất cả thể loại",
     "popularCategories": "Thể Loại Phổ Biến",
     "moreGames": "Game Khác",
-    "recentlyVisited": "Vừa Xem Gần Đây"
+    "recentlyVisited": "Vừa Xem Gần Đây",
+    "headline": "Nghỉ một chút. Vui thật nhiều.",
+    "editorsPicks": "Lựa chọn biên tập",
+    "quickPicks": "Chọn nhanh"
   },
   "categories": {
     "title": "Thể Loại Game",
