@@ -47,14 +47,14 @@ export default async function HomePage({
       <section className="hero editorial-hero">
         <div className="hero-copy">
           <h1><span>{t("headlineLead")}</span><span>{t("headlineEnd")}</span></h1>
+          <p className="hero-sub">{t("editorialSubtitle")}</p>
         </div>
         <div className="hero-side">
-          <p className="hero-sub">{t("editorialSubtitle")}</p>
           <div className="hero-art" aria-hidden="true">
             <span className="hero-burst" />
             <span className="hero-confetti hero-confetti-left" />
             <span className="hero-confetti hero-confetti-right" />
-            <Image src="/hero-gamer.png" alt="" width={1536} height={1024} sizes="(max-width: 720px) 140px, (max-width: 1000px) 220px, 290px" priority />
+            <Image src="/hero-gamer.png" alt="" width={1536} height={1024} sizes="(max-width: 720px) 220px, (max-width: 1000px) 320px, 420px" priority />
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
-  getAllGames,
+  getFeaturedGames,
   getGameBySlug,
   getRelatedGames,
   slugify,
@@ -30,8 +30,12 @@ import {
   supplierIntro,
 } from "@/lib/seo";
 
+// Prebuild editorial picks only. Long-tail games render and cache on first visit.
+export const dynamic = "force-static";
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  return getAllGames().map((g) => ({ slug: g.slug }));
+  return getFeaturedGames(12).map((g) => ({ slug: g.slug }));
 }
 
 export async function generateMetadata({

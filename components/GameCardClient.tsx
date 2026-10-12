@@ -22,6 +22,7 @@ export function GameCardClient({
     <Link
       href={`/game/${game.slug}`}
       className="game-card-link"
+      prefetch={false}
       onClick={() => {
         trackEvent("game_card_click", { slug: game.slug, source });
         if (source === "related") trackEvent("related_click", { slug: game.slug });

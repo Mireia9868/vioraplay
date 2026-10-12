@@ -68,6 +68,13 @@ async function main() {
     assert.ok(home.html.includes('/vioraplay-logo-retro.png'));
     assert.equal((home.html.match(/role="search"/g)||[]).length,1, 'Single homepage search');
     assert.ok(home.html.includes('/hero-gamer.png'), 'Hero uses the production character asset');
+    assert.ok(/class="hero-copy">[\s\S]*?class="hero-sub"[\s\S]*?<div class="hero-side"/.test(home.html), 'Subtitle sits below the headline');
+    const tailGame = games.getAllGames().find(g => !games.getFeaturedGames(12).some(f => f.slug === g.slug));
+    for (const locale of ['en', 'vi']) {
+      const tail = await get(`/${locale}/game/${tailGame.slug}`);
+      assert.equal(tail.status, 200, 'Unbuilt game pages remain accessible');
+      assert.ok(tail.html.includes(tailGame.slug));
+    }
     assert.ok(!home.html.includes('Join the enchanting world of Piece of Cake'), 'Raw descriptions do not enter the home payload');
     for(const locale of ['en','id','pt','tr','vi']) {
       const first=await get(`/${locale}/category/puzzle`);
