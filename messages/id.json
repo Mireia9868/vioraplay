@@ -22,7 +22,10 @@
     "recentlyVisited": "Terakhir Dikunjungi",
     "headline": "Istirahat singkat. Seru maksimal.",
     "editorsPicks": "Pilihan editor",
-    "quickPicks": "Pilihan cepat"
+    "quickPicks": "Pilihan cepat",
+    "headlineLead": "Istirahat singkat.",
+    "headlineEnd": "Seru maksimal.",
+    "editorialSubtitle": "Game gratis, langsung dari browser Anda."
   },
   "categories": {
     "title": "Kategori Game",

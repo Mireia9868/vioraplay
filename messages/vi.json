@@ -22,7 +22,10 @@
     "recentlyVisited": "Vừa Xem Gần Đây",
     "headline": "Nghỉ một chút. Vui thật nhiều.",
     "editorsPicks": "Lựa chọn biên tập",
-    "quickPicks": "Chọn nhanh"
+    "quickPicks": "Chọn nhanh",
+    "headlineLead": "Nghỉ một chút.",
+    "headlineEnd": "Vui thật nhiều.",
+    "editorialSubtitle": "Game miễn phí, ngay trên trình duyệt."
   },
   "categories": {
     "title": "Thể Loại Game",

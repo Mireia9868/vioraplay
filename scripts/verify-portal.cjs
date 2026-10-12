@@ -65,8 +65,9 @@ async function main() {
       return {status:res.statusCode,html:Buffer.concat(chunks).toString('utf8')};
     };
     const home = await get('/en'); assert.equal(home.status,200);
-    assert.ok(home.html.includes('/vioraplay-logo.png'));
+    assert.ok(home.html.includes('/vioraplay-logo-retro.png'));
     assert.equal((home.html.match(/role="search"/g)||[]).length,1, 'Single homepage search');
+    assert.ok(home.html.includes('/hero-gamer.png'), 'Hero uses the production character asset');
     assert.ok(!home.html.includes('Join the enchanting world of Piece of Cake'), 'Raw descriptions do not enter the home payload');
     for(const locale of ['en','id','pt','tr','vi']) {
       const first=await get(`/${locale}/category/puzzle`);

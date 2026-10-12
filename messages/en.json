@@ -22,7 +22,10 @@
     "recentlyVisited": "Recently Visited",
     "headline": "Small breaks. Big fun.",
     "editorsPicks": "Editor’s picks",
-    "quickPicks": "Quick picks"
+    "quickPicks": "Quick picks",
+    "headlineLead": "Small breaks.",
+    "headlineEnd": "Big fun.",
+    "editorialSubtitle": "Free games, straight from your browser."
   },
   "categories": {
     "title": "Game Categories",

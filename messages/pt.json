@@ -22,7 +22,10 @@
     "recentlyVisited": "Visitados Recentemente",
     "headline": "Pequenas pausas. Grande diversão.",
     "editorsPicks": "Escolhas da equipe",
-    "quickPicks": "Escolhas rápidas"
+    "quickPicks": "Escolhas rápidas",
+    "headlineLead": "Pequenas pausas.",
+    "headlineEnd": "Grande diversão.",
+    "editorialSubtitle": "Jogos grátis, direto no seu navegador."
   },
   "categories": {
     "title": "Categorias de Jogos",

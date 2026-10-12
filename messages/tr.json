@@ -22,7 +22,10 @@
     "recentlyVisited": "Son Ziyaret Edilenler",
     "headline": "Kısa molalar. Büyük eğlence.",
     "editorsPicks": "Editörün seçtikleri",
-    "quickPicks": "Hızlı seçimler"
+    "quickPicks": "Hızlı seçimler",
+    "headlineLead": "Kısa molalar.",
+    "headlineEnd": "Büyük eğlence.",
+    "editorialSubtitle": "Ücretsiz oyunlar, doğrudan tarayıcınızda."
   },
   "categories": {
     "title": "Oyun Kategorileri",

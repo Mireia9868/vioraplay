@@ -76,7 +76,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <header className="site-header">
             <Link href="/" className="brand">
-              <Image src="/vioraplay-logo.png" alt={tCommon("siteName")} width={2048} height={682} sizes="(max-width: 720px) 132px, 160px" priority />
+              <Image src="/vioraplay-logo-retro.png" alt={tCommon("siteName")} width={2172} height={724} sizes="(max-width: 720px) 150px, 190px" priority />
             </Link>
             <SearchBar
               locale={locale}

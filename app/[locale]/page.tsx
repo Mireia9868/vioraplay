@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   getAllGames,
@@ -45,17 +46,17 @@ export default async function HomePage({
     <div className="home">
       <section className="hero editorial-hero">
         <div className="hero-copy">
-          <p className="hero-eyebrow">{t("title")}</p>
-          <h1><span>{t("headline")}</span></h1>
+          <h1><span>{t("headlineLead")}</span><span>{t("headlineEnd")}</span></h1>
         </div>
-        <p className="hero-sub">{t("subtitle")}</p>
-        <svg className="hero-controller" viewBox="0 0 220 150" aria-hidden="true" focusable="false">
-          <path d="M108 8l14 25 25-15-3 30 32 4-24 21 24 23-32 3 3 29-25-14-14 26-13-26-27 14 5-30-30-2 22-23-22-21 30-4-5-28 27 13z" fill="var(--accent)" />
-          <path d="M66 64c6-15 21-21 43-16 22-5 37 1 43 16l19 51c6 21-13 28-26 13l-18-20H90l-18 20c-13 15-32 8-26-13z" fill="var(--yellow)" stroke="var(--fg)" strokeWidth="5" strokeLinejoin="round" />
-          <path d="M72 76h27m-13-13v27" stroke="var(--fg)" strokeWidth="7" strokeLinecap="square" />
-          <circle cx="132" cy="72" r="6" fill="var(--fg)" /><circle cx="145" cy="86" r="6" fill="var(--fg)" />
-          <path d="M177 36l13-10M185 56h17M38 37L26 25" stroke="var(--coral)" strokeWidth="7" />
-        </svg>
+        <div className="hero-side">
+          <p className="hero-sub">{t("editorialSubtitle")}</p>
+          <div className="hero-art" aria-hidden="true">
+            <span className="hero-burst" />
+            <span className="hero-confetti hero-confetti-left" />
+            <span className="hero-confetti hero-confetti-right" />
+            <Image src="/hero-gamer.png" alt="" width={1536} height={1024} sizes="(max-width: 720px) 140px, (max-width: 1000px) 220px, 290px" priority />
+          </div>
+        </div>
       </section>
 
       <section className="section spotlight-section">
