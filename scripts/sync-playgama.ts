@@ -17,6 +17,11 @@
  *    We render that inside an <iframe> on OUR domain, so the surrounding page
  *    (title/description/VideoGame JSON-LD) is indexable — this is what makes the
  *    SEO/GEO strategy work (vs. the Widget mode, which renders on their domain).
+ *  - The export also carries rich supplier metadata we now PRESERVE on each game
+ *    (beyond the original 7 fields): `genres[]`, `tags[]`, `howToPlayText`,
+ *    `mobileReady[]`, `supportedLanguages[]`, `screenOrientation`, `inGamePurchases`.
+ *    These power on-site intros (howToPlay), related-game matching (genres/tags),
+ *    and the device filter (mobileReady) without hand-writing 2400+ entries.
  *
  * YOU DO NOT NEED TO COPY LINKS ONE BY ONE. One dashboard download = the whole
  * catalog. This script just reshapes it for our schema.
@@ -49,6 +54,18 @@ function firstStr(v: unknown): string {
     for (const x of v) if (typeof x === "string" && x) return x;
   }
   return "";
+}
+
+/** All non-empty strings from an array (order preserved, deduped). */
+function strArray(v: unknown): string[] {
+  if (!Array.isArray(v)) return [];
+  const out: string[] = [];
+  for (const x of v) if (typeof x === "string" && x.trim() && !out.includes(x)) out.push(x);
+  return out;
+}
+
+function bool(v: unknown): boolean | undefined {
+  return typeof v === "boolean" ? v : undefined;
 }
 
 function ensureClid(url: string): string {
@@ -84,6 +101,10 @@ interface RawGame {
   categories?: unknown;
   genres?: unknown;
   tags?: unknown;
+  mobileReady?: unknown;
+  supportedLanguages?: unknown;
+  screenOrientation?: unknown;
+  inGamePurchases?: unknown;
   images?: unknown;
   image?: unknown;
   thumb?: unknown;
@@ -189,6 +210,14 @@ async function main() {
       thumb: firstImage(g.images ?? g.image ?? g.thumb ?? g.thumbnail),
       embed: ensureClid(url),
       description: str(g.description ?? g.howToPlayText),
+      // --- supplier metadata (Playgama export, preserved for SEO/related) ---
+      genres: strArray(g.genres),
+      tags: strArray(g.tags),
+      howToPlay: str(g.howToPlayText),
+      mobileReady: strArray(g.mobileReady),
+      languages: strArray(g.supportedLanguages),
+      orientation: str(g.screenOrientation),
+      iap: bool(g.inGamePurchases),
       plays: typeof g.plays === "number" ? g.plays : typeof g.playsCount === "number" ? g.playsCount : undefined,
       rating: typeof g.rating === "number" ? g.rating : undefined,
     });

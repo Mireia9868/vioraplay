@@ -6,6 +6,8 @@ import {
   getRelatedGames,
   slugify,
   displayCategory,
+  getGameDevices,
+  getGameHowToPlay,
 } from "@/lib/games";
 import { getGameContent } from "@/data/game-content";
 import {
@@ -97,6 +99,11 @@ export default async function GamePage({
   // Rendered in full in the about section — the page's main indexable text.
   const supplierText = supplierIntro(game.description);
 
+  // Curated text wins; otherwise fall back to supplier-owned content
+  // (howToPlayText / device list) — never invented developer/date/controls.
+  const howToPlay = content?.howToPlay ?? getGameHowToPlay(game);
+  const devices = getGameDevices(game);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -165,23 +172,32 @@ export default async function GamePage({
           attributed to playgama.com and its links pass no authority back.
           Curated text is used when available; otherwise the supplier's opening
           paragraph is rendered in full (not clipped) so the page carries real
-          topical text instead of a thin stub. */}
+          topical text instead of a thin stub. Supplier howToPlay + device list
+          add machine-readable, non-invented detail to every game page. */}
       <section className="about">
         <h2>{t("about")}</h2>
         {content ? (
-          <>
-            <p>{content.intro}</p>
-            <h3>{t("howToPlay")}</h3>
-            <p>{content.howToPlay}</p>
-            {content.controls && (
-              <>
-                <h3>{t("controls")}</h3>
-                <p>{content.controls}</p>
-              </>
-            )}
-          </>
+          <p>{content.intro}</p>
         ) : (
           supplierText && <p>{supplierText}</p>
+        )}
+        {howToPlay && (
+          <>
+            <h3>{t("howToPlay")}</h3>
+            <p>{howToPlay}</p>
+          </>
+        )}
+        {content?.controls && (
+          <>
+            <h3>{t("controls")}</h3>
+            <p>{content.controls}</p>
+          </>
+        )}
+        {devices.length > 0 && (
+          <>
+            <h3>{t("availableOn")}</h3>
+            <p>{devices.join(" · ")}</p>
+          </>
         )}
       </section>
 

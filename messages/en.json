@@ -39,6 +39,7 @@
     "reload": "Reload",
     "loading": "Loading game…",
     "adNote": "In-game ads and loading screens come from the game provider.",
+    "availableOn": "Available on",
     "exitFullscreen": "Exit fullscreen",
     "fullscreenFallback": "Your browser could not enter fullscreen. Expanded view is shown instead; use the exit button to return.",
     "slowLoading": "The provider is taking longer to load. You can wait or reload the game."

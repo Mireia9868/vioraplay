@@ -39,6 +39,7 @@
     "reload": "Muat Ulang",
     "loading": "Memuat game…",
     "adNote": "Iklan dalam game dan layar pemuatan berasal dari penyedia game.",
+    "availableOn": "Tersedia di",
     "exitFullscreen": "Keluar layar penuh",
     "fullscreenFallback": "Browser tidak dapat membuka layar penuh. Tampilan diperbesar digunakan; tekan tombol keluar untuk kembali.",
     "slowLoading": "Penyedia membutuhkan waktu lebih lama. Tunggu atau muat ulang game."

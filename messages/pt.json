@@ -39,6 +39,7 @@
     "reload": "Recarregar",
     "loading": "Carregando o jogo…",
     "adNote": "Anúncios dentro do jogo e telas de carregamento vêm do provedor do jogo.",
+    "availableOn": "Disponível em",
     "exitFullscreen": "Sair da tela cheia",
     "fullscreenFallback": "Seu navegador não pôde abrir a tela cheia. Usamos uma visualização ampliada; use o botão de saída para voltar.",
     "slowLoading": "O provedor está demorando para carregar. Aguarde ou recarregue o jogo."

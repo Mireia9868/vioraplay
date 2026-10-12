@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw Playgama export (large, re-downloaded each sync). The sync output
+# data/games.json IS committed; this input file is not.
+/data/playgama-catalog.json

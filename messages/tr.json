@@ -39,6 +39,7 @@
     "reload": "Yeniden Yükle",
     "loading": "Oyun yükleniyor…",
     "adNote": "Oyun içi reklamlar ve yükleme ekranları oyun sağlayıcısından gelir.",
+    "availableOn": "Şu cihazlarda",
     "exitFullscreen": "Tam ekrandan çık",
     "fullscreenFallback": "Tarayıcınız tam ekranı açamadı. Genişletilmiş görünüm kullanılıyor; geri dönmek için çıkış düğmesine basın.",
     "slowLoading": "Sağlayıcının yüklemesi uzun sürüyor. Bekleyebilir veya oyunu yeniden yükleyebilirsiniz."

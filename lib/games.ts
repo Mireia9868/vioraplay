@@ -93,16 +93,93 @@ function categoryTags(category: string): string[] {
   return map[c] ?? [c];
 }
 
+/**
+ * Supplier tags are noisy: they mix engine/platform tokens
+ * ("unity-games-online", "android-games") with "-games"/"-games-online"
+ * boilerplate. Normalise to a clean gameplay token, or null if pure noise.
+ * Kept deliberately conservative: we only DROP clearly non-gameplay tokens.
+ */
+const TAG_NOISE =
+  /(^|-)(unity|webgl|html5|flash|construct|godot|cocos|gamemaker|defold|gdevelop|gam-supported|android|iphone|ios|desktop|mobile|touchscreen|browser|borwser|no-download)(-|$)/;
+
+/** Boilerplate tokens that carry no discriminating gameplay signal on their own. */
+const GENERIC_TAGS = new Set([
+  "1-player",
+  "casual",
+  "addictive",
+  "relaxing",
+  "cute",
+  "simple",
+  "funny",
+  "popular",
+  "cool",
+  "fast-paced",
+  "challenge",
+  "agility",
+  "reaction",
+  "endless",
+  "speed",
+  "mini",
+  "2d",
+  "3d",
+]);
+
+function normalizeSupplierTag(t: string): string | null {
+  const s = t
+    .toLowerCase()
+    .replace(/-games-online$/, "")
+    .replace(/-games$/, "")
+    .replace(/-online$/, "")
+    .trim();
+  if (!s) return null;
+  if (TAG_NOISE.test(s)) return null;
+  if (GENERIC_TAGS.has(s)) return null;
+  return s;
+}
+
 function tagSetFor(game: Game): Set<string> {
-  const tags = new Set<string>(GAME_CONTENT[game.slug]?.tags ?? []);
+  const tags = new Set<string>();
+  // 1) Curated gameplay tags for the hand-written key games — highest quality.
+  (GAME_CONTENT[game.slug]?.tags ?? []).forEach((t) => tags.add(t));
+  // 2) Supplier genres — clean gameplay dimensions (puzzle/arcade/strategy/…).
+  (game.genres ?? []).forEach((t) => tags.add(t.toLowerCase()));
+  // 3) Supplier tags — denoised, weak-but-broad signal (~98% coverage).
+  (game.tags ?? []).forEach((t) => {
+    const n = normalizeSupplierTag(t);
+    if (n) tags.add(n);
+  });
+  // 4) Hand map so games WITHOUT supplier genres still cluster by category.
   categoryTags(game.category).forEach((t) => tags.add(t));
-  // Feed categories can be broad; infer specific game families from titles.
-  // A game with "chess" in its name is not automatically classic chess.
+  // 5) Title hints for families the broad feed categories miss.
+  //    A game with "chess" in its name is not automatically classic chess.
   if (/\bchess\b/i.test(game.title) && game.slug !== "moon-chess") tags.add("chess");
   if (/\bsudoku\b/i.test(game.title)) tags.add("sudoku");
   if (/\bmahjong\b/i.test(game.title)) tags.add("mahjong");
   if (/\bsolitaire\b/i.test(game.title)) tags.add("solitaire");
   return tags;
+}
+
+/** Supplier platform labels → short display names. */
+const DEVICE_LABEL: Record<string, string> = {
+  "For Desktop": "Desktop & Web",
+  "For Android": "Android",
+  "For IOS": "iOS",
+  "For iOS": "iOS",
+};
+
+/** Supplier-confirmed platforms for a game (used for the on-site device line). */
+export function getGameDevices(game: Game): string[] {
+  const out: string[] = [];
+  for (const d of game.mobileReady ?? []) {
+    const label = DEVICE_LABEL[d] ?? d.replace(/^For\s+/i, "");
+    if (label && !out.includes(label)) out.push(label);
+  }
+  return out;
+}
+
+/** Supplier "how to play" line, if any (authorised supplier content). */
+export function getGameHowToPlay(game: Game): string {
+  return (game.howToPlay ?? "").trim();
 }
 
 /**
