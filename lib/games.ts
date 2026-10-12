@@ -183,6 +183,57 @@ export function getGameHowToPlay(game: Game): string {
 }
 
 /**
+ * Device-filter options shown on category pages, in display order.
+ * Keys map to the labels returned by getGameDevices().
+ */
+export const DEVICE_FILTERS: { key: string; label: string }[] = [
+  { key: "desktop", label: "Desktop & Web" },
+  { key: "android", label: "Android" },
+  { key: "ios", label: "iOS" },
+];
+
+const DEVICE_KEY_TO_LABEL: Record<string, string> = {
+  desktop: "Desktop & Web",
+  android: "Android",
+  ios: "iOS",
+};
+
+/** Parse a `?device=android,ios` query param into valid filter keys (deduped, in DEVICE_FILTERS order). */
+export function parseDeviceParam(raw: string | string[] | undefined): string[] {
+  const csv = Array.isArray(raw) ? raw[0] : raw;
+  if (!csv) return [];
+  const keys = new Set(
+    csv
+      .split(",")
+      .map((s) => s.trim().toLowerCase())
+      .filter((k) => k in DEVICE_KEY_TO_LABEL)
+  );
+  return DEVICE_FILTERS.map((d) => d.key).filter((k) => keys.has(k));
+}
+
+/** Keep games that support ALL selected devices (AND semantics: must run on every picked device). */
+export function filterGamesByDevices(games: Game[], keys: string[]): Game[] {
+  if (!keys.length) return games;
+  const want = keys.map((k) => DEVICE_KEY_TO_LABEL[k]);
+  return games.filter((g) => {
+    const have = getGameDevices(g);
+    return want.every((w) => have.includes(w));
+  });
+}
+
+/** Per-device availability counts within a game set (for filter-chip badges). */
+export function countGamesByDevice(games: Game[]): Record<string, number> {
+  const out: Record<string, number> = { desktop: 0, android: 0, ios: 0 };
+  for (const g of games) {
+    const have = getGameDevices(g);
+    for (const k of Object.keys(out)) {
+      if (have.includes(DEVICE_KEY_TO_LABEL[k])) out[k]++;
+    }
+  }
+  return out;
+}
+
+/**
  * Curated homepage "Featured Games" — hand-picked, NOT a popularity ranking
  * (the catalog has no real play-count data, so we never fake "Top/Hot").
  */

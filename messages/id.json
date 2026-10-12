@@ -26,7 +26,14 @@
     "pagination": "Halaman",
     "prev": "Sebelumnya",
     "next": "Berikutnya",
-    "relatedCategories": "Kategori Terkait"
+    "relatedCategories": "Kategori Terkait",
+    "filterHeading": "Mainkan di",
+    "deviceDesktop": "Desktop & Web",
+    "deviceAndroid": "Android",
+    "deviceIOS": "iOS",
+    "clear": "Hapus",
+    "showing": "Menampilkan {count} dari {total} game",
+    "noResults": "Tidak ada game yang cocok dengan filter ini."
   },
   "game": {
     "playNow": "Main Sekarang",

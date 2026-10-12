@@ -26,7 +26,14 @@
     "pagination": "Sayfalama",
     "prev": "Önceki",
     "next": "Sonraki",
-    "relatedCategories": "İlgili Kategoriler"
+    "relatedCategories": "İlgili Kategoriler",
+    "filterHeading": "Şu cihazda",
+    "deviceDesktop": "Masaüstü ve Web",
+    "deviceAndroid": "Android",
+    "deviceIOS": "iOS",
+    "clear": "Temizle",
+    "showing": "{total} oyundan {count} tanesi gösteriliyor",
+    "noResults": "Bu filtreyle eşleşen oyun yok."
   },
   "game": {
     "playNow": "Hemen Oyna",

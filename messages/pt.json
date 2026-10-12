@@ -26,7 +26,14 @@
     "pagination": "Paginação",
     "prev": "Anterior",
     "next": "Próxima",
-    "relatedCategories": "Categorias Relacionadas"
+    "relatedCategories": "Categorias Relacionadas",
+    "filterHeading": "Jogar em",
+    "deviceDesktop": "Desktop e Web",
+    "deviceAndroid": "Android",
+    "deviceIOS": "iOS",
+    "clear": "Limpar",
+    "showing": "Exibindo {count} de {total} jogos",
+    "noResults": "Nenhum jogo corresponde a este filtro."
   },
   "game": {
     "playNow": "Jogar Agora",

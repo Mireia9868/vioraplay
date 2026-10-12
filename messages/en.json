@@ -26,7 +26,14 @@
     "pagination": "Pagination",
     "prev": "Previous",
     "next": "Next",
-    "relatedCategories": "Related Categories"
+    "relatedCategories": "Related Categories",
+    "filterHeading": "Play on",
+    "deviceDesktop": "Desktop & Web",
+    "deviceAndroid": "Android",
+    "deviceIOS": "iOS",
+    "clear": "Clear",
+    "showing": "Showing {count} of {total} games",
+    "noResults": "No games match this filter."
   },
   "game": {
     "playNow": "Play Now",

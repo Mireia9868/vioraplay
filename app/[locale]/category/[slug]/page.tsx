@@ -9,6 +9,10 @@ import {
   getRelatedCategories,
   categoryFullName,
   PER_PAGE,
+  parseDeviceParam,
+  filterGamesByDevices,
+  countGamesByDevice,
+  DEVICE_FILTERS,
 } from "@/lib/games";
 import { GameCard } from "@/components/GameCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -49,13 +53,21 @@ export async function generateMetadata({
   const { slug, locale } = await params;
   const sp = await searchParams;
   const page = pageFrom(sp);
+  const devices = parseDeviceParam(sp?.device);
   const games = getGamesByCategory(slug);
   if (!games.length) return {};
 
   const cat = getCategoryBySlug(slug);
   const fullName = cat?.fullName ?? categoryFullName(games[0].category);
   const count = games.length;
-  const path = (l: string) => `/${l}/category/${slug}${page > 1 ? `?page=${page}` : ""}`;
+  const deviceQs = devices.length ? `device=${devices.join(",")}` : "";
+  const path = (l: string) => {
+    const parts: string[] = [];
+    if (page > 1) parts.push(`page=${page}`);
+    if (deviceQs) parts.push(deviceQs);
+    const qs = parts.join("&");
+    return `/${l}/category/${slug}${qs ? `?${qs}` : ""}`;
+  };
 
   return {
     metadataBase,
@@ -68,10 +80,10 @@ export async function generateMetadata({
       canonical: path(locale),
       languages: buildLanguageAlternates((l) => path(l)),
     },
-    // Deeper pages: crawlable but out of the index. Thin categories: same, for
-    // the reason documented on MIN_INDEXABLE_GAMES above.
+    // Deeper pages and device-filtered views: crawlable but out of the index.
+    // Thin categories: same, for the reason documented on MIN_INDEXABLE_GAMES.
     robots:
-      page > 1 || count < MIN_INDEXABLE_GAMES
+      page > 1 || devices.length > 0 || count < MIN_INDEXABLE_GAMES
         ? { index: false, follow: true }
         : undefined,
     openGraph: {
@@ -93,27 +105,47 @@ export default async function CategoryPage({
   const { slug, locale } = await params;
   const sp = await searchParams;
   setRequestLocale(locale);
-  const games = getGamesByCategory(slug);
-  if (!games.length) notFound();
+  const allGames = getGamesByCategory(slug);
+  if (!allGames.length) notFound();
 
   const t = await getTranslations("home");
   const tn = await getTranslations("nav");
   const tc = await getTranslations("categories");
 
   const cat = getCategoryBySlug(slug);
-  const fullName = cat?.fullName ?? categoryFullName(games[0].category);
+  const fullName = cat?.fullName ?? categoryFullName(allGames[0].category);
+
+  const devices = parseDeviceParam(sp?.device);
+  const games = devices.length ? filterGamesByDevices(allGames, devices) : allGames;
+  const deviceCounts = countGamesByDevice(allGames);
 
   const page = pageFrom(sp);
   const totalPages = Math.max(1, Math.ceil(games.length / PER_PAGE));
-  if (page > totalPages) notFound();
-  const safePage = page;
+  // Unfiltered out-of-range pages 404 (deliberate SEO choice); filtered views
+  // clamp instead so a stale ?page= on a smaller result set never hard-fails.
+  const safePage = page > totalPages && devices.length > 0 ? totalPages : page;
+  if (page > totalPages && devices.length === 0) notFound();
   const start = (safePage - 1) * PER_PAGE;
   const pageGames = games.slice(start, start + PER_PAGE);
 
   const relatedCats = getRelatedCategories(slug, 6);
 
-  const pageUrl = (n: number) =>
-    n === 1 ? `/category/${slug}` : `/category/${slug}?page=${n}`;
+  const deviceQs = devices.length ? `device=${devices.join(",")}` : "";
+  const pageUrl = (n: number) => {
+    const parts: string[] = [];
+    if (n > 1) parts.push(`page=${n}`);
+    if (deviceQs) parts.push(deviceQs);
+    const qs = parts.join("&");
+    return qs ? `/category/${slug}?${qs}` : `/category/${slug}`;
+  };
+
+  const deviceHref = (toggleKey: string) => {
+    const set = new Set(devices);
+    if (set.has(toggleKey)) set.delete(toggleKey);
+    else set.add(toggleKey);
+    const next = DEVICE_FILTERS.map((d) => d.key).filter((k) => set.has(k));
+    return next.length ? `/category/${slug}?device=${next.join(",")}` : `/category/${slug}`;
+  };
 
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
@@ -130,6 +162,40 @@ export default async function CategoryPage({
       <h1>{fullName}</h1>
       <p className="cat-intro">{getCategoryIntro(slug, fullName.toLowerCase())}</p>
 
+      <div className="device-filter" aria-label={tc("filterHeading")}>
+        <span className="df-label">{tc("filterHeading")}</span>
+        <div className="df-chips">
+          {DEVICE_FILTERS.map((d) => {
+            const active = devices.includes(d.key);
+            const n = deviceCounts[d.key];
+            const labelKey = `device${d.key[0].toUpperCase()}${d.key.slice(1)}`;
+            return (
+              <Link
+                key={d.key}
+                href={deviceHref(d.key)}
+                className={`df-chip ${active ? "is-active" : ""}`}
+                aria-pressed={active}
+                scroll={false}
+              >
+                {tc(labelKey)}
+                <span className="df-count">{n}</span>
+              </Link>
+            );
+          })}
+          {devices.length > 0 && (
+            <Link href={`/category/${slug}`} className="df-clear" scroll={false}>
+              {tc("clear")}
+            </Link>
+          )}
+        </div>
+      </div>
+
+      {devices.length > 0 && (
+        <p className="filter-note">
+          {tc("showing", { count: games.length, total: allGames.length })}
+        </p>
+      )}
+
       <Adsterra variant="banner" />
 
       <div className="game-grid">
@@ -137,6 +203,8 @@ export default async function CategoryPage({
           <GameCard key={g.id} game={g} priority={safePage === 1 && i < 8} />
         ))}
       </div>
+
+      {pageGames.length === 0 && <p className="empty-note">{tc("noResults")}</p>}
 
       {totalPages > 1 && (
         <nav className="pagination" aria-label={tc("pagination")}>

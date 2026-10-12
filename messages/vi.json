@@ -26,7 +26,14 @@
     "pagination": "Phân trang",
     "prev": "Trước",
     "next": "Sau",
-    "relatedCategories": "Thể Loại Liên Quan"
+    "relatedCategories": "Thể Loại Liên Quan",
+    "filterHeading": "Chơi trên",
+    "deviceDesktop": "Máy tính & Web",
+    "deviceAndroid": "Android",
+    "deviceIOS": "iOS",
+    "clear": "Xóa",
+    "showing": "Đang hiển thị {count} trong {total} trò chơi",
+    "noResults": "Không có game nào khớp với bộ lọc này."
   },
   "game": {
     "playNow": "Chơi Ngay",
