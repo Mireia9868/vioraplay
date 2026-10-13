@@ -68,6 +68,7 @@ export default async function CategoriesPage({
         </div>
       </section>
       <CategoryDirectory categories={categories} labels={{heading: t("moreWays"), search: t("findCategory"), empty: t("noCategories"), resultCount: t("categoryMatches", {count: "{count}"})}} />
+      {locale === "en" && <section className="section"><h2>Learn a strategy game</h2><p><Link href="/guides/how-to-play-gomoku">How to play Gomoku: five-in-a-row rules and beginner tips</Link></p></section>}
     </div>
   );
 }

@@ -44,6 +44,9 @@ export interface GameIntent {
 }
 
 export const GAME_INTENTS: Record<string, GameIntent> = {
+  "arrow-exit-puzzle": { primary: "Arrow Puzzle Game Online" },
+  "arrow-cube-3d": { primary: "3D Arrow Puzzles" },
+  "2048-knights": { primary: "2048 Number Puzzle" },
   // Overlap with the game name is fine when it is the category term — "chess"
   // in a chess game title is what we want indexed. Avoid restating the whole
   // title: "Chess Online" for a game named "Chess Online Playing" adds nothing.

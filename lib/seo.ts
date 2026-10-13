@@ -23,10 +23,11 @@ export function absUrl(path: string): string {
  * x-default so Google knows which page to serve when no language matches.
  */
 export function buildLanguageAlternates(
-  pathFor: (locale: Locale) => string
+  pathFor: (locale: Locale) => string,
+  locales: readonly Locale[] = routing.locales
 ): Record<string, string> {
   const languages: Record<string, string> = {};
-  for (const locale of routing.locales) {
+  for (const locale of locales) {
     languages[locale] = pathFor(locale);
   }
   languages["x-default"] = pathFor(routing.defaultLocale);

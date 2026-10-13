@@ -72,7 +72,7 @@ export default async function LocaleLayout({
   const tSearch = await getTranslations("search");
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body>
         <NextIntlClientProvider messages={messages}>
           <header className="site-header">
@@ -84,7 +84,7 @@ export default async function LocaleLayout({
               placeholder={tSearch("placeholder")}
               label={tSearch("label")}
             />
-            <SiteNav labels={{home: tNav("home"), categories: tNav("categories"), search: tNav("search")}} />
+            <SiteNav labels={{home: tNav("home"), categories: tNav("categories"), language: tNav("language")}} />
           </header>
 
           <main className="site-main">{children}</main>

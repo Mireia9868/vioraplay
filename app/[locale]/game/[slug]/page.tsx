@@ -10,6 +10,9 @@ import {
   getGameHowToPlay,
 } from "@/lib/games";
 import { getGameContent } from "@/data/game-content";
+import { REGIONAL_GAME_CONTENT } from "@/data/regional-game-content";
+import { isNewLocale } from "@/data/regional-seo";
+import { routing } from "@/i18n/routing";
 import {
   getGameIntent,
   gameTitle,
@@ -50,21 +53,24 @@ export async function generateMetadata({
   // Titles are English-only source data, so only the site name suffix is
   // localized. Descriptions are long scraped blurbs and must be clipped or
   // Google truncates mid-sentence.
-  const content = getGameContent(slug);
+  const content = getGameContent(slug, locale);
   const description = content?.intro ?? truncateDescription(game.description, 155);
   const path = (l: string) => `/${l}/game/${game.slug}`;
   const intent = getGameIntent(slug);
 
   return {
     metadataBase,
-    title: gameTitle(game.title, intent),
+    title: REGIONAL_GAME_CONTENT[locale]?.[slug]?.title
+      ? `${REGIONAL_GAME_CONTENT[locale][slug].title} | VioraPlay` : gameTitle(game.title, intent),
     description,
     alternates: {
       canonical: path(locale),
-      languages: buildLanguageAlternates((l) => path(l)),
+      languages: buildLanguageAlternates((l) => path(l), routing.locales.filter(l => !isNewLocale(l) || Boolean(REGIONAL_GAME_CONTENT[l]?.[slug]))),
     },
+    robots: isNewLocale(locale) && !REGIONAL_GAME_CONTENT[locale]?.[slug]
+      ? { index: false, follow: true } : undefined,
     openGraph: {
-      title: gameOgTitle(game.title, intent),
+      title: REGIONAL_GAME_CONTENT[locale]?.[slug]?.title ?? gameOgTitle(game.title, intent),
       description,
       url: path(locale),
       type: "website" as const,
@@ -85,7 +91,7 @@ export default async function GamePage({
 
   const t = await getTranslations("game");
   const tn = await getTranslations("nav");
-  const content = getGameContent(slug);
+  const content = getGameContent(slug, locale);
   const related = getRelatedGames(game, 8);
   const catSlug = slugify(game.category);
   const catName = displayCategory(game.category);
