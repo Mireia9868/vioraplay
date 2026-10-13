@@ -64,7 +64,19 @@ async function main() {
       await handler(req,res);
       return {status:res.statusCode,html:Buffer.concat(chunks).toString('utf8')};
     };
-    const home = await get('/en'); assert.equal(home.status,200);
+    const homeResponse = await get('/en'); assert.equal(homeResponse.status,200);
+    // Verify the fresh prerendered artifact; route-cache may survive local preview runs.
+    const home = {html: fs.readFileSync(path.join(root, '.next/server/app/en.html'), 'utf8')};
+    for (const locale of ['en','id','pt','tr','vi']) {
+      const html = fs.readFileSync(path.join(root, `.next/server/app/${locale}/categories.html`), 'utf8');
+      assert.ok(html.includes('category-discovery-art.webp'));
+      assert.equal((html.match(/class="category-feature category-feature-/g)||[]).length, 6);
+      assert.ok(html.includes(`/${locale}/category/racing`) && html.includes(`/${locale}/category/strategy`));
+      assert.ok(html.includes('type="search"'));
+      assert.ok(!html.includes('categories.exploreLead'));
+    }
+    const manifest = JSON.parse(fs.readFileSync(path.join(root, '.next/prerender-manifest.json'), 'utf8'));
+    assert.ok(Object.keys(manifest.routes).filter(path=>path.includes('/game/')).length <= 60, 'Bounded game prerendering');
     assert.ok(home.html.includes('/vioraplay-logo-retro.png'));
     assert.equal((home.html.match(/role="search"/g)||[]).length,1, 'Single homepage search');
     assert.ok(home.html.includes('hero-gamer-scene.webp'), 'Hero uses the production character asset');
