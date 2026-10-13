@@ -76,6 +76,11 @@ export function buildLocaleSitemap(locale: Locale): MetadataRoute.Sitemap {
 
   // /search stays out: the page is noindex, and every ?q= variant would
   // otherwise be submitted here.
+  // This guide is currently English-only: no alternates for untranslated pages.
+  if (locale === "en") {
+    urls.push({ url: `${SITE_URL}/en/guides/how-to-play-gomoku`,
+      lastModified: new Date("2026-10-13T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 });
+  }
 
   /**
    * Thin categories are excluded, matching the noindex on the category page.

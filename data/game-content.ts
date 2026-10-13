@@ -26,6 +26,24 @@ export interface GameContent {
 }
 
 export const GAME_CONTENT: Record<string, GameContent> = {
+  "arrow-exit-puzzle": {
+    tags: ["arrows", "logic", "puzzle", "brain"],
+    intro: "Play Arrow Exit Puzzle online: clear the grid by choosing arrows with an unobstructed path. Plan the order before making your move.",
+    howToPlay: "Choose an arrow to move it in the direction it points. An obstacle blocks the arrow and costs one health point. Clear the arrows without losing all three health points.",
+    controls: "Click an arrow on desktop or tap it on mobile.",
+  },
+  "arrow-cube-3d": {
+    tags: ["arrows", "logic", "puzzle", "3d"],
+    intro: "Arrow Cube 3D is a spatial logic puzzle. Inspect the cube and remove arrows in an order that keeps each exit path clear.",
+    howToPlay: "Rotate the cube to inspect its sides. Select an arrow whose path is not blocked, then repeat until every arrow has left the cube.",
+    controls: "Tap or click an arrow to remove it when its path is clear.",
+  },
+  "2048-knights": {
+    tags: ["2048", "numbers", "puzzle", "merge"],
+    intro: "2048 Knights is a number-merging puzzle with stage targets. Slide equal numbered tiles together and reach the goal in fewer moves.",
+    howToPlay: "Slide all tiles in one direction. Equal numbers merge into a tile worth twice as much. Reach the goal shown for the stage and plan around obstacles in later levels.",
+    controls: "Swipe on mobile, or use arrow keys, WASD, or the on-screen pad.",
+  },
   "master-chess": {
     tags: ["chess", "strategy", "board", "two-player", "turn-based"],
     intro:

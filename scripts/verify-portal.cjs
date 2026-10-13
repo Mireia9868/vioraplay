@@ -105,6 +105,19 @@ async function main() {
       assert.ok(second.html.includes(`https://www.vioraplay.com/${locale}/categories`));
     }
     const game = await get('/en/game/master-chess');
+    const guide = await get('/en/guides/how-to-play-gomoku');
+    assert.equal(guide.status, 200);
+    assert.ok(guide.html.includes('How to Play Gomoku') && guide.html.includes('Gomoku is not currently in our playable catalog'));
+    assert.ok(guide.html.includes('href="https://www.vioraplay.com/en/guides/how-to-play-gomoku"'));
+    assert.equal((await get('/vi/guides/how-to-play-gomoku')).status, 404);
+    const puzzle = await get('/en/category/puzzle');
+    assert.ok(puzzle.html.includes('Free Online Puzzle Games') && puzzle.html.includes('Find your next online puzzle game'));
+    const filteredPuzzle = await get('/en/category/puzzle?device=ios');
+    assert.ok(!filteredPuzzle.html.includes('Find your next online puzzle game'));
+    const arrow = await get('/en/game/arrow-exit-puzzle');
+    assert.ok(arrow.html.includes('Arrow Puzzle Game Online') && arrow.html.includes('all three health points'));
+    assert.ok((await get('/sitemap-en')).html.includes('/en/guides/how-to-play-gomoku'));
+    assert.ok(!(await get('/sitemap-vi')).html.includes('/guides/how-to-play-gomoku'));
     assert.equal(game.status,200);
     assert.ok(game.html.includes('Move your pieces using standard chess rules'));
     assert.ok(game.html.includes('Fullscreen')&&game.html.includes('Reload'));

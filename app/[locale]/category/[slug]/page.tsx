@@ -17,6 +17,7 @@ import {
 import { GameCard } from "@/components/GameCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Adsterra } from "@/components/Adsterra";
+import { PuzzleSearchGuide } from "@/components/PuzzleSearchGuide";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
 
 type SearchParams = Record<string, string | string[] | undefined>;
@@ -71,7 +72,9 @@ export async function generateMetadata({
 
   return {
     metadataBase,
-    title: `${fullName} — Play Free Online | VioraPlay`,
+    title: locale === "en" && slug === "puzzle"
+      ? "Free Online Puzzle Games: Logic & Brain Puzzles | VioraPlay"
+      : `${fullName} — Play Free Online | VioraPlay`,
     description: getCategoryIntro(slug, fullName.toLowerCase()).replace(
       /\.$/,
       ""
@@ -159,7 +162,7 @@ export default async function CategoryPage({
         ]}
       />
 
-      <h1>{fullName}</h1>
+      <h1>{locale === "en" && slug === "puzzle" ? "Free Online Puzzle Games" : fullName}</h1>
       <p className="cat-intro">{getCategoryIntro(slug, fullName.toLowerCase())}</p>
 
       <div className="device-filter" aria-label={tc("filterHeading")}>
@@ -205,6 +208,8 @@ export default async function CategoryPage({
       </div>
 
       {pageGames.length === 0 && <p className="empty-note">{tc("noResults")}</p>}
+
+      {locale === "en" && slug === "puzzle" && safePage === 1 && devices.length === 0 && <PuzzleSearchGuide />}
 
       {totalPages > 1 && (
         <nav className="pagination" aria-label={tc("pagination")}>
