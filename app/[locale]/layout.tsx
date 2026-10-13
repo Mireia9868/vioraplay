@@ -7,6 +7,7 @@ import { routing, type Locale } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { Adsterra } from "@/components/Adsterra";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { SiteNav } from "@/components/SiteNav";
 import { SearchBar } from "@/components/SearchBar";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
 import "../globals.css";
@@ -83,11 +84,7 @@ export default async function LocaleLayout({
               placeholder={tSearch("placeholder")}
               label={tSearch("label")}
             />
-            <nav className="site-nav">
-              <Link href="/">{tNav("home")}</Link>
-              <Link href="/categories">{tNav("categories")}</Link>
-              <Link href="/search">{tNav("search")}</Link>
-            </nav>
+            <SiteNav labels={{home: tNav("home"), categories: tNav("categories"), search: tNav("search")}} />
           </header>
 
           <main className="site-main">{children}</main>

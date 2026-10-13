@@ -25,7 +25,16 @@
     "quickPicks": "Hızlı seçimler",
     "headlineLead": "Kısa molalar.",
     "headlineEnd": "Büyük eğlence.",
-    "editorialSubtitle": "Ücretsiz oyunlar, doğrudan tarayıcınızda."
+    "editorialSubtitle": "Ücretsiz oyunlar, doğrudan tarayıcınızda.",
+    "browseGames": "Tüm Oyunları Keşfet",
+    "benefitsLabel": "Neden VioraPlay",
+    "instantPlay": "Anında Oyna",
+    "instantPlayCopy": "İndirme yok, kurulum yok",
+    "freeGames": "%100 Ücretsiz",
+    "freeGamesCopy": "Doğrudan tarayıcında oyna",
+    "handpicked": "Özenle Seçilmiş Oyunlar",
+    "handpickedCopy": "Kalite ve eğlence için seçildi",
+    "viewCategories": "Tüm kategorileri gör"
   },
   "categories": {
     "title": "Oyun Kategorileri",

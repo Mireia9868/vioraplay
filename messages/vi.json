@@ -25,7 +25,16 @@
     "quickPicks": "Chọn nhanh",
     "headlineLead": "Nghỉ một chút.",
     "headlineEnd": "Vui thật nhiều.",
-    "editorialSubtitle": "Game miễn phí, ngay trên trình duyệt."
+    "editorialSubtitle": "Game miễn phí, ngay trên trình duyệt.",
+    "browseGames": "Khám phá tất cả trò chơi",
+    "benefitsLabel": "Vì sao chơi tại VioraPlay",
+    "instantPlay": "Chơi ngay",
+    "instantPlayCopy": "Không tải xuống, không cài đặt",
+    "freeGames": "Miễn phí 100%",
+    "freeGamesCopy": "Chơi trực tiếp trên trình duyệt",
+    "handpicked": "Trò chơi chọn lọc",
+    "handpickedCopy": "Được chọn vì chất lượng và niềm vui",
+    "viewCategories": "Xem mọi thể loại"
   },
   "categories": {
     "title": "Thể Loại Game",

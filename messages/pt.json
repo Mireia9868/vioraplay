@@ -25,7 +25,16 @@
     "quickPicks": "Escolhas rápidas",
     "headlineLead": "Pequenas pausas.",
     "headlineEnd": "Grande diversão.",
-    "editorialSubtitle": "Jogos grátis, direto no seu navegador."
+    "editorialSubtitle": "Jogos grátis, direto no seu navegador.",
+    "browseGames": "Explorar todos os jogos",
+    "benefitsLabel": "Por que jogar no VioraPlay",
+    "instantPlay": "Jogue na hora",
+    "instantPlayCopy": "Sem download, sem instalação",
+    "freeGames": "100% grátis",
+    "freeGamesCopy": "Jogue diretamente no navegador",
+    "handpicked": "Jogos selecionados",
+    "handpickedCopy": "Selecionados pela qualidade e diversão",
+    "viewCategories": "Ver todas as categorias"
   },
   "categories": {
     "title": "Categorias de Jogos",

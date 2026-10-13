@@ -25,7 +25,16 @@
     "quickPicks": "Pilihan cepat",
     "headlineLead": "Istirahat singkat.",
     "headlineEnd": "Seru maksimal.",
-    "editorialSubtitle": "Game gratis, langsung dari browser Anda."
+    "editorialSubtitle": "Game gratis, langsung dari browser Anda.",
+    "browseGames": "Jelajahi Semua Game",
+    "benefitsLabel": "Mengapa bermain di VioraPlay",
+    "instantPlay": "Langsung Main",
+    "instantPlayCopy": "Tanpa unduhan, tanpa instalasi",
+    "freeGames": "100% Gratis",
+    "freeGamesCopy": "Main langsung di browser",
+    "handpicked": "Game Pilihan",
+    "handpickedCopy": "Dipilih untuk kualitas dan keseruan",
+    "viewCategories": "Lihat semua kategori"
   },
   "categories": {
     "title": "Kategori Game",

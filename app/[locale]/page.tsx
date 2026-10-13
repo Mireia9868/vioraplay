@@ -8,6 +8,7 @@ import {
 import { GameCard } from "@/components/GameCard";
 import { PersonalGames } from "@/components/PersonalGames";
 import { Link } from "@/i18n/navigation";
+import { PortalIcon } from "@/components/PortalIcon";
 import { Adsterra } from "@/components/Adsterra";
 
 export default async function HomePage({
@@ -24,9 +25,9 @@ export default async function HomePage({
   // Hand-curated selection (NOT a popularity ranking — the catalog has no
   // real play-count data, so we never fake "Top/Hot"). See FEATURED_SLUGS.
   const featured = getFeaturedGames(12);
-  const spotlights = [featured.find(g => g.slug === "moto-x3m"), featured.find(g => g.slug === "master-chess")].filter((g): g is NonNullable<typeof g> => Boolean(g));
+  const spotlights = ["moto-x3m", "master-chess", "brain-test-iq-challenge", "fruit-slicer"].map(slug => allGames.find(g => g.slug === slug)).filter((g): g is NonNullable<typeof g> => Boolean(g));
   const quickPicks = featured.filter(g => !spotlights.some(s => s.slug === g.slug));
-  const featuredSlugs = new Set(featured.map((g) => g.slug));
+  const featuredSlugs = new Set([...featured, ...spotlights].map((g) => g.slug));
   // Sample of the wider catalog, excluding the curated tiles above.
   const more = allGames.filter((g) => !featuredSlugs.has(g.slug)).slice(0, 48);
 
@@ -48,15 +49,17 @@ export default async function HomePage({
         <div className="hero-copy">
           <h1><span>{t("headlineLead")}</span><span>{t("headlineEnd")}</span></h1>
           <p className="hero-sub">{t("editorialSubtitle")}</p>
+          <Link href="/categories" className="hero-cta" prefetch={false}><PortalIcon name="gamepad" /><span>{t("browseGames")}</span><span aria-hidden="true">→</span></Link>
         </div>
         <div className="hero-side">
           <div className="hero-art" aria-hidden="true">
-            <span className="hero-burst" />
-            <span className="hero-confetti hero-confetti-left" />
-            <span className="hero-confetti hero-confetti-right" />
-            <Image src="/hero-gamer.png" alt="" width={1536} height={1024} sizes="(max-width: 720px) 220px, (max-width: 1000px) 320px, 420px" priority />
+            <Image src="/hero-gamer-scene.webp" alt="" width={1536} height={630} sizes="(max-width: 720px) 92vw, (max-width: 1000px) 52vw, 820px" priority />
           </div>
         </div>
+      </section>
+
+      <section className="benefits" aria-label={t("benefitsLabel")}>
+        {[{icon: "bolt", title: "instantPlay", copy: "instantPlayCopy"}, {icon: "gamepad", title: "freeGames", copy: "freeGamesCopy"}, {icon: "heart", title: "handpicked", copy: "handpickedCopy"}].map(item => <div className="benefit" key={item.title}><span className="benefit-icon"><PortalIcon name={item.icon} /></span><div><h2>{t(item.title)}</h2><p>{t(item.copy)}</p></div></div>)}
       </section>
 
       <section className="section spotlight-section">
@@ -75,12 +78,12 @@ export default async function HomePage({
       </section>
 
       <section className="section mood-section">
-        <div className="section-head"><h2>{t("browseByCategory")}</h2></div>
+        <div className="section-head"><h2>{t("browseByCategory")}</h2><Link href="/categories" className="section-more">{t("viewCategories")} <span aria-hidden="true">↗</span></Link></div>
         <div className="mood-grid">
-          {["racing", "puzzle", "arcade", "action"].map((slug, i) => {
+          {["racing", "puzzle", "arcade", "action", "sports", "strategy"].map((slug, i) => {
             const category = categories.find(c => c.slug === slug);
             return category && <Link key={slug} href={`/category/${slug}`} className={`mood-card mood-${i}`}>
-              <span className="mood-icon" aria-hidden="true">{["⚑", "✚", "◕", "✹"][i]}</span>
+              <span className="mood-icon"><PortalIcon name={slug} /></span>
               <span>{category.name}</span><span className="mood-arrow" aria-hidden="true">↗</span>
             </Link>;
           })}
