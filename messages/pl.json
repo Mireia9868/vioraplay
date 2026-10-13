@@ -1,0 +1,123 @@
+{
+  "common": {
+    "siteName": "VioraPlay"
+  },
+  "nav": {
+    "home": "Strona główna",
+    "categories": "Kategorie",
+    "search": "Szukaj",
+    "language": "Język"
+  },
+  "home": {
+    "title": "Darmowe gry online",
+    "subtitle": "Graj w przeglądarce bez pobierania i instalacji.",
+    "featured": "Polecane gry",
+    "browseByCategory": "Przeglądaj kategorie",
+    "allGames": "Wszystkie gry",
+    "playFree": "Graj za darmo",
+    "searchPlaceholder": "Szukaj wśród ponad 2400 gier...",
+    "searchLabel": "Szukaj gier",
+    "browseAll": "Wszystkie kategorie",
+    "popularCategories": "Popularne kategorie",
+    "moreGames": "Więcej gier",
+    "recentlyVisited": "Ostatnio odwiedzone",
+    "headline": "Mała przerwa. Wielka frajda.",
+    "editorsPicks": "Wybór redakcji",
+    "quickPicks": "Na szybką rozgrywkę",
+    "headlineLead": "Mała przerwa.",
+    "headlineEnd": "Wielka frajda.",
+    "editorialSubtitle": "Darmowe gry prosto w przeglądarce.",
+    "browseGames": "Przeglądaj wszystkie gry",
+    "benefitsLabel": "Dlaczego warto grać na VioraPlay",
+    "instantPlay": "Graj od razu",
+    "instantPlayCopy": "Bez pobierania i instalacji",
+    "freeGames": "100% za darmo",
+    "freeGamesCopy": "Graj bezpośrednio w przeglądarce",
+    "handpicked": "Wybrane gry",
+    "handpickedCopy": "Wybrane z myślą o jakości i zabawie",
+    "viewCategories": "Zobacz wszystkie kategorie"
+  },
+  "categories": {
+    "title": "Kategorie gier",
+    "pagination": "Strony",
+    "prev": "Poprzednia",
+    "next": "Następna",
+    "relatedCategories": "Powiązane kategorie",
+    "filterHeading": "Graj na",
+    "deviceDesktop": "Komputer i przeglądarka",
+    "deviceAndroid": "Android",
+    "deviceIOS": "iOS",
+    "clear": "Wyczyść",
+    "showing": "Wyświetlono {count} z {total} gier",
+    "noResults": "Brak gier dla tego filtra.",
+    "exploreEyebrow": "WYBIERZ SWOJĄ ZABAWĘ",
+    "exploreLead": "Gra na",
+    "exploreEnd": "każdy nastrój.",
+    "exploreSubtitle": "Przygody i łamigłówki. Tutaj zaczyna się Twoja przerwa.",
+    "startFavorite": "Zacznij od ulubionej kategorii",
+    "pickCategory": "Wybierz kategorię",
+    "gameCount": "{count} gier",
+    "moreWays": "Więcej sposobów na grę",
+    "findCategory": "Szukaj kategorii...",
+    "noCategories": "Nie znaleziono kategorii. Spróbuj innej nazwy.",
+    "categoryMatches": "Znaleziono {count} kategorii",
+    "intro_racing": "Szybkie trasy. Wielkie emocje.",
+    "intro_puzzle": "Wyzwanie dla umysłu.",
+    "intro_arcade": "Jeszcze jedna runda?",
+    "intro_action": "Wskocz do akcji.",
+    "intro_sports": "Twoje kolejne zwycięstwo.",
+    "intro_strategy": "Planuj i graj z głową."
+  },
+  "game": {
+    "playNow": "Graj teraz",
+    "backHome": "Wróć na stronę główną",
+    "youMightLike": "Może Ci się spodobać",
+    "about": "O tej grze",
+    "howToPlay": "Jak grać",
+    "controls": "Sterowanie",
+    "fullscreen": "Pełny ekran",
+    "reload": "Wczytaj ponownie",
+    "loading": "Ładowanie gry…",
+    "adNote": "Reklamy i ekrany ładowania w grze pochodzą od dostawcy.",
+    "availableOn": "Dostępne na",
+    "exitFullscreen": "Wyjdź z pełnego ekranu",
+    "fullscreenFallback": "Przeglądarka nie włączyła pełnego ekranu. Wyświetlono widok powiększony; użyj przycisku wyjścia, aby wrócić.",
+    "slowLoading": "Dostawca ładuje grę dłużej. Możesz poczekać lub wczytać ją ponownie."
+  },
+  "search": {
+    "title": "Szukaj gier",
+    "placeholder": "Szukaj gier...",
+    "submit": "Szukaj",
+    "resultsFor": "Wyniki dla",
+    "noResults": "Nie znaleziono gier.",
+    "noQuery": "Wpisz nazwę gry.",
+    "label": "Szukaj gier"
+  },
+  "meta": {
+    "homeTitle": "VioraPlay — Darmowe gry online bez pobierania",
+    "homeDescription": "Graj za darmo w przeglądarce. Gry logiczne, wyścigi, akcja i strategia bez pobierania i instalacji.",
+    "siteName": "VioraPlay",
+    "categoriesTitle": "Kategorie darmowych gier online | VioraPlay",
+    "categoriesDescription": "Przeglądaj gry logiczne, wyścigowe, zręcznościowe i inne. Wybierz grę i graj za darmo w przeglądarce.",
+    "searchTitle": "Szukaj gier | VioraPlay",
+    "searchDescription": "Znajdź darmowe gry przeglądarkowe bez pobierania i instalacji."
+  },
+  "footer": {
+    "label": "Informacje o stronie",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "privacy": "Prywatność",
+    "terms": "Warunki"
+  },
+  "favorites": {
+    "title": "Ulubione",
+    "add": "Dodaj do ulubionych",
+    "remove": "Usuń z ulubionych"
+  },
+  "info": {
+    "about": "VioraPlay to katalog gier przeglądarkowych. Gry są osadzane przez Playgama; VioraPlay zapewnia nawigację, wyszukiwanie, rekomendacje i ulubione zapisywane w przeglądarce.",
+    "contact": "Błędne linki i problemy ze stroną zgłaszaj w repozytorium GitHub. Nie publikuj haseł, danych płatniczych ani prywatnych informacji.",
+    "privacy": "Ulubione i ostatnio odwiedzone gry są przechowywane lokalnie w przeglądarce, bez konta VioraPlay. Usunięcie danych strony usuwa te wpisy. Korzystamy z Google Analytics do pomiaru wizyt i interakcji. Osadzone gry łączą się z Playgama i mogą wyświetlać reklamy lub używać pamięci zgodnie z polityką dostawcy. VioraPlay nie może odczytywać zawartości ramek z innych domen.",
+    "terms": "Gry działają u zewnętrznych dostawców i mogą zawierać reklamy. Dostępność, zasady i usługi w grze zależą od dostawcy. Szanuj prawa twórców i korzystaj ze strony zgodnie z prawem. Ponowne wczytanie może usunąć niezapisany postęp."
+  }
+}

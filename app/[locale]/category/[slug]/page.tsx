@@ -18,6 +18,8 @@ import { GameCard } from "@/components/GameCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Adsterra } from "@/components/Adsterra";
 import { PuzzleSearchGuide } from "@/components/PuzzleSearchGuide";
+import { PUZZLE_SEO, isNewLocale } from "@/data/regional-seo";
+import { routing } from "@/i18n/routing";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
 
 type SearchParams = Record<string, string | string[] | undefined>;
@@ -61,6 +63,7 @@ export async function generateMetadata({
   const cat = getCategoryBySlug(slug);
   const fullName = cat?.fullName ?? categoryFullName(games[0].category);
   const count = games.length;
+  const puzzleCopy = slug === "puzzle" ? PUZZLE_SEO[locale] : undefined;
   const deviceQs = devices.length ? `device=${devices.join(",")}` : "";
   const path = (l: string) => {
     const parts: string[] = [];
@@ -72,26 +75,24 @@ export async function generateMetadata({
 
   return {
     metadataBase,
-    title: locale === "en" && slug === "puzzle"
-      ? "Free Online Puzzle Games: Logic & Brain Puzzles | VioraPlay"
-      : `${fullName} — Play Free Online | VioraPlay`,
-    description: getCategoryIntro(slug, fullName.toLowerCase()).replace(
+    title: puzzleCopy?.title ?? `${fullName} — Play Free Online | VioraPlay`,
+    description: puzzleCopy?.description ?? getCategoryIntro(slug, fullName.toLowerCase()).replace(
       /\.$/,
       ""
     ) + ` Browse ${count} free ${fullName.toLowerCase()} — no download, instant play.`,
     alternates: {
       canonical: path(locale),
-      languages: buildLanguageAlternates((l) => path(l)),
+      languages: buildLanguageAlternates((l) => path(l), routing.locales.filter(l => slug === "puzzle" || !isNewLocale(l))),
     },
     // Deeper pages and device-filtered views: crawlable but out of the index.
     // Thin categories: same, for the reason documented on MIN_INDEXABLE_GAMES.
     robots:
-      page > 1 || devices.length > 0 || count < MIN_INDEXABLE_GAMES
+      page > 1 || devices.length > 0 || count < MIN_INDEXABLE_GAMES || (isNewLocale(locale) && !puzzleCopy)
         ? { index: false, follow: true }
         : undefined,
     openGraph: {
-      title: `${fullName} — Play Free Online`,
-      description: `Play ${count} free ${fullName.toLowerCase()} online. No download, no install.`,
+      title: puzzleCopy?.name ?? `${fullName} — Play Free Online`,
+      description: puzzleCopy?.description ?? `Play ${count} free ${fullName.toLowerCase()} online. No download, no install.`,
       url: path(locale),
       type: "website" as const,
     },
@@ -117,6 +118,7 @@ export default async function CategoryPage({
 
   const cat = getCategoryBySlug(slug);
   const fullName = cat?.fullName ?? categoryFullName(allGames[0].category);
+  const puzzleCopy = slug === "puzzle" ? PUZZLE_SEO[locale] : undefined;
 
   const devices = parseDeviceParam(sp?.device);
   const games = devices.length ? filterGamesByDevices(allGames, devices) : allGames;
@@ -158,12 +160,12 @@ export default async function CategoryPage({
         items={[
           { label: tn("home"), href: "/" },
           { label: tn("categories"), href: "/categories" },
-          { label: fullName, href: `/category/${slug}` },
+          { label: puzzleCopy?.name ?? fullName, href: `/category/${slug}` },
         ]}
       />
 
-      <h1>{locale === "en" && slug === "puzzle" ? "Free Online Puzzle Games" : fullName}</h1>
-      <p className="cat-intro">{getCategoryIntro(slug, fullName.toLowerCase())}</p>
+      <h1>{puzzleCopy?.name ?? fullName}</h1>
+      <p className="cat-intro">{puzzleCopy?.intro ?? getCategoryIntro(slug, fullName.toLowerCase())}</p>
 
       <div className="device-filter" aria-label={tc("filterHeading")}>
         <span className="df-label">{tc("filterHeading")}</span>
@@ -209,7 +211,7 @@ export default async function CategoryPage({
 
       {pageGames.length === 0 && <p className="empty-note">{tc("noResults")}</p>}
 
-      {locale === "en" && slug === "puzzle" && safePage === 1 && devices.length === 0 && <PuzzleSearchGuide />}
+      {slug === "puzzle" && safePage === 1 && devices.length === 0 && <PuzzleSearchGuide locale={locale} />}
 
       {totalPages > 1 && (
         <nav className="pagination" aria-label={tc("pagination")}>

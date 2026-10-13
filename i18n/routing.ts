@@ -1,8 +1,8 @@
 import { defineRouting } from "next-intl/routing";
 
-// MVP target markets: non-English high-volume (ID/BR/TR/VI) + EN placeholder.
+// Language versions: country priorities are measured separately in GSC/revenue.
 export const routing = defineRouting({
-  locales: ["en", "id", "pt", "tr", "vi"],
+  locales: ["en", "id", "pt", "tr", "vi", "es", "pl", "ar"],
   defaultLocale: "en",
 });
 

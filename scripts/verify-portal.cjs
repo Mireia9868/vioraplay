@@ -25,6 +25,7 @@ function load(file) {
   return exports;
 }
 async function main() {
+  const locales = Array.from(load('i18n/routing.ts').routing.locales);
   const games = load('lib/games.ts');
   const related = games.getRelatedGames(games.getGameBySlug('master-chess'));
   assert.equal(related.length,8);
@@ -34,7 +35,7 @@ async function main() {
   const content = load('data/game-content.ts').GAME_CONTENT;
   assert.ok(Object.keys(content).length >= 30, 'At least 30 curated entries');
   for (const slug of Object.keys(content)) assert.ok(games.getGameBySlug(slug), `Curated game exists: ${slug}`);
-  for (const locale of ['en','id','pt','tr','vi']) {
+  for (const locale of locales) {
     const messages = load(`messages/${locale}.json`);
     for (const key of ['pagination','next','prev','relatedCategories']) assert.ok(messages.categories[key]);
     assert.ok(messages.game.fullscreenFallback);
@@ -67,7 +68,7 @@ async function main() {
     const homeResponse = await get('/en'); assert.equal(homeResponse.status,200);
     // Verify the fresh prerendered artifact; route-cache may survive local preview runs.
     const home = {html: fs.readFileSync(path.join(root, '.next/server/app/en.html'), 'utf8')};
-    for (const locale of ['en','id','pt','tr','vi']) {
+    for (const locale of locales) {
       const html = fs.readFileSync(path.join(root, `.next/server/app/${locale}/categories.html`), 'utf8');
       assert.ok(html.includes('category-discovery-art.webp'));
       assert.equal((html.match(/class="category-feature category-feature-/g)||[]).length, 6);
@@ -76,7 +77,7 @@ async function main() {
       assert.ok(!html.includes('categories.exploreLead'));
     }
     const manifest = JSON.parse(fs.readFileSync(path.join(root, '.next/prerender-manifest.json'), 'utf8'));
-    assert.ok(Object.keys(manifest.routes).filter(path=>path.includes('/game/')).length <= 60, 'Bounded game prerendering');
+    assert.ok(Object.keys(manifest.routes).filter(path=>path.includes('/game/')).length <= locales.length * 12, 'Bounded game prerendering');
     assert.ok(home.html.includes('/vioraplay-logo-retro.png'));
     assert.equal((home.html.match(/role="search"/g)||[]).length,1, 'Single homepage search');
     assert.ok(home.html.includes('hero-gamer-scene.webp'), 'Hero uses the production character asset');
@@ -91,7 +92,7 @@ async function main() {
     assert.equal((home.html.match(/class="benefit"/g)||[]).length, 3, 'Three real benefits');
     assert.ok(home.html.includes('Browse All Games') && home.html.includes('fruit-slicer'));
     assert.ok(!home.html.includes('Join the enchanting world of Piece of Cake'), 'Raw descriptions do not enter the home payload');
-    for(const locale of ['en','id','pt','tr','vi']) {
+    for(const locale of locales) {
       const first=await get(`/${locale}/category/puzzle`);
       const second=await get(`/${locale}/category/puzzle?page=2`);
       const refresh=await get(`/${locale}/category/puzzle?page=2`);
@@ -118,6 +119,31 @@ async function main() {
     assert.ok(arrow.html.includes('Arrow Puzzle Game Online') && arrow.html.includes('all three health points'));
     assert.ok((await get('/sitemap-en')).html.includes('/en/guides/how-to-play-gomoku'));
     assert.ok(!(await get('/sitemap-vi')).html.includes('/guides/how-to-play-gomoku'));
+    for (const locale of locales) {
+      const localizedHome = await get(`/${locale}`);
+      assert.equal(localizedHome.status, 200);
+      assert.ok(localizedHome.html.includes('class="language-switcher"'));
+      for (const target of locales) assert.ok(localizedHome.html.includes(`href="/${target}"`), `Language link ${target} on ${locale}`);
+      const localizedPuzzle = await get(`/${locale}/category/puzzle`);
+      const copy = load('data/regional-seo.ts').PUZZLE_SEO[locale];
+      assert.ok(localizedPuzzle.html.includes(copy.title.replace(/&/g, '&amp;')) && localizedPuzzle.html.includes(copy.heading), `Localized puzzle copy: ${locale}`);
+      assert.ok(localizedPuzzle.html.includes(`href="https://www.vioraplay.com/${locale}/category/puzzle"`));
+      assert.equal((await get(`/sitemap-${locale}`)).status, 200);
+    }
+    const arabic = await get('/ar');
+    assert.ok(arabic.html.includes('lang="ar" dir="rtl"'));
+    for (const locale of ['pt', 'es', 'pl', 'ar']) {
+      const translatedGame = await get(`/${locale}/game/arrow-exit-puzzle`);
+      assert.equal(translatedGame.status, 200);
+      assert.ok(translatedGame.html.includes(load('data/regional-game-content.ts').REGIONAL_GAME_CONTENT[locale]['arrow-exit-puzzle'].intro));
+    }
+    for (const locale of ['es', 'pl', 'ar']) {
+      const untranslated = await get(`/${locale}/game/master-chess`);
+      assert.ok(untranslated.html.includes('content="noindex, follow"'));
+      const regionalSitemap = await get(`/sitemap-${locale}`);
+      assert.ok(regionalSitemap.html.includes(`/game/arrow-exit-puzzle`));
+      assert.ok(!regionalSitemap.html.includes('/game/master-chess') && !regionalSitemap.html.includes('/category/racing'));
+    }
     assert.equal(game.status,200);
     assert.ok(game.html.includes('Move your pieces using standard chess rules'));
     assert.ok(game.html.includes('Fullscreen')&&game.html.includes('Reload'));

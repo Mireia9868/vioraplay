@@ -13,6 +13,6 @@ export const config = {
    * sitemap routes are served at the root and must not be locale-prefixed.
    */
   matcher: [
-    "/((?!api|_next|_vercel|sitemap-en|sitemap-id|sitemap-pt|sitemap-tr|sitemap-vi|robots\\.txt|sitemap\\.xml|llms\\.txt|.*\\..*).*)",
+    "/((?!api|_next|_vercel|sitemap-en|sitemap-id|sitemap-pt|sitemap-tr|sitemap-vi|sitemap-es|sitemap-pl|sitemap-ar|robots\\.txt|sitemap\\.xml|llms\\.txt|.*\\..*).*)",
   ],
 };

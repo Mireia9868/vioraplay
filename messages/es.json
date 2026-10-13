@@ -1,0 +1,123 @@
+{
+  "common": {
+    "siteName": "VioraPlay"
+  },
+  "nav": {
+    "home": "Inicio",
+    "categories": "Categorías",
+    "search": "Buscar",
+    "language": "Idioma"
+  },
+  "home": {
+    "title": "Juegos gratis online",
+    "subtitle": "Juega en el navegador, sin descargar ni instalar.",
+    "featured": "Juegos destacados",
+    "browseByCategory": "Explorar por categoría",
+    "allGames": "Todos los juegos",
+    "playFree": "Jugar gratis",
+    "searchPlaceholder": "Buscar entre más de 2400 juegos...",
+    "searchLabel": "Buscar juegos",
+    "browseAll": "Todas las categorías",
+    "popularCategories": "Explorar categorías populares",
+    "moreGames": "Más juegos",
+    "recentlyVisited": "Visitados recientemente",
+    "headline": "Una pausa. Mucha diversión.",
+    "editorsPicks": "Selección editorial",
+    "quickPicks": "Para una partida rápida",
+    "headlineLead": "Una pausa.",
+    "headlineEnd": "Mucha diversión.",
+    "editorialSubtitle": "Juegos gratis, directamente en tu navegador.",
+    "browseGames": "Explorar todos los juegos",
+    "benefitsLabel": "Por qué jugar en VioraPlay",
+    "instantPlay": "Juega al instante",
+    "instantPlayCopy": "Sin descargas ni instalaciones",
+    "freeGames": "100 % gratis",
+    "freeGamesCopy": "Juega directamente en tu navegador",
+    "handpicked": "Juegos seleccionados",
+    "handpickedCopy": "Elegidos por su calidad y diversión",
+    "viewCategories": "Ver todas las categorías"
+  },
+  "categories": {
+    "title": "Categorías de juegos",
+    "pagination": "Paginación",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "relatedCategories": "Categorías relacionadas",
+    "filterHeading": "Jugar en",
+    "deviceDesktop": "Ordenador y web",
+    "deviceAndroid": "Android",
+    "deviceIOS": "iOS",
+    "clear": "Quitar filtros",
+    "showing": "Mostrando {count} de {total} juegos",
+    "noResults": "No hay juegos con este filtro.",
+    "exploreEyebrow": "ELIGE TU DIVERSIÓN",
+    "exploreLead": "Un juego para",
+    "exploreEnd": "cada momento.",
+    "exploreSubtitle": "Aventuras y desafíos de lógica. Tu próxima pausa empieza aquí.",
+    "startFavorite": "Empieza por un favorito",
+    "pickCategory": "Elige una categoría",
+    "gameCount": "{count} juegos",
+    "moreWays": "Más formas de jugar",
+    "findCategory": "Buscar categoría...",
+    "noCategories": "No hay categorías. Prueba otro nombre.",
+    "categoryMatches": "{count} categorías encontradas",
+    "intro_racing": "Velocidad y emoción.",
+    "intro_puzzle": "Un reto para tu mente.",
+    "intro_arcade": "¿Otra partida? Claro.",
+    "intro_action": "Entra en acción.",
+    "intro_sports": "Tu próxima victoria.",
+    "intro_strategy": "Planifica y juega con estrategia."
+  },
+  "game": {
+    "playNow": "Jugar ahora",
+    "backHome": "Volver al inicio",
+    "youMightLike": "También te puede gustar",
+    "about": "Sobre este juego",
+    "howToPlay": "Cómo jugar",
+    "controls": "Controles",
+    "fullscreen": "Pantalla completa",
+    "reload": "Recargar",
+    "loading": "Cargando juego…",
+    "adNote": "Los anuncios y pantallas de carga del juego dependen del proveedor.",
+    "availableOn": "Disponible en",
+    "exitFullscreen": "Salir de pantalla completa",
+    "fullscreenFallback": "Tu navegador no pudo activar la pantalla completa. Se muestra una vista ampliada; usa el botón de salir para volver.",
+    "slowLoading": "El proveedor tarda en cargar. Puedes esperar o recargar el juego."
+  },
+  "search": {
+    "title": "Buscar juegos",
+    "placeholder": "Buscar juegos...",
+    "submit": "Buscar",
+    "resultsFor": "Resultados para",
+    "noResults": "No se encontraron juegos.",
+    "noQuery": "Escribe el nombre de un juego.",
+    "label": "Buscar juegos"
+  },
+  "meta": {
+    "homeTitle": "VioraPlay — Juegos gratis online sin descargar",
+    "homeDescription": "Juega gratis en tu navegador: juegos de lógica, acción, carreras y estrategia. Sin descargar ni instalar.",
+    "siteName": "VioraPlay",
+    "categoriesTitle": "Categorías de juegos gratis online | VioraPlay",
+    "categoriesDescription": "Explora juegos de lógica, acción, carreras y más. Elige un juego y juega gratis en el navegador.",
+    "searchTitle": "Buscar juegos | VioraPlay",
+    "searchDescription": "Encuentra juegos gratis para jugar en el navegador, sin descargas ni instalaciones."
+  },
+  "footer": {
+    "label": "Información del sitio",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "favorites": {
+    "title": "Favoritos",
+    "add": "Añadir a favoritos",
+    "remove": "Quitar de favoritos"
+  },
+  "info": {
+    "about": "VioraPlay es un catálogo de juegos de navegador. Los juegos se ofrecen mediante contenido de Playgama; VioraPlay proporciona navegación, búsqueda, recomendaciones y favoritos guardados en el navegador.",
+    "contact": "Para enlaces rotos o problemas del sitio, usa las incidencias de nuestro repositorio de GitHub. No publiques contraseñas, datos de pago ni información privada.",
+    "privacy": "Los favoritos y juegos recientes se guardan en este navegador, sin cuenta de VioraPlay. Borrar los datos del sitio elimina estos registros. Usamos Google Analytics para medir visitas e interacciones. Los juegos integrados conectan con Playgama y pueden mostrar anuncios o usar almacenamiento según las políticas del proveedor. VioraPlay no puede leer el contenido de los marcos de otros dominios.",
+    "terms": "Los juegos dependen de terceros y pueden mostrar anuncios. Su disponibilidad, reglas y servicios dependen del proveedor. Respeta los derechos de los creadores y usa el sitio legalmente. Recargar puede borrar el progreso que el proveedor no haya guardado."
+  }
+}

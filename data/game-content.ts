@@ -14,6 +14,8 @@
  * Keyed by game slug (stable, from data/games.json).
  */
 
+import { REGIONAL_GAME_CONTENT } from "@/data/regional-game-content";
+
 export interface GameContent {
   /** Curated gameplay tags for related-game matching. */
   tags: string[];
@@ -311,7 +313,9 @@ export const FEATURED_SLUGS: string[] = [
   "crosswords-big-collection",
 ];
 
-export function getGameContent(slug: string): GameContent | undefined {
-  return GAME_CONTENT[slug];
+export function getGameContent(slug: string, locale = "en"): GameContent | undefined {
+  const base = GAME_CONTENT[slug];
+  const localized = REGIONAL_GAME_CONTENT[locale]?.[slug];
+  return base && localized ? { ...base, ...localized } : base;
 }
 
