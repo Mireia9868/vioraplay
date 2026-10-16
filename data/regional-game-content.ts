@@ -1,4 +1,4 @@
-export const REGIONAL_GAME_CONTENT: Record<string, Record<string, { title: string; intro: string; howToPlay: string; controls: string }>> = {
+export const REGIONAL_GAME_CONTENT: Record<string, Record<string, { title: string; intro: string; howToPlay?: string; controls?: string }>> = {
   "pt": {
     "arrow-exit-puzzle": {
       "title": "Puzzle de setas online — Arrow Exit Puzzle",
@@ -17,8 +17,47 @@ export const REGIONAL_GAME_CONTENT: Record<string, Record<string, { title: strin
       "intro": "2048 Knights combina números em um puzzle com metas por fase. Deslize peças iguais e alcance a meta com menos movimentos.",
       "howToPlay": "Deslize as peças em uma direção. Números iguais se juntam e dobram de valor. Alcance a meta da fase e planeje os movimentos ao redor dos obstáculos.",
       "controls": "Deslize no celular ou use as setas, WASD ou o controle na tela."
-    }
-  },
+    },
+    "geometry-dash-infinity": {
+      "title": "Geometry Dash: Infinity - Jogo de Ritmo Online",
+      "intro": "Geometry Dash: Infinity e um runner de ritmo onde voce pula e voa por circuitos de obstaculos sincronizados com a musica.",
+    },
+    "supa-tic-tac-toe": {
+      "title": "Jogue Tic Tac Toe Online - Supa Tic Tac Toe",
+      "intro": "Supa Tic Tac Toe e o classico jogo da velha no navegador - alinhe tres para vencer.",
+    },
+    "block-blast-2048": {
+      "title": "Block Blast 2048 - Puzzle de Blocos Online",
+      "intro": "Block Blast 2048 mistura quebra-cabecas de blocos com fusao de numeros em um unico tabuleiro.",
+    },
+    "ludo-legend": {
+      "title": "Jogue Ludo Online - Ludo Legend",
+      "intro": "Ludo Legend e o classico jogo de tabuleiro onde voce corre com suas pecas ate a casa final.",
+    },
+    "mahjong-classic": {
+      "title": "Jogue Mahjong Online - Mahjong Classic",
+      "intro": "Mahjong Classic e o jogo de solitario de ladrilhos onde voce limpa o tabuleiro combinando pecas livres.",
+    },
+    "plants-vs-zombies-fusion-edition": {
+      "title": "Plants vs Zombies Fusion - Jogo de Defesa Online",
+      "intro": "Plants vs Zombies Fusion Edition e um jogo de tower defense onde voce planta defesas para parar zumbis.",
+    },
+    "moto-traffic-rider": {
+      "title": "Moto Traffic Rider - Jogo de Moto Online",
+      "intro": "Moto Traffic Rider e um jogo de moto onde voce zigzagueia entre o transito em alta velocidade.",
+    },
+    "basket-random": {
+      "title": "Basket Random - Jogo de Basquete Online",
+      "intro": "Basket Random e um jogo de basquete com fisica divertida e movimentos imprevisiveis.",
+    },
+    "click-click-clicker-playgama": {
+      "title": "Click Click Clicker - Jogo Idle Online",
+      "intro": "Click Click Clicker e um jogo idle onde cada toque constroi upgrades automaticos maiores.",
+    },
+    "idle-tower-defense-be01-1": {
+      "title": "Idle Tower Defense - Jogo de Defesa Online",
+      "intro": "Idle Tower Defense mistura defesa por ondas com progressao idle que continua mesmo ausente.",
+    },  },
   "es": {
     "arrow-exit-puzzle": {
       "title": "Juego de flechas online — Arrow Exit Puzzle",
@@ -77,6 +116,132 @@ export const REGIONAL_GAME_CONTENT: Record<string, Record<string, { title: strin
       "intro": "2048 Knights لغز لدمج الأرقام مع أهداف لكل مرحلة. حرّك القطع المتساوية وحقق الهدف بعدد أقل من الحركات.",
       "howToPlay": "حرّك جميع القطع في اتجاه واحد. تندمج الأرقام المتساوية وتتضاعف قيمتها. حقق هدف المرحلة وخطط لحركاتك حول العوائق.",
       "controls": "اسحب على الهاتف أو استخدم مفاتيح الأسهم أو WASD أو أزرار الشاشة."
+    }
+  },
+  "vi": {
+    "geometry-dash-infinity": {
+      "title": "Geometry Dash: Infinity - Choi Game Nhịp Diệu Online",
+      "intro": "Geometry Dash: Infinity la game chay nhịp điệu, ban nhay va bay qua cac chuong ngai vật theo nhac.",
+    },
+    "supa-tic-tac-toe": {
+      "title": "Choi Tic Tac Toe Online - Supa Tic Tac Toe",
+      "intro": "Supa Tic Tac Toe la tro co ca-ro co dien tren trinh duyet - xep ba o lien tiếp đe thắng.",
+    },
+    "block-blast-2048": {
+      "title": "Block Blast 2048 - Game Xep Gach Online",
+      "intro": "Block Blast 2048 kết hop xep gach va ghep so tren cung một bang.",
+    },
+    "ludo-legend": {
+      "title": "Choi Ludo Online - Ludo Legend",
+      "intro": "Ludo Legend la co ludo co dien, dua quan co từ đầu đen nha.",
+    },
+    "mahjong-classic": {
+      "title": "Choi Mahjong Online - Mahjong Classic",
+      "intro": "Mahjong Classic la tro ghep quan co solitaire, go bo bang bang cach ket đoi quan tu do.",
+    },
+    "plants-vs-zombies-fusion-edition": {
+      "title": "Plants vs Zombies Fusion - Game Phong Thu Online",
+      "intro": "Plants vs Zombies Fusion Edition la game tower defense, trong cay đe chan đoi quan zombie.",
+    },
+    "moto-traffic-rider": {
+      "title": "Moto Traffic Rider - Game Mo To Online",
+      "intro": "Moto Traffic Rider la game mo to, luon lac qua giao thong ở tốc đon cao.",
+    },
+    "basket-random": {
+      "title": "Basket Random - Game Bong Ro Online",
+      "intro": "Basket Random la game bong ro voi vật ly hau hước va di chuyen kho đoan.",
+    },
+    "click-click-clicker-playgama": {
+      "title": "Click Click Clicker - Game Idle Online",
+      "intro": "Click Click Clicker la game idle, moi cu click xay dựng nang cap tu đong lớn hon.",
+    },
+    "idle-tower-defense-be01-1": {
+      "title": "Idle Tower Defense - Game Phong Thu Online",
+      "intro": "Idle Tower Defense kết hop phong thu theo đot voi tiến trinh idle chay ca khi ban rời đi.",
+    }
+  },
+  "id": {
+    "geometry-dash-infinity": {
+      "title": "Geometry Dash: Infinity - Main Game Ritme Online",
+      "intro": "Geometry Dash: Infinity adalah game lari ritme, lompat dan terbang melewati rintangan mengikuti musik.",
+    },
+    "supa-tic-tac-toe": {
+      "title": "Main Tic Tac Toe Online - Supa Tic Tac Toe",
+      "intro": "Supa Tic Tac Toe adalah permainan tic tac toe klasik di browser - susun tiga berurutan untuk menang.",
+    },
+    "block-blast-2048": {
+      "title": "Block Blast 2048 - Game Balok Online",
+      "intro": "Block Blast 2048 menggabungkan puzzle balok dengan penyatuan angka dalam satu papan.",
+    },
+    "ludo-legend": {
+      "title": "Main Ludo Online - Ludo Legend",
+      "intro": "Ludo Legend adalah papan ludo klasik, balap bidak dari awal ke rumah.",
+    },
+    "mahjong-classic": {
+      "title": "Main Mahjong Online - Mahjong Classic",
+      "intro": "Mahjong Classic adalah solitaire ubin, bersihkan papan dengan memasangkan ubin bebas.",
+    },
+    "plants-vs-zombies-fusion-edition": {
+      "title": "Plants vs Zombies Fusion - Game Pertahanan Online",
+      "intro": "Plants vs Zombies Fusion Edition adalah tower defense, tanam pertahanan untuk hentikan zombie.",
+    },
+    "moto-traffic-rider": {
+      "title": "Moto Traffic Rider - Game Motor Online",
+      "intro": "Moto Traffic Rider adalah game motor, menyelip di antara lalu lintas dengan kecepatan tinggi.",
+    },
+    "basket-random": {
+      "title": "Basket Random - Game Bola Basket Online",
+      "intro": "Basket Random adalah game bola basket dengan fisika lucu dan gerakan tak terduga.",
+    },
+    "click-click-clicker-playgama": {
+      "title": "Click Click Clicker - Game Idle Online",
+      "intro": "Click Click Clicker adalah game idle, setiap klik membangun upgrade otomatis lebih besar.",
+    },
+    "idle-tower-defense-be01-1": {
+      "title": "Idle Tower Defense - Game Pertahanan Online",
+      "intro": "Idle Tower Defense memadukan pertahanan gelombang dengan progresi idle yang berjalan saat Anda pergi.",
+    }
+  },
+  "tr": {
+    "geometry-dash-infinity": {
+      "title": "Geometry Dash: Infinity - Ritm Oyunu Online",
+      "intro": "Geometry Dash: Infinity, engelleri muze uyumlu sekilde zıplayarak astıgın ritim tabanlı bir kosu oyunudur.",
+    },
+    "supa-tic-tac-toe": {
+      "title": "Tic Tac Toe Online Oyna - Supa Tic Tac Toe",
+      "intro": "Supa Tic Tac Toe, tarayıcıdaki klasik tic tac toe oyunudur - kazanmak için üçünü hizala.",
+    },
+    "block-blast-2048": {
+      "title": "Block Blast 2048 - Blok Puzzle Online",
+      "intro": "Block Blast 2048, blok yerlestirmeyi tek bir tahtada sayı birlestirme ile harmanlar.",
+    },
+    "ludo-legend": {
+      "title": "Ludo Online Oyna - Ludo Legend",
+      "intro": "Ludo Legend, pulları bastan sona yarıştırdıgın klasik ludo tahta oyunudur.",
+    },
+    "mahjong-classic": {
+      "title": "Mahjong Online Oyna - Mahjong Classic",
+      "intro": "Mahjong Classic, serbest tasları esleştirerek tahtayı temizledigin tas solitairesidir.",
+    },
+    "plants-vs-zombies-fusion-edition": {
+      "title": "Plants vs Zombies Fusion - Savunma Oyunu Online",
+      "intro": "Plants vs Zombies Fusion Edition, zombileri durdurmak için bitki diktigin bir tower defense oyunudur.",
+    },
+    "moto-traffic-rider": {
+      "title": "Moto Traffic Rider - Moto Oyunu Online",
+      "intro": "Moto Traffic Rider, yuksek hızla trafik arasında kıvrıldıgın bir motosiklet oyunudur.",
+    },
+    "basket-random": {
+      "title": "Basket Random - Basketbol Oyunu Online",
+      "intro": "Basket Random, komik fizik ve ongorulemez hareketlerle oynanan bir basketbol oyunudur.",
+    },
+    "click-click-clicker-playgama": {
+      "title": "Click Click Clicker - Boşta Idle Oyunu Online",
+      "intro": "Click Click Clicker, her tıklamanın daha buyuk otomatik yukseltmeler insa ettigi bir idle oyunudur.",
+    },
+    "idle-tower-defense-be01-1": {
+      "title": "Idle Tower Defense - Savunma Oyunu Online",
+      "intro": "Idle Tower Defense, dalga savunmasını sen yokken de ilerleyen idle ilerlemeyle birlestirir.",
     }
   }
 };

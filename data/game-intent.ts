@@ -52,6 +52,17 @@ export const GAME_INTENTS: Record<string, GameIntent> = {
   // title: "Chess Online" for a game named "Chess Online Playing" adds nothing.
   "master-chess": { primary: "Play Chess Online Free" },
   "chess-online-playing": { primary: "Chess Against Computer" },
+  "geometry-dash-infinity": { primary: "Geometry Dash Game" },
+  "supa-tic-tac-toe": { primary: "Play Tic Tac Toe Online" },
+  "block-blast-2048": { primary: "Block Puzzle 2048" },
+  "ludo-legend": { primary: "Play Ludo Online" },
+  "mahjong-classic": { primary: "Play Mahjong Online" },
+  "plants-vs-zombies-fusion-edition": { primary: "PvZ Fusion Game" },
+  "moto-traffic-rider": { primary: "Traffic Rider Game" },
+  "basket-random": { primary: "Basketball 2 Player Game" },
+  "click-click-clicker-playgama": { primary: "Idle Clicker Game" },
+  "idle-tower-defense-be01-1": { primary: "Tower Defense Game" },
+
 };
 
 export function getGameIntent(slug: string): GameIntent | undefined {

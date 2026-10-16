@@ -1,5 +1,5 @@
 import { routing, type Locale } from "@/i18n/routing";
-import { buildLocaleSitemap } from "@/app/sitemap";
+import { buildLocaleSitemap } from "@/lib/sitemap-data";
 
 /**
  * Shared renderer for the per-locale sitemaps.
@@ -44,13 +44,13 @@ export function renderSitemap(locale: Locale): Response {
 
       const lastModified = entry.lastModified
         ? new Date(entry.lastModified).toISOString()
-        : new Date().toISOString();
+        : null;
 
       return [
         "  <url>",
         `    <loc>${xmlEscape(entry.url)}</loc>`,
         links,
-        `    <lastmod>${lastModified}</lastmod>`,
+        lastModified ? `    <lastmod>${lastModified}</lastmod>` : "",
         `    <changefreq>${entry.changeFrequency}</changefreq>`,
         `    <priority>${entry.priority}</priority>`,
         "  </url>",

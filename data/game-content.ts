@@ -294,6 +294,67 @@ export const GAME_CONTENT: Record<string, GameContent> = {
       "Pop letter bubbles to spell words from the prompt. Longer words clear more bubbles.",
     controls: "Mouse or touch to select letters.",
   },
+  "geometry-dash-infinity": {
+    tags: ["rhythm", "runner", "arcade", "skill"],
+    intro: "Geometry Dash: Infinity is a rhythm-based runner where you jump and fly through obstacle courses synced to the music.",
+    howToPlay: "Tap or click to jump in time with the beat, and hold to fly through spikes and gaps. One hit sends you back to the last checkpoint.",
+    controls: "Click, tap, or spacebar to jump; hold to fly.",
+  },
+  "supa-tic-tac-toe": {
+    tags: ["tic-tac-toe", "board", "strategy", "casual"],
+    intro: "Supa Tic Tac Toe is the classic paper-and-pencil game played in your browser — line up three in a row to win.",
+    howToPlay: "Take turns placing your mark in an empty square. Get three in a row horizontally, vertically, or diagonally before your opponent does.",
+    controls: "Mouse or touch to place your mark.",
+  },
+  "block-blast-2048": {
+    tags: ["block", "puzzle", "merge", "2048"],
+    intro: "Block Blast 2048 combines block-placement puzzles with number merging on a single board.",
+    howToPlay: "Drop and merge numbered blocks to build toward 2048 while keeping the board clear. Plan placements to trigger bigger combos.",
+    controls: "Mouse or touch to place and merge blocks.",
+  },
+  "ludo-legend": {
+    tags: ["ludo", "board", "strategy", "multiplayer"],
+    intro: "Ludo Legend is the classic cross-and-circle board game where you race tokens from start to home.",
+    howToPlay: "Roll and move your tokens around the track, capture opponents when you land on them, and get all four home first.",
+    controls: "Mouse or touch to roll and move tokens.",
+  },
+  "mahjong-classic": {
+    tags: ["mahjong", "solitaire", "puzzle", "tiles"],
+    intro: "Mahjong Classic is the tile-matching solitaire game where you clear the board by pairing free tiles.",
+    howToPlay: "Match identical open tiles to remove them. Only tiles with no neighbors on the left or right are playable. Clear the whole layout.",
+    controls: "Mouse or touch to select and match tiles.",
+  },
+  "plants-vs-zombies-fusion-edition": {
+    tags: ["plants-vs-zombies", "tower-defense", "strategy", "zombie"],
+    intro: "Plants vs Zombies Fusion Edition is a tower-defense game where you grow plants to stop waves of zombies.",
+    howToPlay: "Place plant defenders along the lawn to shoot, block, or slow incoming zombies. Manage sun economy to survive each wave.",
+    controls: "Mouse or touch to place plants.",
+  },
+  "moto-traffic-rider": {
+    tags: ["motorbike", "racing", "driving", "skill"],
+    intro: "Moto Traffic Rider is a motorcycle game where you weave through traffic at speed.",
+    howToPlay: "Accelerate and steer between cars and obstacles without crashing. The faster you go, the more you score.",
+    controls: "Arrow keys, WASD, or touch to accelerate and steer.",
+  },
+  "basket-random": {
+    tags: ["basketball", "sports", "two-player", "arcade"],
+    intro: "Basket Random is a playful basketball game with wobbly physics and unpredictable moves.",
+    howToPlay: "Shoot and scramble for the ball against an opponent, scoring baskets with chaotic, ragdoll-style movement.",
+    controls: "Mouse, keyboard, or touch to move and shoot.",
+  },
+  "click-click-clicker-playgama": {
+    tags: ["clicker", "idle", "increment"],
+    intro: "Click Click Clicker is an idle clicker game where each tap builds toward bigger automatic upgrades.",
+    howToPlay: "Click to earn, then spend on upgrades that generate points for you automatically. Keep reinvesting to scale up.",
+    controls: "Click or tap to earn; buttons to buy upgrades.",
+  },
+  "idle-tower-defense-be01-1": {
+    tags: ["tower-defense", "strategy", "idle", "defense"],
+    intro: "Idle Tower Defense blends wave-based defense with idle progression that runs while you are away.",
+    howToPlay: "Place towers to stop enemy waves and collect idle income to upgrade them automatically between runs.",
+    controls: "Mouse to place and upgrade towers.",
+  },
+
 };
 
 /** Homepage "Featured Games" — hand-curated, NOT a popularity ranking

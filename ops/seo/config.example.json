@@ -1,0 +1,10 @@
+{
+  "site": "https://www.vioraplay.com",
+  "ga4_property": "558289372",
+  "gsc_site": "sc-domain:vioraplay.com",
+  "timezone": "America/Los_Angeles",
+  "output_dir": "~/.local/state/vioraplay-seo",
+  "email": "mireia1998@163.com",
+  "smtp_host": "smtp.163.com",
+  "audit_paths": ["/en", "/en/category/puzzle", "/en/game/moto-x3m", "/en/game/arrow-exit-puzzle", "/en/guides/how-to-play-gomoku"]
+}

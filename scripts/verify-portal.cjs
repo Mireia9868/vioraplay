@@ -150,7 +150,7 @@ async function main() {
     const missing = await get('/en/category/puzzle?page=999');assert.equal(missing.status,404);
     const invalid = await get('/en/game/not-a-real-viora-game');assert.equal(invalid.status,404);
     for(const info of ['about','contact','privacy','terms']) assert.equal((await get('/en/'+info)).status,200);
-    const sitemap=await get('/sitemap.xml');assert.ok(!sitemap.html.includes('?page='));
+    const sitemap=await get('/sitemap.xml');assert.equal(sitemap.status,200);assert.ok(sitemap.html.includes('<sitemapindex '));assert.equal((sitemap.html.match(/<sitemap>/g)||[]).length,locales.length);assert.ok(!sitemap.html.includes('<urlset'));assert.ok(!sitemap.html.includes('?page='));
     const robots=await get('/robots.txt');assert.ok(!robots.html.includes('Disallow: /*/search'));
     console.log('PASS: production HTTP, homepage payload, all locale pagination/canonical/noindex/refresh, breadcrumbs, game intro, footer, 404, sitemap/robots');
   } finally { await app.close(); }
