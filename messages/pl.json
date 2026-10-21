@@ -107,7 +107,8 @@
     "about": "O nas",
     "contact": "Kontakt",
     "privacy": "Prywatność",
-    "terms": "Warunki"
+    "terms": "Warunki",
+    "cookieSettings": "Ustawienia plików cookie"
   },
   "favorites": {
     "title": "Ulubione",
@@ -117,7 +118,13 @@
   "info": {
     "about": "VioraPlay to katalog gier przeglądarkowych. Gry są osadzane przez Playgama; VioraPlay zapewnia nawigację, wyszukiwanie, rekomendacje i ulubione zapisywane w przeglądarce.",
     "contact": "Błędne linki i problemy ze stroną zgłaszaj w repozytorium GitHub. Nie publikuj haseł, danych płatniczych ani prywatnych informacji.",
-    "privacy": "Ulubione i ostatnio odwiedzone gry są przechowywane lokalnie w przeglądarce, bez konta VioraPlay. Usunięcie danych strony usuwa te wpisy. Korzystamy z Google Analytics do pomiaru wizyt i interakcji. Osadzone gry łączą się z Playgama i mogą wyświetlać reklamy lub używać pamięci zgodnie z polityką dostawcy. VioraPlay nie może odczytywać zawartości ramek z innych domen.",
+    "privacy": "VioraPlay przechowuje ulubione i ostatnio odwiedzone gry w tej przeglądarce przy użyciu pamięci lokalnej, bez konta VioraPlay. Usunięcie danych strony usuwa te wpisy. Używamy Google Analytics do pomiaru odwiedzin i interakcji. Wyświetlamy też reklamy przez Google AdSense. Google i jego partnerzy mogą używać plików cookie —w tym reklamowego pliku cookie DoubleClick— do personalizowania reklam i mierzenia ich skuteczności. Możesz wyłączyć spersonalizowane reklamy w dowolnym momencie w Ustawieniach reklam Google, Your Online Choices lub Network Advertising Initiative. Osadzone gry łączą się z Playgama i mogą wyświetlać reklamy lub używać pamięci zgodnie z polityką dostawcy. VioraPlay nie może odczytywać zawartości ramek z innych domen. W dowolnym momencie możesz przejrzeć lub zmienić wybory dotyczące plików cookie za pomocą linku 'Ustawienia plików cookie' w stopce.",
     "terms": "Gry działają u zewnętrznych dostawców i mogą zawierać reklamy. Dostępność, zasady i usługi w grze zależą od dostawcy. Szanuj prawa twórców i korzystaj ze strony zgodnie z prawem. Ponowne wczytanie może usunąć niezapisany postęp."
+  },
+  "consent": {
+    "title": "Twoje wybory prywatności",
+    "body": "Używamy plików cookie do analizy oraz wyświetlania spersonalizowanych reklam przez Google AdSense. Zaakceptuj, aby pomóc nam ulepszać stronę, lub odrzuć, aby ograniczyć śledzenie tylko do niezbędnej pamięci lokalnej.",
+    "accept": "Akceptuj wszystko",
+    "reject": "Odrzuć wszystko"
   }
 }

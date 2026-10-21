@@ -107,7 +107,8 @@
     "about": "Hakkında",
     "contact": "İletişim",
     "privacy": "Gizlilik",
-    "terms": "Koşullar"
+    "terms": "Koşullar",
+    "cookieSettings": "Çerez ayarları"
   },
   "favorites": {
     "title": "Favoriler",
@@ -117,7 +118,13 @@
   "info": {
     "about": "VioraPlay bir tarayıcı oyunları kataloğudur. Oyunlar üçüncü taraf Playgama yerleştirmeleri üzerinden sağlanır. VioraPlay gezinme, arama, öneriler ve tarayıcıda saklanan favoriler sunar.",
     "contact": "Bozuk bağlantılar veya site sorunları için GitHub sorun takipçimizi kullanın. Herkese açık raporlara parola, ödeme bilgileri veya özel bilgiler eklemeyin.",
-    "privacy": "Favoriler ve son ziyaret edilen oyunlar VioraPlay hesabı olmadan bu tarayıcıda saklanır. Site verilerini silmek bu kayıtları kaldırır. Site ziyaret ve etkileşimleri ölçmek için Google Analytics kullanır. Yerleştirilmiş oyunlar Playgama’ya bağlanır ve sağlayıcının gizlilik politikalarına göre reklam yükleyebilir veya depolama kullanabilir. VioraPlay farklı kaynaklı oyun çerçevelerinin içeriğini okuyamaz.",
+    "privacy": "VioraPlay, favori ve son ziyaret edilen oyunları VioraPlay hesabı olmadan bu tarayıcının yerel depolamasında saklar. Site verilerini silmek bu kayıtları kaldırır. Ziyaret ve etkileşimleri ölçmek için Google Analytics kullanırız. Ayrıca Google AdSense aracılığıyla reklam gösteririz. Google ve iş ortakları, reklamları kişiselleştirmek ve performanslarını ölçmek için —DoubleClick reklam çerezi dahil— çerezleri kullanabilir. Google Reklam Ayarları, Your Online Choices veya Network Advertising Initiative üzerinden istediğiniz zaman kişiselleştirilmiş reklamları kapatabilirsiniz. Yerleştirilmiş oyunlar Playgama'ya bağlanır ve sağlayıcının gizlilik politikalarına göre reklam gösterebilir veya depolama kullanabilir. VioraPlay farklı kaynaklı oyun çerçevelerinin içeriğini okuyamaz. Alt bilgideki 'Çerez ayarları' bağlantısını kullanarak çerez tercihlerinizi istediğiniz zaman gözden geçirebilir veya değiştirebilirsiniz.",
     "terms": "Oyunlar üçüncü taraflarca çalıştırılır ve reklam gösterebilir. Kullanılabilirlik, kurallar ve oyun hizmetleri sağlayıcıya bağlıdır. Oyun yaratıcılarının haklarına saygı gösterin ve siteyi yasal şekilde kullanın. Yeniden yükleme, sağlayıcının kaydetmediği ilerlemeyi sıfırlayabilir."
+  },
+  "consent": {
+    "title": "Gizlilik tercihleriniz",
+    "body": "Site analitiği ve Google AdSense aracılığıyla kişiselleştirilmiş reklamlar için çerez kullanırız. Siteyi iyileştirmemize yardımcı olmak için kabul edin veya yalnızca gerekli yerel depolamayla sınırlı tutmak için reddedin.",
+    "accept": "Tümünü kabul et",
+    "reject": "Tümünü reddet"
   }
 }

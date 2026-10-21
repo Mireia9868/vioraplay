@@ -107,7 +107,8 @@
     "about": "Tentang",
     "contact": "Kontak",
     "privacy": "Privasi",
-    "terms": "Ketentuan"
+    "terms": "Ketentuan",
+    "cookieSettings": "Pengaturan cookie"
   },
   "favorites": {
     "title": "Favorit",
@@ -117,7 +118,13 @@
   "info": {
     "about": "VioraPlay adalah direktori game browser. Game disediakan melalui sematan pihak ketiga Playgama. VioraPlay menyediakan navigasi, pencarian, rekomendasi, dan favorit lokal.",
     "contact": "Laporkan tautan rusak atau masalah situs melalui pelacak isu GitHub kami. Jangan sertakan kata sandi, informasi pembayaran, atau informasi pribadi dalam laporan publik.",
-    "privacy": "Favorit dan game yang baru dikunjungi disimpan di browser ini tanpa akun VioraPlay. Menghapus data situs menghapus catatan tersebut. Situs menggunakan Google Analytics untuk mengukur kunjungan dan interaksi. Game tersemat terhubung ke Playgama dan dapat memuat iklan atau menggunakan penyimpanan sesuai kebijakan privasi penyedia. VioraPlay tidak dapat membaca isi frame game lintas asal.",
+    "privacy": "VioraPlay menyimpan game favorit dan yang baru dikunjungi di browser ini menggunakan penyimpanan lokal, tanpa akun VioraPlay. Menghapus data situs menghapus catatan tersebut. Kami menggunakan Google Analytics untuk mengukur kunjungan dan interaksi. Kami juga menampilkan iklan melalui Google AdSense. Google dan mitranya dapat menggunakan cookie —termasuk cookie iklan DoubleClick— untuk mempersonalisasi iklan dan mengukur kinerjanya. Anda dapat menonaktifkan iklan yang dipersonalisasi kapan saja melalui Setelan Iklan Google, Your Online Choices, atau Network Advertising Initiative. Game tersemat terhubung ke Playgama dan dapat memuat iklan atau menggunakan penyimpanan sesuai kebijakan privasi penyedia. VioraPlay tidak dapat membaca isi frame game lintas asal. Anda dapat meninjau atau mengubah pilihan cookie kapan saja melalui tautan 'Pengaturan cookie' di footer.",
     "terms": "Game dijalankan melalui penyedia pihak ketiga dan dapat menampilkan iklan. Ketersediaan, aturan, dan layanan game bergantung pada penyedia. Hormati hak pembuat game dan gunakan situs secara sah. Memuat ulang dapat menghapus kemajuan yang belum disimpan penyedia."
+  },
+  "consent": {
+    "title": "Pilihan privasi Anda",
+    "body": "Kami menggunakan cookie untuk analitik dan menampilkan iklan yang dipersonalisasi melalui Google AdSense. Terima untuk membantu kami meningkatkan situs, atau tolak untuk membatasi pelacakan hanya pada penyimpanan lokal yang penting.",
+    "accept": "Terima semua",
+    "reject": "Tolak semua"
   }
 }

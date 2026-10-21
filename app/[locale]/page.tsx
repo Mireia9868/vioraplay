@@ -115,6 +115,24 @@ export default async function HomePage({
         </div>
       </section>
 
+      {locale === "en" && (
+        <section className="section guides-promo">
+          <div className="section-head">
+            <h2>Game guides &amp; how-to play</h2>
+            <Link href="/guides" className="section-more">Browse all guides <span aria-hidden="true">↗</span></Link>
+          </div>
+          <ul className="guide-list">
+            <li><Link href="/guides/how-to-play-sudoku">How to Play Sudoku</Link></li>
+            <li><Link href="/guides/how-to-play-chess">How to Play Chess</Link></li>
+            <li><Link href="/guides/how-to-play-mahjong">How to Play Mahjong Solitaire</Link></li>
+            <li><Link href="/guides/how-to-play-bubble-shooter">How to Play Bubble Shooter</Link></li>
+            <li><Link href="/guides/how-to-play-tower-defense">How to Play Tower Defense</Link></li>
+            <li><Link href="/guides/merge-and-sort-puzzle-guide">Merge &amp; Sort Puzzle Guide</Link></li>
+            <li><Link href="/guides/how-to-play-snake">How to Play Snake</Link></li>
+          </ul>
+        </section>
+      )}
+
       <section className="section">
         <div className="section-head">
           <h2>{t("moreGames")}</h2>

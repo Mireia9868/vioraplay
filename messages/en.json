@@ -107,7 +107,8 @@
     "about": "About",
     "contact": "Contact",
     "privacy": "Privacy",
-    "terms": "Terms"
+    "terms": "Terms",
+    "cookieSettings": "Cookie settings"
   },
   "favorites": {
     "title": "Favorites",
@@ -117,7 +118,13 @@
   "info": {
     "about": "VioraPlay is a directory of browser games. Games are provided through third-party Playgama embeds; VioraPlay supplies navigation, search, recommendations and browser-local favorites.",
     "contact": "For broken game links or website issues, use our GitHub issue tracker. Do not include passwords, payment details or other private information in public reports.",
-    "privacy": "Favorites and recently visited games are saved in this browser using local storage, without a VioraPlay account. Clearing site data removes these records. The site uses Google Analytics to measure visits and site interactions. Embedded games connect to Playgama and may load advertising or use storage under the provider’s privacy policies. VioraPlay cannot read the contents of cross-origin game frames.",
+    "privacy": "VioraPlay saves your favorites and recently visited games in this browser using local storage, without a VioraPlay account. Clearing your site data removes these records. We use Google Analytics to measure visits and site interactions. We also display advertising through Google AdSense. Google and its partners may use cookies — including the DoubleClick advertising cookie — to personalize ads and measure their performance. You can opt out of personalized advertising at any time through Google Ads Settings, Your Online Choices, or the Network Advertising Initiative. Embedded games connect to Playgama and may load advertising or use storage under the provider's privacy policies. VioraPlay cannot read the contents of cross-origin game frames. You can review or change your cookie choices at any time using the 'Cookie settings' link in the footer.",
     "terms": "Games run through third-party providers and may show ads. Availability, game rules and in-game services depend on the provider. Respect the rights of game creators and use the site lawfully. Reloading a game may reset progress that the provider has not saved."
+  },
+  "consent": {
+    "title": "Your privacy choices",
+    "body": "We use cookies for site analytics and to serve personalized ads through Google AdSense. Accept to help us improve and support the site, or reject to limit tracking to essential local storage only.",
+    "accept": "Accept all",
+    "reject": "Reject all"
   }
 }

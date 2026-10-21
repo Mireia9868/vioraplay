@@ -66,7 +66,12 @@ export async function generateMetadata({
       canonical: path(locale),
       languages: buildLanguageAlternates((l) => path(l), routing.locales.filter(l => !isNewLocale(l) || Boolean(REGIONAL_GAME_CONTENT[l]?.[slug]))),
     },
-    robots: isNewLocale(locale) && !REGIONAL_GAME_CONTENT[locale]?.[slug]
+    // AdSense / thin-content guard: a game page is indexed only when it carries
+    // VioraPlay's own curated copy for the locale. Pages that would otherwise
+    // render only the supplier's description (no original intro) are kept out
+    // of the index so the catalog does not read as scraped/made-for-AdSense.
+    // New locales additionally require a localized entry, not just the EN base.
+    robots: (isNewLocale(locale) ? !REGIONAL_GAME_CONTENT[locale]?.[slug] : !content)
       ? { index: false, follow: true } : undefined,
     openGraph: {
       title: REGIONAL_GAME_CONTENT[locale]?.[slug]?.title ?? gameOgTitle(game.title, intent),

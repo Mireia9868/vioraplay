@@ -107,7 +107,8 @@
     "about": "Giới thiệu",
     "contact": "Liên hệ",
     "privacy": "Quyền riêng tư",
-    "terms": "Điều khoản"
+    "terms": "Điều khoản",
+    "cookieSettings": "Cài đặt cookie"
   },
   "favorites": {
     "title": "Yêu thích",
@@ -117,7 +118,13 @@
   "info": {
     "about": "VioraPlay là danh mục trò chơi trên trình duyệt. Trò chơi được cung cấp qua khung nhúng Playgama của bên thứ ba. VioraPlay cung cấp điều hướng, tìm kiếm, đề xuất và mục yêu thích lưu trên trình duyệt.",
     "contact": "Để báo liên kết hỏng hoặc lỗi trang web, hãy dùng trình theo dõi vấn đề GitHub của chúng tôi. Không gửi mật khẩu, thông tin thanh toán hoặc thông tin riêng tư trong báo cáo công khai.",
-    "privacy": "Mục yêu thích và trò chơi đã truy cập được lưu trên trình duyệt này, không cần tài khoản VioraPlay. Xóa dữ liệu trang web sẽ xóa các mục này. Trang web dùng Google Analytics để đo lượt truy cập và tương tác. Trò chơi nhúng kết nối đến Playgama và có thể tải quảng cáo hoặc dùng bộ nhớ theo chính sách của nhà cung cấp. VioraPlay không thể đọc nội dung khung trò chơi khác nguồn.",
+    "privacy": "VioraPlay lưu các game yêu thích và vừa xem gần đây trên trình duyệt này bằng bộ nhớ cục bộ, không cần tài khoản VioraPlay. Xóa dữ liệu trang web sẽ xóa các mục này. Chúng tôi dùng Google Analytics để đo lượt truy cập và tương tác. Chúng tôi cũng hiển thị quảng cáo qua Google AdSense. Google và các đối tác có thể dùng cookie —bao gồm cookie quảng cáo DoubleClick— để cá nhân hóa quảng cáo và đo hiệu quả. Bạn có thể tắt quảng cáo được cá nhân hóa bất cứ lúc nào qua Cài đặt quảng cáo của Google, Your Online Choices, hoặc Network Advertising Initiative. Các game nhúng kết nối với Playgama và có thể tải quảng cáo hoặc dùng bộ nhớ theo chính sách của nhà cung cấp. VioraPlay không thể đọc nội dung khung game từ nguồn khác. Bạn có thể xem lại hoặc thay đổi lựa chọn cookie bất cứ lúc nào qua liên kết 'Cài đặt cookie' ở chân trang.",
     "terms": "Trò chơi do bên thứ ba vận hành và có thể hiển thị quảng cáo. Tính khả dụng, quy tắc và dịch vụ phụ thuộc vào nhà cung cấp. Tôn trọng quyền của nhà sáng tạo và sử dụng trang web hợp pháp. Tải lại có thể mất tiến độ chưa được nhà cung cấp lưu."
+  },
+  "consent": {
+    "title": "Tùy chọn quyền riêng tư",
+    "body": "Chúng tôi dùng cookie để phân tích và hiển thị quảng cáo được cá nhân hóa qua Google AdSense. Chấp nhận để giúp chúng tôi cải thiện trang, hoặc từ chối để chỉ giới hạn ở bộ nhớ cục bộ cần thiết.",
+    "accept": "Chấp nhận tất cả",
+    "reject": "Từ chối tất cả"
   }
 }

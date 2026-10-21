@@ -6,6 +6,8 @@ import { notFound } from "next/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { ConsentBanner } from "@/components/ConsentBanner";
+import { FooterConsentLink } from "@/components/FooterConsentLink";
 import { SiteNav } from "@/components/SiteNav";
 import { SearchBar } from "@/components/SearchBar";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
@@ -94,14 +96,18 @@ export default async function LocaleLayout({
               <Link href="/contact">{tFooter("contact")}</Link>
               <Link href="/privacy">{tFooter("privacy")}</Link>
               <Link href="/terms">{tFooter("terms")}</Link>
+              <FooterConsentLink />
             </nav>
             <p>
               © {new Date().getFullYear()} {tCommon("siteName")}
             </p>
           </footer>
 
-          {/* GA4 — all portal pages; game iframe content is 3rd-party. */}
+          {/* GA4 — all portal pages; game iframe content is 3rd-party.
+              Loads only after analytics consent (see lib/consent.ts). */}
           <GoogleAnalytics />
+          {/* EU/UK consent banner for analytics + advertising cookies. */}
+          <ConsentBanner />
         </NextIntlClientProvider>
       </body>
     </html>

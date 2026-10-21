@@ -26,9 +26,12 @@ export default async function InfoPage({params}: {params: Promise<{locale: strin
     {info === "contact" && <p>{email
       ? <a href={`mailto:${email}`}>{email}</a>
       : <a href="https://github.com/Mireia9868/vioraplay/issues">GitHub — VioraPlay</a>}</p>}
-    {info === "privacy" && <p>
-      <a href="https://policies.google.com/privacy">Google Privacy</a>{" · "}
-      <a href="https://playgama.com/">Playgama</a>
-    </p>}
+    {info === "privacy" && <div className="privacy-links">
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy &amp; Terms</a>
+      <a href="https://playgama.com/" target="_blank" rel="noopener noreferrer">Playgama</a>
+      <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>
+      <a href="https://www.youronlinechoices.com/" target="_blank" rel="noopener noreferrer">Your Online Choices</a>
+      <a href="https://www.networkadvertising.org/" target="_blank" rel="noopener noreferrer">Network Advertising Initiative</a>
+    </div>}
   </article>;
 }

@@ -107,7 +107,8 @@
     "about": "Sobre",
     "contact": "Contato",
     "privacy": "Privacidade",
-    "terms": "Termos"
+    "terms": "Termos",
+    "cookieSettings": "Configurações de cookies"
   },
   "favorites": {
     "title": "Favoritos",
@@ -117,7 +118,13 @@
   "info": {
     "about": "VioraPlay é um catálogo de jogos de navegador. Os jogos são fornecidos por incorporações de terceiros do Playgama. VioraPlay oferece navegação, busca, recomendações e favoritos locais.",
     "contact": "Para links quebrados ou problemas do site, use nosso rastreador de problemas no GitHub. Não inclua senhas, dados de pagamento ou informações privadas em relatos públicos.",
-    "privacy": "Favoritos e jogos visitados recentemente são salvos neste navegador, sem conta VioraPlay. Limpar os dados do site apaga esses registros. O site usa Google Analytics para medir visitas e interações. Jogos incorporados conectam-se ao Playgama e podem carregar anúncios ou usar armazenamento conforme as políticas do provedor. VioraPlay não pode ler o conteúdo de frames de jogos de outra origem.",
+    "privacy": "O VioraPlay salva seus jogos favoritos e visitados recentemente neste navegador usando armazenamento local, sem uma conta VioraPlay. Limpar os dados do site apaga esses registros. Usamos o Google Analytics para medir visitas e interações. Também exibimos publicidade pelo Google AdSense. O Google e seus parceiros podem usar cookies —incluindo o cookie publicitário DoubleClick— para personalizar anúncios e medir seu desempenho. Você pode desativar a publicidade personalizada a qualquer momento nas Configurações de anúncios do Google, Your Online Choices ou na Network Advertising Initiative. Os jogos incorporados conectam-se ao Playgama e podem exibir anúncios ou usar armazenamento conforme as políticas do provedor. O VioraPlay não pode ler o conteúdo de frames de outras origens. Você pode revisar ou alterar suas preferências de cookies a qualquer momento usando o link 'Configurações de cookies' no rodapé.",
     "terms": "Os jogos são executados por terceiros e podem mostrar anúncios. Disponibilidade, regras e serviços dependem do provedor. Respeite os direitos dos criadores e use o site legalmente. Recarregar pode apagar o progresso ainda não salvo pelo provedor."
+  },
+  "consent": {
+    "title": "Suas opções de privacidade",
+    "body": "Usamos cookies para análise e para exibir anúncios personalizados pelo Google AdSense. Aceite para nos ajudar a melhorar e manter o site, ou recuse para limitar o rastreamento apenas ao armazenamento local essencial.",
+    "accept": "Aceitar tudo",
+    "reject": "Rejeitar tudo"
   }
 }

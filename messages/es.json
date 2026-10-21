@@ -107,7 +107,8 @@
     "about": "Acerca de",
     "contact": "Contacto",
     "privacy": "Privacidad",
-    "terms": "Términos"
+    "terms": "Términos",
+    "cookieSettings": "Configuración de cookies"
   },
   "favorites": {
     "title": "Favoritos",
@@ -117,7 +118,13 @@
   "info": {
     "about": "VioraPlay es un catálogo de juegos de navegador. Los juegos se ofrecen mediante contenido de Playgama; VioraPlay proporciona navegación, búsqueda, recomendaciones y favoritos guardados en el navegador.",
     "contact": "Para enlaces rotos o problemas del sitio, usa las incidencias de nuestro repositorio de GitHub. No publiques contraseñas, datos de pago ni información privada.",
-    "privacy": "Los favoritos y juegos recientes se guardan en este navegador, sin cuenta de VioraPlay. Borrar los datos del sitio elimina estos registros. Usamos Google Analytics para medir visitas e interacciones. Los juegos integrados conectan con Playgama y pueden mostrar anuncios o usar almacenamiento según las políticas del proveedor. VioraPlay no puede leer el contenido de los marcos de otros dominios.",
+    "privacy": "VioraPlay guarda tus juegos favoritos y visitados recientemente en este navegador mediante almacenamiento local, sin una cuenta de VioraPlay. Borrar los datos del sitio elimina estos registros. Usamos Google Analytics para medir visitas e interacciones. También mostramos publicidad a través de Google AdSense. Google y sus socios pueden usar cookies —incluida la cookie publicitaria DoubleClick— para personalizar anuncios y medir su rendimiento. Puedes desactivar la publicidad personalizada en cualquier momento en la configuración de anuncios de Google, Your Online Choices o la Network Advertising Initiative. Los juegos integrados se conectan con Playgama y pueden mostrar anuncios o usar almacenamiento según las políticas del proveedor. VioraPlay no puede leer el contenido de los marcos de otros dominios. Puedes revisar o cambiar tus preferencias de cookies en cualquier momento con el enlace 'Configuración de cookies' del pie de página.",
     "terms": "Los juegos dependen de terceros y pueden mostrar anuncios. Su disponibilidad, reglas y servicios dependen del proveedor. Respeta los derechos de los creadores y usa el sitio legalmente. Recargar puede borrar el progreso que el proveedor no haya guardado."
+  },
+  "consent": {
+    "title": "Tus opciones de privacidad",
+    "body": "Usamos cookies para analítica y para mostrar anuncios personalizados a través de Google AdSense. Acepta para ayudarnos a mejorar y mantener el sitio, o recházalo para limitar el rastreo solo al almacenamiento local esencial.",
+    "accept": "Aceptar todo",
+    "reject": "Rechazar todo"
   }
 }

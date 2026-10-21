@@ -68,7 +68,22 @@ export default async function CategoriesPage({
         </div>
       </section>
       <CategoryDirectory categories={categories} labels={{heading: t("moreWays"), search: t("findCategory"), empty: t("noCategories"), resultCount: t("categoryMatches", {count: "{count}"})}} />
-      {locale === "en" && <section className="section"><h2>Learn a strategy game</h2><p><Link href="/guides/how-to-play-gomoku">How to play Gomoku: five-in-a-row rules and beginner tips</Link></p></section>}
+      {locale === "en" && (
+        <section className="section guides-promo">
+          <h2>Game guides &amp; how-to play</h2>
+          <p>New to a game? Read our plain-language guides before you play.</p>
+          <ul className="guide-list">
+            <li><Link href="/guides/how-to-play-sudoku">How to Play Sudoku</Link></li>
+            <li><Link href="/guides/how-to-play-chess">How to Play Chess</Link></li>
+            <li><Link href="/guides/how-to-play-mahjong">How to Play Mahjong Solitaire</Link></li>
+            <li><Link href="/guides/how-to-play-bubble-shooter">How to Play Bubble Shooter</Link></li>
+            <li><Link href="/guides/how-to-play-tower-defense">How to Play Tower Defense</Link></li>
+            <li><Link href="/guides/merge-and-sort-puzzle-guide">Merge &amp; Sort Puzzle Guide</Link></li>
+            <li><Link href="/guides/how-to-play-snake">How to Play Snake</Link></li>
+          </ul>
+          <p><Link href="/guides">Browse all game guides →</Link></p>
+        </section>
+      )}
     </div>
   );
 }
