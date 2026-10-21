@@ -23,7 +23,6 @@ import { GameCard } from "@/components/GameCard";
 import { GameControls } from "@/components/GameControls";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
-import { Adsterra } from "@/components/Adsterra";
 import { GameViewTracker } from "@/components/GameViewTracker";
 import {
   SITE_URL,
@@ -174,8 +173,6 @@ export default async function GamePage({
       <GameControls slug={game.slug} embed={game.embed} title={game.title} />
 
       <GameViewTracker slug={game.slug} category={game.category} />
-
-      <Adsterra variant="native" />
 
       {/* Site-owned, indexable content. This block is the whole SEO surface of
           a game page: the iframe itself is crawlable but its content is

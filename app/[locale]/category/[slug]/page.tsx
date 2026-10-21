@@ -16,7 +16,6 @@ import {
 } from "@/lib/games";
 import { GameCard } from "@/components/GameCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Adsterra } from "@/components/Adsterra";
 import { PuzzleSearchGuide } from "@/components/PuzzleSearchGuide";
 import { PUZZLE_SEO, isNewLocale } from "@/data/regional-seo";
 import { routing } from "@/i18n/routing";
@@ -200,8 +199,6 @@ export default async function CategoryPage({
           {tc("showing", { count: games.length, total: allGames.length })}
         </p>
       )}
-
-      <Adsterra variant="banner" />
 
       <div className="game-grid">
         {pageGames.map((g, i) => (

@@ -9,7 +9,6 @@ import { GameCard } from "@/components/GameCard";
 import { PersonalGames } from "@/components/PersonalGames";
 import { Link } from "@/i18n/navigation";
 import { PortalIcon } from "@/components/PortalIcon";
-import { Adsterra } from "@/components/Adsterra";
 
 export default async function HomePage({
   params,
@@ -100,8 +99,6 @@ export default async function HomePage({
       {/* Client-only: reads localStorage, hidden when empty, drops dead slugs. */}
       <PersonalGames games={allGames.map(({slug, title, thumb, category}) => ({slug, title, thumb, category}))} />
 
-      <Adsterra variant="banner" />
-
       <section className="section">
         <h2>{t("popularCategories")}</h2>
         <div className="cat-grid">
@@ -117,8 +114,6 @@ export default async function HomePage({
           ))}
         </div>
       </section>
-
-      <Adsterra variant="native" />
 
       <section className="section">
         <div className="section-head">

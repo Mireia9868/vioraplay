@@ -404,11 +404,6 @@ h2 {
   cursor: pointer;
 }
 
-.ad-placeholder {
-  display: block;
-  min-height: 1px;
-}
-
 /* ---------- Responsive ---------- */
 
 @media (max-width: 720px) {

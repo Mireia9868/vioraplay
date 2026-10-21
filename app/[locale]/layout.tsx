@@ -5,7 +5,6 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
-import { Adsterra } from "@/components/Adsterra";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { SiteNav } from "@/components/SiteNav";
 import { SearchBar } from "@/components/SearchBar";
@@ -100,9 +99,6 @@ export default async function LocaleLayout({
               © {new Date().getFullYear()} {tCommon("siteName")}
             </p>
           </footer>
-
-          {/* Adsterra only on portal pages, never inside the game iframe. */}
-          <Adsterra variant="popunder" />
 
           {/* GA4 — all portal pages; game iframe content is 3rd-party. */}
           <GoogleAnalytics />
