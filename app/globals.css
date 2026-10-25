@@ -621,6 +621,31 @@ h2 {
   margin-bottom: 8px;
 }
 
+.game-faq {
+  margin-top: 20px;
+  max-width: 75ch;
+}
+
+.game-faq h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.game-faq-item {
+  margin-bottom: 14px;
+}
+
+.game-faq-item h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.game-faq-item p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
 .cat-intro {
   color: var(--muted);
   max-width: 70ch;
@@ -839,17 +864,19 @@ h1, .breadcrumbs, .gc-note { overflow-wrap: anywhere; }
 
 /* Guide hub: index + cross-promo sections reused across the site. */
 .guides-index, .sudoku-guide, .chess-guide, .mahjong-guide, .bubble-guide,
-.td-guide, .merge-guide, .snake-guide { max-width: 820px; margin: 0 auto; line-height: 1.75; }
+.td-guide, .merge-guide, .snake-guide, .guide-page { max-width: 820px; margin: 0 auto; line-height: 1.75; }
 .guides-index section, .sudoku-guide section, .chess-guide section, .mahjong-guide section,
-.bubble-guide section, .td-guide section, .merge-guide section, .snake-guide section { margin: 2rem 0; scroll-margin-top: 5rem; }
+.bubble-guide section, .td-guide section, .merge-guide section, .snake-guide section,
+.guide-page section { margin: 2rem 0; scroll-margin-top: 5rem; }
 .guides-index li, .sudoku-guide li, .chess-guide li, .mahjong-guide li, .bubble-guide li,
-.td-guide li, .merge-guide li, .snake-guide li { margin-bottom: .6rem; }
+.td-guide li, .merge-guide li, .snake-guide li, .guide-page li { margin-bottom: .6rem; }
 .guides-index ol, .sudoku-guide ol, .chess-guide ol, .mahjong-guide ol, .bubble-guide ol,
-.td-guide ol, .merge-guide ol, .snake-guide ol { padding-left: 1.5rem; }
+.td-guide ol, .merge-guide ol, .snake-guide ol, .guide-page ol { padding-left: 1.5rem; }
 .guides-index h2, .sudoku-guide h2, .chess-guide h2, .mahjong-guide h2, .bubble-guide h2,
-.td-guide h2, .merge-guide h2, .snake-guide h2 { margin-top: 1.5rem; }
+.td-guide h2, .merge-guide h2, .snake-guide h2, .guide-page h2 { margin-top: 1.5rem; }
 .guides-index nav[aria-label="Guide sections"], .sudoku-guide nav, .chess-guide nav,
-.mahjong-guide nav, .bubble-guide nav, .td-guide nav, .merge-guide nav, .snake-guide nav {
+.mahjong-guide nav, .bubble-guide nav, .td-guide nav, .merge-guide nav, .snake-guide nav,
+.guide-page nav {
   font-size: .9rem; color: #555; padding: .5rem 0; border-bottom: 1px solid #eee; margin-bottom: 1rem; }
 .guides-promo { max-width: 1100px; margin: 0 auto; }
 .guide-list { list-style: none; padding: 0; margin: .5rem 0 1rem; columns: 2; column-gap: 2rem; }

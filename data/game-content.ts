@@ -15,6 +15,7 @@
  */
 
 import { REGIONAL_GAME_CONTENT } from "@/data/regional-game-content";
+import { GAME_DEEP_CONTENT } from "@/data/game-deep-content";
 
 export interface GameContent {
   /** Curated gameplay tags for related-game matching. */
@@ -25,6 +26,10 @@ export interface GameContent {
   howToPlay: string;
   /** Shown only when the input method is confidently genre-standard. */
   controls?: string;
+  /** Deeper editorial copy rendered after the basics (English pages only). */
+  strategy?: string;
+  /** Two or three genuine beginner questions, answered in plain language. */
+  faq?: { q: string; a: string }[];
 }
 
 export const GAME_CONTENT: Record<string, GameContent> = {
@@ -1762,7 +1767,10 @@ export const FEATURED_SLUGS: string[] = [
 
 export function getGameContent(slug: string, locale = "en"): GameContent | undefined {
   const base = GAME_CONTENT[slug];
+  if (!base) return undefined;
   const localized = REGIONAL_GAME_CONTENT[locale]?.[slug];
-  return base && localized ? { ...base, ...localized } : base;
+  // Deep copy is English-only today; the page decides whether to render it.
+  const deep = GAME_DEEP_CONTENT[slug];
+  return { ...base, ...localized, ...deep };
 }
 

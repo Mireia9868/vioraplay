@@ -82,7 +82,9 @@
     "availableOn": "Có trên",
     "exitFullscreen": "Thoát toàn màn hình",
     "fullscreenFallback": "Trình duyệt không thể mở toàn màn hình. Chế độ mở rộng được sử dụng; nhấn nút thoát để quay lại.",
-    "slowLoading": "Nhà cung cấp đang tải lâu hơn. Bạn có thể chờ hoặc tải lại trò chơi."
+    "slowLoading": "Nhà cung cấp đang tải lâu hơn. Bạn có thể chờ hoặc tải lại trò chơi.",
+    "strategy": "Mẹo chiến thuật",
+    "faq": "Câu hỏi thường gặp"
   },
   "search": {
     "title": "Tìm Game",

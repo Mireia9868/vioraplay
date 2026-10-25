@@ -82,7 +82,9 @@
     "availableOn": "Tersedia di",
     "exitFullscreen": "Keluar layar penuh",
     "fullscreenFallback": "Browser tidak dapat membuka layar penuh. Tampilan diperbesar digunakan; tekan tombol keluar untuk kembali.",
-    "slowLoading": "Penyedia membutuhkan waktu lebih lama. Tunggu atau muat ulang game."
+    "slowLoading": "Penyedia membutuhkan waktu lebih lama. Tunggu atau muat ulang game.",
+    "strategy": "Tips strategi",
+    "faq": "Pertanyaan umum"
   },
   "search": {
     "title": "Cari Game",

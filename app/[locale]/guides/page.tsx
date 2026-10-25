@@ -7,7 +7,7 @@ import { metadataBase, absUrl } from "@/lib/seo";
 import { GUIDES, isGuideIndexable } from "@/lib/guides";
 
 const title = "Game Guides & How-To Play | VioraPlay";
-const description = "Free how-to-play guides for Sudoku, chess, gomoku, mahjong, bubble shooter, tower defense, merge & sort puzzles, and snake. Rules, beginner tips, and strategy.";
+const description = "Free how-to-play guides for Sudoku, chess, gomoku, mahjong, solitaire, 2048, match-3, .io, hidden object, racing, bubble shooter, tower defense, merge and snake. Rules, beginner tips, and strategy.";
 const path = "/en/guides";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {

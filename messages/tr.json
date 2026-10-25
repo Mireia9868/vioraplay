@@ -82,7 +82,9 @@
     "availableOn": "Şu cihazlarda",
     "exitFullscreen": "Tam ekrandan çık",
     "fullscreenFallback": "Tarayıcınız tam ekranı açamadı. Genişletilmiş görünüm kullanılıyor; geri dönmek için çıkış düğmesine basın.",
-    "slowLoading": "Sağlayıcının yüklemesi uzun sürüyor. Bekleyebilir veya oyunu yeniden yükleyebilirsiniz."
+    "slowLoading": "Sağlayıcının yüklemesi uzun sürüyor. Bekleyebilir veya oyunu yeniden yükleyebilirsiniz.",
+    "strategy": "Strateji ipuçları",
+    "faq": "Sık sorulan sorular"
   },
   "search": {
     "title": "Oyun Ara",

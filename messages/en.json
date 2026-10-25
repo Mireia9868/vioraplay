@@ -82,7 +82,9 @@
     "availableOn": "Available on",
     "exitFullscreen": "Exit fullscreen",
     "fullscreenFallback": "Your browser could not enter fullscreen. Expanded view is shown instead; use the exit button to return.",
-    "slowLoading": "The provider is taking longer to load. You can wait or reload the game."
+    "slowLoading": "The provider is taking longer to load. You can wait or reload the game.",
+    "strategy": "Strategy tips",
+    "faq": "Frequently asked questions"
   },
   "search": {
     "title": "Search Games",

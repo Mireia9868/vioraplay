@@ -209,7 +209,27 @@ export default async function GamePage({
             <p>{devices.join(" · ")}</p>
           </>
         )}
+        {locale === "en" && content?.strategy && (
+          <>
+            <h3>{t("strategy")}</h3>
+            <p>{content.strategy}</p>
+          </>
+        )}
       </section>
+
+      {/* Deep copy is English-only for now (see data/game-deep-content.ts).
+          Rendering it under a localized URL would reintroduce mixed-language pages. */}
+      {locale === "en" && content?.faq && content.faq.length > 0 && (
+        <section className="game-faq">
+          <h2>{t("faq")}</h2>
+          {content.faq.map((item) => (
+            <div key={item.q} className="game-faq-item">
+              <h3>{item.q}</h3>
+              <p>{item.a}</p>
+            </div>
+          ))}
+        </section>
+      )}
 
       {related.length > 0 && (
         <section>

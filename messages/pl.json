@@ -82,7 +82,9 @@
     "availableOn": "Dostępne na",
     "exitFullscreen": "Wyjdź z pełnego ekranu",
     "fullscreenFallback": "Przeglądarka nie włączyła pełnego ekranu. Wyświetlono widok powiększony; użyj przycisku wyjścia, aby wrócić.",
-    "slowLoading": "Dostawca ładuje grę dłużej. Możesz poczekać lub wczytać ją ponownie."
+    "slowLoading": "Dostawca ładuje grę dłużej. Możesz poczekać lub wczytać ją ponownie.",
+    "strategy": "Wskazówki strategiczne",
+    "faq": "Najczęstsze pytania"
   },
   "search": {
     "title": "Szukaj gier",

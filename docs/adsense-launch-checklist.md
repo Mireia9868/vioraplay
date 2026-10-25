@@ -3,6 +3,9 @@
 本清单对应分支 `fix/adsense-readiness` 的改动。目标：把「提交即拒」的硬伤清掉，
 并把广告接入做成**可回滚、默认不生效**的形式。
 
+环境变量的逐项填写说明（取值、作用域、缺失后果、验证命令）见
+[`environment-variables.md`](./environment-variables.md)。
+
 ---
 
 ## 0. 先决条件（必须先做，否则后面都是空转）
@@ -10,6 +13,7 @@
 - [ ] 确认 Vercel 生产分支是 `main`，并部署到包含本分支合并后的 commit
 - [ ] `NEXT_PUBLIC_SITE_URL=https://www.vioraplay.com`（已默认，确认未被覆盖）
 - [ ] `NEXT_PUBLIC_CONTACT_EMAIL` 配置为真实可收信邮箱（不配则 Contact 页回退到 GitHub Issues）
+- [ ] `NEXT_PUBLIC_SITE_URL` / `NEXT_PUBLIC_GA4_ID` 显式配置（见环境变量文档）
 - [ ] 先不要配置 `NEXT_PUBLIC_ADSENSE_CLIENT`——审核通过前不需要，配了只会产生空白广告位
 
 验收（部署后逐条执行）：

@@ -82,7 +82,9 @@
     "availableOn": "Disponível em",
     "exitFullscreen": "Sair da tela cheia",
     "fullscreenFallback": "Seu navegador não pôde abrir a tela cheia. Usamos uma visualização ampliada; use o botão de saída para voltar.",
-    "slowLoading": "O provedor está demorando para carregar. Aguarde ou recarregue o jogo."
+    "slowLoading": "O provedor está demorando para carregar. Aguarde ou recarregue o jogo.",
+    "strategy": "Dicas de estratégia",
+    "faq": "Perguntas frequentes"
   },
   "search": {
     "title": "Buscar Jogos",

@@ -77,6 +77,48 @@ export const GUIDES: readonly Guide[] = [
     cat: "/category/snake",
     catName: "Snake Games",
   },
+  {
+    slug: "how-to-play-2048",
+    title: "How to Play 2048",
+    blurb: "The sliding rule, the corner strategy, and the move order that keeps a board alive.",
+    cat: "/category/puzzle",
+    catName: "Puzzle Games",
+  },
+  {
+    slug: "how-to-play-solitaire",
+    title: "How to Play Solitaire",
+    blurb: "Klondike layout, legal moves, and the column habits that win more deals.",
+    cat: "/category/solitaire",
+    catName: "Solitaire Games",
+  },
+  {
+    slug: "how-to-play-match-3",
+    title: "How to Play Match-3",
+    blurb: "Swaps, cascades and special tiles, and why bottom matches clear more.",
+    cat: "/category/match-3",
+    catName: "Match-3 Games",
+  },
+  {
+    slug: "how-to-play-io-games",
+    title: "How to Play .io Games",
+    blurb: "How shared arenas work, and the early-game habits that reach the leaderboard.",
+    cat: "/category/io",
+    catName: ".io Games",
+  },
+  {
+    slug: "how-to-play-hidden-object",
+    title: "How to Play Hidden Object",
+    blurb: "A band-by-band scanning method that finds objects faster and saves hints.",
+    cat: "/category/hidden-object",
+    catName: "Hidden Object Games",
+  },
+  {
+    slug: "how-to-play-racing-games",
+    title: "How to Play Racing Games",
+    blurb: "Braking, racing lines and exit speed, plus stunt-bike landing angles.",
+    cat: "/category/racing",
+    catName: "Racing Games",
+  },
 ];
 
 export const GUIDE_SLUGS: readonly string[] = GUIDES.map((g) => g.slug);

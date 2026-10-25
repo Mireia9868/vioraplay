@@ -82,7 +82,9 @@
     "availableOn": "Disponible en",
     "exitFullscreen": "Salir de pantalla completa",
     "fullscreenFallback": "Tu navegador no pudo activar la pantalla completa. Se muestra una vista ampliada; usa el botón de salir para volver.",
-    "slowLoading": "El proveedor tarda en cargar. Puedes esperar o recargar el juego."
+    "slowLoading": "El proveedor tarda en cargar. Puedes esperar o recargar el juego.",
+    "strategy": "Consejos de estrategia",
+    "faq": "Preguntas frecuentes"
   },
   "search": {
     "title": "Buscar juegos",
