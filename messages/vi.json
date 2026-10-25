@@ -116,15 +116,118 @@
     "remove": "Xóa khỏi yêu thích"
   },
   "info": {
-    "about": "VioraPlay là danh mục trò chơi trên trình duyệt. Trò chơi được cung cấp qua khung nhúng Playgama của bên thứ ba. VioraPlay cung cấp điều hướng, tìm kiếm, đề xuất và mục yêu thích lưu trên trình duyệt.",
-    "contact": "Để báo liên kết hỏng hoặc lỗi trang web, hãy dùng trình theo dõi vấn đề GitHub của chúng tôi. Không gửi mật khẩu, thông tin thanh toán hoặc thông tin riêng tư trong báo cáo công khai.",
-    "privacy": "VioraPlay lưu các game yêu thích và vừa xem gần đây trên trình duyệt này bằng bộ nhớ cục bộ, không cần tài khoản VioraPlay. Xóa dữ liệu trang web sẽ xóa các mục này. Chúng tôi dùng Google Analytics để đo lượt truy cập và tương tác. Chúng tôi cũng hiển thị quảng cáo qua Google AdSense. Google và các đối tác có thể dùng cookie —bao gồm cookie quảng cáo DoubleClick— để cá nhân hóa quảng cáo và đo hiệu quả. Bạn có thể tắt quảng cáo được cá nhân hóa bất cứ lúc nào qua Cài đặt quảng cáo của Google, Your Online Choices, hoặc Network Advertising Initiative. Các game nhúng kết nối với Playgama và có thể tải quảng cáo hoặc dùng bộ nhớ theo chính sách của nhà cung cấp. VioraPlay không thể đọc nội dung khung game từ nguồn khác. Bạn có thể xem lại hoặc thay đổi lựa chọn cookie bất cứ lúc nào qua liên kết 'Cài đặt cookie' ở chân trang.",
-    "terms": "Trò chơi do bên thứ ba vận hành và có thể hiển thị quảng cáo. Tính khả dụng, quy tắc và dịch vụ phụ thuộc vào nhà cung cấp. Tôn trọng quyền của nhà sáng tạo và sử dụng trang web hợp pháp. Tải lại có thể mất tiến độ chưa được nhà cung cấp lưu."
+    "updated": "Cập nhật lần cuối: 25 tháng 10 năm 2026",
+    "contactEmailHeading": "Cách liên hệ với chúng tôi",
+    "about": {
+      "intro": "VioraPlay là danh mục trò chơi trình duyệt độc lập. Chúng tôi không phát triển các trò chơi tại đây; chúng tôi giúp bạn tìm một trò chơi đáng để nghỉ giải lao và giải thích cách chơi.",
+      "sections": [
+        {
+          "h": "Trang này là gì",
+          "p": "VioraPlay liệt kê các trò chơi HTML5 miễn phí chạy trên trình duyệt mà không cần tải xuống hay tài khoản. Mỗi trò chơi chạy trong khung nhúng do nhà phát hành Playgama cung cấp. Mọi thứ ngoài khung đó — mô tả, trang danh mục, hướng dẫn, gợi ý và giao diện — do VioraPlay viết và duy trì."
+        },
+        {
+          "h": "Cách chọn trò chơi",
+          "p": "Chúng tôi bắt đầu từ danh mục Playgama và chỉ giữ trò chơi khi nó tải ổn định, chạy trên máy tính và điện thoại, và thuộc một danh mục rõ ràng. Các lựa chọn biên tập trên trang chủ do chúng tôi chọn tay; không phải vị trí trả phí và chúng tôi không bán thứ hạng."
+        },
+        {
+          "h": "Chúng tôi tự viết gì",
+          "p": "Với các trò chơi được đề cập sâu, chúng tôi viết phần giới thiệu gốc và mục cách chơi, đồng thời xuất bản hướng dẫn dài hơn cho các thể loại được tìm nhiều. Chúng tôi không sao chép mô tả của nhà phát hành và không bịa ngày phát hành, studio hay số người chơi."
+        },
+        {
+          "h": "Sửa lỗi và gỡ bỏ",
+          "p": "Nếu trò chơi bị lỗi, gắn sai danh mục hoặc thiếu, hãy cho chúng tôi biết qua trang liên hệ; chúng tôi sẽ sửa hoặc gỡ. Nếu bạn có quyền với nội dung được hiển thị ở đây, xem mục bản quyền trên trang liên hệ."
+        },
+        {
+          "h": "Tính độc lập",
+          "p": "VioraPlay không liên kết với Playgama hay các studio có trò chơi xuất hiện ở đây. Tên, hình ảnh và nhãn hiệu thuộc về chủ sở hữu tương ứng. Trang được tài trợ bằng quảng cáo, như nêu trên trang quyền riêng tư."
+        }
+      ]
+    },
+    "contact": {
+      "intro": "Cách nhanh nhất để liên hệ là email. Chúng tôi đọc mọi tin nhắn và thường trả lời trong vài ngày làm việc.",
+      "sections": [
+        {
+          "h": "Báo trò chơi bị lỗi",
+          "p": "Gửi URL trang, điều bạn mong đợi, điều đã xảy ra, thiết bị và trình duyệt. Ảnh chụp màn hình sẽ hữu ích. Lỗi nhúng thường được sửa trong một tuần."
+        },
+        {
+          "h": "Bản quyền và yêu cầu gỡ bỏ",
+          "p": "Nếu bạn có quyền với trò chơi, hình ảnh hoặc văn bản hiển thị trên VioraPlay và cho rằng nó được dùng sai, hãy liên hệ kèm URL và mô tả ngắn về quyền của bạn. Chúng tôi gỡ hoặc thay thế nội dung đang tranh chấp trong khi xem xét."
+        },
+        {
+          "h": "Quảng cáo, cấp phép và dữ liệu",
+          "p": "Dùng cùng địa chỉ cho câu hỏi quảng cáo, cấp phép và yêu cầu về quyền riêng tư hoặc dữ liệu. Với yêu cầu riêng tư, cho biết bạn đang thực hiện quyền nào."
+        },
+        {
+          "h": "Những gì không nên gửi",
+          "p": "Không bao giờ gửi mật khẩu, thông tin thanh toán, giấy tờ tùy thân hoặc dữ liệu cá nhân nhạy cảm. Chúng tôi không cần chúng để sửa một trang và email không phải kênh an toàn."
+        }
+      ]
+    },
+    "privacy": {
+      "intro": "Chính sách này giải thích VioraPlay lưu gì, vì sao và cách bạn kiểm soát. Áp dụng cho vioraplay.com và các phiên bản ngôn ngữ.",
+      "sections": [
+        {
+          "h": "Những gì lưu trong trình duyệt",
+          "p": "Mục yêu thích, trò chơi xem gần đây và lựa chọn cookie được lưu trong bộ nhớ cục bộ của trình duyệt. Không có tài khoản VioraPlay và không có hồ sơ của bạn trên máy chủ. Xóa dữ liệu trang sẽ xóa các bản ghi này."
+        },
+        {
+          "h": "Phân tích",
+          "p": "Chúng tôi dùng Google Analytics 4 để đo lượt truy cập và tương tác cơ bản, chỉ sau khi bạn chấp nhận cookie phân tích trong biểu ngữ đồng ý. Báo cáo là tổng hợp. Google có thể xử lý địa chỉ IP và thông tin thiết bị theo chính sách của Google. Bạn có thể từ chối phân tích và vẫn dùng mọi trò chơi."
+        },
+        {
+          "h": "Quảng cáo",
+          "p": "Chúng tôi hiển thị quảng cáo qua Google AdSense. Google và đối tác có thể dùng cookie — gồm cookie quảng cáo DoubleClick — để phân phối và đo lường quảng cáo. Khi được yêu cầu, kể cả ở EEA và Vương quốc Anh, sự đồng ý quảng cáo được thu thập qua nền tảng quản lý đồng ý được Google chứng nhận trước khi đặt bất kỳ cookie quảng cáo cá nhân hóa nào. Bạn có thể thay đổi lựa chọn phân tích qua liên kết ở chân trang và tắt quảng cáo cá nhân hóa trong Cài đặt quảng cáo của Google, Your Online Choices hoặc Network Advertising Initiative (liên kết bên dưới)."
+        },
+        {
+          "h": "Trò chơi bên thứ ba",
+          "p": "Trò chơi tải trong khung nhúng do Playgama vận hành. Nhà cung cấp có thể đặt cookie riêng, hiển thị quảng cáo riêng và lưu tiến trình theo chính sách của họ. Vì khung khác nguồn, VioraPlay không đọc được nội dung bên trong."
+        },
+        {
+          "h": "Quyền của bạn",
+          "p": "Tùy nơi cư trú, bạn có thể có quyền truy cập, sửa, xóa hoặc chuyển dữ liệu cá nhân, phản đối hoặc hạn chế xử lý và rút lại sự đồng ý. Chúng tôi không bán thông tin cá nhân. Để thực hiện quyền, liên hệ qua trang liên hệ; chúng tôi trả lời trong thời hạn luật định. Bạn cũng có thể khiếu nại cơ quan bảo vệ dữ liệu địa phương."
+        },
+        {
+          "h": "Trẻ em và thay đổi",
+          "p": "VioraPlay là trang cho công chúng và không hướng đến trẻ dưới 13 tuổi (16 tại EEA). Chúng tôi không cố ý thu thập dữ liệu của trẻ em. Chính sách được cập nhật khi cách làm thay đổi; ngày ở đầu trang cho biết lần sửa đổi cuối."
+        }
+      ],
+      "note": "Chính sách được xuất bản bằng nhiều ngôn ngữ để tiện dụng. Nếu bản dịch khác văn bản tiếng Anh, bản tiếng Anh được ưu tiên."
+    },
+    "terms": {
+      "intro": "Các điều khoản này điều chỉnh việc bạn sử dụng VioraPlay. Khi dùng trang, bạn chấp nhận chúng; nếu không đồng ý, hãy ngừng sử dụng.",
+      "sections": [
+        {
+          "h": "Sử dụng VioraPlay",
+          "p": "VioraPlay miễn phí cho mục đích giải trí cá nhân, phi thương mại. Bạn có thể liên kết tới bất kỳ trang nào. Không được thu thập danh mục hàng loạt, đăng lại văn bản hoặc hướng dẫn của chúng tôi, hoặc can thiệp vào hoạt động hay bảo mật của trang."
+        },
+        {
+          "h": "Trò chơi do bên thứ ba cung cấp",
+          "p": "Trò chơi được nhúng từ Playgama và vẫn thuộc sở hữu của nhà phát triển. Khả năng cung cấp, luật chơi, mua trong trò chơi, quảng cáo và tiến trình đã lưu do các bên đó kiểm soát. Một trò chơi có thể thay đổi hoặc bị gỡ mà không báo trước."
+        },
+        {
+          "h": "Nội dung của chúng tôi",
+          "p": "Văn bản, hướng dẫn, bố cục, mã và thiết kế của VioraPlay thuộc VioraPlay. Tên, hình ảnh, ảnh chụp và nhãn hiệu của trò chơi thuộc chủ sở hữu tương ứng và được hiển thị để nhận diện và điều hướng. Nếu bạn cho rằng nội dung xâm phạm quyền của mình, xem trang liên hệ."
+        },
+        {
+          "h": "Quảng cáo",
+          "p": "Các trang hiển thị quảng cáo, gồm Google AdSense. Quảng cáo do hệ thống quảng cáo lựa chọn, không phải chúng tôi; việc hiển thị quảng cáo không có nghĩa là chúng tôi chứng thực sản phẩm hay dịch vụ được quảng cáo."
+        },
+        {
+          "h": "Miễn trừ và giới hạn trách nhiệm",
+          "p": "Trang được cung cấp «nguyên trạng». Chúng tôi không bảo đảm mọi trò chơi chạy trên mọi thiết bị, hay danh mục đầy đủ và không có lỗi. Trong phạm vi pháp luật cho phép, VioraPlay không chịu trách nhiệm cho thiệt hại gián tiếp phát sinh từ việc dùng trang hoặc trò chơi bên thứ ba. Không điều khoản nào giới hạn trách nhiệm mà pháp luật không cho phép giới hạn."
+        },
+        {
+          "h": "Thay đổi điều khoản",
+          "p": "Chúng tôi có thể cập nhật điều khoản khi trang thay đổi. Ngày sửa đổi nằm ở đầu trang. Tiếp tục dùng VioraPlay sau thay đổi nghĩa là bạn chấp nhận điều khoản mới."
+        }
+      ]
+    }
   },
   "consent": {
-    "title": "Tùy chọn quyền riêng tư",
-    "body": "Chúng tôi dùng cookie để phân tích và hiển thị quảng cáo được cá nhân hóa qua Google AdSense. Chấp nhận để giúp chúng tôi cải thiện trang, hoặc từ chối để chỉ giới hạn ở bộ nhớ cục bộ cần thiết.",
-    "accept": "Chấp nhận tất cả",
-    "reject": "Từ chối tất cả"
+    "title": "Cookie phân tích",
+    "body": "Chúng tôi dùng cookie phân tích để hiểu cách VioraPlay được sử dụng. Quảng cáo do Google phân phối và Google tự hỏi sự đồng ý khi pháp luật yêu cầu. Chấp nhận phân tích hoặc từ chối và tiếp tục chơi.",
+    "accept": "Chấp nhận phân tích",
+    "reject": "Từ chối phân tích"
   }
 }

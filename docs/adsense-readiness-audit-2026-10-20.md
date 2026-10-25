@@ -3,6 +3,10 @@
 日期：2026-10-20｜对象：`web/`（Next.js 16 + next-intl，8 语种）
 结论：**当前状态无法通过 AdSense 审核**，存在 3 个 P0 硬性阻断项 + 2 个 P1 高优先级风险。逐项均有代码证据。
 
+> **2026-10-25 更新**：P0 修复已落到分支 `fix/adsense-readiness`（统一可索引判定、sitemap 只提交 index 页、
+> 法务页 8 语种扩写、analytics 同意与 Google CMP 分离、AdSense 标签按环境变量开关）。
+> 上线步骤与验收命令见 [`adsense-launch-checklist.md`](./adsense-launch-checklist.md)。
+
 ---
 
 ## 一、总评（按 AdSense 审核维度打分）

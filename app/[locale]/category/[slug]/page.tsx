@@ -17,23 +17,12 @@ import {
 import { GameCard } from "@/components/GameCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PuzzleSearchGuide } from "@/components/PuzzleSearchGuide";
-import { PUZZLE_SEO, isNewLocale } from "@/data/regional-seo";
+import { PUZZLE_SEO } from "@/data/regional-seo";
+import { isCategoryIndexable } from "@/lib/indexability";
 import { routing } from "@/i18n/routing";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
 
 type SearchParams = Record<string, string | string[] | undefined>;
-
-/**
- * Minimum games a category needs before it is worth indexing on its own.
- *
- * 76 of 165 categories hold 3 or fewer games; 116 hold fewer than 10. Those
- * pages duplicate the parent category's content with a handful of tiles, so
- * indexing them dilutes the site's quality evaluation across the whole catalog.
- * Threshold chosen at 10: it keeps 49 categories indexable while parking the
- * thin tail. Games inside stay reachable via the parent category and homepage,
- * and follow:true keeps their link equity flowing.
- */
-const MIN_INDEXABLE_GAMES = 10;
 
 function pageFrom(sp: SearchParams | undefined): number {
   const raw = sp?.page;
@@ -81,12 +70,12 @@ export async function generateMetadata({
     ) + ` Browse ${count} free ${fullName.toLowerCase()} — no download, instant play.`,
     alternates: {
       canonical: path(locale),
-      languages: buildLanguageAlternates((l) => path(l), routing.locales.filter(l => slug === "puzzle" || !isNewLocale(l))),
+      languages: buildLanguageAlternates((l) => path(l), routing.locales.filter(l => isCategoryIndexable(l, slug, count))),
     },
-    // Deeper pages and device-filtered views: crawlable but out of the index.
-    // Thin categories: same, for the reason documented on MIN_INDEXABLE_GAMES.
+    // Thin categories, deeper pages and device-filtered views: crawlable but
+    // out of the index. Shared with the sitemap via lib/indexability.ts.
     robots:
-      page > 1 || devices.length > 0 || count < MIN_INDEXABLE_GAMES || (isNewLocale(locale) && !puzzleCopy)
+      page > 1 || devices.length > 0 || !isCategoryIndexable(locale, slug, count)
         ? { index: false, follow: true }
         : undefined,
     openGraph: {

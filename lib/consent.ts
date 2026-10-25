@@ -1,18 +1,17 @@
-// Consent state for analytics + advertising cookies.
+// Consent state for analytics cookies only.
 //
-// AdSense's EU User Consent Policy requires that we obtain consent BEFORE
-// setting advertising/analytics cookies in the EEA/UK. We show a banner, store
-// the decision in localStorage, and gate Google Analytics (and future AdSense
-// snippets) on the stored choice.
+// Why ads moved out of this file: Google requires a Google-certified CMP
+// (TCF v2.2) to collect ad consent in the EEA/UK. A hand-rolled banner is not
+// certified, so claiming ad consent from it would be inaccurate. Ad consent is
+// now collected by Google's own consent message configured in AdSense
+// ("Privacy & messaging" → GDPR/CCPA messages). This module only remembers
+// whether the visitor allowed Google Analytics.
 //
-// `analytics` gates Google Analytics. `ads` gates any future AdSense unit — when
-// you add the AdSense <script>/<ins> snippet, render it only when
-// getConsent()?.ads === true (see components/GoogleAnalytics.tsx for the
-// pattern). Reject sets both to false: no analytics, no personalized ads.
+// Analytics is consent-gated because GA4 sets cookies. Ads are handled by the
+// Google tag + CMP, which refuses personalised ads until the CMP has consent.
 
 export type ConsentDecision = {
   analytics: boolean;
-  ads: boolean;
   decidedAt: number;
 };
 
@@ -26,8 +25,13 @@ export function getConsent(): ConsentDecision | null {
     const raw = window.localStorage.getItem(KEY);
     if (!raw) return null;
     const parsed = JSON.parse(raw) as Partial<ConsentDecision>;
-    if (typeof parsed?.analytics === "boolean" && typeof parsed?.ads === "boolean") {
-      return parsed as ConsentDecision;
+    // Records written by the previous version also carry `ads`; that field is
+    // ignored from now on, `analytics` is what we honour.
+    if (typeof parsed?.analytics === "boolean") {
+      return {
+        analytics: parsed.analytics,
+        decidedAt: typeof parsed.decidedAt === "number" ? parsed.decidedAt : Date.now(),
+      };
     }
     return null;
   } catch {
@@ -35,9 +39,9 @@ export function getConsent(): ConsentDecision | null {
   }
 }
 
-export function setConsent(analytics: boolean, ads: boolean): void {
+export function setConsent(analytics: boolean): void {
   if (typeof window === "undefined") return;
-  const decision: ConsentDecision = { analytics, ads, decidedAt: Date.now() };
+  const decision: ConsentDecision = { analytics, decidedAt: Date.now() };
   window.localStorage.setItem(KEY, JSON.stringify(decision));
   window.dispatchEvent(new Event(CONSENT_CHANGE_EVENT));
 }

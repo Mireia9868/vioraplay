@@ -1,0 +1,10 @@
+# Replace pub-0000000000000000 with the publisher ID from AdSense
+# (AdSense → Account → Settings → Account information → Publisher ID).
+# Save this file as `public/ads.txt` so it is served at
+# https://www.vioraplay.com/ads.txt — AdSense expects it at the domain root,
+# and both the apex and www host must return it.
+#
+# Do not commit the real publisher ID to a public repository if you prefer to
+# keep it out of the codebase: edit the file on the deployment (or generate it
+# at build time), and add `public/ads.txt` to .gitignore.
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

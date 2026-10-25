@@ -116,15 +116,122 @@
     "remove": "Remove from favorites"
   },
   "info": {
-    "about": "VioraPlay is a directory of browser games. Games are provided through third-party Playgama embeds; VioraPlay supplies navigation, search, recommendations and browser-local favorites.",
-    "contact": "For broken game links or website issues, use our GitHub issue tracker. Do not include passwords, payment details or other private information in public reports.",
-    "privacy": "VioraPlay saves your favorites and recently visited games in this browser using local storage, without a VioraPlay account. Clearing your site data removes these records. We use Google Analytics to measure visits and site interactions. We also display advertising through Google AdSense. Google and its partners may use cookies — including the DoubleClick advertising cookie — to personalize ads and measure their performance. You can opt out of personalized advertising at any time through Google Ads Settings, Your Online Choices, or the Network Advertising Initiative. Embedded games connect to Playgama and may load advertising or use storage under the provider's privacy policies. VioraPlay cannot read the contents of cross-origin game frames. You can review or change your cookie choices at any time using the 'Cookie settings' link in the footer.",
-    "terms": "Games run through third-party providers and may show ads. Availability, game rules and in-game services depend on the provider. Respect the rights of game creators and use the site lawfully. Reloading a game may reset progress that the provider has not saved."
+    "updated": "Last updated: 25 October 2026",
+    "contactEmailHeading": "How to reach us",
+    "about": {
+      "intro": "VioraPlay is an independent browser-game directory. We do not develop the games listed here; we help you find one worth your break, and we explain how it works.",
+      "sections": [
+        {
+          "h": "What this site is",
+          "p": "VioraPlay lists free HTML5 games that run in a browser without a download or an account. Each game runs inside an embedded frame supplied by its publisher, Playgama. Everything outside that frame — descriptions, category pages, guides, recommendations and the interface itself — is written and maintained by VioraPlay."
+        },
+        {
+          "h": "How games are selected",
+          "p": "We start from the Playgama catalogue and keep a game only when it loads reliably, works on desktop and mobile, and fits a clear category. The editorial picks on the homepage are hand-selected by us; they are not paid placements, and we do not sell ranking positions."
+        },
+        {
+          "h": "What we write ourselves",
+          "p": "For the games we cover in depth, we write an original introduction and a how-to-play section, and we publish longer guides for the genres readers ask about most. We do not copy publisher blurbs into our own voice, and we do not invent release dates, developer names or player counts."
+        },
+        {
+          "h": "Corrections and removal",
+          "p": "If a game is broken, mislabelled or missing, tell us through the contact page and we will fix or remove it. If you own rights in something shown here, see the copyright section on the contact page."
+        },
+        {
+          "h": "Independence",
+          "p": "VioraPlay is not affiliated with Playgama or with the studios whose games appear here. Game titles, artwork and trademarks belong to their respective owners. The site is supported by advertising, which is disclosed on the privacy page."
+        }
+      ]
+    },
+    "contact": {
+      "intro": "The fastest way to reach us is email. We read every message and usually reply within a few working days.",
+      "sections": [
+        {
+          "h": "Report a broken game",
+          "p": "Send the page URL, what you expected, what happened instead, and your device and browser. Screenshots help. Broken embeds are usually fixed within a week."
+        },
+        {
+          "h": "Copyright and takedowns",
+          "p": "If you own rights in a game, image or text shown on VioraPlay and believe it is used incorrectly, contact us with the URL and a short description of your rights. We remove or replace disputed material promptly while we review it."
+        },
+        {
+          "h": "Advertising, licensing and data requests",
+          "p": "Use the same address for advertising enquiries, licensing questions, and privacy or data requests. For privacy requests, tell us which right you are exercising so we can route the message correctly."
+        },
+        {
+          "h": "What not to send",
+          "p": "Never send passwords, payment details, identity documents or other sensitive personal data. We do not need them to fix a game page, and email is not a secure channel for them."
+        }
+      ]
+    },
+    "privacy": {
+      "intro": "This policy explains what VioraPlay stores, why we store it, and how you can control it. It applies to vioraplay.com and its language versions.",
+      "sections": [
+        {
+          "h": "What stays in your browser",
+          "p": "Favourites, recently visited games and your cookie choice are saved in your browser's local storage. There is no VioraPlay account and no server-side profile of you. Clearing site data removes these records; favourites then disappear."
+        },
+        {
+          "h": "Analytics",
+          "p": "We use Google Analytics 4 to measure visits and basic interactions, and only after you accept analytics cookies in the consent banner. Reports are aggregated. Google may process your IP address and device information as described in Google's privacy policy. You can reject analytics and still use every game."
+        },
+        {
+          "h": "Advertising",
+          "p": "We display advertising through Google AdSense. Google and its partners may use cookies — including the DoubleClick advertising cookie — to serve and measure ads. Where required, including in the EEA and the UK, ad consent is collected through a Google-certified consent management platform before any personalised advertising cookie is set. You can change your analytics choice at any time using the 'Cookie settings' link in the footer, and you can opt out of personalised advertising through Google Ads Settings, Your Online Choices or the Network Advertising Initiative (links below)."
+        },
+        {
+          "h": "Third-party games",
+          "p": "Games load inside an embedded frame operated by Playgama. The provider may set its own cookies, show its own advertising, and store game progress under its own privacy policy. Because the frame is cross-origin, VioraPlay cannot read what happens inside it. We choose providers we consider reputable, but their data practices are theirs, not ours."
+        },
+        {
+          "h": "Your rights",
+          "p": "Depending on where you live, you may have the right to access, correct, delete or port your personal data, to object to or restrict processing, and to withdraw consent. We do not sell personal information. To exercise a right, contact us using the contact page; we respond within the period required by law. You may also complain to your local data protection authority."
+        },
+        {
+          "h": "Children",
+          "p": "VioraPlay is a general-audience site and is not directed to children under 13 (16 in the EEA). We do not knowingly collect personal data from children. If you believe a child has provided personal data, contact us and we will delete it."
+        },
+        {
+          "h": "Changes",
+          "p": "We update this policy when our practices change. The date at the top of the page shows the last revision. Material changes will be announced on this page."
+        }
+      ],
+      "note": "This policy is published in several languages for convenience. If a translation differs from the English text, the English version prevails."
+    },
+    "terms": {
+      "intro": "These terms govern your use of VioraPlay. By using the site you accept them; if you do not, please stop using it.",
+      "sections": [
+        {
+          "h": "Using VioraPlay",
+          "p": "VioraPlay is free to use for personal, non-commercial entertainment. You may link to any page. You may not scrape the catalogue in bulk, republish our text or guides, or attempt to interfere with the site's operation or security."
+        },
+        {
+          "h": "Games are provided by third parties",
+          "p": "Games are embedded from Playgama and remain the property of their developers. Their availability, rules, in-game purchases, advertising and saved progress are controlled by those third parties. A game may be changed, regionalised or withdrawn without notice."
+        },
+        {
+          "h": "Our content",
+          "p": "The text, guides, layout, code and design of VioraPlay belong to VioraPlay. Game titles, artwork, screenshots and trademarks belong to their respective owners and are shown for identification and navigation. If you believe content infringes your rights, see the contact page."
+        },
+        {
+          "h": "Advertising",
+          "p": "Pages display advertising, including Google AdSense. Ads are selected by the advertising systems, not by us, and displaying an ad is not an endorsement of the advertised product or service."
+        },
+        {
+          "h": "Disclaimer and limitation of liability",
+          "p": "The site is provided 'as is'. We do not warrant that every game will work on every device, or that the catalogue is complete or error-free. To the extent permitted by law, VioraPlay is not liable for indirect or consequential loss arising from use of the site or of third-party games. Nothing in these terms limits liability that cannot be limited by law."
+        },
+        {
+          "h": "Changes to these terms",
+          "p": "We may update these terms as the site changes. The revision date appears at the top of the page. Continuing to use VioraPlay after a change means you accept the updated terms."
+        }
+      ]
+    }
   },
   "consent": {
-    "title": "Your privacy choices",
-    "body": "We use cookies for site analytics and to serve personalized ads through Google AdSense. Accept to help us improve and support the site, or reject to limit tracking to essential local storage only.",
-    "accept": "Accept all",
-    "reject": "Reject all"
+    "title": "Analytics cookies",
+    "body": "We use analytics cookies to understand how VioraPlay is used. Advertising is served by Google, which asks for its own consent where the law requires it. Accept analytics, or reject and keep playing.",
+    "accept": "Accept analytics",
+    "reject": "Reject analytics"
   }
 }

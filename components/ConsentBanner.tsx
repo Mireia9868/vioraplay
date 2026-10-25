@@ -9,8 +9,11 @@ import {
   CONSENT_OPEN_EVENT,
 } from "@/lib/consent";
 
-// Bottom fixed banner shown until the visitor makes a choice. Reopenable from
-// the footer "Cookie settings" link, which dispatches CONSENT_OPEN_EVENT.
+// Bottom fixed banner shown until the visitor decides about ANALYTICS cookies.
+// Advertising consent is not asked for here: Google's certified CMP (enabled in
+// AdSense → Privacy & messaging) shows its own message and gates ad cookies.
+// Two consent prompts are expected and legitimate — they cover different things.
+// Reopenable from the footer "Cookie settings" link (CONSENT_OPEN_EVENT).
 export function ConsentBanner() {
   const t = useTranslations("consent");
   const [visible, setVisible] = useState(false);
@@ -40,14 +43,14 @@ export function ConsentBanner() {
           <button
             type="button"
             className="consent-btn consent-reject"
-            onClick={() => setConsent(false, false)}
+            onClick={() => setConsent(false)}
           >
             {t("reject")}
           </button>
           <button
             type="button"
             className="consent-btn consent-accept"
-            onClick={() => setConsent(true, true)}
+            onClick={() => setConsent(true)}
           >
             {t("accept")}
           </button>

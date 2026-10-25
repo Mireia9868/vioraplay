@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { AdSense } from "@/components/AdSense";
 import { ConsentBanner } from "@/components/ConsentBanner";
 import { FooterConsentLink } from "@/components/FooterConsentLink";
 import { SiteNav } from "@/components/SiteNav";
@@ -106,7 +107,10 @@ export default async function LocaleLayout({
           {/* GA4 — all portal pages; game iframe content is 3rd-party.
               Loads only after analytics consent (see lib/consent.ts). */}
           <GoogleAnalytics />
-          {/* EU/UK consent banner for analytics + advertising cookies. */}
+          {/* AdSense tag — renders only when NEXT_PUBLIC_ADSENSE_CLIENT is set.
+              Ad consent is collected by Google's certified CMP, not by the banner. */}
+          <AdSense />
+          {/* Analytics consent banner. Ad consent is Google's own message. */}
           <ConsentBanner />
         </NextIntlClientProvider>
       </body>

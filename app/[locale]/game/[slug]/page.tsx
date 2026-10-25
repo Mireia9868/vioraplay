@@ -11,7 +11,7 @@ import {
 } from "@/lib/games";
 import { getGameContent } from "@/data/game-content";
 import { REGIONAL_GAME_CONTENT } from "@/data/regional-game-content";
-import { isNewLocale } from "@/data/regional-seo";
+import { isGameIndexable, indexableGameLocales } from "@/lib/indexability";
 import { routing } from "@/i18n/routing";
 import {
   getGameIntent,
@@ -64,15 +64,13 @@ export async function generateMetadata({
     description,
     alternates: {
       canonical: path(locale),
-      languages: buildLanguageAlternates((l) => path(l), routing.locales.filter(l => !isNewLocale(l) || Boolean(REGIONAL_GAME_CONTENT[l]?.[slug]))),
+      languages: buildLanguageAlternates((l) => path(l), indexableGameLocales(routing.locales, slug)),
     },
-    // AdSense / thin-content guard: a game page is indexed only when it carries
-    // VioraPlay's own curated copy for the locale. Pages that would otherwise
-    // render only the supplier's description (no original intro) are kept out
-    // of the index so the catalog does not read as scraped/made-for-AdSense.
-    // New locales additionally require a localized entry, not just the EN base.
-    robots: (isNewLocale(locale) ? !REGIONAL_GAME_CONTENT[locale]?.[slug] : !content)
-      ? { index: false, follow: true } : undefined,
+    // AdSense / thin-content guard: index a game page only when it carries
+    // VioraPlay's own curated copy for THIS locale. English fallback under a
+    // non-English URL is duplicate content, so it stays noindex. See
+    // lib/indexability.ts for the shared rule used by the sitemap too.
+    robots: isGameIndexable(locale, slug) ? undefined : { index: false, follow: true },
     openGraph: {
       title: REGIONAL_GAME_CONTENT[locale]?.[slug]?.title ?? gameOgTitle(game.title, intent),
       description,

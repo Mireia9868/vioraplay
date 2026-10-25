@@ -116,15 +116,122 @@
     "remove": "Favorilerden kaldır"
   },
   "info": {
-    "about": "VioraPlay bir tarayıcı oyunları kataloğudur. Oyunlar üçüncü taraf Playgama yerleştirmeleri üzerinden sağlanır. VioraPlay gezinme, arama, öneriler ve tarayıcıda saklanan favoriler sunar.",
-    "contact": "Bozuk bağlantılar veya site sorunları için GitHub sorun takipçimizi kullanın. Herkese açık raporlara parola, ödeme bilgileri veya özel bilgiler eklemeyin.",
-    "privacy": "VioraPlay, favori ve son ziyaret edilen oyunları VioraPlay hesabı olmadan bu tarayıcının yerel depolamasında saklar. Site verilerini silmek bu kayıtları kaldırır. Ziyaret ve etkileşimleri ölçmek için Google Analytics kullanırız. Ayrıca Google AdSense aracılığıyla reklam gösteririz. Google ve iş ortakları, reklamları kişiselleştirmek ve performanslarını ölçmek için —DoubleClick reklam çerezi dahil— çerezleri kullanabilir. Google Reklam Ayarları, Your Online Choices veya Network Advertising Initiative üzerinden istediğiniz zaman kişiselleştirilmiş reklamları kapatabilirsiniz. Yerleştirilmiş oyunlar Playgama'ya bağlanır ve sağlayıcının gizlilik politikalarına göre reklam gösterebilir veya depolama kullanabilir. VioraPlay farklı kaynaklı oyun çerçevelerinin içeriğini okuyamaz. Alt bilgideki 'Çerez ayarları' bağlantısını kullanarak çerez tercihlerinizi istediğiniz zaman gözden geçirebilir veya değiştirebilirsiniz.",
-    "terms": "Oyunlar üçüncü taraflarca çalıştırılır ve reklam gösterebilir. Kullanılabilirlik, kurallar ve oyun hizmetleri sağlayıcıya bağlıdır. Oyun yaratıcılarının haklarına saygı gösterin ve siteyi yasal şekilde kullanın. Yeniden yükleme, sağlayıcının kaydetmediği ilerlemeyi sıfırlayabilir."
+    "updated": "Son güncelleme: 25 Ekim 2026",
+    "contactEmailHeading": "Bize nasıl ulaşabilirsiniz",
+    "about": {
+      "intro": "VioraPlay bağımsız bir tarayıcı oyunları dizinidir. Burada listelenen oyunları biz geliştirmiyoruz; molanıza değecek oyunu bulmanıza yardım ediyor ve nasıl oynandığını açıklıyoruz.",
+      "sections": [
+        {
+          "h": "Bu site nedir",
+          "p": "VioraPlay, indirme veya hesap gerektirmeden tarayıcıda çalışan ücretsiz HTML5 oyunlarını listeler. Her oyun, yayıncısı Playgama tarafından sağlanan gömülü bir çerçeve içinde çalışır. Bu çerçevenin dışındaki her şey — açıklamalar, kategori sayfaları, rehberler, öneriler ve arayüzün kendisi — VioraPlay tarafından yazılır ve sürdürülür."
+        },
+        {
+          "h": "Oyunlar nasıl seçilir",
+          "p": "Playgama kataloğundan başlarız ve bir oyunu yalnızca güvenilir şekilde yükleniyorsa, masaüstünde ve mobilde çalışıyorsa ve net bir kategoriye uyuyorsa tutarız. Ana sayfadaki editoryal seçimler elle yapılır; ücretli yerleşim değildir ve sıralama satmayız."
+        },
+        {
+          "h": "Kendimiz ne yazıyoruz",
+          "p": "Derinlemesine ele aldığımız oyunlar için özgün bir giriş ve nasıl oynanır bölümü yazar, en çok merak edilen türler için daha uzun rehberler yayımlarız. Yayıncı metinlerini kopyalamaz, çıkış tarihi, stüdyo veya oyuncu sayısı uydurmayız."
+        },
+        {
+          "h": "Düzeltmeler ve kaldırma",
+          "p": "Bir oyun bozuksa, yanlış etiketlenmişse veya eksikse iletişim sayfasından bildirin; düzeltir veya kaldırırız. Burada gösterilen bir içerikte hak sahibiyseniz iletişim sayfasındaki telif bölümüne bakın."
+        },
+        {
+          "h": "Bağımsızlık",
+          "p": "VioraPlay, Playgama veya oyunları burada yer alan stüdyolarla bağlantılı değildir. Oyun adları, görseller ve markalar ilgili sahiplerine aittir. Site, gizlilik sayfasında açıklandığı gibi reklamla finanse edilir."
+        }
+      ]
+    },
+    "contact": {
+      "intro": "Bize ulaşmanın en hızlı yolu e-postadır. Her mesajı okuruz ve genellikle birkaç iş günü içinde yanıtlarız.",
+      "sections": [
+        {
+          "h": "Bozuk oyun bildir",
+          "p": "Sayfa adresini, ne beklediğinizi, ne olduğunu ve cihaz ile tarayıcınızı yazın. Ekran görüntüleri yardımcı olur. Gömme hataları genellikle bir hafta içinde düzeltilir."
+        },
+        {
+          "h": "Telif ve kaldırma",
+          "p": "VioraPlay'de gösterilen bir oyun, görsel veya metin üzerinde hak sahibiyseniz ve yanlış kullanıldığını düşünüyorsanız, URL ve haklarınızın kısa açıklamasıyla yazın. İtiraz edilen içeriği incelerken hızla kaldırır veya değiştiririz."
+        },
+        {
+          "h": "Reklam, lisans ve veri talepleri",
+          "p": "Reklam, lisans ve gizlilik/veri talepleri için aynı adresi kullanın. Gizlilik taleplerinde hangi hakkı kullandığınızı belirtin."
+        },
+        {
+          "h": "Neleri göndermeyin",
+          "p": "Şifre, ödeme bilgisi, kimlik belgesi veya hassas kişisel veri göndermeyin. Bir sayfayı düzeltmek için bunlara ihtiyacımız yok ve e-posta güvenli bir kanal değildir."
+        }
+      ]
+    },
+    "privacy": {
+      "intro": "Bu politika VioraPlay'in neyi, neden sakladığını ve nasıl kontrol edebileceğinizi açıklar. vioraplay.com ve dil sürümleri için geçerlidir.",
+      "sections": [
+        {
+          "h": "Tarayıcınızda kalanlar",
+          "p": "Favoriler, son oynanan oyunlar ve çerez tercihiniz tarayıcının yerel depolamasında saklanır. VioraPlay hesabı veya sunucuda profiliniz yoktur. Site verilerini temizlerseniz bu kayıtlar silinir."
+        },
+        {
+          "h": "Analitik",
+          "p": "Ziyaretleri ve temel etkileşimleri ölçmek için Google Analytics 4 kullanırız; yalnızca onay banner'ında analitik çerezlerini kabul ettikten sonra. Raporlar toplu hâldedir. Google, IP adresinizi ve cihaz bilgilerinizi kendi gizlilik politikasına göre işleyebilir. Analitiği reddedip tüm oyunları kullanmaya devam edebilirsiniz."
+        },
+        {
+          "h": "Reklamlar",
+          "p": "Reklamları Google AdSense üzerinden gösteririz. Google ve iş ortakları, reklamları sunmak ve ölçmek için çerezler — DoubleClick reklam çerezi dâhil — kullanabilir. Gerekli olduğu yerlerde, AEA ve Birleşik Krallık dâhil, kişiselleştirilmiş reklam çerezi yerleştirilmeden önce reklam onayı Google sertifikalı bir onay yönetim platformu aracılığıyla alınır. Analitik tercihinizi altbilgideki bağlantıdan değiştirebilir; kişiselleştirilmiş reklamları Google Reklam Ayarları, Your Online Choices veya Network Advertising Initiative üzerinden kapatabilirsiniz (bağlantılar aşağıda)."
+        },
+        {
+          "h": "Üçüncü taraf oyunlar",
+          "p": "Oyunlar Playgama tarafından işletilen gömülü bir çerçevede yüklenir. Sağlayıcı kendi çerezlerini kullanabilir, kendi reklamlarını gösterebilir ve ilerlemeyi kendi politikasına göre saklayabilir. Çerçeve farklı kaynakta olduğundan VioraPlay içeride olanları okuyamaz."
+        },
+        {
+          "h": "Haklarınız",
+          "p": "Yaşadığınız yere göre verilerinize erişme, düzeltme, silme veya taşıma, işlemeye itiraz etme veya kısıtlama ve onayı geri çekme hakkınız olabilir. Kişisel bilgi satmayız. Bir hakkı kullanmak için iletişim sayfasından yazın; yasal süre içinde yanıtlarız. Yerel veri koruma otoritesine şikâyet edebilirsiniz."
+        },
+        {
+          "h": "Çocuklar",
+          "p": "VioraPlay genel izleyici sitesidir ve 13 (AEA'da 16) yaş altı çocuklara yönelik değildir. Çocuklardan bilerek kişisel veri toplamayız. Bir çocuğun veri verdiğini düşünüyorsanız yazın, silelim."
+        },
+        {
+          "h": "Değişiklikler",
+          "p": "Uygulamalarımız değiştiğinde politikayı güncelleriz. Sayfanın başındaki tarih son revizyonu gösterir. Önemli değişiklikler bu sayfada duyurulur."
+        }
+      ],
+      "note": "Bu politika kolaylık için birkaç dilde yayımlanır. Çeviri İngilizce metinden farklıysa İngilizce sürüm geçerlidir."
+    },
+    "terms": {
+      "intro": "Bu koşullar VioraPlay kullanımınızı düzenler. Siteyi kullanarak kabul etmiş olursunuz; kabul etmiyorsanız kullanmayı bırakın.",
+      "sections": [
+        {
+          "h": "VioraPlay kullanımı",
+          "p": "VioraPlay kişisel ve ticari olmayan eğlence için ücretsizdir. Herhangi bir sayfaya bağlantı verebilirsiniz. Kataloğu toplu kazıyamaz, metinlerimizi veya rehberlerimizi yeniden yayımlayamaz, sitenin işleyişine veya güvenliğine müdahale edemezsiniz."
+        },
+        {
+          "h": "Oyunlar üçüncü taraflara aittir",
+          "p": "Oyunlar Playgama'dan gömülür ve geliştiricilerinin mülkiyetinde kalır. Kullanılabilirlik, kurallar, oyun içi satın alımlar, reklamlar ve kayıtlı ilerleme bu üçüncü taraflarca kontrol edilir. Bir oyun bildirimsiz değiştirilebilir veya kaldırılabilir."
+        },
+        {
+          "h": "İçeriğimiz",
+          "p": "VioraPlay'in metinleri, rehberleri, düzeni, kodu ve tasarımı VioraPlay'e aittir. Oyun adları, görselleri, ekran görüntüleri ve markaları sahiplerine aittir ve tanıtım ile gezinme amacıyla gösterilir. İçeriğin haklarınızı ihlal ettiğini düşünüyorsanız iletişim sayfasına bakın."
+        },
+        {
+          "h": "Reklamlar",
+          "p": "Sayfalar Google AdSense dâhil reklam gösterir. Reklamlar bizim değil, reklam sistemlerinin seçimidir; bir reklamın gösterilmesi reklamı yapılan ürün veya hizmetin onaylandığı anlamına gelmez."
+        },
+        {
+          "h": "Sorumluluk reddi ve sınırlama",
+          "p": "Site 'olduğu gibi' sunulur. Her oyunun her cihazda çalışacağını veya kataloğun eksiksiz ve hatasız olduğunu garanti etmeyiz. Yasaların izin verdiği ölçüde VioraPlay, site veya üçüncü taraf oyunların kullanımından doğan dolaylı zararlardan sorumlu değildir. Bu koşullar, yasayla sınırlandırılamayan sorumluluğu sınırlamaz."
+        },
+        {
+          "h": "Koşullardaki değişiklikler",
+          "p": "Site değiştikçe bu koşulları güncelleyebiliriz. Revizyon tarihi sayfanın başında yer alır. Değişiklikten sonra VioraPlay'i kullanmaya devam etmeniz güncel koşulları kabul ettiğiniz anlamına gelir."
+        }
+      ]
+    }
   },
   "consent": {
-    "title": "Gizlilik tercihleriniz",
-    "body": "Site analitiği ve Google AdSense aracılığıyla kişiselleştirilmiş reklamlar için çerez kullanırız. Siteyi iyileştirmemize yardımcı olmak için kabul edin veya yalnızca gerekli yerel depolamayla sınırlı tutmak için reddedin.",
-    "accept": "Tümünü kabul et",
-    "reject": "Tümünü reddet"
+    "title": "Analitik çerezler",
+    "body": "VioraPlay'in nasıl kullanıldığını anlamak için analitik çerezler kullanıyoruz. Reklamları Google sunar ve yasanın gerektirdiği yerlerde kendi onayını ister. Analitiği kabul edin veya reddedip oynamaya devam edin.",
+    "accept": "Analitiği kabul et",
+    "reject": "Analitiği reddet"
   }
 }

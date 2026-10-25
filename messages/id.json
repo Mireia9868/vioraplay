@@ -116,15 +116,118 @@
     "remove": "Hapus dari favorit"
   },
   "info": {
-    "about": "VioraPlay adalah direktori game browser. Game disediakan melalui sematan pihak ketiga Playgama. VioraPlay menyediakan navigasi, pencarian, rekomendasi, dan favorit lokal.",
-    "contact": "Laporkan tautan rusak atau masalah situs melalui pelacak isu GitHub kami. Jangan sertakan kata sandi, informasi pembayaran, atau informasi pribadi dalam laporan publik.",
-    "privacy": "VioraPlay menyimpan game favorit dan yang baru dikunjungi di browser ini menggunakan penyimpanan lokal, tanpa akun VioraPlay. Menghapus data situs menghapus catatan tersebut. Kami menggunakan Google Analytics untuk mengukur kunjungan dan interaksi. Kami juga menampilkan iklan melalui Google AdSense. Google dan mitranya dapat menggunakan cookie —termasuk cookie iklan DoubleClick— untuk mempersonalisasi iklan dan mengukur kinerjanya. Anda dapat menonaktifkan iklan yang dipersonalisasi kapan saja melalui Setelan Iklan Google, Your Online Choices, atau Network Advertising Initiative. Game tersemat terhubung ke Playgama dan dapat memuat iklan atau menggunakan penyimpanan sesuai kebijakan privasi penyedia. VioraPlay tidak dapat membaca isi frame game lintas asal. Anda dapat meninjau atau mengubah pilihan cookie kapan saja melalui tautan 'Pengaturan cookie' di footer.",
-    "terms": "Game dijalankan melalui penyedia pihak ketiga dan dapat menampilkan iklan. Ketersediaan, aturan, dan layanan game bergantung pada penyedia. Hormati hak pembuat game dan gunakan situs secara sah. Memuat ulang dapat menghapus kemajuan yang belum disimpan penyedia."
+    "updated": "Terakhir diperbarui: 25 Oktober 2026",
+    "contactEmailHeading": "Cara menghubungi kami",
+    "about": {
+      "intro": "VioraPlay adalah direktori game browser independen. Kami tidak mengembangkan game yang tercantum di sini; kami membantu Anda menemukan game yang layak untuk jeda, dan menjelaskan cara memainkannya.",
+      "sections": [
+        {
+          "h": "Apa situs ini",
+          "p": "VioraPlay mendaftar game HTML5 gratis yang berjalan di browser tanpa unduhan atau akun. Setiap game berjalan di dalam bingkai tersemat yang disediakan penerbitnya, Playgama. Semua di luar bingkai itu — deskripsi, kategori, panduan, rekomendasi, dan antarmuka — ditulis dan dikelola oleh VioraPlay."
+        },
+        {
+          "h": "Bagaimana game dipilih",
+          "p": "Kami mulai dari katalog Playgama dan hanya menyimpan game jika memuat dengan andal, berjalan di desktop dan ponsel, serta masuk kategori yang jelas. Pilihan editorial di beranda dipilih manual; bukan penempatan berbayar dan kami tidak menjual peringkat."
+        },
+        {
+          "h": "Apa yang kami tulis sendiri",
+          "p": "Untuk game yang kami bahas mendalam, kami menulis pengantar orisinal dan bagian cara bermain, serta panduan lebih panjang untuk genre yang paling dicari. Kami tidak menyalin teks penerbit dan tidak mengarang tanggal rilis, studio, atau jumlah pemain."
+        },
+        {
+          "h": "Koreksi dan penghapusan",
+          "p": "Jika game rusak, salah label, atau hilang, beri tahu kami lewat halaman kontak dan kami akan memperbaiki atau menghapusnya. Jika Anda memiliki hak atas sesuatu yang ditampilkan di sini, lihat bagian hak cipta di halaman kontak."
+        },
+        {
+          "h": "Independensi",
+          "p": "VioraPlay tidak berafiliasi dengan Playgama atau studio yang game-nya tampil di sini. Judul, karya seni, dan merek milik pemiliknya masing-masing. Situs didukung iklan, sebagaimana dijelaskan di halaman privasi."
+        }
+      ]
+    },
+    "contact": {
+      "intro": "Cara tercepat menghubungi kami adalah email. Kami membaca setiap pesan dan biasanya membalas dalam beberapa hari kerja.",
+      "sections": [
+        {
+          "h": "Laporkan game rusak",
+          "p": "Sertakan URL halaman, apa yang Anda harapkan, apa yang terjadi, serta perangkat dan browser Anda. Tangkapan layar membantu. Kesalahan sematan biasanya diperbaiki dalam seminggu."
+        },
+        {
+          "h": "Hak cipta dan penghapusan",
+          "p": "Jika Anda memiliki hak atas game, gambar, atau teks yang ditampilkan di VioraPlay dan merasa penggunaannya salah, hubungi kami dengan URL dan deskripsi singkat hak Anda. Kami menghapus atau mengganti materi yang diperdebatkan selama peninjauan."
+        },
+        {
+          "h": "Iklan, lisensi, dan permintaan data",
+          "p": "Gunakan alamat yang sama untuk pertanyaan iklan, lisensi, dan privasi/data. Untuk permintaan privasi, sebutkan hak yang Anda gunakan."
+        },
+        {
+          "h": "Yang tidak boleh dikirim",
+          "p": "Jangan pernah mengirim kata sandi, detail pembayaran, dokumen identitas, atau data pribadi sensitif. Kami tidak membutuhkannya untuk memperbaiki halaman dan email bukan saluran aman."
+        }
+      ]
+    },
+    "privacy": {
+      "intro": "Kebijakan ini menjelaskan apa yang disimpan VioraPlay, mengapa, dan bagaimana Anda mengendalikannya. Berlaku untuk vioraplay.com dan versi bahasanya.",
+      "sections": [
+        {
+          "h": "Yang tersimpan di browser",
+          "p": "Favorit, game yang baru dikunjungi, dan pilihan cookie disimpan di penyimpanan lokal browser. Tidak ada akun VioraPlay dan tidak ada profil Anda di server. Menghapus data situs akan menghapus catatan ini."
+        },
+        {
+          "h": "Analitik",
+          "p": "Kami memakai Google Analytics 4 untuk mengukur kunjungan dan interaksi dasar, hanya setelah Anda menerima cookie analitik di banner persetujuan. Laporan bersifat agregat. Google dapat memproses alamat IP dan informasi perangkat sesuai kebijakan privasinya. Anda dapat menolak analitik dan tetap memainkan semua game."
+        },
+        {
+          "h": "Iklan",
+          "p": "Kami menampilkan iklan melalui Google AdSense. Google dan mitranya dapat memakai cookie — termasuk cookie iklan DoubleClick — untuk menayangkan dan mengukur iklan. Bila diwajibkan, termasuk di EEA dan Inggris, persetujuan iklan dikumpulkan melalui platform manajemen persetujuan bersertifikat Google sebelum cookie iklan yang dipersonalisasi dipasang. Anda dapat mengubah pilihan analitik lewat tautan di footer dan menonaktifkan iklan yang dipersonalisasi di Setelan Iklan Google, Your Online Choices, atau Network Advertising Initiative (tautan di bawah)."
+        },
+        {
+          "h": "Game pihak ketiga",
+          "p": "Game dimuat dalam bingkai tersemat yang dijalankan Playgama. Penyedia dapat memasang cookie sendiri, menampilkan iklannya sendiri, dan menyimpan progres sesuai kebijakannya. Karena bingkai berasal dari domain lain, VioraPlay tidak dapat membaca isinya."
+        },
+        {
+          "h": "Hak Anda",
+          "p": "Bergantung pada tempat tinggal Anda, Anda mungkin berhak mengakses, memperbaiki, menghapus, atau memindahkan data pribadi, menolak atau membatasi pemrosesan, dan menarik persetujuan. Kami tidak menjual informasi pribadi. Untuk menggunakan hak, hubungi kami lewat halaman kontak; kami menjawab dalam tenggat yang diwajibkan hukum. Anda juga dapat mengadu ke otoritas perlindungan data setempat."
+        },
+        {
+          "h": "Anak-anak dan perubahan",
+          "p": "VioraPlay adalah situs untuk khalayak umum dan tidak ditujukan untuk anak di bawah 13 tahun (16 di EEA). Kami tidak dengan sengaja mengumpulkan data anak. Kebijakan diperbarui saat praktik kami berubah; tanggal di atas halaman menunjukkan revisi terakhir."
+        }
+      ],
+      "note": "Kebijakan ini diterbitkan dalam beberapa bahasa untuk kemudahan. Jika terjemahan berbeda dari teks bahasa Inggris, versi bahasa Inggris yang berlaku."
+    },
+    "terms": {
+      "intro": "Ketentuan ini mengatur penggunaan VioraPlay. Dengan memakai situs, Anda menerimanya; jika tidak setuju, berhentilah memakai.",
+      "sections": [
+        {
+          "h": "Menggunakan VioraPlay",
+          "p": "VioraPlay gratis untuk hiburan pribadi dan nonkomersial. Anda boleh menautkan ke halaman mana pun. Anda tidak boleh mengambil katalog secara massal, menerbitkan ulang teks atau panduan kami, atau mengganggu operasi maupun keamanan situs."
+        },
+        {
+          "h": "Game disediakan pihak ketiga",
+          "p": "Game disematkan dari Playgama dan tetap milik pengembangnya. Ketersediaan, aturan, pembelian dalam game, iklan, dan progres tersimpan dikendalikan pihak ketiga tersebut. Game dapat diubah atau ditarik tanpa pemberitahuan."
+        },
+        {
+          "h": "Konten kami",
+          "p": "Teks, panduan, tata letak, kode, dan desain VioraPlay milik VioraPlay. Judul, karya seni, tangkapan layar, dan merek game milik pemiliknya masing-masing dan ditampilkan untuk identifikasi serta navigasi. Jika Anda menilai konten melanggar hak Anda, lihat halaman kontak."
+        },
+        {
+          "h": "Iklan",
+          "p": "Halaman menampilkan iklan, termasuk Google AdSense. Iklan dipilih oleh sistem periklanan, bukan oleh kami; menampilkan iklan bukan berarti kami mendukung produk atau layanan yang diiklankan."
+        },
+        {
+          "h": "Penafian dan batasan tanggung jawab",
+          "p": "Situs disediakan «sebagaimana adanya». Kami tidak menjamin setiap game berjalan di setiap perangkat, atau katalog lengkap dan bebas kesalahan. Sejauh diizinkan hukum, VioraPlay tidak bertanggung jawab atas kerugian tidak langsung akibat penggunaan situs atau game pihak ketiga. Tidak ada ketentuan yang membatasi tanggung jawab yang tidak dapat dibatasi hukum."
+        },
+        {
+          "h": "Perubahan ketentuan",
+          "p": "Kami dapat memperbarui ketentuan seiring perubahan situs. Tanggal revisi ada di atas halaman. Terus memakai VioraPlay setelah perubahan berarti Anda menerima ketentuan terbaru."
+        }
+      ]
+    }
   },
   "consent": {
-    "title": "Pilihan privasi Anda",
-    "body": "Kami menggunakan cookie untuk analitik dan menampilkan iklan yang dipersonalisasi melalui Google AdSense. Terima untuk membantu kami meningkatkan situs, atau tolak untuk membatasi pelacakan hanya pada penyimpanan lokal yang penting.",
-    "accept": "Terima semua",
-    "reject": "Tolak semua"
+    "title": "Cookie analitik",
+    "body": "Kami memakai cookie analitik untuk memahami cara VioraPlay digunakan. Iklan ditayangkan oleh Google, yang meminta persetujuannya sendiri bila diwajibkan hukum. Terima analitik atau tolak dan tetap bermain.",
+    "accept": "Terima analitik",
+    "reject": "Tolak analitik"
   }
 }
