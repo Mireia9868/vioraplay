@@ -39,6 +39,9 @@ export function isGameIndexable(locale: string, slug: string): boolean {
 }
 
 export function isCategoryIndexable(locale: string, slug: string, count: number): boolean {
+  // "Other" is Playgama's unclassified bucket, not a genre. A page of 63
+  // unrelated games reads as a broken category to a reviewer and to Google.
+  if (slug === "other") return false;
   if (count < MIN_INDEXABLE_GAMES) return false;
   if (isNewLocale(locale)) return slug === "puzzle";
   return true;

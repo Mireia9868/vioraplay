@@ -646,6 +646,22 @@ h2 {
   margin: 0;
 }
 
+.category-editorial {
+  max-width: 75ch;
+  margin: 32px 0 8px;
+}
+
+.category-editorial h2 {
+  font-size: 20px;
+  margin: 22px 0 6px;
+}
+
+.category-editorial p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
 .cat-intro {
   color: var(--muted);
   max-width: 70ch;

@@ -18,6 +18,7 @@ import { GameCard } from "@/components/GameCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PuzzleSearchGuide } from "@/components/PuzzleSearchGuide";
 import { PUZZLE_SEO } from "@/data/regional-seo";
+import { CATEGORY_EDITORIAL } from "@/data/category-editorial";
 import { isCategoryIndexable } from "@/lib/indexability";
 import { routing } from "@/i18n/routing";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
@@ -122,6 +123,10 @@ export default async function CategoryPage({
   const pageGames = games.slice(start, start + PER_PAGE);
 
   const relatedCats = getRelatedCategories(slug, 6);
+  // Category editorial is English-only for now (see data/category-editorial.ts).
+  // The puzzle page already carries localized copy and a search guide, so it is
+  // deliberately excluded here rather than stacked with a second intro.
+  const editorial = locale === "en" && slug !== "puzzle" ? CATEGORY_EDITORIAL[slug] : undefined;
 
   const deviceQs = devices.length ? `device=${devices.join(",")}` : "";
   const pageUrl = (n: number) => {
@@ -153,7 +158,7 @@ export default async function CategoryPage({
       />
 
       <h1>{puzzleCopy?.name ?? fullName}</h1>
-      <p className="cat-intro">{puzzleCopy?.intro ?? getCategoryIntro(slug, fullName.toLowerCase())}</p>
+      <p className="cat-intro">{editorial?.intro ?? puzzleCopy?.intro ?? getCategoryIntro(slug, fullName.toLowerCase())}</p>
 
       <div className="device-filter" aria-label={tc("filterHeading")}>
         <span className="df-label">{tc("filterHeading")}</span>
@@ -198,6 +203,17 @@ export default async function CategoryPage({
       {pageGames.length === 0 && <p className="empty-note">{tc("noResults")}</p>}
 
       {slug === "puzzle" && safePage === 1 && devices.length === 0 && <PuzzleSearchGuide locale={locale} />}
+
+      {editorial && safePage === 1 && devices.length === 0 && (
+        <section className="category-editorial">
+          {editorial.sections.map((section) => (
+            <div key={section.h}>
+              <h2>{section.h}</h2>
+              <p>{section.p}</p>
+            </div>
+          ))}
+        </section>
+      )}
 
       {totalPages > 1 && (
         <nav className="pagination" aria-label={tc("pagination")}>
