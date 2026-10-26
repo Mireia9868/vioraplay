@@ -235,6 +235,79 @@ export const GUIDES: readonly Guide[] = [
 
 export const GUIDE_SLUGS: readonly string[] = GUIDES.map((g) => g.slug);
 
+/**
+ * Category -> guide mapping, used for internal links in both directions.
+ * Only categories with a genuinely matching guide are listed; a game in
+ * "action" should not be pushed to a racing guide just to create a link.
+ */
+export const GUIDE_BY_CATEGORY: Record<string, string> = {
+  chess: "how-to-play-chess",
+  sudoku: "how-to-play-sudoku",
+  mahjong: "how-to-play-mahjong",
+  solitaire: "how-to-play-solitaire",
+  cards: "how-to-play-solitaire",
+  merge: "merge-and-sort-puzzle-guide",
+  "tower-defense": "how-to-play-tower-defense",
+  racing: "how-to-play-racing-games",
+  motorbike: "how-to-play-racing-games",
+  snake: "how-to-play-snake",
+  "bubble-shooter": "how-to-play-bubble-shooter",
+  bubble: "how-to-play-bubble-shooter",
+  "hidden-object": "how-to-play-hidden-object",
+  io: "how-to-play-io-games",
+  girls: "how-to-play-dress-up-games",
+  fashion: "how-to-play-dress-up-games",
+  "dress-up": "how-to-play-dress-up-games",
+  food: "how-to-play-cooking-games",
+  cooking: "how-to-play-cooking-games",
+  survival: "how-to-play-survival-games",
+  tycoon: "how-to-play-tycoon-games",
+  platform: "how-to-play-platform-games",
+  obby: "how-to-play-obby-games",
+  strategy: "how-to-play-strategy-games",
+  shooting: "how-to-play-shooting-games",
+  idle: "how-to-play-idle-games",
+  clicker: "how-to-play-clicker-games",
+  "match-3": "how-to-play-match-3",
+};
+
+/**
+ * Game-level overrides for categories that are too broad to map safely
+ * ("puzzle" holds arrow puzzles, sorting games and 2048 alike). Game slug wins
+ * over category, so a link is only shown when it is actually relevant.
+ */
+export const GUIDE_BY_GAME: Record<string, string> = {
+  "2048-knights": "how-to-play-2048",
+  "block-blast-2048": "how-to-play-2048",
+  "2048-merge-blocks": "how-to-play-2048",
+  "block-blast-mania": "how-to-play-2048",
+  "good-sort-master": "how-to-play-sorting-puzzles",
+  "nuts-puzzle-sort-by-color": "how-to-play-sorting-puzzles",
+  "color-sort-puzzle-milk-tea-sorting": "how-to-play-sorting-puzzles",
+  "yarn-fever-unravel-puzzle": "how-to-play-sorting-puzzles",
+  "supa-tic-tac-toe": "how-to-play-tic-tac-toe",
+  "ludo-legend": "how-to-play-ludo",
+  "backgammon": "how-to-play-backgammon",
+  "crosswords-big-collection": "how-to-play-crossword",
+  "word-cross": "how-to-play-crossword",
+  "word-search-hidden-words": "how-to-play-word-search",
+  "word-finder": "how-to-play-word-search",
+  "solitaire-crime-stories": "how-to-play-solitaire",
+  "solitaire-klondike-treasure-island": "how-to-play-solitaire",
+};
+
+/** The guide that matches a game, falling back to its category. */
+export function guideForGame(gameSlug: string, categorySlug: string): Guide | undefined {
+  const slug = GUIDE_BY_GAME[gameSlug] ?? GUIDE_BY_CATEGORY[categorySlug];
+  return slug ? GUIDES.find((g) => g.slug === slug) : undefined;
+}
+
+/** The guide that matches a category slug, if one exists. */
+export function guideForCategory(categorySlug: string): Guide | undefined {
+  const slug = GUIDE_BY_CATEGORY[categorySlug];
+  return slug ? GUIDES.find((g) => g.slug === slug) : undefined;
+}
+
 /** Guides are English-only; every other locale is noindexed and absent from sitemaps. */
 export function isGuideIndexable(locale: string): boolean {
   return locale === "en";

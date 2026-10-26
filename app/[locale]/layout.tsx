@@ -97,6 +97,8 @@ export default async function LocaleLayout({
               <Link href="/contact">{tFooter("contact")}</Link>
               <Link href="/privacy">{tFooter("privacy")}</Link>
               <Link href="/terms">{tFooter("terms")}</Link>
+              {/* Guides are English-only; this link is omitted on other locales. */}
+              {locale === "en" && <Link href="/guides">Guides</Link>}
               <FooterConsentLink />
             </nav>
             <p>

@@ -646,6 +646,20 @@ h2 {
   margin: 0;
 }
 
+.game-category-link,
+.game-guide-link,
+.cat-guide-link {
+  margin: 14px 0 0;
+  font-size: 14px;
+}
+
+.game-category-link a,
+.game-guide-link a,
+.cat-guide-link a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 .category-editorial {
   max-width: 75ch;
   margin: 32px 0 8px;

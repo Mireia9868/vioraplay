@@ -20,6 +20,8 @@ import {
   type GameIntent,
 } from "@/data/game-intent";
 import { GameCard } from "@/components/GameCard";
+import { Link } from "@/i18n/navigation";
+import { guideForGame } from "@/lib/guides";
 import { GameControls } from "@/components/GameControls";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -97,6 +99,8 @@ export default async function GamePage({
   const related = getRelatedGames(game, 8);
   const catSlug = slugify(game.category);
   const catName = displayCategory(game.category);
+  // Guides are English-only; linking to /pt/guides/... would 404.
+  const guide = locale === "en" ? guideForGame(game.slug, catSlug) : undefined;
   const path = (l: string) => `/${l}/game/${game.slug}`;
 
   /**
@@ -216,6 +220,17 @@ export default async function GamePage({
           </>
         )}
       </section>
+
+      <p className="game-category-link">
+        <Link href={`/category/${catSlug}`}>Browse all {catName.toLowerCase()} games</Link>
+      </p>
+
+      {guide && (
+        <p className="game-guide-link">
+          New to {catName.toLowerCase()}? Read{" "}
+          <Link href={`/guides/${guide.slug}`}>{guide.title}</Link>.
+        </p>
+      )}
 
       {/* Deep copy is English-only for now (see data/game-deep-content.ts).
           Rendering it under a localized URL would reintroduce mixed-language pages. */}

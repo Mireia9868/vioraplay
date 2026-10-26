@@ -19,6 +19,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PuzzleSearchGuide } from "@/components/PuzzleSearchGuide";
 import { PUZZLE_SEO } from "@/data/regional-seo";
 import { CATEGORY_EDITORIAL } from "@/data/category-editorial";
+import { guideForCategory } from "@/lib/guides";
 import { isCategoryIndexable } from "@/lib/indexability";
 import { routing } from "@/i18n/routing";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
@@ -127,6 +128,7 @@ export default async function CategoryPage({
   // The puzzle page already carries localized copy and a search guide, so it is
   // deliberately excluded here rather than stacked with a second intro.
   const editorial = locale === "en" && slug !== "puzzle" ? CATEGORY_EDITORIAL[slug] : undefined;
+  const guide = locale === "en" ? guideForCategory(slug) : undefined;
 
   const deviceQs = devices.length ? `device=${devices.join(",")}` : "";
   const pageUrl = (n: number) => {
@@ -159,6 +161,13 @@ export default async function CategoryPage({
 
       <h1>{puzzleCopy?.name ?? fullName}</h1>
       <p className="cat-intro">{editorial?.intro ?? puzzleCopy?.intro ?? getCategoryIntro(slug, fullName.toLowerCase())}</p>
+
+      {guide && (
+        <p className="cat-guide-link">
+          New to {fullName.toLowerCase()}? Read{" "}
+          <Link href={`/guides/${guide.slug}`}>{guide.title}</Link>.
+        </p>
+      )}
 
       <div className="device-filter" aria-label={tc("filterHeading")}>
         <span className="df-label">{tc("filterHeading")}</span>
