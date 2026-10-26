@@ -57,7 +57,14 @@ export const REGIONAL_GAME_CONTENT: Record<string, Record<string, { title: strin
     "idle-tower-defense-be01-1": {
       "title": "Idle Tower Defense - Jogo de Defesa Online",
       "intro": "Idle Tower Defense mistura defesa por ondas com progressao idle que continua mesmo ausente.",
-    },  },
+    },
+    "block-blast-e170-1": {
+      "title": "Block Blast — puzzle de blocos online",
+      "intro": "Block Blast é um puzzle de encaixe: arraste as formas para o tabuleiro 8x8 e complete linhas ou colunas para limpar antes que o espaço acabe.",
+      "howToPlay": "Arraste cada forma oferecida para o tabuleiro. Linhas e colunas completas somem e pontuam. A partida termina quando nenhuma das três formas cabe.",
+      "controls": "Arraste e solte com o mouse ou o dedo."
+    },
+  },
   "es": {
     "arrow-exit-puzzle": {
       "title": "Juego de flechas online — Arrow Exit Puzzle",

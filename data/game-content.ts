@@ -1746,6 +1746,41 @@ export const GAME_CONTENT: Record<string, GameContent> = {
     controls: "Arrow keys or WASD to drive; touch also supported.",
   },
 
+  "brain-dots": {
+    tags: ["physics", "puzzle", "drawing", "brain"],
+    intro: "Brain Dots is a physics puzzle: draw lines to knock two balls into each other. Each level gives you a limited number of strokes, so the solution is about angle and momentum rather than speed.",
+    howToPlay: "Draw a line with the mouse or your finger; the line becomes a solid object. Release a ball or let gravity move it, and use the line as a ramp or a wall to redirect it into the other ball.",
+    controls: "Draw with the mouse or a finger; undo removes the last line.",
+  },
+
+  "busy-bites-tycoon": {
+    tags: ["tycoon", "management", "cooking", "idle"],
+    intro: "Busy Bites Tycoon is a small restaurant simulation: seat customers, take orders, serve food and reinvest the profit before the queue turns into complaints.",
+    howToPlay: "Customers arrive and wait for a table. Take each order, prepare it at the right station, deliver it, then clear the table. Earnings buy staff and equipment upgrades.",
+    controls: "Click or tap a customer, station or item to interact.",
+  },
+
+  "pickaxe-crusher-idle": {
+    tags: ["idle", "clicker", "mining", "upgrade"],
+    intro: "Pickaxe Crusher Idle is a mining clicker: each swing breaks rock, and the ore buys better pickaxes and automated drills that keep mining while you are away.",
+    howToPlay: "Tap or click to swing the pickaxe. Ore accumulates and is spent on upgrades that raise damage or automate swings. Deeper layers hold tougher rock and more valuable ore.",
+    controls: "Click or tap to swing; upgrades are in the side panel.",
+  },
+
+  "block-blast-e170-1": {
+    tags: ["blocks", "puzzle", "2048", "logic"],
+    intro: "Block Blast is a block-fitting puzzle: drag three shapes onto an 8x8 grid and clear full rows or columns before the board runs out of space.",
+    howToPlay: "Drag each offered shape onto the board. A full row or column clears and scores. The run ends when none of the three shapes fits anywhere.",
+    controls: "Drag and drop with the mouse or a finger.",
+  },
+
+  "carrom-club": {
+    tags: ["carrom", "board", "physics", "two-player"],
+    intro: "Carrom Club is a digital carrom board: flick the striker to pocket your coins before your opponent does, while keeping the striker out of the pockets.",
+    howToPlay: "Aim the striker along the baseline, set the power, and release. Pocket your colour and avoid pocketing the striker; the queen is only yours once you have covered a coin.",
+    controls: "Drag to aim and set power, then release to shoot.",
+  },
+
 };
 
 /** Homepage "Featured Games" — hand-curated, NOT a popularity ranking

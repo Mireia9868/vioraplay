@@ -633,4 +633,53 @@ export const GAME_DEEP_CONTENT: Record<
       { q: "When should I reset?", a: "When progress stalls for longer than the previous stage took in total." },
     ],
   },
+  "brain-dots": {
+    strategy: "Plan the whole path before drawing: the first line sets the angle for everything after it. Use walls as free bounces, and prefer one long ramp over three short corrections.",
+    faq: [
+      { q: "Why does the ball stop?", a: "Friction and a flat line. Add slope, and keep the line short enough that the ball keeps momentum." },
+      { q: "Can I undo a line?", a: "Yes in most versions; undo before adding a correction on top of a bad line." },
+    ],
+  },
+  "busy-bites-tycoon": {
+    strategy: "Serve the customer closest to leaving first, and upgrade the station that is actually the bottleneck. Hiring before upgrading usually wastes money because staff idle at the slow station.",
+    faq: [
+      { q: "Why do customers leave?", a: "The queue is too long. Add a station or upgrade the slow one before hiring more waiters." },
+      { q: "What should I upgrade first?", a: "The station with the longest queue, not the most expensive one." },
+    ],
+  },
+  "pickaxe-crusher-idle": {
+    strategy: "Buy the upgrade that raises damage per second before depth or cosmetic upgrades. Automation pays back fastest just before you plan to stop clicking.",
+    faq: [
+      { q: "Does it keep mining offline?", a: "Most idle versions do, often at a reduced rate. Check the offline panel before closing the tab." },
+      { q: "When should I prestige?", a: "When the next layer takes longer than the whole previous run." },
+    ],
+  },
+  "block-blast-e170-1": {
+    strategy: "Keep a two-by-two space open in a corner and clear lines that keep the board flat. Save long pieces for a line that is one cell short.",
+    faq: [
+      { q: "Why did the game end?", a: "None of the three shapes fit. A two-by-two gap prevents most early endings." },
+      { q: "Should I clear rows or columns?", a: "Whichever keeps the board flattest; a clear that splits the board is usually a mistake." },
+    ],
+  },
+  "carrom-club": {
+    strategy: "Aim to leave the striker near the centre after each shot; position matters more than power. Clear coins near pockets before attacking the queen.",
+    faq: [
+      { q: "What happens if I pocket the striker?", a: "It returns to the board and costs you a coin or a turn, depending on the rules shown." },
+      { q: "When can I pocket the queen?", a: "Usually after covering one of your own coins; check the rule panel before aiming at it." },
+    ],
+  },
+  "2-minute-football-qb-legend": {
+    strategy: "Throw to the receiver who is open earliest, not the deepest route. Stop the clock by getting out of bounds when time matters.",
+    faq: [
+      { q: "Why do passes get intercepted?", a: "Throwing late or into double coverage. Check the defender before releasing." },
+      { q: "How do I stop the clock?", a: "Complete a pass and get out of bounds, or spike the ball if the game allows it." },
+    ],
+  },
+  "ragdoll-football-online": {
+    strategy: "Stay between the ball and your goal, and let the opponent overcommit. A flailing ragdoll is easier to score past than a positioned one.",
+    faq: [
+      { q: "Is it multiplayer?", a: "Yes, online matches; some versions also offer a local mode." },
+      { q: "Why can't I control the ball?", a: "Ragdoll physics limits control. Aim for the ball's path rather than the ball itself." },
+    ],
+  },
 };
