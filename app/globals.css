@@ -696,6 +696,17 @@ h2 {
   .bar-row { grid-template-columns: 104px minmax(0, 1fr) auto; font-size: 12px; }
 }
 
+/* ---------- Press kit ---------- */
+.press { max-width: 820px; margin: 0 auto; line-height: 1.75; }
+.press h2 { margin-top: 2rem; }
+.press blockquote { margin: 8px 0 18px; padding: 12px 16px; border-left: 3px solid var(--accent); background: var(--accent-soft, #1a7f5a0d); border-radius: 0 8px 8px 0; }
+.press-label { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 16px 0 0; }
+.press-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.press-table th { text-align: left; font-weight: 600; width: 38%; padding: 8px 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+.press-table td { padding: 8px 0; border-bottom: 1px solid var(--border); color: var(--muted); }
+.press-assets { display: flex; flex-wrap: wrap; gap: 10px 24px; padding-left: 1.2rem; }
+.press-note { font-size: 13px; color: var(--muted); }
+
 .cat-intro {
   color: var(--muted);
   max-width: 70ch;

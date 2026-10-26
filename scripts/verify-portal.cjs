@@ -124,6 +124,10 @@ async function main() {
     assert.equal(research.status, 200);
     assert.ok(research.html.includes('2,416'), 'Research page renders the dataset headline');
     assert.equal((await get('/pt/research/browser-games-2026')).status, 404);
+    const press = await get('/en/press');
+    assert.equal(press.status, 200);
+    assert.ok(press.html.includes('Press kit'));
+    assert.equal((await get('/pt/press')).status, 404);
     const puzzle = await get('/en/category/puzzle');
     assert.ok(puzzle.html.includes('Free Online Puzzle Games') && puzzle.html.includes('Find your next online puzzle game'));
     const filteredPuzzle = await get('/en/category/puzzle?device=ios');

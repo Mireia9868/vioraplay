@@ -64,6 +64,14 @@ export function buildLocaleSitemap(locale: Locale): MetadataRoute.Sitemap {
     });
   }
 
+  if (locale === "en") {
+    urls.push({
+      url: `${SITE_URL}/en/press`,
+      changeFrequency: "yearly",
+      priority: 0.4,
+    });
+  }
+
   if (isGuideIndexable(locale)) {
     urls.push({
       url: `${SITE_URL}/${locale}/guides`,
