@@ -55,6 +55,15 @@ export function buildLocaleSitemap(locale: Locale): MetadataRoute.Sitemap {
 
   // /search stays out: the page is noindex, and every ?q= variant would
   // otherwise be submitted here.
+  // Data study: a linkable asset, English only.
+  if (locale === "en") {
+    urls.push({
+      url: `${SITE_URL}/en/research/browser-games-2026`,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    });
+  }
+
   if (isGuideIndexable(locale)) {
     urls.push({
       url: `${SITE_URL}/${locale}/guides`,

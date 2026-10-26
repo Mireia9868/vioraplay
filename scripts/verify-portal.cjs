@@ -120,6 +120,10 @@ async function main() {
     assert.ok(guide.html.includes('How to Play Gomoku') && guide.html.includes('Gomoku is not currently in our playable catalog'));
     assert.ok(guide.html.includes('href="https://www.vioraplay.com/en/guides/how-to-play-gomoku"'));
     assert.equal((await get('/vi/guides/how-to-play-gomoku')).status, 404);
+    const research = await get('/en/research/browser-games-2026');
+    assert.equal(research.status, 200);
+    assert.ok(research.html.includes('2,416'), 'Research page renders the dataset headline');
+    assert.equal((await get('/pt/research/browser-games-2026')).status, 404);
     const puzzle = await get('/en/category/puzzle');
     assert.ok(puzzle.html.includes('Free Online Puzzle Games') && puzzle.html.includes('Find your next online puzzle game'));
     const filteredPuzzle = await get('/en/category/puzzle?device=ios');
