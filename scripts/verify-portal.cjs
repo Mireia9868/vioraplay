@@ -35,6 +35,15 @@ async function main() {
   const content = load('data/game-content.ts').GAME_CONTENT;
   assert.ok(Object.keys(content).length >= 30, 'At least 30 curated entries');
   for (const slug of Object.keys(content)) assert.ok(games.getGameBySlug(slug), `Curated game exists: ${slug}`);
+  // A localized entry without an English base is silently unindexable:
+  // isGameIndexable requires GAME_CONTENT[slug]. Catch that at verify time.
+  const regional = load('data/regional-game-content.ts').REGIONAL_GAME_CONTENT;
+  for (const [locale, entries] of Object.entries(regional)) {
+    for (const slug of Object.keys(entries)) {
+      assert.ok(games.getGameBySlug(slug), `Localized game exists: ${locale}/${slug}`);
+      assert.ok(content[slug], `Localized game has an English base entry: ${locale}/${slug}`);
+    }
+  }
   for (const locale of locales) {
     const messages = load(`messages/${locale}.json`);
     for (const key of ['pagination','next','prev','relatedCategories']) assert.ok(messages.categories[key]);

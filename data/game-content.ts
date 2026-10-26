@@ -1977,6 +1977,90 @@ export const GAME_CONTENT: Record<string, GameContent> = {
     controls: "Drag to aim and set power; release or tap to fire.",
   },
 
+  "chess-royale": {
+    tags: ["chess", "fantasy", "strategy", "magic"],
+    intro: "Chess Royale is chess with a twist: the kings have magical powers, and the goal is still to cut down the enemy king while building a tactic around those abilities.",
+    howToPlay: "Move your pieces as in chess, then use the king's power when it fits the position. Powers change the usual exchanges, so a piece that looks safe may not be.",
+    controls: "Click a piece, then the destination square; power buttons appear when available.",
+  },
+
+  "hotel-manager-simulator": {
+    tags: ["management", "hotel", "simulation", "tycoon"],
+    intro: "Hotel Manager Simulator puts you in charge of a small hotel: welcome guests, provide food and rooms, earn likes and reinvest the profit into a bigger business.",
+    howToPlay: "Check guests in, fulfil their requests and keep the rooms clean. Likes and income fund new rooms, staff and facilities; unhappy guests leave poor reviews.",
+    controls: "Click or tap guests, rooms and facilities to interact.",
+  },
+
+  "backgammon-multiplayer": {
+    tags: ["backgammon", "board", "dice", "multiplayer"],
+    intro: "Backgammon is the classic race-and-contact board game: move your pieces around the board, hit opposing blots and bear off all fifteen before your rival does.",
+    howToPlay: "Roll two dice and move pieces accordingly. A lone enemy piece on a point can be hit and sent to the bar; the first player to bear off every piece wins.",
+    controls: "Click a piece and then a valid point; the dice show the available moves.",
+  },
+
+  "army-run-3d": {
+    tags: ["runner", "army", "shooter", "upgrade"],
+    intro: "Army Run 3D is a runner with firepower: charge down desert roads, blast enemies and barrels, and pick the gate that improves your squad.",
+    howToPlay: "Steer left and right to collect gates that multiply or upgrade your soldiers. Shooting happens automatically; your job is positioning and choosing the better gate.",
+    controls: "Drag or use arrow keys to steer; the game fires automatically.",
+  },
+
+  "obby-1-digging-power-per-click": {
+    tags: ["obby", "clicker", "mining", "upgrade"],
+    intro: "Obby: +1 Digging Power per Click is a mining clicker: each click digs deeper, loot is sold for cash, and the money buys a stronger pickaxe and rebirths.",
+    howToPlay: "Click to dig and collect ore, sell it, then spend the cash on pickaxe upgrades. Rebirth resets progress for a permanent multiplier once digging slows down.",
+    controls: "Click or tap to dig; upgrade and rebirth buttons are on the side.",
+  },
+
+  "draw-the-perfect-shape": {
+    tags: ["drawing", "precision", "casual", "skill"],
+    intro: "Draw the Perfect Shape is a precision game: pick a circle, square or triangle and trace it as accurately as you can while the game scores your line.",
+    howToPlay: "Choose a shape, then draw it in one stroke without lifting your finger or mouse. The closer your line matches the outline, the higher the score.",
+    controls: "Draw with the mouse or a finger in a single stroke.",
+  },
+
+  "durak": {
+    tags: ["cards", "durak", "shedding", "strategy"],
+    intro: "Durak is a shedding card game: get rid of every card in your hand before your opponent does, attacking with one card and defending against theirs.",
+    howToPlay: "The attacker plays a card; the defender must beat it with a higher card of the same suit or a trump. If the defence fails, the defender picks up the pile.",
+    controls: "Click a card to play or defend; the table shows which cards are in play.",
+  },
+
+  "home-design-decorate-house": {
+    tags: ["match-3", "design", "renovation", "puzzle"],
+    intro: "Home Design: Decorate House pairs match-3 puzzles with renovation: clear levels to earn resources, then spend them on furniture and room makeovers.",
+    howToPlay: "Complete match-3 levels to earn stars and coins. Stars unlock renovation tasks; choose the furniture and colours you prefer for each room.",
+    controls: "Swap adjacent tiles with the mouse or finger; tap furniture to place it.",
+  },
+
+  "rise-of-the-dead": {
+    tags: ["zombie", "shooter", "horror", "survival"],
+    intro: "Rise of the Dead is a zombie shooter: fight waves from every direction, complete task-driven quests and try to stay alive as the city falls.",
+    howToPlay: "Move through the level, aim and fire at incoming zombies, and pick up ammo and supplies. Quests tell you where to go next; standing still is how runs end.",
+    controls: "WASD to move, mouse to aim and click to fire; R to reload.",
+  },
+
+  "car-wash-idle": {
+    tags: ["idle", "car", "arcade", "upgrade"],
+    intro: "Car Wash Idle is a car wash arcade game: clean muddy cars, upgrade your bays and hire helpers until a single wash bay becomes an idle car wash empire.",
+    howToPlay: "Wash each car that arrives, collect the cash and spend it on better equipment and helpers. More capacity means more cars cleaned at once, even while you are away.",
+    controls: "Click or tap cars and stations to start a wash.",
+  },
+
+  "a-deadly-car-crash": {
+    tags: ["driving", "crash", "survival", "physics"],
+    intro: "A Deadly Car Crash is a downhill survival drive: keep the car on the road, absorb the damage and try to reach the end in one piece.",
+    howToPlay: "Steer down the slope, avoid obstacles and keep control through impacts. Damage accumulates, so one bad corner can end the run before the finish.",
+    controls: "Arrow keys or WASD to drive; R to restart.",
+  },
+
+  "my-resale-cases-and-sales": {
+    tags: ["management", "business", "resale", "simulation"],
+    intro: "My Resale. Cases and Sales is a reselling simulator: buy stock, price it, sell it on and grow the shop without tying up all your cash in unsold goods.",
+    howToPlay: "Choose items, negotiate a buying price and resell at a profit. Earnings fund better stock and shop upgrades; inventory that sits too long locks up capital.",
+    controls: "Click or tap to select, buy and sell items.",
+  },
+
 };
 
 /** Homepage "Featured Games" — hand-curated, NOT a popularity ranking

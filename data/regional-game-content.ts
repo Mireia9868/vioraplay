@@ -283,7 +283,19 @@ export const REGIONAL_GAME_CONTENT: Record<string, Record<string, {
     "idle-tower-defense-be01-1": {
       "title": "Idle Tower Defense - Game Phong Thu Online",
       "intro": "Idle Tower Defense kết hop phong thu theo đot voi tiến trinh idle chay ca khi ban rời đi.",
-    }
+    },
+    "my-resale-cases-and-sales": {
+      "title": "My Resale — game kinh doanh mua đi bán lại",
+      "intro": "My Resale. Cases and Sales là game mô phỏng kinh doanh: mua hàng, định giá, bán lại và mở rộng cửa hàng để kiếm lời.",
+      "howToPlay": "Chọn món hàng, trả giá và bán lại với lợi nhuận. Tiền lãi dùng để mua hàng tốt hơn và nâng cấp cửa hàng; hàng tồn lâu sẽ chiếm vốn.",
+      "controls": "Nhấp hoặc chạm để chọn, mua và bán hàng.",
+      "strategy": "Giữ vốn luân chuyển: đừng dồn hết tiền vào một món. Mua món dễ bán trước, món lợi nhuận cao sau.",
+      "faq": [
+        { "q": "Có yếu tố thời gian?", "a": "Một số phiên bản có ngày làm việc; hết ngày sẽ kết thúc lượt." },
+        { "q": "Làm sao tăng lợi nhuận?", "a": "Mua rẻ, bán đúng giá và nâng cấp cửa hàng để thu hút khách." },
+      ]
+    },
+
   },
   "id": {
     "geometry-dash-infinity": {
@@ -436,6 +448,29 @@ export const REGIONAL_GAME_CONTENT: Record<string, Record<string, {
         { "q": "Bisa mulai ulang?", "a": "Bisa; jika macet, ubah urutan sepuluh langkah pertama sebelum mengulang." },
       ]
     },
+    "car-wash-idle": {
+      "title": "Car Wash Idle — arcade cuci mobil idle",
+      "intro": "Car Wash Idle adalah game idle bertema cuci mobil: bangun bisnis detailing, cuci mobil kotor, perluas garasi, dan ubah satu bay menjadi arcade cuci mobil yang sibuk.",
+      "howToPlay": "Cuci mobil yang datang, kumpulkan uang, lalu beli peralatan dan bantu pekerja. Semakin besar kapasitas, semakin banyak mobil yang bisa dicuci bersamaan.",
+      "controls": "Klik atau ketuk mobil dan stasiun untuk memulai pencucian.",
+      "strategy": "Tingkatkan kapasitas cuci sebelum dekorasi; mobil yang menunggu tidak menghasilkan uang. Otomatisasi bay pertama sebelum menambah bay baru.",
+      "faq": [
+        { "q": "Jalan saat offline?", "a": "Sebagian besar versi idle tetap menghasilkan, kadang dengan laju lebih rendah." },
+        { "q": "Apa yang diupgrade dulu?", "a": "Stasiun dengan antrean terpanjang." },
+      ]
+    },
+    "a-deadly-car-crash": {
+      "title": "A Deadly Car Crash — game tabrakan mobil",
+      "intro": "A Deadly Car Crash adalah game mengemudi penuh kehancuran: kendalikan mobil di jalur menurun dan sebisa mungkin bertahan sampai akhir tanpa hancur.",
+      "howToPlay": "Kemudikan mobil menuruni lintasan, hindari rintangan, dan jaga kendali saat benturan. Kerusakan menumpuk; satu kesalahan bisa mengakhiri run.",
+      "controls": "Panah atau WASD untuk mengemudi; R untuk mengulang.",
+      "strategy": "Rem sebelum tikungan, jangan menikung sambil mengerem. Run yang selamat lebih berharga daripada start cepat.",
+      "faq": [
+        { "q": "Bisa diperbaiki?", "a": "Biasanya per run; mengulang lebih cepat daripada melanjutkan rusak." },
+        { "q": "Apakah ada level?", "a": "Sebagian versi punya lintasan berganda; lainnya satu lintasan panjang." },
+      ]
+    },
+
   },
   "tr": {
     "geometry-dash-infinity": {

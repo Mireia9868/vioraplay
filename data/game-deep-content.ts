@@ -871,4 +871,88 @@ export const GAME_DEEP_CONTENT: Record<
       { q: "Does it run on mobile?", a: "Yes, with touch aiming, though a mouse gives finer control." },
     ],
   },
+  "chess-royale": {
+    strategy: "King powers change trades: bait a piece, then use the power to win the exchange. Keep the king behind pawns until the power is ready.",
+    faq: [
+      { q: "Is it normal chess?", a: "Movement is chess; the king powers are the variant." },
+      { q: "Which power first?", a: "The one that saves the king from a fork." },
+    ],
+  },
+  "hotel-manager-simulator": {
+    strategy: "Fix the bottleneck: if guests complain about food, upgrade the kitchen; if rooms are dirty, hire cleaning. Likes compound into bookings, so a happy guest is worth more than a cheap one.",
+    faq: [
+      { q: "Why do ratings drop?", a: "Unmet requests. Serve the guest closest to leaving first." },
+      { q: "What to build first?", a: "Rooms before decor; capacity pays for everything else." },
+    ],
+  },
+  "backgammon-multiplayer": {
+    strategy: "Make points instead of leaving blots. Early on, connect your back pieces; late, race when ahead and hit when behind.",
+    faq: [
+      { q: "What is the bar?", a: "A hit piece waits there and must re-enter before its owner moves." },
+      { q: "When to double?", a: "When you are clearly ahead in the race and the opponent still has contact." },
+    ],
+  },
+  "army-run-3d": {
+    strategy: "Choose gates that multiply your squad rather than add a few; a bigger squad survives the next stretch. Avoid gates that shrink you even if the path looks easier.",
+    faq: [
+      { q: "Do I aim?", a: "No, firing is automatic; steering and gate choice are the game." },
+      { q: "What should I upgrade?", a: "Damage first, because later stretches have more enemies." },
+    ],
+  },
+  "obby-1-digging-power-per-click": {
+    strategy: "Buy damage per second before depth, and rebirth when the next layer takes longer than the whole run. Sell loot in batches so you can afford the next pickaxe tier.",
+    faq: [
+      { q: "What is rebirth?", a: "A reset that grants a permanent multiplier." },
+      { q: "Does it idle?", a: "Some versions continue offline; check the panel." },
+    ],
+  },
+  "draw-the-perfect-shape": {
+    strategy: "Slow down at the corners; most score loss happens there. Start from the same point every time so your hand learns the path.",
+    faq: [
+      { q: "Does speed matter?", a: "No, accuracy does; fast strokes wobble." },
+      { q: "Which shape first?", a: "Circle; it has no corners." },
+    ],
+  },
+  "durak": {
+    strategy: "Attack with your lowest non-trump first and keep trumps for defence. When you cannot defend, take the pile rather than burning a trump you will need.",
+    faq: [
+      { q: "What is trump?", a: "The suit shown by the bottom card; it beats other suits." },
+      { q: "Can I add cards?", a: "The attacker may add cards matching ranks already on the table." },
+    ],
+  },
+  "home-design-decorate-house": {
+    strategy: "Clear levels with the fewest moves to bank stars, then spend them on tasks that unlock the next room. Do not buy decor before the structural tasks.",
+    faq: [
+      { q: "How do I get stars?", a: "By completing match-3 levels; harder levels give more." },
+      { q: "Can I choose furniture?", a: "Yes, once the task is unlocked; choices are cosmetic." },
+    ],
+  },
+  "rise-of-the-dead": {
+    strategy: "Keep moving and reload behind cover. Aim for the head only when close; body shots are more reliable at range.",
+    faq: [
+      { q: "Is it multiplayer?", a: "Some versions offer co-op; check the mode list." },
+      { q: "How do I survive waves?", a: "Learn the spawn points and keep a route back." },
+    ],
+  },
+  "car-wash-idle": {
+    strategy: "Upgrade wash capacity before decoration; cars waiting in line do not pay. Automate the first bay before opening a second one.",
+    faq: [
+      { q: "Does it run offline?", a: "Most idle versions keep earning, often at a reduced rate." },
+      { q: "What should I upgrade first?", a: "The station with the longest queue." },
+    ],
+  },
+  "a-deadly-car-crash": {
+    strategy: "Brake before the corner, not while turning. A run that survives is worth more than a fast start.",
+    faq: [
+      { q: "Can I repair the car?", a: "Usually per run; restarting is faster than limping on." },
+      { q: "Are there levels?", a: "Some versions have multiple tracks; others use one long route." },
+    ],
+  },
+  "my-resale-cases-and-sales": {
+    strategy: "Keep cash moving: do not put everything into one item. Buy quick sellers first and high-margin items once you have a cushion.",
+    faq: [
+      { q: "Is there a time limit?", a: "Some versions run a working day that ends the session." },
+      { q: "How do I raise profit?", a: "Buy low, price correctly and upgrade the shop to attract more buyers." },
+    ],
+  },
 };

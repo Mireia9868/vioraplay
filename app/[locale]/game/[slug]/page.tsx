@@ -22,6 +22,7 @@ import {
 import { GameCard } from "@/components/GameCard";
 import { Link } from "@/i18n/navigation";
 import { guideForGame } from "@/lib/guides";
+import { GAME_SEO_OVERRIDES } from "@/data/game-seo-overrides";
 import { GameControls } from "@/components/GameControls";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -58,12 +59,14 @@ export async function generateMetadata({
   const description = content?.intro ?? truncateDescription(game.description, 155);
   const path = (l: string) => `/${l}/game/${game.slug}`;
   const intent = getGameIntent(slug);
+  // English-only, query-driven overrides (see data/game-seo-overrides.ts).
+  const seoOverride = locale === "en" ? GAME_SEO_OVERRIDES[slug] : undefined;
 
   return {
     metadataBase,
-    title: REGIONAL_GAME_CONTENT[locale]?.[slug]?.title
-      ? `${REGIONAL_GAME_CONTENT[locale][slug].title} | VioraPlay` : gameTitle(game.title, intent),
-    description,
+    title: seoOverride?.title ?? (REGIONAL_GAME_CONTENT[locale]?.[slug]?.title
+      ? `${REGIONAL_GAME_CONTENT[locale][slug].title} | VioraPlay` : gameTitle(game.title, intent)),
+    description: seoOverride?.description ?? description,
     alternates: {
       canonical: path(locale),
       languages: buildLanguageAlternates((l) => path(l), indexableGameLocales(routing.locales, slug)),
