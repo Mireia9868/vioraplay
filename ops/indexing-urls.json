@@ -1,0 +1,182 @@
+{
+  "site": "https://www.vioraplay.com",
+  "updatedAt": "2026-10-26T12:08:56.096Z",
+  "note": "GSC 没有请求索引 API，此文件只用于人工提交时记录状态。",
+  "urls": [
+    {
+      "url": "https://www.vioraplay.com/en",
+      "priority": 1,
+      "group": "core",
+      "note": "首页",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/categories",
+      "priority": 1,
+      "group": "core",
+      "note": "类目总览",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/guides",
+      "priority": 1,
+      "group": "guide",
+      "note": "指南中心",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/guides/how-to-play-2-player-games",
+      "priority": 1,
+      "group": "guide",
+      "note": "2-player 指南",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/category/hidden-object",
+      "priority": 1,
+      "group": "category",
+      "note": "GSC 点击最高",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/game/brain-dots",
+      "priority": 1,
+      "group": "game",
+      "note": "GSC 4 次点击",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/game/busy-bites-tycoon",
+      "priority": 1,
+      "group": "game",
+      "note": "GSC 4 次点击",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/game/pickaxe-crusher-idle",
+      "priority": 1,
+      "group": "game",
+      "note": "GSC 4 次点击",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/game/hidden-objects-home-sweet-home",
+      "priority": 1,
+      "group": "game",
+      "note": "hidden-object 集群",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/game/blackriver-mystery-hidden-objects",
+      "priority": 1,
+      "group": "game",
+      "note": "hidden-object 集群",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/pt",
+      "priority": 1,
+      "group": "pt",
+      "note": "pt 首页",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/pt/game/master-chess",
+      "priority": 1,
+      "group": "pt",
+      "note": "pt 本地化",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/pt/game/brain-dots",
+      "priority": 1,
+      "group": "pt",
+      "note": "pt 本地化",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/pt/game/pregnant-mom-simulator-family-life",
+      "priority": 1,
+      "group": "pt",
+      "note": "pt 本地化",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/pt/category/hidden-object",
+      "priority": 1,
+      "group": "pt",
+      "note": "pt 类目",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/guides/how-to-play-hidden-object",
+      "priority": 2,
+      "group": "guide",
+      "note": "hidden-object 指南",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/guides/how-to-play-chess",
+      "priority": 2,
+      "group": "guide",
+      "note": "chess 指南",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/guides/how-to-play-sudoku",
+      "priority": 2,
+      "group": "guide",
+      "note": "sudoku 指南",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/guides/how-to-play-2048",
+      "priority": 2,
+      "group": "guide",
+      "note": "2048 指南",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/guides/how-to-play-match-3",
+      "priority": 2,
+      "group": "guide",
+      "note": "match-3 指南",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/category/puzzle",
+      "priority": 2,
+      "group": "category",
+      "note": "最大类目",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/category/racing",
+      "priority": 2,
+      "group": "category",
+      "note": "racing 类目",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/category/mahjong",
+      "priority": 2,
+      "group": "category",
+      "note": "mahjong 类目",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/game/master-chess",
+      "priority": 2,
+      "group": "game",
+      "note": "头部游戏",
+      "submittedAt": null
+    },
+    {
+      "url": "https://www.vioraplay.com/en/game/sudoku-online",
+      "priority": 2,
+      "group": "game",
+      "note": "头部游戏",
+      "submittedAt": null
+    }
+  ]
+}

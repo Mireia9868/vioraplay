@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "verify": "node scripts/verify-portal.cjs"
+    "verify": "node scripts/verify-portal.cjs",
+    "index:audit": "node scripts/index-audit.mjs"
   },
   "engines": {
     "node": ">=20.9.0"
