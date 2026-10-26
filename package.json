@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "verify": "node scripts/verify-portal.cjs",
-    "index:audit": "node scripts/index-audit.mjs"
+    "index:audit": "node scripts/index-audit.mjs",
+    "gsc:auth": "node scripts/gsc-auth.mjs",
+    "gsc:report": "node scripts/gsc-report.mjs"
   },
   "engines": {
     "node": ">=20.9.0"
