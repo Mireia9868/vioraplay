@@ -17,8 +17,30 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const TOKEN_FILE = path.join(ROOT, "secrets/token.json");
-const GSC_SITE_ENV = process.env.GSC_SITE ?? "";
-const GA4_PROPERTY = process.env.GA4_PROPERTY_ID ?? "558289372";
+const SITE_KEY = process.env.SITE_KEY ?? (() => {
+  const i = process.argv.indexOf("--site");
+  return i === -1 ? "" : process.argv[i + 1] ?? "";
+})();
+const REGISTRY_FILE = path.join(ROOT, "ops/gsc-sites.json");
+
+let siteConfig = null;
+let registryKeys = [];
+try {
+  const registry = JSON.parse(await fs.readFile(REGISTRY_FILE, "utf8"));
+  registryKeys = Object.keys(registry);
+  if (SITE_KEY) {
+    siteConfig = registry[SITE_KEY] ?? null;
+    if (!siteConfig) {
+      console.error(`Unknown site "${SITE_KEY}". Known: ${Object.keys(registry).join(", ")}`);
+      process.exit(2);
+    }
+  }
+} catch {
+  // Registry is optional; environment variables still work.
+}
+
+const GSC_SITE_ENV = siteConfig?.gsc ?? process.env.GSC_SITE ?? "";
+const GA4_PROPERTY = siteConfig?.ga4 ?? process.env.GA4_PROPERTY_ID ?? "";
 const DAYS = Number(process.env.REPORT_DAYS ?? 28);
 
 const date = (d) => d.toISOString().slice(0, 10);
@@ -67,11 +89,14 @@ if (!sitesRes.ok) {
 }
 const sites = (await sitesRes.json()).siteEntry ?? [];
 const GSC_SITE =
-  (GSC_SITE_ENV && sites.some((s) => s.siteUrl === GSC_SITE_ENV) ? GSC_SITE_ENV : null) ??
-  sites.find((s) => s.siteUrl.includes("vioraplay"))?.siteUrl;
+  GSC_SITE_ENV && sites.some((s) => s.siteUrl === GSC_SITE_ENV) ? GSC_SITE_ENV : null;
 if (!GSC_SITE) {
-  console.error("No vioraplay property found. Available:");
+  console.error(GSC_SITE_ENV
+    ? `Property not accessible: ${GSC_SITE_ENV}`
+    : "No site selected. Pass --site <key> or set GSC_SITE.");
+  console.error("Available properties:");
   for (const s of sites) console.error(`  ${s.siteUrl} (${s.permissionLevel})`);
+  console.error(`Known site keys: ${registryKeys.join(", ") || "(none)"}`);
   process.exit(1);
 }
 console.log(`Using GSC property: ${GSC_SITE}`);
@@ -110,7 +135,7 @@ async function ga4() {
   return res.json();
 }
 
-const channels = await ga4().catch(() => null);
+const channels = GA4_PROPERTY ? await ga4().catch(() => null) : null;
 const sum = (rows, key = "clicks") => rows.reduce((a, r) => a + (r[key] ?? 0), 0);
 const impressions = sum(totals.rows ?? [], "impressions");
 const clicks = sum(totals.rows ?? [], "clicks");
@@ -157,7 +182,7 @@ if (channels?.rows?.length) {
   md.push("");
 }
 
-const out = path.join(ROOT, `ops/gsc-report-${date(new Date())}.md`);
+const out = path.join(ROOT, `ops/gsc-report-${SITE_KEY || "site"}-${date(new Date())}.md`);
 await fs.writeFile(out, md.join("\n"));
 console.log(`Wrote ${path.relative(ROOT, out)}`);
 console.log(`Clicks ${Math.round(clicks)} · Impressions ${Math.round(impressions)} · CTR ${ctr.toFixed(2)}%`);

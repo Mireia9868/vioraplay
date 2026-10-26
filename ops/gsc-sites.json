@@ -1,0 +1,12 @@
+{
+  "vioraplay": {
+    "gsc": "https://www.vioraplay.com/",
+    "ga4": "558289372",
+    "note": "URL 前缀资源；apex 另有 https://vioraplay.com/，报表用 www 版本"
+  },
+  "powerbitutorials": {
+    "gsc": "https://powerbitutorials.com/",
+    "ga4": "",
+    "note": "GA4 属性 ID 待补；留空则只输出 GSC 部分"
+  }
+}

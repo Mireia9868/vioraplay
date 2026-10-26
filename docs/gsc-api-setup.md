@@ -75,9 +75,27 @@ npm run gsc:auth
 
 ## 第 4 步：生成报表
 
+同一个 Google 账号下可能有多个站点（当前账号有 7 个 GSC 资源）。用 `ops/gsc-sites.json`
+登记站点，再按 key 出报表：
+
 ```bash
-npm run gsc:report
+npm run gsc:report:vioraplay
+npm run gsc:report:pbt
+# 或
+SITE_KEY=vioraplay node scripts/gsc-report.mjs
 ```
+
+`ops/gsc-sites.json` 结构：
+
+```json
+{
+  "vioraplay": { "gsc": "https://www.vioraplay.com/", "ga4": "558289372" },
+  "powerbitutorials": { "gsc": "https://powerbitutorials.com/", "ga4": "" }
+}
+```
+
+`ga4` 留空则只输出 GSC 部分。报表文件名会带上站点 key，例如
+`ops/gsc-report-vioraplay-2026-10-26.md`。
 
 输出：`ops/gsc-report-YYYY-MM-DD.md`，包含：
 
@@ -89,7 +107,8 @@ npm run gsc:report
 默认拉最近 28 天（GSC 有 2–3 天延迟）。可用环境变量覆盖：
 
 ```bash
-GSC_SITE=sc-domain:vioraplay.com GA4_PROPERTY_ID=558289372 REPORT_DAYS=28 npm run gsc:report
+REPORT_DAYS=28 SITE_KEY=vioraplay npm run gsc:report
+GSC_SITE=https://www.vioraplay.com/ GA4_PROPERTY_ID=558289372 node scripts/gsc-report.mjs
 ```
 
 ## 第 5 步：定期跑

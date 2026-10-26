@@ -9,7 +9,9 @@
     "verify": "node scripts/verify-portal.cjs",
     "index:audit": "node scripts/index-audit.mjs",
     "gsc:auth": "node scripts/gsc-auth.mjs",
-    "gsc:report": "node scripts/gsc-report.mjs"
+    "gsc:report": "node scripts/gsc-report.mjs",
+    "gsc:report:vioraplay": "SITE_KEY=vioraplay node scripts/gsc-report.mjs",
+    "gsc:report:pbt": "SITE_KEY=powerbitutorials node scripts/gsc-report.mjs"
   },
   "engines": {
     "node": ">=20.9.0"
