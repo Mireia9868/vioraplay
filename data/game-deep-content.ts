@@ -682,4 +682,39 @@ export const GAME_DEEP_CONTENT: Record<
       { q: "Why can't I control the ball?", a: "Ragdoll physics limits control. Aim for the ball's path rather than the ball itself." },
     ],
   },
+  "hidden-objects-home-sweet-home": {
+    strategy: "Treat each room as a grid: top-left to bottom-right, one band at a time. Household scenes hide items inside other objects, so check inside vases, under tables and along the frame edges before spending a hint.",
+    faq: [
+      { q: "Why do I run out of time?", a: "Usually re-scanning the same corner. Mark a band as done and move on, even if one object is still missing." },
+      { q: "When should I use a hint?", a: "On the last one or two items, when fewer hiding places remain." },
+    ],
+  },
+  "blackriver-mystery-hidden-objects": {
+    strategy: "Read the case list before searching: some objects are clues, not decoration. Work the scene from the edges inward, and check reflections in water and glass, which is where riverside scenes hide small items.",
+    faq: [
+      { q: "Do I need to follow the story?", a: "Only loosely. The list tells you what to find; the story explains why it matters." },
+      { q: "Are wrong clicks penalised?", a: "Usually with time. Slow down rather than clicking every shape that resembles the item." },
+    ],
+  },
+  "hidden-object-my-hotel": {
+    strategy: "Clear one room completely before moving to the next, and open every drawer and curtain you can. Hotel scenes reuse the same furniture, so memorise where similar items hid in earlier rooms.",
+    faq: [
+      { q: "Why can't I see a listed item?", a: "It may be behind an interaction — a drawer, a curtain, a door. Click the furniture first." },
+      { q: "Do hints carry over?", a: "Usually per level. Spend them before the timer runs out rather than saving them for a level you may not reach." },
+    ],
+  },
+  "hidden-objects-recipe-collection": {
+    strategy: "Kitchen scenes hide ingredients inside jars, behind bowls and along shelf edges. Scan shelf by shelf rather than looking at the whole pantry, and check the counter last — that is where small tools hide.",
+    faq: [
+      { q: "What if two ingredients look alike?", a: "Check the list's exact wording. Scene designers use similar-looking items on purpose." },
+      { q: "Is there a timer?", a: "Many levels have one. Short lists first keeps momentum and frees space for the harder items." },
+    ],
+  },
+  "mystery-of-the-old-house-hidden-objects": {
+    strategy: "Dark rooms reward a slow pass: look for edges that do not match the wall, and shapes that repeat in the wallpaper. Clear the room's list before moving on so you are not carrying two lists in your head.",
+    faq: [
+      { q: "Why do objects appear after I click?", a: "Some are hidden behind doors, books or curtains. Interact with the room, not just the background." },
+      { q: "Can I replay a room?", a: "Most versions let you restart a scene. If one item is blocking progress, restart and change your scan order." },
+    ],
+  },
 };

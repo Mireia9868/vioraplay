@@ -1788,6 +1788,41 @@ export const GAME_CONTENT: Record<string, GameContent> = {
     controls: "Click or tap to select a play and a receiver; drag to aim in some versions.",
   },
 
+  "hidden-objects-home-sweet-home": {
+    tags: ["hidden-object", "home", "casual", "search"],
+    intro: "Hidden Objects: Home Sweet Home hides everyday items in cluttered domestic scenes — kitchens, living rooms, gardens — and asks you to find the ones on the list.",
+    howToPlay: "Scan the room and click each object named in the list. A correct find removes it from the list; a wrong click usually costs time. Hints reveal one object when you are stuck.",
+    controls: "Click or tap an object to select it; use the hint button when available.",
+  },
+
+  "blackriver-mystery-hidden-objects": {
+    tags: ["hidden-object", "mystery", "detective", "search"],
+    intro: "Blackriver Mystery is a detective-themed hidden-object game: search riverside locations and crime scenes for the objects and clues on your list.",
+    howToPlay: "Work through each location looking for the listed items, some of which are tucked inside other objects. Correct finds advance the case; random clicking costs time.",
+    controls: "Click or tap an object; use the hint button to reveal one item.",
+  },
+
+  "hidden-object-my-hotel": {
+    tags: ["hidden-object", "hotel", "casual", "search"],
+    intro: "Hidden Object: My Hotel turns a hotel into a search scene: lobbies, guest rooms and service areas are full of misplaced items waiting to be found.",
+    howToPlay: "Read the list, then search the room in bands rather than jumping around. Some items only appear after you open a drawer or move a curtain.",
+    controls: "Click or tap to interact; use hints when a listed item is not visible.",
+  },
+
+  "hidden-objects-recipe-collection": {
+    tags: ["hidden-object", "cooking", "search", "casual"],
+    intro: "Hidden Objects: Recipe Collection hides ingredients and kitchen tools across recipe-themed scenes, from prep counters to pantry shelves.",
+    howToPlay: "Find each ingredient or utensil named in the list. Cluttered shelves hide items inside jars and behind bowls, so check edges and overlaps.",
+    controls: "Click or tap an item; the hint button highlights one you have missed.",
+  },
+
+  "mystery-of-the-old-house-hidden-objects": {
+    tags: ["hidden-object", "mystery", "house", "search"],
+    intro: "Mystery of the Old House is a hidden-object game set in a dusty, abandoned house: search studies, attics and cellars for the objects on your list.",
+    howToPlay: "Move through the house one room at a time and clear each list before moving on. Dark corners and reflections hide objects that are obvious once lit.",
+    controls: "Click or tap an object; use the hint when a room refuses to give up the last item.",
+  },
+
 };
 
 /** Homepage "Featured Games" — hand-curated, NOT a popularity ranking

@@ -892,4 +892,61 @@ export const GUIDE_ARTICLES: Record<string, GuideArticle> = {
       { href: "/game/tank-1944", label: "Tank 1944" },
     ],
   },
+  "how-to-play-2-player-games": {
+    slug: "how-to-play-2-player-games",
+    title: "How to Play 2-Player Games: Same-Screen & Online Tips | VioraPlay",
+    h1: "How to Play 2-Player Games",
+    description: "Two-player browser games explained: shared-keyboard vs online matches, turn-based vs simultaneous play, and the small rules that keep short matches fair and fun.",
+    intro: "Two-player games are the fastest way to turn a browser tab into a shared activity. The rules are usually simple; what decides whether a match is fun is whether both players understand the controls, the format and what counts as a fair rematch.",
+    sections: [
+      {
+        id: "modes",
+        h: "Same device or online",
+        paragraphs: [
+          "Same-device games split one keyboard or one touchscreen between two players. They start instantly and need no account, which makes them the default for a quick match.",
+          "Online games match you with another person over the internet. They add latency and matchmaking, but they also let you play someone who is not in the room.",
+        ],
+      },
+      {
+        id: "formats",
+        h: "Turn-based versus simultaneous",
+        bullets: [
+          "Turn-based games (board games, tic-tac-toe, card games) reward planning and let one player think while the other waits.",
+          "Simultaneous games (sports, fighting, racing) reward reaction time and force both players to act at once.",
+          "Mixed formats exist: some games are turn-based in the lobby and simultaneous in the match. Check the controls screen before starting.",
+        ],
+      },
+      {
+        id: "fair",
+        h: "Setting up a fair match",
+        steps: [
+          "Agree on the controls before the first round; player one and player two rarely use the same keys.",
+          "Play one practice round with no score, especially in physics games where the controls take a moment to learn.",
+          "If one player is clearly stronger, swap sides after each match rather than changing the game.",
+          "Keep matches short. Best-of-three is usually enough to settle a disagreement without wearing out the fun.",
+        ],
+      },
+      {
+        id: "etiquette",
+        h: "Etiquette and troubleshooting",
+        paragraphs: [
+          "Do not pause mid-match to check something; in shared-screen games the other player is waiting with no information. Finish the round first.",
+          "If the game lags in an online match, agree to restart rather than blaming the result. Latency decides close fights, and neither player learns anything from a laggy win.",
+          "Decide before the match what happens on a draw, a disconnect or a glitch. Agreeing afterwards is where arguments start.",
+        ],
+      },
+    ],
+    faq: [
+      { q: "Can two people play on one keyboard?", a: "Often yes, but check the controls panel: some games use the arrow keys for one player and WASD for the other, others only support touch or a gamepad." },
+      { q: "Do we need an account?", a: "Most same-device games need none. Online games may ask for a nickname or a room code, but rarely a full account." },
+      { q: "What if the game is too one-sided?", a: "Swap sides, shorten the match, or pick a game with more randomness. Handicapping by changing the game usually works better than asking the stronger player to hold back." },
+    ],
+    playHref: "/category/two-player",
+    playLabel: "two-player games",
+    gameLinks: [
+      { href: "/game/basket-random", label: "Basket Random" },
+      { href: "/game/ragdoll-football-online", label: "Ragdoll Football Online" },
+      { href: "/game/supa-tic-tac-toe", label: "Supa Tic Tac Toe" },
+    ],
+  },
 };

@@ -231,6 +231,13 @@ export const GUIDES: readonly Guide[] = [
     cat: "/category/shooting",
     catName: "Shooting Games",
   },
+  {
+    slug: "how-to-play-2-player-games",
+    title: "How to Play 2-Player Games",
+    blurb: "Shared-keyboard vs online, turn-based vs simultaneous, and how to keep matches fair.",
+    cat: "/category/two-player",
+    catName: "2-Player Games",
+  },
 ];
 
 export const GUIDE_SLUGS: readonly string[] = GUIDES.map((g) => g.slug);
