@@ -1848,6 +1848,7 @@ export function getGameContent(slug: string, locale = "en"): GameContent | undef
   const localized = REGIONAL_GAME_CONTENT[locale]?.[slug];
   // Deep copy is English-only today; the page decides whether to render it.
   const deep = GAME_DEEP_CONTENT[slug];
-  return { ...base, ...localized, ...deep };
+  // Localized deep copy must win over the English one, so it spreads last.
+  return { ...base, ...deep, ...localized };
 }
 

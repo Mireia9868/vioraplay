@@ -1,4 +1,12 @@
-export const REGIONAL_GAME_CONTENT: Record<string, Record<string, { title: string; intro: string; howToPlay?: string; controls?: string }>> = {
+export const REGIONAL_GAME_CONTENT: Record<string, Record<string, {
+  title: string;
+  intro: string;
+  howToPlay?: string;
+  controls?: string;
+  /** Localized deep copy; overrides the English strategy when present. */
+  strategy?: string;
+  faq?: { q: string; a: string }[];
+}>> = {
   "pt": {
     "arrow-exit-puzzle": {
       "title": "Puzzle de setas online — Arrow Exit Puzzle",
@@ -63,6 +71,116 @@ export const REGIONAL_GAME_CONTENT: Record<string, Record<string, { title: strin
       "intro": "Block Blast é um puzzle de encaixe: arraste as formas para o tabuleiro 8x8 e complete linhas ou colunas para limpar antes que o espaço acabe.",
       "howToPlay": "Arraste cada forma oferecida para o tabuleiro. Linhas e colunas completas somem e pontuam. A partida termina quando nenhuma das três formas cabe.",
       "controls": "Arraste e solte com o mouse ou o dedo."
+    },
+    "brain-dots": {
+      "title": "Brain Dots — puzzle de física online",
+      "intro": "Brain Dots é um puzzle de física: desenhe linhas para fazer duas bolinhas se encontrarem. Cada fase dá um número limitado de traços, então o segredo é ângulo e impulso, não velocidade.",
+      "howToPlay": "Desenhe uma linha com o mouse ou o dedo; ela vira um objeto sólido. Solte uma bolinha ou deixe a gravidade agir e use a linha como rampa ou parede para desviar até a outra bolinha.",
+      "controls": "Desenhe com o mouse ou o dedo; desfazer remove o último traço.",
+      "strategy": "Planeje o caminho inteiro antes de desenhar: o primeiro traço define o ângulo de tudo depois. Use as paredes como quique grátis e prefira uma rampa longa a três correções curtas.",
+      "faq": [
+        { "q": "Por que a bolinha para?", "a": "Atrito e linha reta. Dê inclinação e mantenha o traço curto para a bolinha não perder impulso." },
+        { "q": "Dá para desfazer?", "a": "Na maioria das versões sim; desfaça antes de empilhar correções sobre um traço ruim." },
+      ]
+    },
+    "pregnant-mom-simulator-family-life": {
+      "title": "Pregnant Mom Simulator — simulação de família online",
+      "intro": "Pregnant Mom Simulator Family Life acompanha a rotina de uma mãe e sua família: cuidar da casa, atender necessidades e administrar o tempo entre tarefas.",
+      "howToPlay": "Escolha as ações pelo cenário e pelos ícones: alimentar, descansar, limpar e cuidar do bebê. Cada tarefa consome tempo, e deixar necessidades acumularem piora o dia.",
+      "controls": "Clique ou toque nos objetos e ícones para interagir.",
+      "strategy": "Resolva primeiro a necessidade que está mais baixa; tarefas longas podem esperar. Faça uma rodada de manutenção antes de começar qualquer atividade nova.",
+      "faq": [
+        { "q": "É um jogo de história?", "a": "É mais simulação de rotina do que narrativa; o objetivo é manter a família em ordem." },
+        { "q": "Tem tempo limite?", "a": "Algumas versões têm um dia com relógio; outras são livres. Veja o painel antes de começar." },
+      ]
+    },
+    "busy-bites-tycoon": {
+      "title": "Busy Bites Tycoon — simulação de restaurante",
+      "intro": "Busy Bites Tycoon é uma simulação de restaurante: acomode clientes, anote pedidos, sirva e reinvista o lucro antes que a fila vire reclamação.",
+      "howToPlay": "Os clientes chegam e esperam mesa. Anote o pedido, prepare na estação certa, entregue e limpe a mesa. O dinheiro compra funcionários e melhorias de equipamento.",
+      "controls": "Clique ou toque em cliente, estação ou item para interagir.",
+      "strategy": "Atenda primeiro quem está mais perto de desistir e melhore a estação que é o gargalo real. Contratar antes de melhorar costuma desperdiçar dinheiro.",
+      "faq": [
+        { "q": "Por que os clientes vão embora?", "a": "A fila está longa. Adicione ou melhore uma estação antes de contratar mais garçons." },
+        { "q": "O que melhorar primeiro?", "a": "A estação com a maior fila, não a mais cara." },
+      ]
+    },
+    "pickaxe-crusher-idle": {
+      "title": "Pickaxe Crusher Idle — clicker de mineração",
+      "intro": "Pickaxe Crusher Idle é um clicker de mineração: cada golpe quebra pedra, e o minério compra picaretas melhores e brocas automáticas que continuam minerando enquanto você está fora.",
+      "howToPlay": "Clique ou toque para golpear. O minério acumula e é gasto em melhorias de dano ou automação. Camadas mais fundas têm pedra mais dura e minério mais valioso.",
+      "controls": "Clique ou toque para golpear; melhorias ficam no painel lateral.",
+      "strategy": "Compre a melhoria que aumenta dano por segundo antes das de profundidade ou cosméticas. A automação se paga mais rápido pouco antes de você parar de clicar.",
+      "faq": [
+        { "q": "Continua minerando offline?", "a": "A maioria das versões idle continua, às vezes com taxa reduzida. Veja o painel offline antes de fechar." },
+        { "q": "Quando devo reiniciar (prestígio)?", "a": "Quando a próxima camada levar mais tempo do que a run inteira anterior." },
+      ]
+    },
+    "hidden-object-clues-and-mysteries": {
+      "title": "Hidden Object: Clues and Mysteries — objetos escondidos",
+      "intro": "Hidden Object: Clues and Mysteries esconde objetos em cenas cheias de detalhes e pede que você encontre os itens da lista antes que o tempo acabe.",
+      "howToPlay": "Leia a lista e procure cada objeto na cena, clicando nele. Acertos removem o item da lista; cliques errados geralmente custam tempo. Dicas revelam um objeto quando você trava.",
+      "controls": "Clique ou toque no objeto; use o botão de dica quando disponível.",
+      "strategy": "Divida a cena em faixas e termine uma antes de passar para a próxima. Olhe bordas, reflexos e objetos dentro de outros objetos antes de gastar uma dica.",
+      "faq": [
+        { "q": "Por que perco tempo?", "a": "Costuma ser reescanear o mesmo canto. Marque a faixa como concluída e siga." },
+        { "q": "Quando usar dica?", "a": "Nos últimos dois itens, quando restam menos esconderijos." },
+      ]
+    },
+    "hidden-objects-home-sweet-home": {
+      "title": "Hidden Objects: Home Sweet Home — objetos escondidos",
+      "intro": "Hidden Objects: Home Sweet Home esconde itens do dia a dia em cenas domésticas cheias de coisas: cozinha, sala, jardim.",
+      "howToPlay": "Encontre os objetos da lista clicando neles. Alguns só aparecem depois de abrir uma gaveta ou mover uma cortina.",
+      "controls": "Clique ou toque para interagir; dicas revelam um item.",
+      "strategy": "Vá de canto a canto em faixas, sem pular. Cenas de casa repetem móveis, então lembre onde itens parecidos se esconderam antes.",
+      "faq": [
+        { "q": "Não acho um item da lista. E agora?", "a": "Pode estar atrás de uma interação: gaveta, cortina, porta." },
+        { "q": "As dicas são limitadas?", "a": "Geralmente sim; gaste nos últimos itens." },
+      ]
+    },
+    "master-chess": {
+      "title": "Master Chess — xadrez online grátis",
+      "intro": "Master Chess é xadrez clássico no navegador: jogue contra o computador ou outro jogador, com regras completas e sem instalar nada.",
+      "howToPlay": "Cada lado começa com 16 peças e move uma por vez. O objetivo é dar xeque-mate no rei adversário. Roque, en passant e promoção seguem as regras normais.",
+      "controls": "Clique na peça e depois na casa de destino; arrastar também funciona.",
+      "strategy": "Ocupe o centro, desenvolva cavalos e bispos antes de mover a mesma peça duas vezes e faça o roque cedo. No meio-jogo, procure peças indefesas antes de calcular linhas longas.",
+      "faq": [
+        { "q": "Dá para desfazer?", "a": "Na maioria dos modos sim; use enquanto aprende, mas evite esconder o erro que quer corrigir." },
+        { "q": "Jogo contra quem?", "a": "Contra o computador ou em partidas online, dependendo do modo escolhido." },
+      ]
+    },
+    "sudoku-online": {
+      "title": "Sudoku Online — sudoku grátis no navegador",
+      "intro": "Sudoku Online é o quebra-cabeça de lógica 9x9: preencha as casas vazias sem repetir números em linha, coluna ou bloco.",
+      "howToPlay": "Cada linha, coluna e bloco 3x3 deve conter os números de 1 a 9 uma única vez. Clique numa casa e escolha o número; os candidatos podem ser anotados.",
+      "controls": "Clique na casa e digite ou selecione o número; use as anotações para candidatos.",
+      "strategy": "Faça passes: procure um número que só cabe em uma casa da linha, coluna ou bloco, preencha e repita. Só use anotações quando o passe não render nada.",
+      "faq": [
+        { "q": "Preciso adivinhar?", "a": "Um sudoku bem formado tem solução única e não exige chute. Revise as anotações antes de arriscar." },
+        { "q": "O que é candidato único escondido?", "a": "É um número que só cabe em uma casa da região, mesmo que a casa aceite vários. É o jeito mais rápido de destravar." },
+      ]
+    },
+    "moto-x3m": {
+      "title": "Moto X3M — jogo de moto e obstáculos online",
+      "intro": "Moto X3M é um jogo de moto em trilhas de obstáculos: acelere, freie e incline a moto para passar de cada rampa sem cair.",
+      "howToPlay": "Pilote até o fim da fase passando por rampas, obstáculos e checkpoints. Cair faz você voltar ao último checkpoint; o tempo define as estrelas.",
+      "controls": "Setas ou WASD para acelerar, frear e inclinar; R para reiniciar.",
+      "strategy": "Trate cada fase como ritmo: acelere no plano, solte antes da rampa e incline para frente no ar para cair na descida. Uma run sem queda vale mais que uma rápida.",
+      "faq": [
+        { "q": "Como cair sem bater?", "a": "Alinhe o ângulo da moto com a descida e pouse as duas rodas juntas." },
+        { "q": "Os checkpoints reiniciam o tempo?", "a": "Eles salvam a posição; a queda volta ao checkpoint, não ao início." },
+      ]
+    },
+    "emerland-solitaire": {
+      "title": "Emerland Solitaire — paciência clássica online",
+      "intro": "Emerland Solitaire é uma versão de paciência (klondike) com tema de fantasia: organize o tableau, suba as cartas para as fundações e limpe o baralho.",
+      "howToPlay": "Mova cartas entre colunas em ordem decrescente e cores alternadas. Leve ases às fundações e suba na sequência do mesmo naipe. O monte compra cartas quando não há jogada.",
+      "controls": "Clique ou arraste as cartas; o monte é clicado para comprar.",
+      "strategy": "Revele cartas viradas para baixo primeiro e mantenha uma coluna vazia para manobrar. Não suba uma carta às fundações se ela ainda segura uma sequência útil.",
+      "faq": [
+        { "q": "Toda partida tem solução?", "a": "Não. Algumas distribuições são impossíveis; a maioria é vencível com boa ordem de jogadas." },
+        { "q": "Posso recomeçar?", "a": "Sim; se travar, mude a ordem dos primeiros movimentos antes de repetir." },
+      ]
     },
   },
   "es": {

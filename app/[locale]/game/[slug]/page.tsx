@@ -101,6 +101,11 @@ export default async function GamePage({
   const catName = displayCategory(game.category);
   // Guides are English-only; linking to /pt/guides/... would 404.
   const guide = locale === "en" ? guideForGame(game.slug, catSlug) : undefined;
+  // Deep copy renders in English, or in a locale that has its own translation.
+  // English fallback under /pt would reintroduce the mixed-language pages we
+  // deliberately removed from the index.
+  const localizedEntry = REGIONAL_GAME_CONTENT[locale]?.[slug];
+  const showDeep = locale === "en" || Boolean(localizedEntry?.strategy);
   const path = (l: string) => `/${l}/game/${game.slug}`;
 
   /**
@@ -213,7 +218,7 @@ export default async function GamePage({
             <p>{devices.join(" · ")}</p>
           </>
         )}
-        {locale === "en" && content?.strategy && (
+        {showDeep && content?.strategy && (
           <>
             <h3>{t("strategy")}</h3>
             <p>{content.strategy}</p>
@@ -234,7 +239,7 @@ export default async function GamePage({
 
       {/* Deep copy is English-only for now (see data/game-deep-content.ts).
           Rendering it under a localized URL would reintroduce mixed-language pages. */}
-      {locale === "en" && content?.faq && content.faq.length > 0 && (
+      {showDeep && content?.faq && content.faq.length > 0 && (
         <section className="game-faq">
           <h2>{t("faq")}</h2>
           {content.faq.map((item) => (
