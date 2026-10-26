@@ -1781,6 +1781,13 @@ export const GAME_CONTENT: Record<string, GameContent> = {
     controls: "Drag to aim and set power, then release to shoot.",
   },
 
+  "2-minute-football-qb-legend": {
+    tags: ["football", "sports", "quarterback", "timing"],
+    intro: "2 Minute Football puts you at quarterback with two minutes on the clock: read the defence, choose a receiver and throw before the rush arrives.",
+    howToPlay: "Pick a play, watch the routes develop, and throw to an open receiver. Completed passes stop the clock and move the chains; the drive ends on an interception or a failed fourth down.",
+    controls: "Click or tap to select a play and a receiver; drag to aim in some versions.",
+  },
+
 };
 
 /** Homepage "Featured Games" — hand-curated, NOT a popularity ranking
