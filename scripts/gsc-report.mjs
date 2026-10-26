@@ -17,7 +17,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const TOKEN_FILE = path.join(ROOT, "secrets/token.json");
-const GSC_SITE = process.env.GSC_SITE ?? "sc-domain:vioraplay.com";
+const GSC_SITE_ENV = process.env.GSC_SITE ?? "";
 const GA4_PROPERTY = process.env.GA4_PROPERTY_ID ?? "558289372";
 const DAYS = Number(process.env.REPORT_DAYS ?? 28);
 
@@ -57,6 +57,24 @@ async function accessToken() {
 
 const auth = await accessToken();
 const headers = { authorization: `Bearer ${auth}`, "content-type": "application/json" };
+
+// Resolve the property instead of assuming one: the account may only have a
+// URL-prefix property, not the domain property.
+const sitesRes = await fetch("https://www.googleapis.com/webmasters/v3/sites", { headers });
+if (!sitesRes.ok) {
+  console.error(`Cannot list Search Console properties: ${sitesRes.status} ${await sitesRes.text()}`);
+  process.exit(1);
+}
+const sites = (await sitesRes.json()).siteEntry ?? [];
+const GSC_SITE =
+  (GSC_SITE_ENV && sites.some((s) => s.siteUrl === GSC_SITE_ENV) ? GSC_SITE_ENV : null) ??
+  sites.find((s) => s.siteUrl.includes("vioraplay"))?.siteUrl;
+if (!GSC_SITE) {
+  console.error("No vioraplay property found. Available:");
+  for (const s of sites) console.error(`  ${s.siteUrl} (${s.permissionLevel})`);
+  process.exit(1);
+}
+console.log(`Using GSC property: ${GSC_SITE}`);
 
 async function gsc(body) {
   const res = await fetch(

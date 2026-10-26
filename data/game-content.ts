@@ -1823,6 +1823,69 @@ export const GAME_CONTENT: Record<string, GameContent> = {
     controls: "Click or tap an object; use the hint when a room refuses to give up the last item.",
   },
 
+  "buildcraft": {
+    tags: ["building", "3d", "sandbox", "voxel"],
+    intro: "BuildCraft is a creative 3D block-building game: choose a project, follow the transparent outline and turn a plan into a finished voxel build.",
+    howToPlay: "Select a build from the project list, then place blocks inside the outline one at a time. The outline shows shape and colour; removing a wrong block costs only a moment.",
+    controls: "Click or tap a block face to place; drag to look around and scroll or pinch to zoom.",
+  },
+
+  "catdoku-sudoku-puzzle": {
+    tags: ["sudoku", "cats", "logic", "puzzle"],
+    intro: "Catdoku Sudoku Puzzle is a logic puzzle with cats: place exactly one cat in every coloured territory while keeping the cats from touching each other.",
+    howToPlay: "Each coloured region must hold exactly one cat, and two cats may not sit in neighbouring cells. Start with regions that have only one possible cell, then eliminate around them.",
+    controls: "Click or tap a cell to place or remove a cat.",
+  },
+
+  "chicken-merge": {
+    tags: ["merge", "tower-defense", "chickens", "strategy"],
+    intro: "Chicken Merge mixes merging with tower defence: drag identical chickens together to create stronger ones, then use them to hold the line against waves of enemies.",
+    howToPlay: "Drag one chicken onto an identical one to merge them into a higher tier. Place the results along the lane to stop enemies, and keep spare chickens in the back for the next merge.",
+    controls: "Drag and drop chickens with the mouse or a finger.",
+  },
+
+  "color-dots-challenge": {
+    tags: ["colour", "precision", "casual", "puzzle"],
+    intro: "Color Dots Challenge is a precision puzzle: place each coloured dot into its matching slot without clipping the edges.",
+    howToPlay: "Drag or aim each dot toward the slot of the same colour. The closer the placement, the better the result; a rushed drop usually bounces out.",
+    controls: "Drag with the mouse or finger, or tap to release the dot.",
+  },
+
+  "cooking-city": {
+    tags: ["cooking", "restaurant", "time-management", "girls"],
+    intro: "Cooking City is a fast restaurant game: take orders, cook the dishes and serve hungry customers before their patience runs out.",
+    howToPlay: "Seat customers, note each order, prepare it at the right station and deliver it. Clearing tables quickly makes room for the next group.",
+    controls: "Click or tap stations, ingredients and customers to interact.",
+  },
+
+  "draw-to-goal-soccer-game": {
+    tags: ["drawing", "football", "physics", "puzzle"],
+    intro: "Draw To Goal is a football puzzle where your pencil is the pass: draw lines that guide the ball past defenders and into the net.",
+    howToPlay: "Draw a path from the ball toward the goal, then release. The ball follows the line and bounces off walls; each level limits how much line you can draw.",
+    controls: "Draw with the mouse or a finger, then release to launch the ball.",
+  },
+
+  "find-the-needle": {
+    tags: ["hidden-object", "search", "relaxing", "simulation"],
+    intro: "Find the Needle hides one tiny needle in an enormous haystack. Dig through the hay layer by layer, shrink the pile and get closer to the target.",
+    howToPlay: "Remove hay in sections rather than at random. Each layer you clear reduces the search area, and the remaining pile gets easier to read.",
+    controls: "Click or drag across the hay to remove it.",
+  },
+
+  "fruit-chopper": {
+    tags: ["fruit", "timing", "skill", "arcade"],
+    intro: "Fruit Chopper is a timing game: launch your blade at the right moment and slice several fruits in one throw for a bonus.",
+    howToPlay: "Time each throw so the blade passes through as many fruits as possible. Missing costs you a life; combos build the score faster than single hits.",
+    controls: "Click or tap to throw; timing decides the angle.",
+  },
+
+  "golf-orbit": {
+    tags: ["golf", "sports", "physics", "one-shot"],
+    intro: "Golf Orbit is a physics golf game with a sense of humour: launch the ball to absurd heights, clear one-shot challenges and see how far it can travel.",
+    howToPlay: "Set the angle and power, then release. The ball flies, bounces and rolls; each level sets a target distance or a hole to reach.",
+    controls: "Drag to set angle and power, release to swing.",
+  },
+
 };
 
 /** Homepage "Featured Games" — hand-curated, NOT a popularity ranking

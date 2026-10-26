@@ -23,7 +23,7 @@ const ROOT = process.cwd();
 const CLIENT_FILE = path.join(ROOT, "secrets/oauth-client.json");
 const TOKEN_FILE = path.join(ROOT, "secrets/token.json");
 const PORT = 53682;
-const REDIRECT_URI = `http://127.0.0.1:${PORT}/oauth2callback`;
+const REDIRECT_URI = `http://localhost:${PORT}/oauth2callback`;
 const SCOPES = [
   "https://www.googleapis.com/auth/webmasters.readonly",
   "https://www.googleapis.com/auth/analytics.readonly",
@@ -85,8 +85,8 @@ const code = await new Promise((resolve, reject) => {
   server.listen(PORT, "127.0.0.1");
   setTimeout(() => {
     server.close();
-    reject(new Error("Timed out after 5 minutes"));
-  }, 5 * 60 * 1000).unref();
+    reject(new Error("Timed out after 15 minutes"));
+  }, 15 * 60 * 1000).unref();
 });
 
 const tokenRes = await fetch("https://oauth2.googleapis.com/token", {

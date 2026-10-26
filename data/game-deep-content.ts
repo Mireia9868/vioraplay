@@ -717,4 +717,67 @@ export const GAME_DEEP_CONTENT: Record<
       { q: "Can I replay a room?", a: "Most versions let you restart a scene. If one item is blocking progress, restart and change your scan order." },
     ],
   },
+  "buildcraft": {
+    strategy: "Follow the outline from the base up, and place the most visible blocks first; interior blocks are easier to fix later. Check the colour guide before the count — a wrong colour is harder to spot than a missing block.",
+    faq: [
+      { q: "Can I build freely?", a: "Projects give an outline; free-build modes vary by version." },
+      { q: "Why won't a block place?", a: "The outline may already be filled, or the block needs a neighbour to attach to." },
+    ],
+  },
+  "catdoku-sudoku-puzzle": {
+    strategy: "Start with the smallest region — it has the fewest legal cells. After placing a cat, eliminate every touching cell in the surrounding regions, then repeat.",
+    faq: [
+      { q: "Do cats touch diagonally?", a: "Usually yes; check the rules panel, because variants differ." },
+      { q: "Is guessing needed?", a: "A well-formed puzzle is solvable by elimination; if you are guessing, recheck earlier placements." },
+    ],
+  },
+  "chicken-merge": {
+    strategy: "Merge from the back lane so the front never loses a defender. Keep one lane for merging and the others holding; a merged chicken that spawns into traffic wastes the merge.",
+    faq: [
+      { q: "Why does my defence collapse?", a: "Merges pulled units out of the lane they were holding. Merge spare chickens first." },
+      { q: "Should I merge everything?", a: "No; keep the front line stable and merge what is behind it." },
+    ],
+  },
+  "color-dots-challenge": {
+    strategy: "Aim for the centre of the slot, not its edge; a clean drop scores better than a fast one. If a dot bounces, wait for it to settle before the next attempt.",
+    faq: [
+      { q: "Does speed matter?", a: "Usually only precision; rushing causes bounces." },
+      { q: "What if a slot is blocked?", a: "Clear the dots in front first; order matters more than aim." },
+    ],
+  },
+  "cooking-city": {
+    strategy: "Start the longest dish first and fill the wait with quick items. Serve the customer closest to leaving rather than the one who arrived first.",
+    faq: [
+      { q: "Why do customers leave?", a: "The queue is too long. Finish one order completely before starting another." },
+      { q: "What should I upgrade?", a: "The station with the longest queue, not the most expensive." },
+    ],
+  },
+  "draw-to-goal-soccer-game": {
+    strategy: "Draw one clean curve rather than several short segments; the ball keeps more speed on a smooth line. Aim to arrive at the goal from the side the keeper is not covering.",
+    faq: [
+      { q: "Why does the ball stop?", a: "The line ran out or the ball lost speed on a sharp turn." },
+      { q: "Can I erase?", a: "Most versions let you undo before launching; after the launch the level resets." },
+    ],
+  },
+  "find-the-needle": {
+    strategy: "Remove hay in horizontal bands and keep the pile flat; a flat pile is easier to compare than a mound. Clear the outer layers first so the remaining area shrinks predictably.",
+    faq: [
+      { q: "Is it random?", a: "The needle's spot is fixed per level; the hay removal is the puzzle." },
+      { q: "Is there a timer?", a: "Some versions include one; if so, work in bands rather than digging randomly." },
+    ],
+  },
+  "fruit-chopper": {
+    strategy: "Wait for the fruit to bunch before throwing; one good multi-slice beats three single hits. Do not chase a missed fruit with a second throw.",
+    faq: [
+      { q: "How do combos work?", a: "Slicing several fruits in one throw multiplies the score." },
+      { q: "What ends a run?", a: "Misses cost lives; three misses usually end it." },
+    ],
+  },
+  "golf-orbit": {
+    strategy: "Power matters less than launch angle: a low angle rolls further on flat ground, a high angle clears obstacles. Learn the first bounce point before trying for distance.",
+    faq: [
+      { q: "How do I reach the target?", a: "Match the angle to the terrain; the ball rolls after landing." },
+      { q: "Are there upgrades?", a: "Some versions add clubs or boosts; check the level screen." },
+    ],
+  },
 };
