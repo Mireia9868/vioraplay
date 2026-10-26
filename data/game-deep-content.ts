@@ -353,4 +353,284 @@ export const GAME_DEEP_CONTENT: Record<
       },
     ],
   },
+  "chess-online-playing": {
+    strategy: "Against the computer, use the lower levels to drill one opening until you know the first eight moves without thinking. Then raise the level and treat every loss as a position to review, not a score to avenge.",
+    faq: [
+      { q: "Can I undo moves?", a: "Most computer modes offer a take-back or a hint. Using it while learning is fine, but it hides the mistake you are trying to fix." },
+      { q: "Which side should I play?", a: "Alternate. Playing black teaches you to defend and to punish loose opening moves, which improves your white games too." },
+    ],
+  },
+  "chess-online-multiplayer": {
+    strategy: "Play a small, reliable opening and spend your time on tactics rather than memorised lines. Check every move for undefended pieces before calculating; most online games are decided by a one-move blunder.",
+    faq: [
+      { q: "Is there a time limit?", a: "Yes, online games use a clock. If you are new, choose the longer option; blitz rewards pattern recognition you may not have yet." },
+      { q: "Can I play a friend?", a: "Some versions let you create or join a game. If not, playing the computer is the fallback." },
+    ],
+  },
+  "chessvola-puzzles": {
+    strategy: "Solve puzzles in short daily sets rather than long marathons. Before moving, name the tactic you are looking for — fork, pin, discovered attack — and check what the opponent's last move left undefended.",
+    faq: [
+      { q: "Do I need to know theory?", a: "No. Puzzle training teaches pattern recognition directly; theory explains why the pattern works." },
+      { q: "Why do I fail easy puzzles?", a: "Usually because you move before checking all checks and captures. Slow down for the first move." },
+    ],
+  },
+  "solitaire-klondike-treasure-island": {
+    strategy: "The pirate theme changes the art, not the rules. Uncover face-down cards first, keep a column free for kings, and only move aces up when doing so does not break a sequence you still need.",
+    faq: [
+      { q: "Is it standard Klondike?", a: "Yes, with a themed deck and adventure framing. The tableau, foundations and stock work the usual way." },
+      { q: "Can I restart a deal?", a: "Most versions allow it. If a deal stalls, changing the order of the first ten moves is usually more useful than repeating them." },
+    ],
+  },
+  "solitaire-crime-stories": {
+    strategy: "The story adds a narrative between deals, but the card logic is still Klondike. Treat the story as a break and return to the tableau with the same priorities: uncover cards, free columns, and delay foundation moves that break sequences.",
+    faq: [
+      { q: "Does the story affect the cards?", a: "Not usually. The narrative frames the deals; the card rules stay the same." },
+      { q: "Can I skip dialogue?", a: "Most versions let you click through it. Skipping is fine if you only want the card game." },
+    ],
+  },
+  "mahjong-lines": {
+    strategy: "Lines asks you to connect matching tiles with a path of at most two turns. Before taking a pair, check whether the path uses a corridor you will need later; the shortest path is not always the best pair.",
+    faq: [
+      { q: "Why can't I connect two visible tiles?", a: "The path needs a clear route with at most two turns. Tiles in the middle of a crowded row usually fail even when they look free." },
+      { q: "Is there a time limit?", a: "Many versions include one. If yours does, prioritise pairs that open long corridors over pairs in the corners." },
+    ],
+  },
+  "mahjong-unlimited": {
+    strategy: "Endless levels reward a steady removal order rather than speed. Clear the top layers first, keep pairs that unlock several tiles for later, and restart a board early if the first ten removals leave no free pairs.",
+    faq: [
+      { q: "Are the boards random?", a: "Yes, levels are generated. The strategy is the same: free tiles first, and avoid removing a pair that blocks a larger group." },
+      { q: "Does difficulty increase?", a: "Usually the layouts get denser. If a board feels impossible, restarting is cheaper than forcing it." },
+    ],
+  },
+  "mahjong-puzzle-tile-match": {
+    strategy: "This variant clears tiles by linking identical ones in rows and columns. Scan the outer rows first — edges have fewer blockers — and keep one column clear as a corridor for later connections.",
+    faq: [
+      { q: "How is this different from stacked mahjong?", a: "There is no stacking; you link tiles along rows and columns. That makes edge tiles more valuable than centre tiles." },
+      { q: "What happens when no moves remain?", a: "The board is stuck. Restart and change which pairs you remove in the first minute." },
+    ],
+  },
+  "bubble-blast": {
+    strategy: "Aim at clusters that support other bubbles: popping a supporting group drops everything beneath it. Bank shots off the walls for colours hidden behind the front row, and avoid adding singles to the ceiling.",
+    faq: [
+      { q: "What happens when I miss?", a: "The board usually gains a bubble and the ceiling drops. Fewer wasted shots matters more than one big pop." },
+      { q: "Are there power-ups?", a: "Yes, bonuses appear as you clear. Save them for a cluster you cannot reach rather than using them on the first group." },
+    ],
+  },
+  "bubble-pop-legend": {
+    strategy: "Coins and bonuses reward clearing whole clusters, not single bubbles. Aim for the highest cluster you can reach so the drop clears the rows below, and keep the ceiling free of isolated colours.",
+    faq: [
+      { q: "What are coins for?", a: "Usually for bonuses or extra shots. Spending them on a level you are about to finish is wasted; save them for a stuck board." },
+      { q: "Is there a shot limit?", a: "Many levels have one. Count your remaining shots and prioritise clusters that drop the most bubbles per shot." },
+    ],
+  },
+  "bubble-shooter-mega": {
+    strategy: "With three colours on screen, plan two shots ahead: clear one colour to make the next cluster easier to reach. Aim at the side of a cluster so the drop takes the widest section.",
+    faq: [
+      { q: "Why do I lose when the board is almost clear?", a: "Isolated bubbles near the ceiling are the usual cause. Clear them before they multiply." },
+      { q: "Do colours run out?", a: "New rows keep coming; the goal is to clear faster than they arrive." },
+    ],
+  },
+  "mr-racer-car-racing": {
+    strategy: "Supercars reward smooth inputs more than top speed. Brake before the traffic rather than while steering, and overtake on the side with the longest gap.",
+    faq: [
+      { q: "How do I unlock cars?", a: "By earning currency in races and events. Upgrading handling first usually helps more than top speed." },
+      { q: "Why do I crash in traffic?", a: "Following too closely. Leave a gap you can brake into." },
+    ],
+  },
+  "driver-club-highway-racing": {
+    strategy: "Highway traffic is about reading three cars ahead. Change lanes early, avoid weaving, and treat the hard shoulder as an emergency exit rather than a racing line.",
+    faq: [
+      { q: "Is it endless?", a: "Usually distance-based with escalating traffic. Consistency beats risky overtakes." },
+      { q: "Do near misses pay?", a: "Many versions reward them, but the risk rarely pays for a crash." },
+    ],
+  },
+  "deadly-descent": {
+    strategy: "Downhill driving is about weight transfer: brake before the corner, let the car roll through, and accelerate only when the road straightens. A clean run beats a fast start.",
+    faq: [
+      { q: "Why does the car flip?", a: "Too much steering at speed or braking mid-corner. Slow down earlier." },
+      { q: "Is damage permanent?", a: "Usually per run. Restarting is cheaper than limping to the finish." },
+    ],
+  },
+  "moto-x3m-spooky-land": {
+    strategy: "Halloween tracks add moving hazards; learn where they spawn before trying to be fast. Keep the bike level in the air and land on the downslope.",
+    faq: [
+      { q: "How do I get three stars?", a: "Finish under the time target without crashing. Checkpoints make retries cheap." },
+      { q: "Do the moving obstacles follow a pattern?", a: "Yes, they loop. Watch one cycle before committing." },
+    ],
+  },
+  "moto-traffic-rider": {
+    strategy: "Traffic riding rewards lane discipline: pick a lane, hold it, and change only when the gap is clear. Near misses are tempting, but one clipped mirror ends the run.",
+    faq: [
+      { q: "How do I go faster?", a: "Sustained speed in a clear lane, not constant weaving." },
+      { q: "What ends a run?", a: "A collision. Treat every car as unpredictable." },
+    ],
+  },
+  "kingdom-defender-tower-defense": {
+    strategy: "Orcs and undead arrive in waves with different armour. Build at the choke, then add a damage type the current wave lacks rather than upgrading the same tower repeatedly.",
+    faq: [
+      { q: "Which tower first?", a: "The cheapest one that covers the longest path section. Upgrade it before building a second." },
+      { q: "Do abilities matter?", a: "Yes. Save them for the wave that breaks through, not the first wave." },
+    ],
+  },
+  "plants-vs-zombies-hybrids": {
+    strategy: "Hybrid plants combine two roles, which saves slots but can blur your economy. Keep two columns of sun producers and place hybrids where a single plant could not cover both defence and damage.",
+    faq: [
+      { q: "Are hybrid plants always better?", a: "No. They usually cost more; a cheap specialist is often better early." },
+      { q: "How do I handle a lane collapse?", a: "Sacrifice the front plant and rebuild behind it; don't feed a lost lane." },
+    ],
+  },
+  "hero-defense-king": {
+    strategy: "The hero is a mobile tower: position it where enemies are slowed, not where they enter. Spend on hero skills that scale with waves rather than one-time damage.",
+    faq: [
+      { q: "Should I upgrade the hero or build towers?", a: "Upgrade the hero while it can still clear a lane; build when the map needs coverage." },
+      { q: "When do I use skills?", a: "On the wave that reaches the hero, not on the first enemies." },
+    ],
+  },
+  "tower-defense": {
+    strategy: "Elements are the counter system: arrows for light enemies, stones for armoured, magic for groups. Build one tower per damage type along the same stretch so every wave meets an answer.",
+    faq: [
+      { q: "Where should towers go?", a: "At corners and doubles-back, where one tower covers more path." },
+      { q: "Why do later waves break through?", a: "A missing damage type, not a lack of towers." },
+    ],
+  },
+  "merge-fruit-characters": {
+    strategy: "Drop fruit along one side, keep the centre clear, and merge only when the result fits. A chain reaction comes from dropping a small fruit into a gap between two of its kind.",
+    faq: [
+      { q: "What happens at the top?", a: "The run ends. Keep one side low to buy time." },
+      { q: "Do bonuses help?", a: "Use them on a stack you cannot clear, not on a board that is already fine." },
+    ],
+  },
+  "merge-wall-last-stand": {
+    strategy: "This is merge plus defence: your wall is the board. Merge from the back so the front line never loses a unit, and keep one lane for merging while the others hold.",
+    faq: [
+      { q: "Why does the wall fall?", a: "Merging front units leaves a gap. Merge the back row first." },
+      { q: "What should I upgrade?", a: "The unit holding the longest lane, not the newest one." },
+    ],
+  },
+  "fleet-merge": {
+    strategy: "Ships merge into stronger classes, but your dock is limited. Keep two of each class you are building toward and sell the rest; a full dock cannot accept new ships.",
+    faq: [
+      { q: "Which line first?", a: "The one that clears the current wave; artillery before lancers early." },
+      { q: "Should I sell ships?", a: "Only ones you cannot pair. Selling a pair slows the next merge." },
+    ],
+  },
+  "2048-merge-blocks": {
+    strategy: "Tap-to-merge changes 2048: you choose the pair, not the direction. Keep the highest block in a corner and merge low pairs elsewhere to preserve space.",
+    faq: [
+      { q: "How is it different from sliding 2048?", a: "You merge by tapping two adjacent blocks, so placement matters more than swiping." },
+      { q: "Why does the board fill?", a: "Too many single blocks. Merge pairs as soon as they have room." },
+    ],
+  },
+  "cube-snake-2048": {
+    strategy: "Collect cubes in ascending order and keep your snake moving in a loop. Merging a cube grows the snake, so leave a return path before you take the next number.",
+    faq: [
+      { q: "Why does the snake trap itself?", a: "It enters a pocket smaller than its length. Turn out early." },
+      { q: "Do numbers reset?", a: "They respawn; the arena stays the same, so learn its shape." },
+    ],
+  },
+  "garden-snakes": {
+    strategy: "This is a fill-the-grid logic puzzle, not an arcade snake. Drag each snake so it covers empty tiles without crossing others; start with the longest snake and the tightest corner.",
+    faq: [
+      { q: "Is there a time limit?", a: "Usually not; it is a logic puzzle. Take the time to plan the longest snake first." },
+      { q: "What if two snakes overlap?", a: "Undo the last move and re-route the shorter one; the longest snake has the least freedom." },
+    ],
+  },
+  "eggy-car": {
+    strategy: "The egg is the constraint: accelerate gently, brake earlier than feels necessary, and avoid jumps that land on the egg's side. A slow run that keeps the egg intact beats a fast crash.",
+    faq: [
+      { q: "Why does the egg fall?", a: "Sudden acceleration or landing on a slope. Smooth inputs keep it in place." },
+      { q: "How do I get further?", a: "Upgrade suspension and tyres before the engine." },
+    ],
+  },
+  "rooftop-run": {
+    strategy: "Parkour runners reward reading the next two obstacles. Jump early rather than late, slide under barriers instead of jumping them, and keep a rhythm rather than reacting to each object.",
+    faq: [
+      { q: "How do I avoid enemies?", a: "Keep moving; most chases end when you break line of sight." },
+      { q: "Should I collect everything?", a: "Only when it is on your line. Detours cost more than the pickup is worth." },
+    ],
+  },
+  "geometry-arrow": {
+    strategy: "The cave is a pattern: each obstacle has a safe gap. Fly through the middle of the gap rather than the edge, and learn one section before speeding up.",
+    faq: [
+      { q: "Why do I hit walls I saw?", a: "Input lag or drifting. Aim for the centre of the gap." },
+      { q: "Is there a checkpoint?", a: "Many versions restart at the section; use repeats to learn one obstacle at a time." },
+    ],
+  },
+  "hoppy-bird": {
+    strategy: "Flap in a rhythm, not in panic. Tap when the bird is at the height of the gap, and aim to pass the middle of each pipe rather than the top edge.",
+    faq: [
+      { q: "Why do I drop so fast?", a: "Gravity is constant; small taps keep altitude better than long pauses." },
+      { q: "Is there an end?", a: "Usually endless with rising speed. Score comes from consistency, not risk." },
+    ],
+  },
+  "ludo-legend": {
+    strategy: "Local pass-and-play Ludo is about token choice: keep one token near home and one near the finish, so a single bad roll cannot stall you. Use safe squares as staging points, not as parking spaces.",
+    faq: [
+      { q: "Can I play with friends on one device?", a: "Yes, pass the device between turns. Up to four players are supported." },
+      { q: "Is there strategy in a dice game?", a: "Only in which token you move; the dice are luck." },
+    ],
+  },
+  "word-cross": {
+    strategy: "Word Cross blends a crossword grid with a word list. Start with the longest word you can see, then use its crossing letters to narrow the rest.",
+    faq: [
+      { q: "Are words hidden backwards?", a: "Usually yes. Read from the last letter when a word will not appear." },
+      { q: "What if I get stuck?", a: "Change the starting letter, not the ending; most misses share an ending." },
+    ],
+  },
+  "word-search-hidden-words": {
+    strategy: "Themed lists help: read the theme first, then scan for its vocabulary. Anchor on the first letter and sweep all eight directions before moving to the next word.",
+    faq: [
+      { q: "Do themes change the words?", a: "Yes, each level uses a themed list. Reading the theme primes you to spot related words." },
+      { q: "Is there a timer?", a: "Many versions include one; short words first keeps momentum." },
+    ],
+  },
+  "hidden-object-street-of-secrets": {
+    strategy: "Detective scenes hide objects inside other objects. Scan in bands, check reflections and shadows, and save hints for the last two items.",
+    faq: [
+      { q: "Do I need to read the story?", a: "No, but clues sometimes tell you where to look. Skim it." },
+      { q: "Are hints limited?", a: "Usually. Spend them late." },
+    ],
+  },
+  "paper-princess--doll-dress-up": {
+    strategy: "Dress-up rewards coherent themes: pick two or three colours and one statement piece. Use the background and hair to support the theme rather than adding a second one.",
+    faq: [
+      { q: "Is there scoring?", a: "Some modes rate the outfit against a theme; others are sandbox." },
+      { q: "Can I save looks?", a: "Most versions keep the current outfit; screenshot anything you want to keep." },
+    ],
+  },
+  "nuts-puzzle-sort-by-color": {
+    strategy: "Nuts on screws is a sorting puzzle with limited pegs. Move a nut only when you can place it on its colour or on an empty screw; keep one empty screw as a buffer.",
+    faq: [
+      { q: "What is the buffer?", a: "An empty screw that lets you move a nut out of the way. Losing it is how boards lock." },
+      { q: "Can I undo?", a: "Many versions allow it; undo to the last buffer rather than pushing forward." },
+    ],
+  },
+  "onet-animals": {
+    strategy: "Onet asks you to connect matching tiles with a path of at most two turns. Clear the outer edges first; they have the most possible paths, and they free the centre for later.",
+    faq: [
+      { q: "Why can't I connect two tiles?", a: "The path needs at most two turns and must be clear. Tiles buried in the middle usually fail." },
+      { q: "Is there a time limit?", a: "Often yes. Prioritise pairs that open corridors." },
+    ],
+  },
+  "special-ops": {
+    strategy: "5v5 shooters reward crosshair placement and cover discipline. Hold the angle instead of rushing, and reload behind cover rather than after contact.",
+    faq: [
+      { q: "Is it multiplayer?", a: "Yes, 5v5 PvP. Expect real opponents, not bots." },
+      { q: "What should I practise first?", a: "Crosshair height and peeking one angle at a time." },
+    ],
+  },
+  "tank-1944": {
+    strategy: "Tank combat is about armour and angle: face the strongest armour toward the enemy, move between shots, and aim for weak points rather than the centre of the hull.",
+    faq: [
+      { q: "Which tank should I pick?", a: "The one that matches the map: slow heavies for corridors, fast tanks for open ground." },
+      { q: "Why do my shots bounce?", a: "Angle and armour. Flank or aim at the sides and rear." },
+    ],
+  },
+  "grow-slime": {
+    strategy: "Clicker progression is about multipliers. Buy the upgrade that raises all income before the one that raises a single source, and reset when the next milestone takes longer than everything before it.",
+    faq: [
+      { q: "Should I keep clicking?", a: "Only until automation out-earns you; after that, clicking is for bursts." },
+      { q: "When should I reset?", a: "When progress stalls for longer than the previous stage took in total." },
+    ],
+  },
 };
