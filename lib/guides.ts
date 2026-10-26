@@ -238,6 +238,13 @@ export const GUIDES: readonly Guide[] = [
     cat: "/category/two-player",
     catName: "2-Player Games",
   },
+  {
+    slug: "what-are-unblocked-games",
+    title: "What Are Unblocked Games?",
+    blurb: "What the term means, why browser games load without installs, and how to pick a safe one.",
+    cat: "/category/unblocked",
+    catName: "Unblocked Games",
+  },
 ];
 
 export const GUIDE_SLUGS: readonly string[] = GUIDES.map((g) => g.slug);

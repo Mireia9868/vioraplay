@@ -325,7 +325,117 @@ export const REGIONAL_GAME_CONTENT: Record<string, Record<string, {
     "idle-tower-defense-be01-1": {
       "title": "Idle Tower Defense - Game Pertahanan Online",
       "intro": "Idle Tower Defense memadukan pertahanan gelombang dengan progresi idle yang berjalan saat Anda pergi.",
-    }
+    },
+    "brain-dots": {
+      "title": "Brain Dots — puzzle fisika online",
+      "intro": "Brain Dots adalah puzzle fisika: gambar garis untuk membuat dua bola saling bertabrakan. Setiap level memberi jumlah goresan terbatas, jadi kuncinya adalah sudut dan momentum, bukan kecepatan.",
+      "howToPlay": "Gambar garis dengan mouse atau jari; garis itu menjadi benda padat. Lepaskan bola atau biarkan gravitasi bekerja, lalu pakai garis sebagai tanjakan atau dinding untuk mengarahkan bola ke bola lainnya.",
+      "controls": "Gambar dengan mouse atau jari; undo menghapus garis terakhir.",
+      "strategy": "Rencanakan seluruh jalur sebelum menggambar: garis pertama menentukan sudut semua garis berikutnya. Manfaatkan dinding sebagai pantulan gratis dan pilih satu tanjakan panjang daripada tiga koreksi pendek.",
+      "faq": [
+        { "q": "Kenapa bola berhenti?", "a": "Gesekan dan garis datar. Beri kemiringan dan jaga garis tetap pendek agar bola tidak kehilangan momentum." },
+        { "q": "Bisa undo?", "a": "Di sebagian besar versi bisa; undo sebelum menumpuk koreksi di garis yang buruk." },
+      ]
+    },
+    "pregnant-mom-simulator-family-life": {
+      "title": "Pregnant Mom Simulator — simulasi keluarga online",
+      "intro": "Pregnant Mom Simulator Family Life mengikuti keseharian seorang ibu dan keluarganya: merawat rumah, memenuhi kebutuhan, dan mengatur waktu di antara tugas.",
+      "howToPlay": "Pilih tindakan lewat lingkungan dan ikon: memberi makan, istirahat, bersih-bersih, dan merawat bayi. Setiap tugas memakan waktu, dan membiarkan kebutuhan menumpuk membuat hari makin sulit.",
+      "controls": "Klik atau ketuk objek dan ikon untuk berinteraksi.",
+      "strategy": "Selesaikan dulu kebutuhan yang paling rendah; tugas panjang bisa menunggu. Lakukan satu putaran perawatan sebelum memulai aktivitas baru.",
+      "faq": [
+        { "q": "Apakah ini game cerita?", "a": "Lebih ke simulasi rutinitas daripada narasi; tujuannya menjaga keluarga tetap teratur." },
+        { "q": "Ada batas waktu?", "a": "Sebagian versi punya hari dengan jam; lainnya bebas. Lihat panel sebelum mulai." },
+      ]
+    },
+    "busy-bites-tycoon": {
+      "title": "Busy Bites Tycoon — simulasi restoran",
+      "intro": "Busy Bites Tycoon adalah simulasi restoran: tempatkan pelanggan, catat pesanan, sajikan makanan, dan investasikan lagi keuntungannya sebelum antrean menjadi keluhan.",
+      "howToPlay": "Pelanggan datang dan menunggu meja. Catat pesanan, siapkan di stasiun yang tepat, antar, lalu bersihkan meja. Uangnya untuk membeli staf dan meningkatkan peralatan.",
+      "controls": "Klik atau ketuk pelanggan, stasiun, atau item untuk berinteraksi.",
+      "strategy": "Layani pelanggan yang paling dekat dengan batas sabar dan tingkatkan stasiun yang benar-benar menjadi hambatan. Merekrut sebelum meningkatkan biasanya membuang uang.",
+      "faq": [
+        { "q": "Kenapa pelanggan pergi?", "a": "Antrean terlalu panjang. Tambah atau tingkatkan stasiun sebelum menambah pelayan." },
+        { "q": "Apa yang harus ditingkatkan dulu?", "a": "Stasiun dengan antrean terpanjang, bukan yang paling mahal." },
+      ]
+    },
+    "pickaxe-crusher-idle": {
+      "title": "Pickaxe Crusher Idle — game klik pertambangan",
+      "intro": "Pickaxe Crusher Idle adalah game klik pertambangan: setiap ayunan memecahkan batu, dan bijihnya membeli kapak lebih baik serta bor otomatis yang tetap menambang saat kamu pergi.",
+      "howToPlay": "Klik atau ketuk untuk mengayun. Bijih terkumpul dan dipakai untuk peningkatan damage atau otomatisasi. Lapisan lebih dalam punya batu lebih keras dan bijih lebih berharga.",
+      "controls": "Klik atau ketuk untuk mengayun; peningkatan ada di panel samping.",
+      "strategy": "Beli peningkatan damage per detik sebelum peningkatan kedalaman atau kosmetik. Otomatisasi paling cepat balik modal tepat sebelum kamu berhenti mengklik.",
+      "faq": [
+        { "q": "Tetap menambang saat offline?", "a": "Sebagian besar versi idle tetap, kadang dengan laju lebih rendah. Cek panel offline sebelum menutup tab." },
+        { "q": "Kapan harus prestige?", "a": "Saat lapisan berikutnya butuh waktu lebih lama daripada seluruh run sebelumnya." },
+      ]
+    },
+    "hidden-object-clues-and-mysteries": {
+      "title": "Hidden Object: Clues and Mysteries — cari benda tersembunyi",
+      "intro": "Hidden Object: Clues and Mysteries menyembunyikan benda di scene penuh detail dan meminta kamu menemukan item daftar sebelum waktu habis.",
+      "howToPlay": "Baca daftar dan cari setiap benda di scene dengan mengkliknya. Klik benar menghapus item dari daftar; klik salah biasanya mengurangi waktu. Petunjuk mengungkap satu benda saat kamu macet.",
+      "controls": "Klik atau ketuk benda; gunakan tombol petunjuk bila tersedia.",
+      "strategy": "Bagi scene menjadi beberapa lajur dan selesaikan satu lajur sebelum pindah. Periksa tepi, pantulan, dan benda di dalam benda lain sebelum memakai petunjuk.",
+      "faq": [
+        { "q": "Kenapa waktu cepat habis?", "a": "Biasanya karena memindai area yang sama berulang. Tandai lajur selesai lalu lanjut." },
+        { "q": "Kapan pakai petunjuk?", "a": "Pada dua item terakhir, saat tempat sembunyi tinggal sedikit." },
+      ]
+    },
+    "hidden-objects-home-sweet-home": {
+      "title": "Hidden Objects: Home Sweet Home — benda tersembunyi",
+      "intro": "Hidden Objects: Home Sweet Home menyembunyikan benda sehari-hari di scene rumah yang penuh barang: dapur, ruang tamu, taman.",
+      "howToPlay": "Temukan benda di daftar dengan mengkliknya. Sebagian hanya muncul setelah membuka laci atau menggeser tirai.",
+      "controls": "Klik atau ketuk untuk berinteraksi; petunjuk mengungkap satu item.",
+      "strategy": "Pindai dari sudut ke sudut dalam lajur, jangan melompat. Scene rumah memakai perabot yang sama, jadi ingat di mana benda serupa pernah sembunyi.",
+      "faq": [
+        { "q": "Tidak menemukan item di daftar?", "a": "Mungkin ada di balik interaksi: laci, tirai, pintu." },
+        { "q": "Petunjuk terbatas?", "a": "Biasanya ya; pakai untuk item terakhir." },
+      ]
+    },
+    "master-chess": {
+      "title": "Master Chess — catur online gratis",
+      "intro": "Master Chess adalah catur klasik di browser: bermain melawan komputer atau pemain lain, dengan aturan lengkap dan tanpa instalasi.",
+      "howToPlay": "Setiap sisi mulai dengan 16 bidak dan bergerak satu per giliran. Tujuannya skakmat raja lawan. Rokade, en passant, dan promosi mengikuti aturan standar.",
+      "controls": "Klik bidak lalu kotak tujuan; menyeret juga bisa.",
+      "strategy": "Kuasi tengah, kembangkan kuda dan uskup sebelum memindahkan bidak yang sama dua kali, dan lakukan rokade lebih awal. Di tengah permainan, cari bidak tak terjaga sebelum menghitung variasi panjang.",
+      "faq": [
+        { "q": "Bisa undo?", "a": "Di sebagian besar mode bisa; gunakan saat belajar, tapi jangan menutupi kesalahan yang ingin diperbaiki." },
+        { "q": "Lawan siapa?", "a": "Melawan komputer atau pemain online, tergantung mode." },
+      ]
+    },
+    "sudoku-online": {
+      "title": "Sudoku Online — sudoku gratis di browser",
+      "intro": "Sudoku Online adalah teka-teki logika 9x9: isi kotak kosong tanpa mengulang angka di baris, kolom, atau blok.",
+      "howToPlay": "Setiap baris, kolom, dan blok 3x3 harus berisi angka 1 sampai 9 tepat sekali. Klik kotak lalu pilih angka; kandidat bisa dicatat.",
+      "controls": "Klik kotak lalu ketik atau pilih angka; gunakan catatan untuk kandidat.",
+      "strategy": "Lakukan putaran: cari angka yang hanya muat di satu kotak pada baris, kolom, atau blok, isi, lalu ulangi. Gunakan catatan hanya ketika putaran tidak menghasilkan apa-apa.",
+      "faq": [
+        { "q": "Harus menebak?", "a": "Sudoku yang baik punya solusi tunggal dan tidak perlu menebak. Periksa catatan sebelum menebak." },
+        { "q": "Apa itu kandidat tunggal tersembunyi?", "a": "Angka yang hanya muat di satu kotak pada suatu area, meski kotaknya bisa memuat beberapa angka. Ini cara tercepat keluar dari kebuntuan." },
+      ]
+    },
+    "moto-x3m": {
+      "title": "Moto X3M — game motor dan rintangan online",
+      "intro": "Moto X3M adalah game motor di lintasan rintangan: gas, rem, dan miringkan motor untuk melewati setiap tanjakan tanpa jatuh.",
+      "howToPlay": "Kendarai sampai akhir level melewati tanjakan, rintangan, dan checkpoint. Jatuh membuat kamu kembali ke checkpoint terakhir; waktu menentukan bintang.",
+      "controls": "Panah atau WASD untuk gas, rem, dan miring; R untuk mengulang.",
+      "strategy": "Perlakukan setiap level sebagai irama: gas di jalan datar, lepas sebelum tanjakan, dan miringkan ke depan di udara agar mendarat di turunan. Run tanpa jatuh lebih berharga daripada cepat.",
+      "faq": [
+        { "q": "Bagaimana mendarat tanpa jatuh?", "a": "Samakan sudut motor dengan turunan dan mendaratkan kedua roda bersamaan." },
+        { "q": "Checkpoint mengulang waktu?", "a": "Checkpoint menyimpan posisi; jatuh kembali ke checkpoint, bukan ke awal." },
+      ]
+    },
+    "emerland-solitaire": {
+      "title": "Emerland Solitaire — solitaire klasik online",
+      "intro": "Emerland Solitaire adalah versi solitaire (klondike) bertema fantasi: atur tableau, naikkan kartu ke foundation, dan habiskan dek.",
+      "howToPlay": "Pindahkan kartu antar kolom dengan urutan turun dan warna bergantian. Bawa As ke foundation dan naikkan sesuai suit. Tumpukan dek dibuka saat tidak ada langkah.",
+      "controls": "Klik atau seret kartu; klik dek untuk mengambil kartu.",
+      "strategy": "Buka kartu tertutup lebih dulu dan sisakan satu kolom kosong untuk bermanuver. Jangan naikkan kartu ke foundation jika masih menahan urutan yang berguna.",
+      "faq": [
+        { "q": "Semua permainan bisa menang?", "a": "Tidak. Sebagian susunan mustahil; sebagian besar bisa menang dengan urutan langkah yang baik." },
+        { "q": "Bisa mulai ulang?", "a": "Bisa; jika macet, ubah urutan sepuluh langkah pertama sebelum mengulang." },
+      ]
+    },
   },
   "tr": {
     "geometry-dash-infinity": {

@@ -780,4 +780,95 @@ export const GAME_DEEP_CONTENT: Record<
       { q: "Are there upgrades?", a: "Some versions add clubs or boosts; check the level screen." },
     ],
   },
+  "find-the-frog--hidden-objects": {
+    strategy: "Look for eyes and legs before the whole body; frogs hide inside leaf shapes and along stone edges. Finish one band before moving on, and save hints for the last two.",
+    faq: [
+      { q: "Are they animated?", a: "Some are static, some blink; movement helps once you know to look for it." },
+      { q: "Is there a timer?", a: "Most levels include one; short lists first keeps momentum." },
+    ],
+  },
+  "hidden-objects-island": {
+    strategy: "Japanese gardens and beach scenes hide items in gravel patterns and reflections. Check the frame edges and the spaces between plants before zooming out.",
+    faq: [
+      { q: "Can I zoom?", a: "Some versions allow it; if not, move closer to the screen rather than clicking randomly." },
+      { q: "Do hints carry over?", a: "Usually per level; spend them before the timer runs out." },
+    ],
+  },
+  "find-out-hidden-object": {
+    strategy: "Take two list items at a time: it keeps your eyes focused and reduces false clicks. Confirm the outline before tapping, because a wrong click costs time.",
+    faq: [
+      { q: "Why do I lose time?", a: "Wrong clicks. Hover over the shape before committing." },
+      { q: "Is the list random?", a: "Usually yes per level; the strategy does not change." },
+    ],
+  },
+  "funny-finds-hidden-object-game": {
+    strategy: "Start with the largest object on the list; it is easier to spot and clears visual clutter for the small ones. Check inside containers and behind furniture.",
+    faq: [
+      { q: "Objects overlap — which do I click?", a: "Click the one named in the list, even if another object covers part of it." },
+      { q: "Are hints limited?", a: "Yes; spend them on the last few items." },
+    ],
+  },
+  "mike-lost-in-desert--hidden-object": {
+    strategy: "Search the wreck first: tools and supplies cluster around the plane. Then sweep the dunes in bands, because sand hides items by covering their edges.",
+    faq: [
+      { q: "Do I need to follow the story?", a: "It hints at what to look for, so skim it." },
+      { q: "What if I miss an item?", a: "Use a hint or restart the scene; most versions let you replay." },
+    ],
+  },
+  "find-the-dog": {
+    strategy: "Black-and-white scenes reward shape, not colour: look for floppy ears and a tail curve. Check negative space between objects, where a dog outline hides best.",
+    faq: [
+      { q: "How many dogs?", a: "The counter shows progress; the last few are usually in plain sight." },
+      { q: "Are hints available?", a: "Most versions offer a few; use them at the end." },
+    ],
+  },
+  "italian-brainrot-difference": {
+    strategy: "Compare strips, not whole images. Start top-left on both pictures, then move down; the eye catches changes better when the scan path is identical.",
+    faq: [
+      { q: "How many differences?", a: "The counter at the top shows what remains; do not stop at the obvious ones." },
+      { q: "Can I click either image?", a: "Usually yes; the difference counts once." },
+    ],
+  },
+  "hidden-paint-3d": {
+    strategy: "Rotate first, paint second: a full turn tells you which objects are unpainted. Revisit painted areas, because some details only appear after an object changes.",
+    faq: [
+      { q: "Is it a hidden-object game?", a: "It is closer to colour-and-find; the search is for unpainted details." },
+      { q: "Does painting do anything?", a: "It animates objects and reveals new details." },
+    ],
+  },
+  "pixel-differences": {
+    strategy: "Track the same vertical strip on both images rather than scanning one and then the other. Colour shifts are easier to catch than shape changes at this scale.",
+    faq: [
+      { q: "How many per level?", a: "The counter shows it; expect five to ten." },
+      { q: "Are they timed?", a: "Some levels are; scan strips rather than the whole image." },
+    ],
+  },
+  "100-hidden-capybaras": {
+    strategy: "Count in bands and trust the game's progress counter. Look for the rounded head, not the full body; most are partly hidden.",
+    faq: [
+      { q: "Is 100 a lot?", a: "It is the point; expect several sessions." },
+      { q: "Do hints exist?", a: "Usually a few; save them for the last ten." },
+    ],
+  },
+  "unfamiliar-object": {
+    strategy: "Read the rules board before walking. The game tests whether you notice deviations, not whether you can fight; report anomalies and keep moving.",
+    faq: [
+      { q: "Is it scary?", a: "It is atmospheric horror with jump scares; not for younger players." },
+      { q: "What happens if I report wrong?", a: "Usually a penalty or a reset; only report clear deviations." },
+    ],
+  },
+  "block-blast-master": {
+    strategy: "Keep a two-by-two gap in a corner and clear lines that keep the board flat. Save long pieces for a line that is one cell short, not for the first gap you see.",
+    faq: [
+      { q: "Why does the run end so fast?", a: "Shapes stop fitting. A corner gap is what usually keeps a run alive." },
+      { q: "Do combos matter?", a: "Yes; clearing several lines in one placement scores more than the same lines cleared separately." },
+    ],
+  },
+  "solar-smash": {
+    strategy: "Aim for the same impact point repeatedly rather than spreading damage; concentrated hits break the surface faster. Watch the planet's rotation before firing so the shot lands where you aimed.",
+    faq: [
+      { q: "Is there a goal?", a: "It is a sandbox: destroy, unlock planets and experiment. Some versions add challenges." },
+      { q: "Does it run on mobile?", a: "Yes, with touch aiming, though a mouse gives finer control." },
+    ],
+  },
 };

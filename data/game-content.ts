@@ -1886,6 +1886,97 @@ export const GAME_CONTENT: Record<string, GameContent> = {
     controls: "Drag to set angle and power, release to swing.",
   },
 
+  "find-the-frog--hidden-objects": {
+    tags: ["hidden-object", "frogs", "search", "casual"],
+    intro: "Find the Frog hides small frogs across themed worlds — farms, swamps, cities, forests and beaches — and asks you to spot every one on the list.",
+    howToPlay: "Scan each scene for the frogs named in the list. They blend into leaves, walls and water, so check edges and patterns rather than looking at the centre.",
+    controls: "Click or tap a frog to collect it; hints reveal one you missed.",
+  },
+
+  "hidden-objects-island": {
+    tags: ["hidden-object", "island", "search", "relaxing"],
+    intro: "Hidden Objects: Island takes you through beaches, Japanese gardens and magical locations, each hiding a list of objects among the scenery.",
+    howToPlay: "Read the list, then clear the scene in bands. Objects sit inside plants, behind rocks and along the frame, so move slowly at the edges.",
+    controls: "Click or tap an object; use the hint button when stuck.",
+  },
+
+  "find-out-hidden-object": {
+    tags: ["hidden-object", "scavenger", "search", "casual"],
+    intro: "Find Out Hidden Object is a scavenger hunt in picture form: the list names the items, the scene hides them, and the clock decides how comfortable the search is.",
+    howToPlay: "Focus on two or three list items at a time rather than the whole list. Tapping a wrong object usually costs time, so confirm the shape before clicking.",
+    controls: "Click or tap the object you have found; hints highlight one item.",
+  },
+
+  "funny-finds-hidden-object-game": {
+    tags: ["hidden-object", "classic", "search", "casual"],
+    intro: "Funny Finds is a classic hidden-object game: each level highlights the objects to find and hides them in a busy illustrated scene.",
+    howToPlay: "Work from the highlighted list and scan the scene systematically. Objects overlap other objects, so check inside containers and behind furniture.",
+    controls: "Click or tap to collect; the hint button reveals a missed item.",
+  },
+
+  "mike-lost-in-desert--hidden-object": {
+    tags: ["hidden-object", "desert", "story", "search"],
+    intro: "Mike Lost in Desert follows a pilot stranded after an emergency landing: search the wreck and the dunes for the objects he needs to survive and repair the plane.",
+    howToPlay: "Each scene lists the items Mike needs. Some are buried in sand or tucked inside the wreckage, so interact with the environment before moving on.",
+    controls: "Click or tap objects and environmental details to search.",
+  },
+
+  "find-the-dog": {
+    tags: ["hidden-object", "dogs", "black-and-white", "search"],
+    intro: "Find The Dog hides pups in whimsical black-and-white scenes. The lack of colour is the twist: shape and outline are your only clues.",
+    howToPlay: "Look for the silhouette of a dog rather than a dog-shaped patch of colour. Check patterns, foliage and the spaces between objects.",
+    controls: "Click or tap a dog to collect it; hints mark one you missed.",
+  },
+
+  "italian-brainrot-difference": {
+    tags: ["hidden-object", "spot-the-difference", "observation", "casual"],
+    intro: "Italian Brainrot Difference is a spot-the-difference game: two illustrated scenes look identical until you find the details that changed.",
+    howToPlay: "Compare the images section by section rather than staring at the whole picture. The counter at the top tells you how many differences remain.",
+    controls: "Click or tap a difference on either image.",
+  },
+
+  "hidden-paint-3d": {
+    tags: ["hidden-object", "3d", "colouring", "observation"],
+    intro: "Hidden Paint 3D is a 3D colour-and-find game: click objects to paint and animate them, and spot the details that change as the scene comes to life.",
+    howToPlay: "Rotate the scene and click the objects you want to colour. Some details only appear after an object is painted, so revisit areas you have already checked.",
+    controls: "Drag to rotate; click or tap an object to paint it.",
+  },
+
+  "pixel-differences": {
+    tags: ["hidden-object", "spot-the-difference", "pixel", "observation"],
+    intro: "Pixel Differences shows two near-identical images and asks you to find every changed detail, with a counter at the top tracking what is left.",
+    howToPlay: "Compare in strips: top to bottom on the left image, then the same strip on the right. Small colour and shape changes are easy to miss in a full-screen scan.",
+    controls: "Click or tap the difference on either image.",
+  },
+
+  "100-hidden-capybaras": {
+    tags: ["hidden-object", "capybaras", "search", "cute"],
+    intro: "100 Hidden Capybaras hides a hundred of them in crowded, playful scenes. The count is the challenge: the last few are always the hardest.",
+    howToPlay: "Divide the scene into bands and mark each one as done. Capybaras hide inside patterns and behind other objects, so look for the rounded head shape rather than the whole body.",
+    controls: "Click or tap a capybara to collect it; hints reveal one.",
+  },
+
+  "unfamiliar-object": {
+    tags: ["hidden-object", "horror", "inspection", "office"],
+    intro: "Unfamiliar Object is a first-person office inspection game: read the rules, walk the night shift and report the one thing that does not belong.",
+    howToPlay: "Follow the checklist for each room and compare what you see with the rules. When something is wrong, report it rather than interacting with it.",
+    controls: "WASD or arrow keys to move; mouse to look; click to inspect or report.",
+  },
+
+  "block-blast-master": {
+    tags: ["blocks", "puzzle", "combo", "arcade"],
+    intro: "Block Blast Master is a block-fitting puzzle: place the offered shapes on the grid, clear full rows and columns, and keep the board from filling up.",
+    howToPlay: "Drag each shape onto the board. Completing a row or column clears it and scores; the run ends when no shape fits. Combos build faster than single clears.",
+    controls: "Drag and drop with the mouse or a finger.",
+  },
+
+  "solar-smash": {
+    tags: ["space", "sandbox", "destruction", "simulation"],
+    intro: "Solar Smash is a cosmic sandbox: choose a planet, aim your attacks and watch the destruction play out in real time.",
+    howToPlay: "Pick a planet and a weapon, then aim and fire. Damage accumulates across the surface; some versions add defences or new planets to unlock.",
+    controls: "Drag to aim and set power; release or tap to fire.",
+  },
+
 };
 
 /** Homepage "Featured Games" — hand-curated, NOT a popularity ranking

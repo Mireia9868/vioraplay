@@ -949,4 +949,62 @@ export const GUIDE_ARTICLES: Record<string, GuideArticle> = {
       { href: "/game/supa-tic-tac-toe", label: "Supa Tic Tac Toe" },
     ],
   },
+  "what-are-unblocked-games": {
+    slug: "what-are-unblocked-games",
+    title: "What Are Unblocked Games? Browser Play Explained | VioraPlay",
+    h1: "What Are Unblocked Games?",
+    description: "Unblocked games explained without the hype: what the term actually means, why browser games load without installs, and how to choose a safe one for a short break.",
+    intro: "\"Unblocked games\" is a search term, not a genre. It usually means browser games that load without an install — the kind that work on a school Chromebook or a locked-down work laptop. Understanding what the term does and does not mean makes the games easier to choose and safer to play.",
+    sections: [
+      {
+        id: "meaning",
+        h: "What the term actually means",
+        paragraphs: [
+          "A game is \"unblocked\" when the network you are on allows the page to load. That depends on your school, employer or ISP, not on the game itself. We do not help bypass network rules, and no game can guarantee access on a managed device.",
+          "What these games do have in common is technical: they run in the browser using HTML5, need no plugin and no installation, and start in seconds.",
+        ],
+      },
+      {
+        id: "why",
+        h: "Why browser games load anywhere",
+        bullets: [
+          "They are rendered by the browser, not installed as an app.",
+          "There is nothing to download, so app-install restrictions do not apply.",
+          "Progress is usually stored in the browser, so a shared device may not keep it.",
+          "They work on Chromebooks, tablets and older laptops with a modern browser.",
+        ],
+      },
+      {
+        id: "short-break",
+        h: "Choosing a game for a short break",
+        paragraphs: [
+          "If you have five minutes, pick a game with short rounds: merge puzzles, one-button arcade games and spot-the-difference scenes all end or pause cleanly.",
+          "Avoid games that need a long tutorial or a saved session if you may be interrupted. A game you can leave mid-round without losing progress is worth more than a deeper one you cannot finish.",
+        ],
+      },
+      {
+        id: "safety",
+        h: "Staying safe on shared devices",
+        bullets: [
+          "Stick to pages you trust; avoid redirects and pop-up download buttons.",
+          "Do not enter an email or password into a game that has no account system.",
+          "Close the tab when you finish; browser storage is shared on family devices.",
+          "If a page asks you to install an extension, leave.",
+        ],
+      },
+    ],
+    faq: [
+      { q: "Are unblocked games safe?", a: "The games themselves are ordinary browser games; the risk is usually in ads and redirects around them. Use a known site and avoid anything that asks for an install." },
+      { q: "Do they need a download?", a: "No. That is the defining feature: HTML5 games run in the tab, with no installer." },
+      { q: "Why is a game blocked on my network?", a: "Network filtering is configured by your school or employer. That decision is theirs; the game cannot change it." },
+    ],
+    playHref: "/category/unblocked",
+    playLabel: "browser games in this catalogue",
+    gameLinks: [
+      { href: "/game/chicken-merge", label: "Chicken Merge" },
+      { href: "/game/catdoku-sudoku-puzzle", label: "Catdoku" },
+      { href: "/game/drive-quest", label: "Drive Quest" },
+      { href: "/game/basket-random", label: "Basket Random" },
+    ],
+  },
 };
