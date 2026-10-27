@@ -6,7 +6,7 @@ import {
   getGamesByCategory,
   getCategoryBySlug,
   getCategoryIntro,
-  getRelatedCategories,
+  getNearbyCategories,
   categoryFullName,
   PER_PAGE,
   parseDeviceParam,
@@ -19,6 +19,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PuzzleSearchGuide } from "@/components/PuzzleSearchGuide";
 import { PUZZLE_SEO } from "@/data/regional-seo";
 import { CATEGORY_EDITORIAL } from "@/data/category-editorial";
+import { GAME_CONTENT } from "@/data/game-content";
 import { guideForCategory } from "@/lib/guides";
 import { isCategoryIndexable } from "@/lib/indexability";
 import { routing } from "@/i18n/routing";
@@ -123,7 +124,11 @@ export default async function CategoryPage({
   const start = (safePage - 1) * PER_PAGE;
   const pageGames = games.slice(start, start + PER_PAGE);
 
-  const relatedCats = getRelatedCategories(slug, 6);
+  const relatedCats = getNearbyCategories(slug, 6);
+  // "Start here": show curated titles first, then the rest of the category.
+  const topPicks = [...allGames]
+    .sort((a, b) => Number(Boolean(GAME_CONTENT[b.slug])) - Number(Boolean(GAME_CONTENT[a.slug])))
+    .slice(0, 3);
   // Category editorial is English-only for now (see data/category-editorial.ts).
   // The puzzle page already carries localized copy and a search guide, so it is
   // deliberately excluded here rather than stacked with a second intro.
@@ -162,11 +167,19 @@ export default async function CategoryPage({
       <h1>{puzzleCopy?.name ?? fullName}</h1>
       <p className="cat-intro">{editorial?.intro ?? puzzleCopy?.intro ?? getCategoryIntro(slug, fullName.toLowerCase())}</p>
 
+      <div className="cat-stats">
+        <span className="cat-stat">{tc("gameCount", { count: games.length })}</span>
+        {deviceCounts.desktop > 0 && <span className="cat-stat">{deviceCounts.desktop} {tc("deviceDesktop")}</span>}
+        {deviceCounts.android > 0 && <span className="cat-stat">{deviceCounts.android} {tc("deviceAndroid")}</span>}
+        {deviceCounts.ios > 0 && <span className="cat-stat">{deviceCounts.ios} {tc("deviceIOS")}</span>}
+      </div>
+
       {guide && (
-        <p className="cat-guide-link">
-          New to {fullName.toLowerCase()}? Read{" "}
-          <Link href={`/guides/${guide.slug}`}>{guide.title}</Link>.
-        </p>
+        <Link href={`/guides/${guide.slug}`} className="cat-guide-card">
+          <span className="cat-guide-kicker">{tc("readGuide")}</span>
+          <strong>{guide.title}</strong>
+          <span className="cat-guide-arrow" aria-hidden="true">→</span>
+        </Link>
       )}
 
       <div className="device-filter" aria-label={tc("filterHeading")}>
@@ -201,6 +214,19 @@ export default async function CategoryPage({
         <p className="filter-note">
           {tc("showing", { count: games.length, total: allGames.length })}
         </p>
+      )}
+
+      {safePage === 1 && devices.length === 0 && topPicks.length === 3 && (
+        <section className="start-here">
+          <div className="section-head">
+            <h2>{tc("startHere")}</h2>
+          </div>
+          <div className="start-here-grid">
+            {topPicks.map((g) => (
+              <GameCard key={g.id} game={g} priority source="featured" />
+            ))}
+          </div>
+        </section>
       )}
 
       <div className="game-grid">

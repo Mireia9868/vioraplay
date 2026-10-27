@@ -66,7 +66,9 @@
     "intro_arcade": "¿Otra partida? Claro.",
     "intro_action": "Entra en acción.",
     "intro_sports": "Tu próxima victoria.",
-    "intro_strategy": "Planifica y juega con estrategia."
+    "intro_strategy": "Planifica y juega con estrategia.",
+    "startHere": "Empieza aquí",
+    "readGuide": "Leer la guía"
   },
   "game": {
     "playNow": "Jugar ahora",

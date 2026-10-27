@@ -66,7 +66,9 @@
     "intro_arcade": "Mais uma rodada? Sempre.",
     "intro_action": "Entre no jogo. Faça sua jogada.",
     "intro_sports": "Seu próximo momento de vitória.",
-    "intro_strategy": "Planeje. Jogue com inteligência."
+    "intro_strategy": "Planeje. Jogue com inteligência.",
+    "startHere": "Comece aqui",
+    "readGuide": "Ler o guia"
   },
   "game": {
     "playNow": "Jogar Agora",

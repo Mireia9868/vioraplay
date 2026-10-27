@@ -327,6 +327,49 @@ export function getRelatedCategories(slug: string, limit = 6): Category[] {
     .slice(0, limit);
 }
 
+/**
+ * Categories that actually sit next to this one, by genre overlap rather than
+ * catalogue size. "Racing" should point at driving/motorbike, not at puzzle
+ * just because puzzle is the largest category.
+ */
+let genreIndex: Map<string, Map<string, number>> | null = null;
+
+function buildGenreIndex(): Map<string, Map<string, number>> {
+  const index = new Map<string, Map<string, number>>();
+  for (const game of getAllGames()) {
+    const cat = slugify(game.category);
+    const vector = index.get(cat) ?? new Map<string, number>();
+    const genres = new Set([...(game.genres ?? []), game.category]);
+    for (const genre of genres) {
+      const key = genre.toLowerCase();
+      vector.set(key, (vector.get(key) ?? 0) + 1);
+    }
+    index.set(cat, vector);
+  }
+  return index;
+}
+
+export function getNearbyCategories(slug: string, limit = 6): Category[] {
+  const index = genreIndex ?? (genreIndex = buildGenreIndex());
+  const own = index.get(slug);
+  if (!own) return getRelatedCategories(slug, limit);
+
+  const ownNorm = Math.sqrt([...own.values()].reduce((a, n) => a + n * n, 0)) || 1;
+  const scored = getCategories()
+    .filter((c) => c.slug !== slug)
+    .map((c) => {
+      const other = index.get(c.slug);
+      if (!other) return { c, score: 0 };
+      let dot = 0;
+      for (const [genre, n] of own) dot += n * (other.get(genre) ?? 0);
+      const norm = Math.sqrt([...other.values()].reduce((a, n) => a + n * n, 0)) || 1;
+      return { c, score: dot / (ownNorm * norm) };
+    })
+    .sort((a, b) => b.score - a.score || b.c.count - a.c.count);
+
+  return scored.slice(0, limit).map((x) => x.c);
+}
+
 export function searchGames(query: string): Game[] {
   const q = query.trim().toLowerCase();
   if (!q) return [];

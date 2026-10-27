@@ -66,7 +66,9 @@
     "intro_arcade": "Bir tur daha mı? Her zaman.",
     "intro_action": "Oyuna katıl. Hamleni yap.",
     "intro_sports": "Bir sonraki zafer anın.",
-    "intro_strategy": "Planla. Akıllıca oyna."
+    "intro_strategy": "Planla. Akıllıca oyna.",
+    "startHere": "Buradan başla",
+    "readGuide": "Rehberi oku"
   },
   "game": {
     "playNow": "Hemen Oyna",

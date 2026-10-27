@@ -676,6 +676,25 @@ h2 {
   margin: 0;
 }
 
+/* ---------- Category hub: stats, start here, guide card ---------- */
+.cat-stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 16px; }
+.cat-stat { border: 1.5px solid var(--fg); background: var(--card); padding: 3px 9px; font-size: 12px; font-weight: 700; }
+.cat-guide-card { display: flex; align-items: center; gap: 12px; margin: 0 0 20px; padding: 14px 16px; border: 2px solid var(--fg); background: var(--card-alt); }
+.cat-guide-card:hover { border-color: var(--accent); }
+.cat-guide-kicker { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); white-space: nowrap; }
+.cat-guide-card strong { font-size: 16px; line-height: 1.25; }
+.cat-guide-arrow { margin-left: auto; font-size: 20px; }
+.start-here { margin: 22px 0 10px; }
+.start-here .section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 10px; }
+.start-here-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.start-here-grid .game-card-body h3 { font-size: 15px; }
+.device-filter { position: sticky; top: 76px; z-index: 8; background: var(--bg); padding: 6px 0; }
+@media (max-width: 720px) {
+  .start-here-grid { grid-template-columns: 1fr; }
+  .device-filter { top: 64px; }
+  .cat-guide-card { flex-wrap: wrap; }
+}
+
 /* ---------- Research / data study pages ---------- */
 .research { max-width: 820px; margin: 0 auto; line-height: 1.75; }
 .research h2 { margin-top: 2rem; }

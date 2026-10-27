@@ -66,7 +66,9 @@
     "intro_arcade": "جولة أخرى؟ بالتأكيد.",
     "intro_action": "انطلق إلى الحركة.",
     "intro_sports": "انتصارك القادم.",
-    "intro_strategy": "خطط مسبقًا والعب بذكاء."
+    "intro_strategy": "خطط مسبقًا والعب بذكاء.",
+    "startHere": "ابدأ من هنا",
+    "readGuide": "اقرأ الدليل"
   },
   "game": {
     "playNow": "العب الآن",

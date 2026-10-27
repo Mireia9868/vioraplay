@@ -66,7 +66,9 @@
     "intro_arcade": "Satu ronde lagi? Tentu.",
     "intro_action": "Langsung main. Ambil langkahmu.",
     "intro_sports": "Momen kemenangan berikutnya.",
-    "intro_strategy": "Rencanakan. Main dengan cerdas."
+    "intro_strategy": "Rencanakan. Main dengan cerdas.",
+    "startHere": "Mulai di sini",
+    "readGuide": "Baca panduan"
   },
   "game": {
     "playNow": "Main Sekarang",
