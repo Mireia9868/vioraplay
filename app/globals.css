@@ -1028,3 +1028,64 @@ h1, .breadcrumbs, .gc-note { overflow-wrap: anywhere; }
 /* Privacy page opt-out link list */
 .privacy-links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 10px; }
 .privacy-links a { color: var(--accent, #1a7f5a); }
+
+
+/* ---------- Category hub (mockup: 6-col grid, filterbar, 3-column band) ---------- */
+.cat-hero { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 4px 0 22px; }
+.cat-eyebrow { margin: 0 0 8px; font-size: 10px; letter-spacing: .14em; font-weight: 800; text-transform: uppercase; color: var(--muted); }
+.cat-hero h1 { margin: 0; font-size: clamp(32px, 4.2vw, 54px); line-height: 1.04; letter-spacing: -.045em; font-weight: 900; }
+.cat-hero h1 span { display: inline-block; position: relative; isolation: isolate; padding: 2px 8px 5px; margin-left: -4px; }
+.cat-hero h1 span::before { content: ""; position: absolute; inset: 1px -3px 0; z-index: -1; background: var(--yellow); clip-path: polygon(1% 7%, 99% 0, 100% 91%, 0 100%); }
+.cat-hero-desc { font-size: 14px; line-height: 1.6; margin: 12px 0 0; max-width: 62ch; color: var(--muted); }
+.cat-emblem { flex: none; width: 92px; height: 92px; display: grid; place-items: center; border: 2px solid var(--fg); background: var(--yellow); transform: rotate(5deg); }
+.cat-emblem svg { transform: rotate(-5deg); }
+.cat-filterbar { position: sticky; top: 74px; z-index: 8; display: flex; align-items: center; gap: 14px; padding: 12px 0; border-block: 2px solid var(--fg); margin-bottom: 18px; background: var(--bg); }
+.cat-filter-label { font-size: 12px; font-weight: 800; white-space: nowrap; }
+.cat-devices { display: flex; gap: 8px; flex-wrap: wrap; }
+.cat-device { display: inline-flex; align-items: center; gap: 7px; min-height: 42px; padding: 8px 13px; border: 2px solid var(--fg); background: var(--card); font-size: 12px; font-weight: 700; }
+.cat-device:hover { background: var(--yellow); }
+.cat-device.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.cat-count { margin-left: auto; font-size: 12px; color: var(--muted); white-space: nowrap; }
+.category-page .game-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px 12px; counter-reset: card; }
+.category-page .game-card { border: 2px solid var(--fg); border-radius: 4px; counter-increment: card; }
+.category-page .game-card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: none; }
+.category-page .game-card-thumb img { aspect-ratio: 8 / 5; object-fit: cover; width: 100%; height: auto; }
+.category-page .game-card-body { padding: 6px 38px 7px 8px; min-height: 46px; border-top: 2px solid var(--fg); }
+.category-page .game-card-body h3 { font-size: 11px; }
+.category-page .game-card-cat { display: none; }
+.category-page .game-card::before { content: counter(card, decimal-leading-zero) " / PLAY"; position: absolute; top: 6px; left: 6px; z-index: 3; background: var(--card); border: 1px solid var(--fg); padding: 2px 4px; font-size: 9px; font-weight: 800; letter-spacing: .06em; }
+.cat-bottom { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 24px; border-block: 2px solid var(--fg); padding: 22px 0; margin-top: 8px; }
+.cat-bottom > section + section { border-left: 2px solid var(--fg); padding-left: 22px; }
+.cat-bottom--two { grid-template-columns: 1.4fr 1fr; }
+.cat-label { margin: 0 0 8px; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; font-weight: 800; color: var(--muted); }
+.cat-bottom h2 { margin: 0 0 10px; font-size: 18px; letter-spacing: -.03em; }
+.cat-editorial p { margin: 0 0 10px; font-size: 12px; line-height: 1.6; }
+.cat-read-guide { font-size: 12px; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+.cat-faq details { border-top: 2px solid var(--fg); }
+.cat-faq details:last-child { border-bottom: 2px solid var(--fg); }
+.cat-faq summary { list-style: none; cursor: pointer; position: relative; padding: 10px 22px 10px 0; font-size: 12px; font-weight: 700; }
+.cat-faq summary::-webkit-details-marker { display: none; }
+.cat-faq summary::after { content: "+"; position: absolute; right: 2px; top: 7px; font-size: 17px; }
+.cat-faq details[open] summary::after { content: "−"; }
+.cat-faq details p { margin: 0 0 10px; font-size: 12px; line-height: 1.55; }
+.cat-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.cat-chip { border: 2px solid var(--fg); background: var(--card); padding: 8px 10px; font-size: 11px; font-weight: 700; }
+.cat-chip:hover { background: var(--yellow); }
+@media (max-width: 1050px) {
+  .category-page .game-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .cat-bottom { grid-template-columns: 1fr 1fr; }
+  .cat-bottom > section:nth-child(3) { border-left: 0; padding-left: 0; }
+}
+@media (max-width: 720px) {
+  .cat-hero h1 { font-size: 34px; }
+  .cat-emblem { width: 56px; height: 56px; }
+  .cat-emblem svg { width: 30px; height: 30px; }
+  .cat-filterbar { flex-wrap: wrap; top: 62px; gap: 8px; }
+  .cat-filter-label { width: 100%; }
+  .cat-devices { width: 100%; flex-wrap: nowrap; overflow-x: auto; }
+  .cat-device { flex: 1; justify-content: center; padding: 8px 6px; font-size: 10px; }
+  .cat-count { margin-left: 0; font-size: 10px; }
+  .category-page .game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 10px; }
+  .cat-bottom { grid-template-columns: 1fr; gap: 18px; }
+  .cat-bottom > section + section { border-left: 0; border-top: 2px solid var(--fg); padding-left: 0; padding-top: 16px; }
+}

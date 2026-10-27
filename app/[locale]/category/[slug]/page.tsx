@@ -20,6 +20,7 @@ import { PuzzleSearchGuide } from "@/components/PuzzleSearchGuide";
 import { PUZZLE_SEO } from "@/data/regional-seo";
 import { CATEGORY_EDITORIAL } from "@/data/category-editorial";
 import { GAME_CONTENT } from "@/data/game-content";
+import { CATEGORY_FAQ } from "@/data/category-faq";
 import { guideForCategory } from "@/lib/guides";
 import { isCategoryIndexable } from "@/lib/indexability";
 import { routing } from "@/i18n/routing";
@@ -134,6 +135,12 @@ export default async function CategoryPage({
   // deliberately excluded here rather than stacked with a second intro.
   const editorial = locale === "en" && slug !== "puzzle" ? CATEGORY_EDITORIAL[slug] : undefined;
   const guide = locale === "en" ? guideForCategory(slug) : undefined;
+  const heroName = puzzleCopy?.name ?? fullName;
+  const heroParts = heroName.split(" ");
+  const heroTail = heroParts.length > 1 ? heroParts[heroParts.length - 1] : heroName;
+  const heroHead = heroParts.length > 1 ? heroParts.slice(0, -1).join(" ") : "";
+  const heroIntro = editorial?.intro ?? puzzleCopy?.intro ?? getCategoryIntro(slug, fullName.toLowerCase());
+  const faq = locale === "en" ? CATEGORY_FAQ[slug] : undefined;
 
   const deviceQs = devices.length ? `device=${devices.join(",")}` : "";
   const pageUrl = (n: number) => {
@@ -164,69 +171,59 @@ export default async function CategoryPage({
         ]}
       />
 
-      <h1>{puzzleCopy?.name ?? fullName}</h1>
-      <p className="cat-intro">{editorial?.intro ?? puzzleCopy?.intro ?? getCategoryIntro(slug, fullName.toLowerCase())}</p>
+      <section className="cat-hero">
+        <div className="cat-hero-copy">
+          <p className="cat-eyebrow">{tc("exploreEyebrow")}</p>
+          <h1>
+            {heroHead ? <>{heroHead} </> : null}
+            <span>{heroTail}</span>
+          </h1>
+          <p className="cat-hero-desc">{heroIntro}</p>
+        </div>
+        <span className="cat-emblem" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" strokeWidth="1.7">
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <path d="M9 4v4M15 4v4M9 16v4M15 16v4M4 9h4M4 15h4M16 9h4M16 15h4" />
+          </svg>
+        </span>
+      </section>
 
-      <div className="cat-stats">
-        <span className="cat-stat">{tc("gameCount", { count: games.length })}</span>
-        {deviceCounts.desktop > 0 && <span className="cat-stat">{deviceCounts.desktop} {tc("deviceDesktop")}</span>}
-        {deviceCounts.android > 0 && <span className="cat-stat">{deviceCounts.android} {tc("deviceAndroid")}</span>}
-        {deviceCounts.ios > 0 && <span className="cat-stat">{deviceCounts.ios} {tc("deviceIOS")}</span>}
-      </div>
-
-      {guide && (
-        <Link href={`/guides/${guide.slug}`} className="cat-guide-card">
-          <span className="cat-guide-kicker">{tc("readGuide")}</span>
-          <strong>{guide.title}</strong>
-          <span className="cat-guide-arrow" aria-hidden="true">→</span>
-        </Link>
-      )}
-
-      <div className="device-filter" aria-label={tc("filterHeading")}>
-        <span className="df-label">{tc("filterHeading")}</span>
-        <div className="df-chips">
+      <div className="cat-filterbar" aria-label={tc("filterHeading")}>
+        <span className="cat-filter-label">{tc("filterHeading")}</span>
+        <div className="cat-devices" role="group" aria-label={tc("filterHeading")}>
           {DEVICE_FILTERS.map((d) => {
             const active = devices.includes(d.key);
-            const n = deviceCounts[d.key];
             const labelKey = d.key === "ios" ? "deviceIOS" : `device${d.key[0].toUpperCase()}${d.key.slice(1)}`;
             return (
               <Link
                 key={d.key}
                 href={deviceHref(d.key)}
-                className={`df-chip ${active ? "is-active" : ""}`}
+                className={`cat-device ${active ? "is-active" : ""}`}
                 aria-pressed={active}
                 scroll={false}
               >
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                  {d.key === "desktop" && <><rect x="3" y="4" width="18" height="12" rx="1.5" /><path d="M8 20h8M12 16v4" /></>}
+                  {d.key === "android" && <><rect x="6" y="3" width="12" height="18" rx="2" /><path d="M10 6h4" /></>}
+                  {d.key === "ios" && <><rect x="7" y="2" width="10" height="20" rx="2.5" /><path d="M11 19h2" /></>}
+                </svg>
                 {tc(labelKey)}
-                <span className="df-count">{n}</span>
               </Link>
             );
           })}
           {devices.length > 0 && (
-            <Link href={`/category/${slug}`} className="df-clear" scroll={false}>
+            <Link href={`/category/${slug}`} className="cat-device cat-clear" scroll={false}>
               {tc("clear")}
             </Link>
           )}
         </div>
+        <span className="cat-count">{tc("gameCount", { count: games.length })}</span>
       </div>
 
       {devices.length > 0 && (
         <p className="filter-note">
           {tc("showing", { count: games.length, total: allGames.length })}
         </p>
-      )}
-
-      {safePage === 1 && devices.length === 0 && topPicks.length === 3 && (
-        <section className="start-here">
-          <div className="section-head">
-            <h2>{tc("startHere")}</h2>
-          </div>
-          <div className="start-here-grid">
-            {topPicks.map((g) => (
-              <GameCard key={g.id} game={g} priority source="featured" />
-            ))}
-          </div>
-        </section>
       )}
 
       <div className="game-grid">
@@ -239,9 +236,51 @@ export default async function CategoryPage({
 
       {slug === "puzzle" && safePage === 1 && devices.length === 0 && <PuzzleSearchGuide locale={locale} />}
 
-      {editorial && safePage === 1 && devices.length === 0 && (
+      {safePage === 1 && devices.length === 0 && (
+        <div className={`cat-bottom ${faq ? "" : "cat-bottom--two"}`}>
+          <section className="cat-editorial">
+            <p className="cat-label">{fullName}</p>
+            <h2>{editorial?.sections[0]?.h ?? fullName}</h2>
+            <p>{heroIntro}</p>
+            {guide && (
+              <Link href={`/guides/${guide.slug}`} className="cat-read-guide">
+                {tc("readGuide")} →
+              </Link>
+            )}
+          </section>
+
+          {faq && (
+            <section className="cat-faq">
+              <p className="cat-label">{tc("faqTitle")}</p>
+              <h2>{tc("faqTitle")}</h2>
+              {faq.map((item) => (
+                <details key={item.q}>
+                  <summary>{item.q}</summary>
+                  <p>{item.a}</p>
+                </details>
+              ))}
+            </section>
+          )}
+
+          {relatedCats.length > 0 && (
+            <section className="cat-chips">
+              <p className="cat-label">{tc("relatedCategories")}</p>
+              <h2>{tc("relatedCategories")}</h2>
+              <div className="cat-chip-row">
+                {relatedCats.map((c) => (
+                  <Link key={c.slug} href={`/category/${c.slug}`} className="cat-chip">
+                    {c.fullName}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+      )}
+
+      {editorial && safePage === 1 && devices.length === 0 && editorial.sections.length > 1 && (
         <section className="category-editorial">
-          {editorial.sections.map((section) => (
+          {editorial.sections.slice(1).map((section) => (
             <div key={section.h}>
               <h2>{section.h}</h2>
               <p>{section.p}</p>
@@ -250,48 +289,6 @@ export default async function CategoryPage({
         </section>
       )}
 
-      {totalPages > 1 && (
-        <nav className="pagination" aria-label={tc("pagination")}>
-          {safePage > 1 && (
-            <Link href={pageUrl(safePage - 1)} className="pg-link">
-              {tc("prev")}
-            </Link>
-          )}
-          {pages.map((n) => (
-            <Link
-              key={n}
-              href={pageUrl(n)}
-              className={`pg-link ${n === safePage ? "is-current" : ""}`}
-              aria-current={n === safePage ? "page" : undefined}
-            >
-              {n}
-            </Link>
-          ))}
-          {safePage < totalPages && (
-            <Link href={pageUrl(safePage + 1)} className="pg-link">
-              {tc("next")}
-            </Link>
-          )}
-        </nav>
-      )}
-
-      {relatedCats.length > 0 && (
-        <section className="section">
-          <h2>{tc("relatedCategories")}</h2>
-          <div className="cat-grid">
-            {relatedCats.map((c) => (
-              <Link
-                key={c.slug}
-                href={`/category/${c.slug}`}
-                className="cat-card"
-              >
-                <span>{c.fullName}</span>
-                <span className="cat-count">{c.count}</span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
     </div>
   );
 }
