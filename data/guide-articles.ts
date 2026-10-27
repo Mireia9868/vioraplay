@@ -1007,4 +1007,279 @@ export const GUIDE_ARTICLES: Record<string, GuideArticle> = {
       { href: "/game/basket-random", label: "Basket Random" },
     ],
   },
+  "how-to-play-horror-games": {
+    slug: "how-to-play-horror-games",
+    title: "How to Play Horror Games: Atmosphere, Sound & Survival | VioraPlay",
+    h1: "How to Play Horror Games",
+    description: "Browser horror games explained: how atmosphere and sound do the scaring, how to survive the first minutes, and which titles suit short sessions.",
+    intro: "Browser horror runs on atmosphere rather than spectacle. A dark corridor, a sound cue and one pursuer can be scarier than a screen full of monsters, and most of these games are short enough for a single sitting. The skill is reading the space before it reads you.",
+    sections: [
+      {
+        id: "atmosphere",
+        h: "What browser horror actually does",
+        paragraphs: [
+          "Most titles here rely on three things: limited light, audio cues and a single threat that follows you. Gore is rare; tension is the product.",
+          "That also means the games are best played with sound on and the screen bright enough to see edges. Turning the brightness down does not make it scarier, it just makes you miss the exit.",
+        ],
+      },
+      {
+        id: "survival",
+        h: "Surviving the first ten minutes",
+        steps: [
+          "Walk the map once before touching objectives; knowing where the exits are is most of the survival.",
+          "Keep a route back to a lit area rather than exploring deeper on a whim.",
+          "Do not sprint indoors: noise often pulls the threat toward you.",
+          "When something chases you, break line of sight before hiding, not after.",
+        ],
+      },
+      {
+        id: "sound",
+        h: "Using sound and light",
+        paragraphs: [
+          "Footsteps, breathing and music changes are the game's real warning system. If the ambience shifts, stop and look before moving.",
+          "Light is a resource in most of these games. A lit room is usually safe, but the switch may also announce where you are.",
+        ],
+      },
+      {
+        id: "suitability",
+        h: "A note on suitability",
+        paragraphs: [
+          "These games use jump scares and threat, and are not aimed at younger players. If you are choosing for a child, the puzzle or colour categories are a better fit.",
+          "If you are playing with others, agree on who controls the mouse; passing it mid-chase usually ends the run.",
+        ],
+      },
+    ],
+    faq: [
+      { q: "Are browser horror games violent?", a: "Most rely on suspense and jump scares rather than graphic violence. Some titles include weapons or zombies, so check the individual game page before playing with children." },
+      { q: "Do I need headphones?", a: "Headphones help a lot. Audio cues warn you about pursuers and changes in the environment long before you see them, and built-in speakers lose that detail." },
+      { q: "Can I play horror games with friends?", a: "Some titles are multiplayer or co-op. For single-player games, playing together in the same room works well: one person drives, the other watches the corners." },
+    ],
+    playHref: "/category/horror",
+    playLabel: "horror games",
+    gameLinks: [
+      { href: "/game/the-tall-man", label: "The Tall Man" },
+      { href: "/game/imposter-3d-online-horror", label: "Imposter 3D" },
+      { href: "/game/99-nights-in-the-forest-horror-multiplayer", label: "99 Nights in the Forest" },
+    ],
+  },
+  "how-to-play-sports-games": {
+    slug: "how-to-play-sports-games",
+    title: "How to Play Sports Games: Timing, Positioning & Upgrades | VioraPlay",
+    h1: "How to Play Sports Games",
+    description: "Arcade sports games explained: simplified rules, real timing windows, positioning over power, and when upgrades actually change the result.",
+    intro: "Arcade sports keep the scoring and drop the paperwork. You still need timing and positioning, but the rules are simplified and matches are short. That makes them a good warm-up game and a surprisingly deep one once you learn the timing windows.",
+    sections: [
+      {
+        id: "timing",
+        h: "Arcade rules, real timing",
+        paragraphs: [
+          "Most titles here reduce a sport to one or two inputs: tap to shoot, hold to charge, release to pass. The skill is in the release point, not the number of buttons.",
+          "Practice the release before playing for score. A shot that fires a fraction early is usually worse than one that fires slightly late.",
+        ],
+      },
+      {
+        id: "position",
+        h: "Positioning beats power",
+        bullets: [
+          "Stay between the ball and your goal rather than chasing the player.",
+          "Move before the pass arrives, not after.",
+          "On offense, create an angle instead of a straight line.",
+          "Give yourself a recovery step; overcommitting loses more points than a passive defence.",
+        ],
+      },
+      {
+        id: "upgrades",
+        h: "When upgrades matter",
+        paragraphs: [
+          "Upgrades help, but they rarely fix bad positioning. Spend early on the attribute that matches your weakness: if you keep getting beaten to the ball, speed; if shots miss, accuracy.",
+          "Do not spread currency across every attribute. Two focused upgrades beat five small ones.",
+        ],
+      },
+      {
+        id: "sessions",
+        h: "Short sessions, quick feedback",
+        paragraphs: [
+          "Sports games are built for a few minutes: a match ends, a mistake costs one point, and you can stop without losing progress.",
+          "That makes them a good way to learn a new genre. Play three short matches rather than one long session, and change one habit per match.",
+        ],
+      },
+    ],
+    faq: [
+      { q: "Do I need a controller?", a: "No. Most browser sports games are designed for keyboard or touch, and the on-screen controls are shown before the match starts." },
+      { q: "Which sport is easiest to start with?", a: "Penalty and shooting games, because the input is a single timed action. Team sports add positioning, so start there once the timing feels natural." },
+      { q: "Are these games multiplayer?", a: "Some are, and many offer a local two-player mode. Check the game page: it usually states whether you play against the computer or another person." },
+    ],
+    playHref: "/category/sports",
+    playLabel: "sports games",
+    gameLinks: [
+      { href: "/game/gym-boss", label: "Gym Boss" },
+      { href: "/game/volley-beans", label: "Volley Beans" },
+      { href: "/game/super-bowling-mania", label: "Super Bowling Mania" },
+    ],
+  },
+  "how-to-play-drawing-games": {
+    slug: "how-to-play-drawing-games",
+    title: "How to Play Drawing Games: Lines, Physics & Line Budgets | VioraPlay",
+    h1: "How to Play Drawing Games",
+    description: "Physics drawing games explained: why your line has weight, how to draw load-bearing shapes first, and how to spend a limited line budget.",
+    intro: "In these games the line you draw is not decoration: it becomes a physical object with weight and strength. A bridge, a ramp or a path is only as good as the points where it touches solid ground, and most failures come from a line that was too thin where it mattered.",
+    sections: [
+      {
+        id: "weight",
+        h: "Your line has weight",
+        paragraphs: [
+          "Thin strokes bend and break; short, thick strokes carry more load. That is why a single clean arc often beats a long, shaky path spread across the level.",
+          "Draw with intent: every extra stroke spends budget you may need for a support later.",
+        ],
+      },
+      {
+        id: "load",
+        h: "Draw the load first",
+        steps: [
+          "Anchor both ends on solid ground before shaping the middle.",
+          "Draw the part that carries the weight first, then connect it to the destination.",
+          "Add supports under the middle of a long span rather than thickening the whole line.",
+          "Test the path with one run before decorating it.",
+        ],
+      },
+      {
+        id: "budget",
+        h: "Spending a line budget",
+        paragraphs: [
+          "If the game limits ink, plan the whole route before drawing. A short bridge with a support is cheaper and stronger than a long, unsupported curve.",
+          "When you run out, restart rather than adding a second line that fights the first.",
+        ],
+      },
+      {
+        id: "testing",
+        h: "Testing and redrawing",
+        paragraphs: [
+          "Send the vehicle or character through once and watch where it stalls. The failure point tells you what to change: a gap means the anchor missed, a stall means the slope is wrong.",
+          "Change one thing per attempt. Redrawing everything at once hides which fix worked.",
+        ],
+      },
+    ],
+    faq: [
+      { q: "Why does my line break under weight?", a: "It is probably too thin at the point where the load concentrates. Add a support under the middle or thicken the stroke rather than lengthening the line." },
+      { q: "Is drawing with a mouse harder than with a finger?", a: "A mouse gives finer control for long curves; a finger is faster for short strokes. Both work, but pick one and practise the level with it." },
+      { q: "Can I erase a line?", a: "Most games offer undo or reset before you launch. After the run starts, the level usually resets, so plan before sending anything across." },
+    ],
+    playHref: "/category/drawing",
+    playLabel: "drawing games",
+    gameLinks: [
+      { href: "/game/save-the-pets-draw-to-save", label: "Save The Pets" },
+      { href: "/game/draw-bridge--brain-game", label: "Draw Bridge" },
+      { href: "/game/draw-to-goal-soccer-game", label: "Draw To Goal" },
+    ],
+  },
+  "how-to-play-colour-puzzles": {
+    slug: "how-to-play-colour-puzzles",
+    title: "How to Play Colour Puzzles: Sorting, Buffers & Soft Locks | VioraPlay",
+    h1: "How to Play Colour Puzzles",
+    description: "Colour puzzles explained: sorting versus colouring, why buffer space decides a sort, the right colour order, and how to avoid a soft lock.",
+    intro: "Colour is the easiest thing for the eye to compare, which is why it makes such a good puzzle material. The category splits into two very different games: sorting puzzles, where you move colours into groups, and colouring games, where you fill shapes for the pleasure of it.",
+    sections: [
+      {
+        id: "types",
+        h: "Sorting versus colouring",
+        paragraphs: [
+          "A sorting puzzle is a logic problem: every pour or swap changes what is possible next. A colouring game is closer to a screensaver: the goal is the finished picture, not a decision.",
+          "Know which one you are playing before you look for strategy. Colouring games rarely punish you; sorting puzzles absolutely do.",
+        ],
+      },
+      {
+        id: "buffer",
+        h: "Buffer space is the real resource",
+        paragraphs: [
+          "In a sort, an empty tube or slot is a buffer: somewhere to park a colour without committing it. Most solved boards were won by protecting one buffer until the last third of the puzzle.",
+          "When every slot is full, you are one move away from a soft lock, even if the board still looks workable.",
+        ],
+      },
+      {
+        id: "order",
+        h: "A sensible colour order",
+        steps: [
+          "Finish the colour that already has the most items together.",
+          "Pour into empty space before filling a partial group.",
+          "Keep one buffer empty for as long as you can.",
+          "If two moves are possible, take the one that completes a group.",
+        ],
+      },
+      {
+        id: "locks",
+        h: "Soft locks and how to escape",
+        paragraphs: [
+          "A soft lock means no legal move remains. It usually comes from spending the last buffer earlier than necessary.",
+          "Undo to the point where a buffer existed rather than pushing forward; most games allow it, and it is faster than restarting.",
+        ],
+      },
+    ],
+    faq: [
+      { q: "Are colouring games timed?", a: "Some are, but many are relaxed. If a timer exists, it is usually generous; the pressure in this category comes from sorting puzzles, not from colouring." },
+      { q: "What is a buffer in a sorting puzzle?", a: "An empty tube or slot you can move a colour into temporarily. It lets you rearrange without committing, and losing it is the usual cause of a dead end." },
+      { q: "Can I undo moves?", a: "Most sorting games offer undo or restart. Use undo to return to the last point where a buffer was free, rather than trying to force a solution." },
+    ],
+    playHref: "/category/color",
+    playLabel: "colour games",
+    gameLinks: [
+      { href: "/game/numicolor", label: "Numi Color" },
+      { href: "/game/color-sort-puzzle-milk-tea-sorting", label: "Color Sort Puzzle" },
+      { href: "/game/flag-painting-game", label: "Flag Painting Game" },
+    ],
+  },
+  "how-to-play-simulation-games": {
+    slug: "how-to-play-simulation-games",
+    title: "How to Play Simulation Games: Bottlenecks, Queues & Upgrades | VioraPlay",
+    h1: "How to Play Simulation Games",
+    description: "Simulation games explained: finding the bottleneck, balancing needs against wants, managing queues, and spending on upgrades that actually help.",
+    intro: "Simulation games hand you a small system and let you poke it. A family, a restaurant, a hotel, an aquapark: the theme changes, but the loop does not. Something is always the limiting factor, and finding it is the actual game.",
+    sections: [
+      {
+        id: "bottleneck",
+        h: "Find the bottleneck first",
+        paragraphs: [
+          "Every simulation has one step that limits everything else: a slow kitchen, too few rooms, a single cashier. Spending anywhere else feels productive and changes nothing.",
+          "Look for the queue. The longest line is almost always the bottleneck.",
+        ],
+      },
+      {
+        id: "needs",
+        h: "Needs before wants",
+        bullets: [
+          "Fix what causes failure before what causes delight.",
+          "Keep a small reserve for emergencies rather than spending to zero.",
+          "Upgrade the step you use most, not the one that looks most impressive.",
+          "Ignore decoration until the system runs without you.",
+        ],
+      },
+      {
+        id: "queues",
+        h: "Queues and timing",
+        paragraphs: [
+          "Serve the customer closest to leaving first, not the one who arrived first. In most simulations, patience is a countdown and the angriest guest is the most expensive one.",
+          "Batch similar tasks when you can: three orders on one station beats three separate trips.",
+        ],
+      },
+      {
+        id: "upgrades",
+        h: "When to upgrade",
+        paragraphs: [
+          "Upgrade when the current step can no longer keep up, not when you can afford it. Buying early ties up money that a later, bigger upgrade would have used better.",
+          "If progress stalls, check for a cap: full storage, maxed staff or a demand limit. Raising a cap is usually worth more than adding speed.",
+        ],
+      },
+    ],
+    faq: [
+      { q: "Are simulation games story-driven?", a: "Some frame progress with characters, but the core is the system. Treat the story as flavour and watch the numbers if you want to progress faster." },
+      { q: "Do they have time limits?", a: "Some run a day clock; others are open-ended. Check the panel before starting, because a timer changes the right strategy." },
+      { q: "Are these suitable for children?", a: "Most are, though themes vary. Check the individual game page; titles about pregnancy, crime or horror are not aimed at younger players." },
+    ],
+    playHref: "/category/simulation",
+    playLabel: "simulation games",
+    gameLinks: [
+      { href: "/game/pregnant-mom-simulator-family-life", label: "Pregnant Mom Simulator" },
+      { href: "/game/build-an-aquapark", label: "Build an Aquapark" },
+      { href: "/game/burger-restaurant-simulator-3d", label: "Burger Restaurant Simulator 3D" },
+    ],
+  },
 };

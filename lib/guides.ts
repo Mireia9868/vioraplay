@@ -245,6 +245,41 @@ export const GUIDES: readonly Guide[] = [
     cat: "/category/unblocked",
     catName: "Unblocked Games",
   },
+  {
+    slug: "how-to-play-horror-games",
+    title: "How to Play Horror Games",
+    blurb: "Atmosphere, sound cues and the first ten minutes of a chase.",
+    cat: "/category/horror",
+    catName: "Horror Games",
+  },
+  {
+    slug: "how-to-play-sports-games",
+    title: "How to Play Sports Games",
+    blurb: "Arcade rules, timing windows and why positioning beats power.",
+    cat: "/category/sports",
+    catName: "Sports Games",
+  },
+  {
+    slug: "how-to-play-drawing-games",
+    title: "How to Play Drawing Games",
+    blurb: "Lines with weight, load-bearing strokes and limited ink.",
+    cat: "/category/drawing",
+    catName: "Drawing Games",
+  },
+  {
+    slug: "how-to-play-colour-puzzles",
+    title: "How to Play Colour Puzzles",
+    blurb: "Sorting versus colouring, buffers and avoiding soft locks.",
+    cat: "/category/color",
+    catName: "Colour Games",
+  },
+  {
+    slug: "how-to-play-simulation-games",
+    title: "How to Play Simulation Games",
+    blurb: "Bottlenecks, queues and upgrades that actually help.",
+    cat: "/category/simulation",
+    catName: "Simulation Games",
+  },
 ];
 
 export const GUIDE_SLUGS: readonly string[] = GUIDES.map((g) => g.slug);
