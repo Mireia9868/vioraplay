@@ -2411,6 +2411,146 @@ export const GAME_CONTENT: Record<string, GameContent> = {
     controls: "Arrow keys or WASD to drive, accelerate and reverse.",
   },
 
+  "animal-royal": {
+    tags: ["animals"],
+    intro: "Animal Royal turns a friendly menagerie into a tense arena. You draft creatures with distinct strengths, then outmaneuver a human opponent in turn-based skirmishes where positioning matters as much as raw power. Matches are short, losses are instructive, and each new animal you learn quietly reshapes how you plan the next bout.",
+    howToPlay: "Pick your animals before the round begins, then trade turns with your opponent: move a creature, strike, or set up a defensive stance. Every action costs tempo, so read the board and commit to a plan before the clock runs out.",
+    controls: "Click or tap to play.",
+  },
+
+  "ball-sort-puzzle": {
+    tags: ["puzzle"],
+    intro: "Ball Sort Puzzle is a calm, colour-matching logic game where every move is reversible and every level rewards patience. Pour balls between flasks until each container holds a single hue, then watch the board clear. Short sessions work well, and the difficulty curve turns a simple sorting rule into a surprisingly satisfying mental workout.",
+    howToPlay: "Tap a flask to pick up its top ball, then tap another flask to pour. Balls only move when the target is empty or its top ball matches in colour, and a flask holds a limited number. Clear every flask to finish the level and unlock the next one.",
+    controls: "Click or tap to play.",
+  },
+
+  "barry-prison-parkour-escape": {
+    tags: ["obby"],
+    intro: "Barry Prison: Parkour Escape! drops you into a locked-down block where the warden watches every move. Sprint across rooftops, time your jumps over patrol gaps, and grab coins as you go. Each test is a short obstacle run that rewards clean movement and quick recovering. Escape is close — one missed step sends you back.",
+    howToPlay: "Move through each section of the block, clearing jumps, beams and moving hazards before the timer or the warden catches you. Collect coins along the route, reach the checkpoint, then repeat the run until the final gate opens and you break out.",
+    controls: "Click or tap to play.",
+  },
+
+  "color-by-numbers-antistress-drawings": {
+    tags: ["drawing"],
+    intro: "Colour by number, one small square at a time. This anti-stress drawing collection turns a numbered canvas into a calm, unhurried ritual: pick a shade, find its number, fill the gaps and watch a picture appear. No sketching ability required, just patience and a quiet moment.",
+    howToPlay: "Choose a drawing, then work the canvas by number. Each region carries a digit, and the palette shows which colour that digit means. Fill every matching area, keep checking the legend, and finish the page once no numbers remain.",
+    controls: "Click or tap a colour, then click or tap the numbered cells to fill them.",
+  },
+
+  "cosmo-merge": {
+    tags: ["arcade"],
+    intro: "Cosmo Merge turns a simple jar into a pocket universe. Drop drifting stardust, watch identical pieces collide and fuse into moons, then planets, then something far larger. Each merge clears space and opens room for bigger bodies, so every careful drop buys you a little more sky. Calm, quick, and quietly addictive.",
+    howToPlay: "Move a celestial body left or right, then drop it into the jar. Two matching bodies touch and fuse into the next size up. Keep merging to free space; if the pile reaches the top, the round ends.",
+    controls: "Click or tap to play.",
+  },
+
+  "crazy-motorcycle": {
+    tags: ["racing"],
+    intro: "Crazy Motorcycle sends you high above the clouds, where narrow ribbons of track hang in open sky. Every stretch bends, dips, and vanishes into bright color, so the thrills arrive faster than you expect. It is loud, fast, and cheerfully silly — a quick racing escape that rewards confident hands and good balance.",
+    howToPlay: "Pick a bike, then ride out onto floating tracks suspended in the sky. Steer through turns, keep your speed up, and avoid tipping over the edges. Finish each course quickly and cleanly to unlock the next stretch of road.",
+    controls: "Use the arrow keys or WASD to steer, accelerate, and brake.",
+  },
+
+  "epic-battle-simulator-2": {
+    tags: ["strategy"],
+    intro: "Epic Battle Simulator 2 turns a few dozen units on a flat field into a test of nerve. You pick a budget, spend it on troops, and watch the fight unfold. Nothing is hidden behind the action, so a bad plan is visible right away. It rewards patient placement over frantic clicking.",
+    howToPlay: "Spend your coin budget on units, drag them onto your side of the field, then start the battle and watch the simulation resolve. Win to unlock the next campaign stage. Lose, and you return to the same budget screen to rebuild your army with what you learned.",
+    controls: "Click or tap to play.",
+  },
+
+  "escape-waves-for-lucky-blocks": {
+    tags: ["survival"],
+    intro: "Lucky blocks are the whole gamble: crack one open and you might get a weapon, a brainrot companion, or nothing useful. Between waves you spend what you earned on walls, traps and upgrades, then sprint back out before the next swarm arrives. Every run mixes fast looting with a base that has to hold.",
+    howToPlay: "Break lucky blocks to collect loot and brainrots, then survive the incoming wave. Spend your earnings between waves on base pieces and upgrades. Each cleared wave sends a tougher group, so keep strengthening your defenses as you go.",
+    controls: "Click or tap to play.",
+  },
+
+  "gun-clone-playgama": {
+    tags: ["action"],
+    intro: "Gun Clone drops you into a fast arcade run where every fight feeds your arsenal. Blast through enemy waves, scoop up weapon upgrades as they drop, and duplicate your firepower until the screen fills with bullets. Each level asks for faster movement and cleaner aim, and rewards players who keep their build focused.",
+    howToPlay: "Run forward through each level, shooting enemies that spawn ahead and behind. Collect dropped upgrades to boost damage and fire rate, then duplicate your weapon to multiply its output. Clear the level, survive the wave spike, and carry your improved build into the next stage.",
+    controls: "Click or tap to play.",
+  },
+
+  "knock-down": {
+    tags: ["skill"],
+    intro: "Knock Down is a slingshot puzzle game where every level hands you a pyramid of bottles and a limited number of shots. Pull back, aim, and send the projectile flying to clear the stack. Simple to pick up, but the later stages demand patience, angle control, and a little physics intuition.",
+    howToPlay: "Each level gives you a set of bottles and a fixed number of shots. Drag back on the slingshot to set power and angle, then release to fire. Bottles that fall off the platform count as cleared, so topple the stack instead of hitting every bottle directly.",
+    controls: "Drag back on the slingshot to aim and set power, then release to fire.",
+  },
+
+  "lucky-brainrot-blocks-online": {
+    tags: ["idle"],
+    intro: "Lucky Brainrot Blocks Online turns a simple walk into a slow-burn reward hunt. Roam each zone, crack open lucky blocks for coins and boosts, then push your upgrades further before the next area unlocks. The pace is forgiving, so short check-ins still move the bar, and the real hook is watching your numbers compound.",
+    howToPlay: "Move through a zone and break lucky blocks to earn coins and temporary boosts. Spend what you collect on upgrades that raise your income, then push deeper until the next zone opens. Progress carries over, so idle time keeps paying.",
+    controls: "Click or tap to play.",
+  },
+
+  "open-city-suv-car-stunts": {
+    tags: ["car"],
+    intro: "Open City SUV Car Stunts hands you a heavy SUV and a city built for bad ideas. Ramps, barriers and rooftops turn ordinary streets into a stunt course, while the open layout lets you pick your own line. Every jump is a small negotiation between speed, angle and nerve.",
+    howToPlay: "Pick a starting point, build speed, and launch off the nearest ramp. Land cleanly to keep your run going, then chain bigger jumps and tighter stunts. Crash and you restart from the last spot, so short attempts pay off faster than long setups.",
+    controls: "Arrow keys or WASD to steer and accelerate.",
+  },
+
+  "police-chase-simulator": {
+    tags: ["simulation"],
+    intro: "Sirens wail, traffic scatters, and every shortcut is a gamble. Police Chase Simulator drops you into arcade pursuit where the map is the obstacle course. Swap between fifteen-plus vehicles, wreck whatever blocks your route, and take the chase somewhere ridiculous — including a low-gravity moon map that changes how every jump and crash feels.",
+    howToPlay: "You start behind the wheel with the chase already live. Accelerate, drift, and weave through traffic to open a gap, choosing routes that keep you clear of roadblocks. Survive longer and the pressure rises — new maps and vehicles open up as you go.",
+    controls: "Use the arrow keys or WASD to steer and accelerate.",
+  },
+
+  "schoolboy-escape-runaway": {
+    tags: ["adventure"],
+    intro: "Schoolboy Escape: Runaway turns a familiar chore into a tense stealth puzzle: slip past watchful parents, hug the dark edges of crooked halls, and reach the front door without a sound. Every creak, every turned head, every hurried step matters. One careless sprint and the whole escape collapses. Read the shadows and walk free.",
+    howToPlay: "You guide the boy room by room, pausing behind furniture while a parent's line of sight sweeps by, then moving again once the coast clears. Reach the exit without being spotted to finish the level.",
+    controls: "Click or tap to play.",
+  },
+
+  "solitaire-emperor-secrets-of-fate": {
+    tags: ["cards"],
+    intro: "Solitaire Emperor - Secrets of Fate wraps classic solitaire in tarot imagery, giving each level a different twist on the familiar deck. Cards drawn from arcana-inspired suits reward patience and planning over speed. Clear the tableau, uncover hidden cards, and let the layout's small rule changes keep every hand feeling like a fresh reading.",
+    howToPlay: "Build foundation piles upward by suit, from ace to king, while arranging tableau cards in descending order with alternating colors. Draw from the stock when no move is left, and use empty columns to reorganise stubborn sequences. Each level adjusts a rule or two, so scan the layout first.",
+    controls: "Click or tap to select and move cards.",
+  },
+
+  "squad-assembler-merge": {
+    tags: ["merge"],
+    intro: "Squad Assembler: Merge is a free browser game where every loot box is a small gamble and every merge is a step toward a squad that can hold a line. Combine duplicate weapons and armor, climb the upgrade chain, and watch a scrappy collection of gear turn into a fighting unit.",
+    howToPlay: "Drag matching weapons or armor onto each other to merge them into a stronger tier. Open loot boxes for fresh pieces, manage your board space, and keep upgrading until your squad is ready to take on tougher fights.",
+    controls: "Drag and drop to merge; click or tap to open loot boxes.",
+  },
+
+  "squid-game-tower-defense": {
+    tags: ["tower-defense"],
+    intro: "Squid Game Tower Defense turns the show's deadly contests into a lane defense puzzle. Place guards and turrets along the track, then watch waves of familiar masked challengers march toward your goal. Each round adds tougher enemies and fresh obstacles, so you rebuild your defenses between assaults and push for one more survival run.",
+    howToPlay: "Enemies follow a set path toward your base. Spend starting coins on towers beside the route, then let each wave run. Clear a wave to earn more coins, upgrade existing towers, and add new ones where the line is weakest. Lose all base health and the run ends.",
+    controls: "Click or tap to place towers and start waves.",
+  },
+
+  "stickman-clicker": {
+    tags: ["clicker"],
+    intro: "Stickman Clicker turns a stick figure doodle into a tycoon. Tap the little guy, watch your coin count climb, and pour the earnings straight back into upgrades. Accessories unlock as your net worth grows, so every click inches you closer to a stickman billionaire lording it over an imaginary empire.",
+    howToPlay: "Click the stickman to earn coins. Spend them on upgrades that raise your coins per click, then buy passive earners so the total keeps rising while you are idle. Reach new milestones to unlock accessories.",
+    controls: "Click or tap to play.",
+  },
+
+  "traffic-rush-online": {
+    tags: ["3d"],
+    intro: "TRAFFIC Rush Online puts you behind the wheel of a speeding car in a packed three-dimensional city. Weave between trucks, sedans and buses as the road throws constant motion at you. One clipped bumper ends the run, so every lane change is a decision. Simple to start, hard to master, endlessly replayable.",
+    howToPlay: "Your car accelerates on its own through busy city lanes. Steer left or right to slip past slower vehicles, and hold your line when the gap is tight. Distance travelled is your score; a single collision ends the attempt and sends you back to the start.",
+    controls: "Use the left and right arrow keys, or A and D, to change lanes.",
+  },
+
+  "watermelon-game": {
+    tags: ["mobile"],
+    intro: "Watermelon Game is a physics puzzle where you drop fruit into a box and merge matching pairs on contact. Each merge grows a larger fruit, and the goal is to reach a watermelon before the pile spills over the top. Simple to start, hard to stop.",
+    howToPlay: "Move your cursor or finger across the top, then release to drop the current fruit. Two identical fruits merge when they touch, growing into the next size. Keep merging, plan space, and avoid stacking past the top.",
+    controls: "Move the pointer to aim, then click to drop the fruit.",
+  },
+
 };
 
 /** Homepage "Featured Games" — hand-curated, NOT a popularity ranking

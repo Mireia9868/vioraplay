@@ -62,3 +62,5 @@ ops/backlink-targets.json
 # outreach targets and generated drafts
 ops/outreach/
 ops/backlink-targets.json
+
+ops/tmp/

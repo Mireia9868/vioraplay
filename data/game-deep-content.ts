@@ -1305,4 +1305,144 @@ export const GAME_DEEP_CONTENT: Record<
       { q: "Do I need a driving wheel or controller?", a: "No. Keyboard or on-screen touch input is enough for every parking challenge, though a controller can feel smoother if you already own one." },
     ],
   },
+  "animal-royal": {
+    strategy: "Spend your first turns learning what each animal does rather than chasing damage. Keep one sturdy creature in front to absorb hits while your faster units work the flanks. Avoid committing every ability at once; holding a counter back often wins the exchange, and retreating a wounded animal is cheaper than losing it outright.",
+    faq: [
+      { q: "Do I need to spend money to win?", a: "No. Progress comes from understanding matchups and timing your moves well, so a patient player who studies each animal can compete without paying for anything." },
+      { q: "How long does a typical match take?", a: "Most rounds finish in a few minutes because each turn is a single decision. Shorter sessions suit quick breaks, while longer sittings let you experiment with different animal lineups." },
+    ],
+  },
+  "ball-sort-puzzle": {
+    strategy: "Before pouring, look for moves that empty a flask completely, since free space is your real resource. Move same-colour balls together only when you can finish that colour, and avoid filling a flask with mixed colours. If you get stuck, undo instead of guessing, and plan two or three pours ahead.",
+    faq: [
+      { q: "Is Ball Sort Puzzle hard to learn?", a: "Not at all. The rules are simple: pour matching colours into the same flask. Early levels teach the pattern, and difficulty rises gradually as more colours and flasks appear." },
+      { q: "What happens if I make a wrong move?", a: "A wrong pour is rarely fatal. Because balls can be poured back and levels are short to replay, you can test a sequence, see where it fails, and try a different order." },
+    ],
+  },
+  "barry-prison-parkour-escape": {
+    strategy: "Walk the first section slowly and learn where each gap and hazard sits before you sprint. Jump early rather than late, and land near platform centers so a slip does not cost the whole run. Chase coins only on routes you already clear, then push your speed once the layout feels familiar.",
+    faq: [
+      { q: "Do I lose my coins if I fall?", a: "Usually each attempt resets your position, so treat coins as a bonus rather than a target. Learn the safe route first, then collect them on runs you can already finish cleanly." },
+      { q: "How long does one escape attempt take?", a: "Runs are short, but expect several attempts before a clean escape. Most of your progress comes from memorising the jumps and hazard timings, not from raw speed." },
+    ],
+  },
+  "color-by-numbers-antistress-drawings": {
+    strategy: "Start with the largest blocks of a single colour, since they anchor the composition and build easy momentum. Keep the palette legend beside the canvas so you are not hunting for numbers. Fill dense clusters while your focus is fresh, and save stray single cells for the end, when the picture already reads clearly.",
+    faq: [
+      { q: "Do I need any drawing skill to enjoy this?", a: "None at all. The numbers decide where each colour goes, so the result depends on patience rather than technique, and beginners usually finish a page that looks deliberate." },
+      { q: "How long does one drawing usually take?", a: "It varies with the picture and how finely it is divided. Small, simple pages can be done in one sitting, while detailed scenes reward several short sessions instead." },
+    ],
+  },
+  "cosmo-merge": {
+    strategy: "Keep your biggest pieces near the bottom and your smallest at the top. Drop new bodies in a tight column on one side rather than scattering them across the jar. Plan two drops ahead so matching pairs land close together, and clear a narrow lane early — space runs out faster than you expect.",
+    faq: [
+      { q: "What happens when two identical bodies touch?", a: "They merge into the next larger object, and the new piece keeps its place in the jar. Chain merges can happen in one drop when the fused body immediately touches another match." },
+      { q: "How do I stop the jar from filling up?", a: "Merge steadily instead of hoarding small bodies. Every fusion removes two pieces and returns one, so constant small merges keep the pile low. Prioritise clearing the highest stack whenever it nears the top." },
+    ],
+  },
+  "crazy-motorcycle": {
+    strategy: "Beginners lose speed by overcorrecting, so make small, early adjustments instead of hard last-second turns. Enter corners wide and drift inward, then accelerate out. Keep your wheels down on steep drops and never chase speed you cannot control; a clean, calm run beats a reckless one every time.",
+    faq: [
+      { q: "Is Crazy Motorcycle hard for first-time players?", a: "The early tracks are gentle and forgiving, teaching you how the bike handles before the sky routes get tricky. Give it a few runs and the controls start to feel natural." },
+      { q: "What happens if I fall off the track?", a: "You lose your hard-earned momentum and the seconds slip away while you get going again. Riders who stay on the road usually finish ahead of those chasing risky shortcuts." },
+    ],
+  },
+  "epic-battle-simulator-2": {
+    strategy: "Put cheap, high-health units in front and keep fragile damage dealers well behind them. Never spread a thin line across the whole field; a short, dense formation holds longer. Keep a small reserve to plug a gap mid-battle, and test one change at a time so you can tell what actually worked.",
+    faq: [
+      { q: "Do I need to pay to unlock units or stages?", a: "No. Units and campaign stages open up as you clear battles, so progress comes from winning rather than from spending. Your budget per battle is the real limit on what you can field." },
+      { q: "Why does my army lose when I outnumber the enemy?", a: "Numbers rarely beat positioning. Units that arrive one at a time get picked off, while a tight group concentrates its damage. Try a shorter front line and keeping your ranged units alive longer." },
+    ],
+  },
+  "escape-waves-for-lucky-blocks": {
+    strategy: "Open blocks early and fast, but don't wander far from your base once a wave warning appears. Spend early money on one solid wall segment and a single upgrade rather than spreading it thin. Keep brainrots near the fight so they help instead of idling, and save a panic route back for the last seconds.",
+    faq: [
+      { q: "What do brainrots actually do?", a: "They are companions you unlock from lucky blocks and place around your base. They fight or support during waves, so collecting more of them is a core part of getting stronger between rounds." },
+      { q: "Is it better to loot or to build first?", a: "Loot first while the map is calm, then build before the next wave hits. Blocks give you the resources, but a base with no defenses collapses fast once the waves scale up." },
+    ],
+  },
+  "gun-clone-playgama": {
+    strategy: "Early on, keep one weapon upgraded instead of spreading pickups across several guns, since a single strong duplicate clears waves faster. Stay near the edge of the screen so enemies funnel toward you, and pick up drops only when the path is clear. Spend upgrades on fire rate before raw damage.",
+    faq: [
+      { q: "Do I need to pay to play Gun Clone?", a: "No. The game runs free in your browser with no download or account required, so you can open it, play a few levels, and close the tab whenever you like." },
+      { q: "What should I upgrade first?", a: "Fire rate and duplication usually beat raw damage early, because more shots and more copies compound quickly. Test one upgrade, watch how fast the next wave clears, then adjust." },
+    ],
+  },
+  "knock-down": {
+    strategy: "Aim for the lowest row first. Taking out a support bottle usually brings the whole column down, which clears bottles you never touched. Watch where the stack leans after each shot and adjust, rather than repeating the same angle. Save your last shots for cleanup, and accept a messy collapse over a perfect direct hit.",
+    faq: [
+      { q: "Do I need to hit every bottle to finish a level?", a: "No. A level is cleared once the required bottles are knocked off the platform, so a well-placed shot that collapses a whole section usually counts the same as picking bottles off one by one." },
+      { q: "What happens if I run out of shots?", a: "Running out of shots ends the attempt before the stack is cleared. On the retry, aim at a different support bottle and watch how the stack shifts." },
+    ],
+  },
+  "lucky-brainrot-blocks-online": {
+    strategy: "Break nearby blocks first; walking past easy ones wastes the boost window. Bank early coins into income upgrades rather than one-off multipliers, since steady gains compound while bursts do not. Save rare boosts for a fresh zone where block density is higher, and never chase one block far off your path.",
+    faq: [
+      { q: "Do I need to play actively for progress?", a: "Not strictly. Upgrades keep generating value while you are away, so logging in for a few minutes to spend coins is often enough to keep moving." },
+      { q: "What should I upgrade first?", a: "Start with whatever raises your passive income, since it pays back in every later zone. Faster block-breaking upgrades come next, once collecting starts to feel slow." },
+    ],
+  },
+  "open-city-suv-car-stunts": {
+    strategy: "Speed matters more than the ramp size, so give yourself a long run-up before anything steep. Straighten the SUV before takeoff; a crooked launch wastes the jump. Use the city's wide roads to build momentum and save tight alleys for slow exploring. Land on all four wheels, then brake early.",
+    faq: [
+      { q: "Do I need to install anything?", a: "No. The game runs in a browser, so you can start a run, close the tab, and come back later without downloads or an account." },
+      { q: "What makes a jump fail?", a: "Usually too little speed or a crooked approach. The SUV lands on its side and the run ends, so straighten up and commit before you leave the ramp." },
+    ],
+  },
+  "police-chase-simulator": {
+    strategy: "Speed is a trap early on. Learn one map before chasing distance, since corners you misjudge cost more time than a slow straight ever will. Keep an escape lane open instead of hugging traffic, and brake early rather than steering late. On the moon map, treat jumps as commitments — pick a line and land straight.",
+    faq: [
+      { q: "Do I need to download or install anything?", a: "No. The game runs in your browser, so you can start a chase on desktop or mobile without installing anything or creating an account." },
+      { q: "Is the moon map harder than the other maps?", a: "It plays differently rather than simply harder. Lower gravity stretches your airtime, so you cover more ground per jump but have less grip when you land — practice a few laps before pushing speed." },
+    ],
+  },
+  "schoolboy-escape-runaway": {
+    strategy: "Walk, don't sprint. Motion draws attention faster than distance, so advance in short bursts and freeze the moment a parent turns. Use doorways and furniture as cover, and watch patrol rhythm rather than reacting to the first opening. Avoid back rooms with a single exit, because a cornered boy has nowhere to retreat.",
+    faq: [
+      { q: "How do I know when a parent can see me?", a: "Watch which way they face and where their path leads. If their body turns toward your hiding spot, wait; step out only when they look away." },
+      { q: "Can I run past a parent instead of hiding?", a: "Sometimes, but sprinting is loud and brief openings close fast. Hiding until the patrol passes is safer for beginners, and it teaches the timing you need later." },
+    ],
+  },
+  "solitaire-emperor-secrets-of-fate": {
+    strategy: "Uncover face-down cards early, because hidden information is the real cost in any solitaire variant. Move aces and low cards to foundations only when doing so frees a column or exposes a card. Keep one empty column in reserve for rearranging long sequences, and resist emptying the stock too fast.",
+    faq: [
+      { q: "Do I need to know tarot to play?", a: "No. The arcana artwork is decoration and atmosphere; the rules follow ordinary solitaire logic. Read each level's brief note before dealing, then play the cards as you normally would." },
+      { q: "What happens if I get stuck?", a: "When a layout stalls, restart and treat the first attempt as a scouting run. Knowing where the hidden cards sit and which columns clog early makes the next deal noticeably easier to solve." },
+    ],
+  },
+  "squad-assembler-merge": {
+    strategy: "Resist opening every loot box at once. Clear low-tier duplicates first so your board keeps breathing room, and merge in pairs rather than scattering upgrades across many item types. A narrow, high-tier squad usually beats a wide board of half-finished gear when space runs out.",
+    faq: [
+      { q: "Do I need to spend money to progress?", a: "No. The game is playable for free in a browser, and progress comes from merging what you already own. Patience with loot boxes matters more than paying." },
+      { q: "What happens when my board fills up?", a: "Merge duplicates to free space before opening new boxes. If you are stuck, upgrade your lowest tier first, since clearing small items opens room for the pieces you actually want to combine." },
+    ],
+  },
+  "squid-game-tower-defense": {
+    strategy: "Build early near the first corner, where enemies stay in range longest, instead of spreading towers thin along the whole path. Upgrade one strong tower before buying a second weak one; damage compounds faster than coverage. Save a little coin for fast runners, and reposition your cheapest towers whenever a new wave exposes a gap.",
+    faq: [
+      { q: "Do I need to know the show to enjoy it?", a: "No. The game works as a straightforward tower defense: enemies walk a fixed path and your towers stop them. Familiar costumes are flavour, not required knowledge." },
+      { q: "What should I do when a wave overwhelms me?", a: "Restart the level and spend coins earlier rather than saving them. A few upgraded towers near the entrance usually beat many cheap ones placed late along the route." },
+    ],
+  },
+  "stickman-clicker": {
+    strategy: "Resist dumping early coins into cosmetics — they look fun but pay nothing. Buy the cheapest coin-per-click upgrade first, then alternate into passive income so your total keeps climbing between taps. Recheck upgrade prices after each milestone; a slightly pricier tier usually beats several small ones. Cash out accessories only when progress stalls.",
+    faq: [
+      { q: "Does Stickman Clicker cost anything?", a: "The game is free to play in a browser, with no download needed. Optional upgrades are bought with coins you earn by clicking, not with real money." },
+      { q: "How long does it take to become a billionaire?", a: "There is no fixed timer. Progress depends on how often you tap and how well you reinvest; active players unlock later tiers faster than idle ones." },
+    ],
+  },
+  "traffic-rush-online": {
+    strategy: "Look one lane ahead rather than at the car directly in front; traffic usually leaves a gap a moment before you need it. Stay near the middle lanes so you keep options on both sides, and avoid drifting to the edge where escape routes disappear. Small, early corrections beat dramatic swerves at speed.",
+    faq: [
+      { q: "Is TRAFFIC Rush Online free to play in a browser?", a: "Yes. The game runs directly in a modern browser with no download or install, and you can start a run in seconds." },
+      { q: "How do I get a higher score?", a: "Survive longer. Score comes from distance travelled, so staying clean matters more than squeezing through risky gaps. Focus on smooth lane choices and the number climbs on its own." },
+    ],
+  },
+  "watermelon-game": {
+    strategy: "Keep large fruits at the edges and small ones in the middle, so they can still meet and merge. Drop carefully rather than fast, and use low fruits to break up tall stacks. Before the box fills, always leave a clear lane for the next fruit to land.",
+    faq: [
+      { q: "What happens if the fruit reaches the top of the box?", a: "The round ends when fruit overflows above the top line. You then see your final score and can start a fresh game to try for a watermelon again." },
+      { q: "Do the smallest fruits matter later in the game?", a: "Yes. Small fruits are the only way to fill gaps and trigger low merges, so dropping them carelessly wastes useful material. Keep a few reachable near the surface." },
+    ],
+  },
 };
