@@ -955,4 +955,354 @@ export const GAME_DEEP_CONTENT: Record<
       { q: "How do I raise profit?", a: "Buy low, price correctly and upgrade the shop to attract more buyers." },
     ],
   },
+  "arrows-out": {
+    strategy: "Work from the outside in: an arrow facing open space is free to remove, and clearing it unlocks the arrows behind. Before tapping, ask which arrow blocks the most others. Random tapping buries the solution. If a board stalls, scan for the single move that frees the most arrows at once.",
+    faq: [
+      { q: "Why does tapping an arrow sometimes do nothing?", a: "An arrow needs an empty line all the way to the edge. If another arrow sits anywhere on that line, it is stuck until the blocker moves out, so clear the shortest path first." },
+      { q: "What is the most common beginner mistake?", a: "Tapping whatever looks available instead of planning two or three moves ahead. Arrows that seem harmless can seal off a narrow corridor, and then the board looks impossible even though it is not." },
+    ],
+  },
+  "basketball-stars": {
+    strategy: "Threes are worth more, so step behind the line whenever your defender backs off — but only shoot when your feet are set. On defense, stay between your man and the rim rather than chasing steals; a missed slap leaves the basket wide open. Practice one reliable dunk first.",
+    faq: [
+      { q: "Why do my shots keep missing?", a: "Most misses come from firing while moving or while a defender is in your face. Stop, plant your feet, then release — and avoid contested attempts unless the clock is forcing your hand." },
+      { q: "How do I block a shot properly?", a: "Jump as the shooter releases, not before — an early jump lets them shoot over you or drive past. Keep your body between the ball and the hoop and contest without gambling." },
+    ],
+  },
+  "combat-guardian-under-attack": {
+    strategy: "Do not spread upgrades evenly. Early on, spend on damage or fire rate so weak enemies die before they stack up, since a crowded screen kills you faster than any single tough enemy. Keep one upgrade for range or survivability before the tougher types appear, and always clear the closest threat first.",
+    faq: [
+      { q: "Is it better to save upgrades or use them right away?", a: "Use them right away. An upgrade you hold does nothing, and clearing early stages faster is what gives you breathing room when the harder ones arrive." },
+      { q: "Do the different enemy types need different handling?", a: "Yes, treat them differently: kill fast, weak enemies before they swarm, and give tougher ones your full attention instead of splitting fire." },
+    ],
+  },
+  "screw-sort-3d": {
+    strategy: "Start with the screws you can already reach and leave the deep ones alone. If a plate will not move, something underneath it is still locked, so clear the outer layer first. Empty tray slots run out fast, so place each screw where it actually belongs.",
+    faq: [
+      { q: "What happens if I pick the wrong screw first?", a: "Nothing breaks, but you may block yourself. Pulling a screw early can leave a plate hanging on one fastener, and the freed slot is wasted until you place it somewhere useful." },
+      { q: "Do I need to match screw colours or sizes?", a: "Many levels use colour or size to show which slot a fastener fits. If a screw refuses to sit, try another slot instead of forcing it, and keep similar pieces together." },
+    ],
+  },
+  "robby-double-jump-for-brainrots": {
+    strategy: "Collect the low, easy brainrots before chasing height; each upgrade changes your jump and run speed, so give yourself a few hops to relearn the timing. Line up before you leap, and save the second jump as a mid-air correction rather than your default move. Steady single jumps beat panicked doubles.",
+    faq: [
+      { q: "Does falling really reset everything?", a: "Yes — one missed platform sends you back to the start. That is why the low brainrots matter: grab them early so a short climb still makes progress before you push higher." },
+      { q: "What is the second jump actually for?", a: "It is a safety net. Tap it when a leap comes up short or you drift off line, then steer back toward the platform. Using it constantly leaves you with no recovery left." },
+    ],
+  },
+  "schoolboy-runaway-room-escape": {
+    strategy: "Sneaking is slower than running but far safer, so only sprint when a parent is already turning away. Learn each patrol loop before you touch anything risky — a dropped item or a noisy door can pull someone into the room you need.",
+    faq: [
+      { q: "How do I know which item opens which door?", a: "Check notes and labels first; a key is usually paired with the lock it fits. If an item does nothing, it belongs somewhere else or is only a distraction." },
+      { q: "What should I do if I keep getting caught near the stairs?", a: "Wait one full patrol cycle and watch from a hiding spot. Parents tend to follow a repeatable path, and the gap right after they turn around is your window to move." },
+    ],
+  },
+  "millionaire-life": {
+    strategy: "Buying the biggest thing first is the usual mistake. Price each purchase against what you have left, not against the size of the win, and keep a cushion for later choices. It also helps to decide what you actually want before you start clicking.",
+    faq: [
+      { q: "What should I buy first?", a: "Something small. A cheap early purchase keeps the balance healthy and leaves room for the next decision, while a single big trophy can use up most of your starting money." },
+      { q: "Why does my money run out so quickly?", a: "Big purchases feel good but shrink the balance fast. Check the price before you click, and leave a cushion so you can still afford the next option you see." },
+    ],
+  },
+  "merge-home-ball-2048": {
+    strategy: "Keep your largest balls along one edge instead of in the middle, where they split the container in two. Drop small numbers into gaps rather than on top of tall stacks, and resist chasing a big merge while the pile is rising. Clearing space is usually the better move.",
+    faq: [
+      { q: "What happens when the container fills up?", a: "Once the pile reaches the top and no new ball fits, the run ends. Larger early merges leave you more headroom, so treat empty space as the resource you are really managing." },
+      { q: "Do combos matter, or should I just merge as fast as I can?", a: "Combos matter. Chaining quick merges clears the pile faster than spreading the same merges across the board, so set up matching pairs near each other before you commit." },
+    ],
+  },
+  "your-majesty-build-conquer": {
+    strategy: "Secure food before anything else. A settlement that cannot feed itself will not hold upgrades or new construction, no matter how much stone you pile up. Keep one material chain running smoothly rather than three half-built ones, and only start a project you can finish.",
+    faq: [
+      { q: "Should I spend resources on new buildings or on upgrades first?", a: "Upgrades usually first. A stronger version of what you already have costs less than a fresh building and starts paying back immediately, while a new structure adds upkeep before it adds value." },
+      { q: "What is the most common beginner mistake?", a: "Building too many things at once. Spreading resources across several projects leaves none of them finished, so nothing produces much and everything feels slow." },
+    ],
+  },
+  "coffee-color-blocks": {
+    strategy: "Start with the piece that has the fewest open routes left, because it has the least room to be rescued later. Keep one lane clear as a corridor while you stack, and fill cups in the order that frees the most space rather than the nearest one.",
+    faq: [
+      { q: "How do I know which gate a piece belongs to?", a: "Each gate shares the colour of the piece it accepts, so match them by colour rather than by position. Pieces that look close to a gate may still need a long way around." },
+      { q: "Why does a good-looking move sometimes trap another piece?", a: "Because moving one piece can close the lane the next one needs. Before a move, check what sits behind the piece you are about to shift, not just where it lands." },
+    ],
+  },
+  "crazy-flying-car": {
+    strategy: "Stay on the road through the early corners: track speed beats a flashy detour you can't land. Save your wings for gaps that are actually broken, and aim your shoves at rivals on narrow sections, where they have no room to recover. Land straight.",
+    faq: [
+      { q: "Do I lose if I fly off the track?", a: "Usually yes, or you drop far behind while recovering. Treat the air as a shortcut with a cost: only leave the road when the gap is short and your landing looks flat." },
+      { q: "What's the fastest way to pass opponents?", a: "Wait for a narrow stretch or a jump, then shove as they commit. Passing in the air rarely works, because both cars lose control and the one who lands straightest wins." },
+    ],
+  },
+  "spin-and-collect": {
+    strategy: "Pick one collection and push it to completion instead of spreading attention across every album. Keep the coins from early spins in reserve so a missing piece never leaves you stuck, and claim your away-time earnings each time you log back in. Small, frequent sessions beat one long grind.",
+    faq: [
+      { q: "How do I unlock new items?", a: "Items come from spins, and rarer pieces appear less often than common ones. Finish the easier collections first, since completing an album usually pays a bigger bonus that helps you chase the rare pieces." },
+      { q: "Do I have to stay on the page to earn rewards?", a: "No. Rewards build up while you are away, so closing the tab is fine. Come back later, collect what has gathered, and put it straight back into spins — checking in briefly is usually enough." },
+    ],
+  },
+  "idle-zoo-tycoon": {
+    strategy: "Do not spread money across every unlocked animal at once. Push one habitat to its upgrade cap first, because a maxed enclosure usually earns more per coin than several cheap ones. Reinvest before buying low-income animals, and check back after long gaps to collect a bigger offline payout.",
+    faq: [
+      { q: "Should I spend money as soon as I have it?", a: "Yes, early on. Idle income compounds, so an upgrade bought now pays for itself over time. Hoarding cash only slows your growth; keep just enough reserve to afford the next habitat unlock." },
+      { q: "Does progress continue while I am not playing?", a: "Yes. The zoo keeps earning offline, though usually at a reduced rate and capped by a maximum absence time. Log back in regularly, collect the accumulated income, and spend it on upgrades." },
+    ],
+  },
+  "kick-a-lucky-block-tsunami-waves": {
+    strategy: "The kick is a timing test, not a strength test — one clean strike beats frantic tapping, so watch for the cue and commit. Then drop the distance score from your mind: pick your escape line early, keep moving, and never stop to admire the block.",
+    faq: [
+      { q: "Does a longer kick always mean a better run?", a: "No. A clean escape counts for a lot, and a modest kick with an open route to safety usually beats a monster kick that leaves you boxed in." },
+      { q: "Is the result mostly down to luck?", a: "Partly, but skill decides most attempts. Timing the kick and picking a clean escape line are the parts you control; the random character roll just adds variety." },
+    ],
+  },
+  "police-drift-escape": {
+    strategy: "Speed is not the goal; angle is. Take wide, early turns so your car rotates before the police commit, and let them carry their momentum into a wall. Collect cash on straight stretches, not in tight corners where you lose control. Keep one open lane as an escape.",
+    faq: [
+      { q: "Is it better to drive fast or slow?", a: "Slower, controlled driving usually wins. High speed makes your car harder to rotate, so you overshoot corners and run out of room. Accelerate on open straights, then ease off before a turn." },
+      { q: "Why do the police keep catching me in corners?", a: "You are probably turning too late. Police follow your line, so if you brake only after entering a corner, they arrive with room to spare. Start turning earlier and leave the inside lane free." },
+    ],
+  },
+  "dead-land-survival": {
+    strategy: "Fight in open space and keep backing away as you swing, so zombies reach you one at a time instead of surrounding you. Pull small groups apart rather than charging a crowd. Early on, put materials into weapon damage and a repair buffer before wider shelter upgrades, because killing faster funds everything else.",
+    faq: [
+      { q: "Do I need other players to make progress?", a: "It is designed as a multiplayer survival game, so you will run into other players. You can still work on your own hero and shelter at your own pace." },
+      { q: "Should I upgrade my hero or my shelter first?", a: "Hero first. A stronger character clears fights faster and brings home more per trip, which pays for shelter work later. Switch to base upgrades once fights feel comfortable and supplies pile up." },
+    ],
+  },
+  "solitaire-the-collection": {
+    strategy: "Before touching a facedown card, ask what flipping it will cost you: emptying a column is powerful in FreeCell, but in Klondike it can strand a king you needed elsewhere. Move aces and twos up early, and don't bury a card you will need soon under a long sequence.",
+    faq: [
+      { q: "Which variant should a beginner start with?", a: "Klondike with one-card draws is the gentlest starting point, because more cards stay reachable. Move to Spider or FreeCell once the tableau patterns start to feel familiar." },
+      { q: "Is it normal to get stuck with no moves left?", a: "Yes, and often it happens because of a choice made ten moves earlier, not the last deal. Checking for empty columns and buried aces before committing helps you see it coming." },
+    ],
+  },
+  "plants-vs-brainrots-2d": {
+    strategy: "Do not spend your opening allowance on one expensive plant; a couple of cheap attackers cover more ground early. Watch which lane the brainrots favour and reinforce it before it breaks. Once you know the wave pattern, save for the heavy hitters and keep a fast, cheap plant in reserve for emergencies.",
+    faq: [
+      { q: "Do I need plants that can hit flying enemies?", a: "Yes, the incoming brainrots travel through the air, so plants that cannot hit airborne targets will not help much. Check what each plant can reach before you spend on it." },
+      { q: "What should I do when a wave breaks through?", a: "Do not panic-buy the most expensive plant. Use a cheap, quick plant to plug the gap, then rebuild your stronger defence one lane at a time." },
+    ],
+  },
+  "kind-shelter--animal-care-and-treatment": {
+    strategy: "Start with the step that's hardest to fix later — treating and cleaning usually come before grooming, since dirt and injuries block the rest. Save dressing for last. Finish one animal fully before you welcome the next, because half-finished pets are easy to lose track of.",
+    faq: [
+      { q: "Do I have to finish every care step?", a: "Each animal's routine runs through several stages, and leaving one out usually leaves the pet visibly unfinished. Work in order, confirm each step, and only then move to the next animal." },
+      { q: "Is speed important, or can I take my time?", a: "The pace is unhurried, so slow and careful is fine. What matters is that each pet ends up clean, treated, and properly dressed before you call it done." },
+    ],
+  },
+  "draw-bridge--brain-game": {
+    strategy: "Anchor both ends on solid ground before worrying about shape, since a bridge that stops in mid-air is wasted ink. Keep the span short and the slope gentle so momentum carries the car. If it stalls at the lip, thicken the entry ramp rather than adding more curves.",
+    faq: [
+      { q: "Why does my car drop through a line that looks connected?", a: "The endpoints usually miss the platform by a few pixels, so the surface never turns solid. Overlap the ground slightly at each anchor instead of stopping exactly at the edge." },
+      { q: "Why does the car slide backward on a path that holds?", a: "A downward slope gives gravity more pull than the car's momentum can match. Flatten the middle of the route and save the drop for the final stretch." },
+    ],
+  },
+  "3d-acrylic-nail-nail-art-game": {
+    strategy: "Don't rush the first stroke — lock in the base color the request calls for before adding extras, because a wrong base is hard to fix. Spend early earnings on upgrades you'll reuse, and practice simple patterns first so your speed holds up on harder clients.",
+    faq: [
+      { q: "Do I need to follow the client's design exactly?", a: "Yes — matching the requested shape and colors is what earns a good result. Decorations add flair, but a close base match matters more than piling on extras." },
+      { q: "What should I upgrade first?", a: "Go for whatever shows up in most orders — extra shades or quicker prep are safe picks. Spreading money across many small upgrades early just slows your progress." },
+    ],
+  },
+  "flag-painting-game": {
+    strategy: "Fill the largest blocks of colour first, because broad fields and thick bands show at a glance whether a shade is wrong. Leave thin outlines, stars and tiny emblems until last. Before you begin, check whether the bands run vertically or horizontally, since that is the mistake most first attempts make.",
+    faq: [
+      { q: "Can I fix a colour I applied by mistake?", a: "Yes. Painting over the section with another shade replaces the old one, so a wrong fill costs nothing and you can repaint an area as often as you like." },
+      { q: "Which flags are easiest to start with?", a: "Simple two- or three-band designs, such as plain vertical or horizontal tricolours. They teach you the palette and the fill rhythm before you tackle stars, crests and fine outlines." },
+    ],
+  },
+  "collect-brainrot-arena": {
+    strategy: "Bank early instead of hoarding. A full inventory is a walking target, and one bad fight costs you everything you gathered. Upgrade storage and base defenses before damage perks, then loot the quieter edges of the map while bigger players fight over the center. Only chase a steal when you know the escape route.",
+    faq: [
+      { q: "Do I lose everything when someone steals from me?", a: "Only what you are carrying or leave unguarded. Anything already banked or placed in protected storage stays safe, which is why banking often matters more than collecting more." },
+      { q: "Should I upgrade offense or my base first?", a: "Base first for most beginners. Survivability compounds: better storage and defenses protect every future run, while damage perks only pay off once you can consistently win fights and hold loot." },
+    ],
+  },
+  "battle-hamsters": {
+    strategy: "Don't rush your whole squad forward. Move one hamster at a time and keep the others behind cover, so a single bad exchange costs you little. Aim at enemies already weakened, because removing one target completely beats spreading damage, and check line of sight before you commit to a shot.",
+    faq: [
+      { q: "Why do my shots keep missing?", a: "Usually it's positioning. A hamster tucked behind cover or standing at the wrong angle can't hit reliably. Move to a clearer spot before firing instead of wasting the turn." },
+      { q: "Should I focus one enemy or spread damage?", a: "Focus. Dropping one enemy removes a whole turn from their squad, while spreading damage leaves everyone alive and shooting back. Finish wounded hamsters first, then move to the next target." },
+    ],
+  },
+  "bmg-ragdoll-car-race": {
+    strategy: "Speed matters most, so give yourself a long straight run-up rather than creeping into a ramp. Hit ramps square-on instead of clipping a corner. Try smaller jumps first to learn how the car behaves in the air, and brake before a landing you can't hold.",
+    faq: [
+      { q: "Do I need to finish a course to score points?", a: "No — the run is scored by the crash itself, so distance, speed, and damage all feed the result. Watch the counter after each attempt to see which of those helped most." },
+      { q: "Why does my car flip over so easily?", a: "Loose ragdoll weight shifts a lot: sharp turns at full speed and landing nose-first will roll you. Ease off the throttle before corners and straighten up while airborne." },
+    ],
+  },
+  "get-tall-and-fall": {
+    strategy: "Treat every growth item as a trade: extra height opens new routes but makes tight sections riskier. Clear the easy food in a location first, save potions for stretches where reach actually matters, and skip long detours for one missed snack. Learning each map beats chasing a perfect run.",
+    faq: [
+      { q: "Does getting taller make the game harder?", a: "It depends on the location. Height opens routes you cannot reach otherwise, but the taller you are the more carefully you have to move, so short growth bursts usually beat one huge spurt." },
+      { q: "Should I go for pets or potions first?", a: "Whichever is closer and safer. Pets and potions both add growth, so early take the easy pickup rather than risk a climb for the rarer one; hunt specific items once you know the layout." },
+    ],
+  },
+  "sprunki-sandbox-ragdoll-playground-mode-d3fe-1": {
+    strategy: "Start with one character and one tool; stacking every object at once makes it hard to see what caused a result. Test a weapon at close range before firing it near something you built. Small, repeatable experiments teach the physics faster than random chaos.",
+    faq: [
+      { q: "What should I try first?", a: "Pick one ragdoll and one tool, then test them on a simple stack of blocks. Once the physics feel predictable, bigger explosions and taller builds get much easier to control." },
+      { q: "Why do things fly around so wildly?", a: "Ragdolls react to physics rather than scripted animations, so a small nudge can start a chain reaction. Expect props to tumble further than they look like they will." },
+    ],
+  },
+  "99-nights-in-the-forest-horror-multiplayer": {
+    strategy: "Never wander far alone on the first nights. Assign one player to fire duty — wood runs out faster than beginners expect, and a dying fire is what kills runs. Learn the map edges before chasing objectives, and bank supplies at base instead of carrying everything with you.",
+    faq: [
+      { q: "Is it better to play with friends or solo?", a: "Friends make it much easier. One person can manage the fire while others scout for supplies and search for the missing boys. Solo runs are possible but leave little room for mistakes." },
+      { q: "What should I do when night falls and I am far from base?", a: "Head back early rather than gambling on one last scavenging run. If you are caught outside, stay near light sources and move quietly instead of sprinting, which gives away your position." },
+    ],
+  },
+  "skate-1-speed": {
+    strategy: "Speed is a resource, not a score. At low speed, jumps are short and traps are easy to read, so use early sections to learn where each one sits. Jump late rather than early, keep a straight line, and only chase the boost once you can clear the next obstacle reliably.",
+    faq: [
+      { q: "Why do I keep crashing on the same trap?", a: "You are probably jumping too early. At higher speed the gap closes faster than it looks, so wait half a beat longer and jump once the trap is close to your board." },
+      { q: "Is it better to go slow and safe?", a: "No, but do not force speed either. Some obstacles only clear with enough momentum, so a steady rhythm beats both reckless rushing and crawling along." },
+    ],
+  },
+  "city-bus-simulator-driving-games": {
+    strategy: "Brake early and lightly. A bus needs far more room to stop than a car, and hard braking throws riders around. Take corners wide and slow so the rear wheels clear the curb. Leaving a gap behind traffic beats weaving for position, because one collision usually costs more time than the shortcut saves.",
+    faq: [
+      { q: "Why do passengers keep complaining even when I finish the route?", a: "Comfort complaints usually come from jerky acceleration, late braking, or stopping too far from the curb. Riders board and exit slowly when the bus is misaligned, which burns your schedule." },
+      { q: "Should I rush to beat the clock or drive slowly?", a: "Rushing causes the mistakes that cost the most time: missed stops, collisions, and awkward reversing. Steady driving with clean stops almost always finishes ahead of a fast run that needs recovery." },
+    ],
+  },
+  "bottle-flip": {
+    strategy: "Start with small, low flips to learn how long you need to hold for one clean rotation. Watch the bottle's angle near the end of the arc rather than the whole spin. Aim for flat landings first and only chase neck landings once that feels repeatable. Overshooting is the most common miss.",
+    faq: [
+      { q: "How do I land the bottle on its neck?", a: "Landing on the neck needs a slower, more controlled spin so the bottle arrives close to vertical. Practise the timing with flat landings first, then reduce the power slightly and watch the final quarter of the rotation." },
+      { q: "What happens if I miss the landing?", a: "A missed flip ends the attempt. You can usually try again straight away, so treat each miss as feedback about your power and timing rather than a reason to change everything at once." },
+    ],
+  },
+  "diamant-match-3-sky-story": {
+    strategy: "Work from the bottom of the board. Matches there collapse more tiles, so a single bottom swap often sets off the cascade you actually needed. Before spending moves on the level goal, scan for four- and five-tile lines, since the special pieces they create clear far more ground than a plain three.",
+    faq: [
+      { q: "Should I match at the top or the bottom of the board?", a: "Bottom matches are usually stronger. Tiles above fall into the gaps and can trigger extra matches for free, so start low and let the cascade work for you." },
+      { q: "What should I focus on first: combos or building?", a: "Combos first. Every structure and helper is paid for with cleared pieces, so a board you can cascade reliably funds the city faster than chasing small goals one at a time." },
+    ],
+  },
+  "tetradicemerge--blast-blocks": {
+    strategy: "Keep the surface flat. A level stack gives every shape somewhere to sit, while towers and holes force awkward drops. Clear lines as soon as they form instead of hoarding them for a big play, and leave the middle open so long pieces still have room to rotate. Recover before the stack gets tall.",
+    faq: [
+      { q: "What is the difference between normal and endless mode?", a: "Normal mode ends when your stack reaches the top, giving each run a finish line. Endless keeps going, so the goal shifts from completing a run to lasting as long as you can." },
+      { q: "Why do I keep losing so quickly?", a: "Most early losses come from a bumpy board, not from fast pieces. One hole can trap several shapes, and the stack grows while you fix it. Flatten the surface before speed becomes the problem." },
+    ],
+  },
+  "age-of-heroes": {
+    strategy: "Don't spread gold across every unit; pick two or three that work together and upgrade them first. Towers buy you time, so reinforce the lane enemies actually use before you buy new heroes. Early on, finish easy battles for steady income instead of gambling on a fight that looks close.",
+    faq: [
+      { q: "Is Age of Heroes free to play in a browser?", a: "Yes, the game runs in a browser and needs no download or install. You can start a campaign on desktop or mobile and pick up the same empire whenever you return." },
+      { q: "What should I do first as a new player?", a: "Play the opening battles with the units you already have and bank the rewards. Spend only on upgrades you will keep using, then expand once your towers can hold without constant attention." },
+    ],
+  },
+  "simple-words": {
+    strategy: "Look for short, familiar words first: three- and four-letter combinations are easier to spot and keep rows moving. Before committing, glance at which rows are closest to clearing, since finishing a row frees all of its blocks at once. Keep vowel-heavy clusters in mind rather than chasing one long word.",
+    faq: [
+      { q: "Do longer words clear more of the board?", a: "A long word uses more blocks and usually opens more space. Still, a quick three-letter word that finishes a row can beat a longer one that leaves the row nearly full." },
+      { q: "What happens if I get stuck on a word?", a: "Start again with the simplest combination you can see. Short words still dim their blocks and can complete a row, which shifts the board and often reveals a better opening." },
+    ],
+  },
+  "wood-blocks-jam": {
+    strategy: "Start by scanning every gate before you touch a block, so you know how much room each one leaves. Clear the blocks crowding a tight corner first, and keep the awkward shapes for last, since they are hardest to fit once the board fills.",
+    faq: [
+      { q: "Is there a timer or a countdown pushing me along?", a: "No. There is no timer, so you can study the board, rethink a move, and try again at whatever pace suits you; the only pressure comes from how the blocks fit together." },
+      { q: "Will the levels look different each time I open them?", a: "They are handcrafted rather than generated, so a level looks the same each time you return to it. That makes it possible to learn a board and improve your route." },
+    ],
+  },
+  "geometry-arrow-2": {
+    strategy: "Watch a hazard for one full cycle before committing to a gap; most traps are predictable and punish panic. Stay near the middle of open space so you keep room to retreat, and treat each death as information about timing. Restart fast, change one thing, and drill the section until the rhythm feels automatic.",
+    faq: [
+      { q: "Is Geometry Arrow 2 suitable for beginners?", a: "Yes. The early caves are short and forgiving, and the restart is instant, so new players can learn the rhythm without losing much progress. It gets harder only once you are comfortable." },
+      { q: "How do I reach the portal more consistently?", a: "Slow down before tight sections instead of rushing in, and watch the trap pattern twice before moving. Consistency comes from repeating the same safe line, not from trying to improvise a faster route." },
+    ],
+  },
+  "grand-shift-auto": {
+    strategy: "Treat the car as your health bar: a clean getaway matters more than one extra kill. Fight from behind cover and back away while firing, since standing in the open drains you fast. Once a mission's target is down, don't loot the area — get moving before reinforcements box you in.",
+    faq: [
+      { q: "Do I have to finish the missions in a set order?", a: "The three jobs are meant to be played one after another, so clear each objective before chasing the next. Rushing ahead usually leaves you short on time and surrounded." },
+      { q: "What should I do when a shootout goes wrong?", a: "Fall back to cover instead of trading shots in the open, then re-engage from a new angle. Breaking line of sight buys you the seconds needed to reset the fight." },
+    ],
+  },
+  "geometry-vibes-3d": {
+    strategy: "Learn each stretch by sight before you try to be fast. Your first few runs are for memorising where obstacles sit relative to the beat, not for setting records. Keep your eyes one obstacle ahead, and resist tapping early — most crashes come from a jump that fires a beat too soon.",
+    faq: [
+      { q: "Do I need to follow the music to progress?", a: "The beat is a guide rather than a gate. Treat the music as a timing cue and watch the obstacles themselves, since what you actually need to clear is what's on screen." },
+      { q: "Are short sessions or long grinds better?", a: "Short sessions work better at first. Reflex games punish tired hands, so take a break after a handful of failed runs and come back with fresh eyes rather than grinding the same wall." },
+    ],
+  },
+  "1-speed-escape-prison": {
+    strategy: "Treat each speed pad as a decision, not a free gift. Grab one only when the ground ahead is long and flat, and skip it before tight platforms or moving hazards. Jump early, keep your camera steady, and repeat tricky sections slowly instead of sprinting into them on your first attempt.",
+    faq: [
+      { q: "What happens when I fall?", a: "You return to your last checkpoint and can try the section again. Falling costs progress rather than ending the run, so treat each mistake as information about where to jump next time." },
+      { q: "Do the speed boosts stack?", a: "Each +1 pad adds to your speed for that run, so the boosts build on each other. Grabbing several in a row makes you noticeably faster and harder to steer." },
+    ],
+  },
+  "detective-max-mystery-the-disappearance-of-mr-winters": {
+    strategy: "Examine everything before you move on — the first clue is often a detail you almost skipped. Keep a mental note of names and times, because contradictions between stories are usually the real lead. If you feel stuck, revisit earlier rooms with the newest clue in mind.",
+    faq: [
+      { q: "What should I do if I can't find the next clue?", a: "Go back through the rooms you have already visited and re-examine objects near the last discovery. Interactive details often only stand out once you know what you are looking for." },
+      { q: "Do I need to keep notes while playing?", a: "Not strictly, but it helps. Jotting down names, times, and where you found each clue makes it far easier to spot which statements do not add up." },
+    ],
+  },
+  "burger-restaurant-simulator-3d": {
+    strategy: "Serve the simplest burger first to build speed before adding complex recipes. Keep one staff member on the grill and another at the counter so orders never pile up. Save early earnings for a faster cooking station instead of decorating, and only expand once your kitchen can handle the rush.",
+    faq: [
+      { q: "Is Burger Restaurant Simulator 3D free to play?", a: "Yes. The game runs in your browser and is free to start, so you can begin cooking right away without downloading anything or creating an account." },
+      { q: "Do I need to manage staff as well as cook?", a: "Eventually. You start by cooking and serving alone, then hire employees as orders increase, so you can focus on expanding the menu and keeping the kitchen running smoothly." },
+    ],
+  },
+  "winter-tale-secrets-and-mergings": {
+    strategy: "Keep one corner clear as working space and do your merging there, rather than scattering pieces across the board. Clear the low-level items that block a chain before chasing the bigger one. Hold your highest pieces until a task or a stuck spot genuinely needs them.",
+    faq: [
+      { q: "Do I need to pay to play?", a: "It is a free browser game, so no download or purchase is involved. Just open the page and start merging." },
+      { q: "What should I do when the board fills up?", a: "Merge the lowest matching pairs you can find first. Clearing those few items usually opens enough room to keep working without touching the pieces you are saving." },
+    ],
+  },
+  "war-groups": {
+    strategy: "Don't spread thin early. Take one compact cluster of sectors, so your borders stay short and defensible, and strengthen what you hold before chasing artifacts. Find an alliance before you look threatening — neighbours will punish an isolated expansionist. Trade surplus rather than hoarding it.",
+    faq: [
+      { q: "Do I need to pay to play War Groups?", a: "No — it runs in your browser for free with nothing to install. You can start playing, claim sectors and join alliances without paying anything up front." },
+      { q: "Can I play solo, or do I have to team up with other players?", a: "You can play on your own, but alliances and trading are usually how larger gains happen. Teaming up early tends to be safer than trying to hold ground alone." },
+    ],
+  },
+  "tornado-fury-of-the-elements": {
+    strategy: "Don't rush the biggest building first. Circle wide, pick off small structures to build momentum, and keep a clear escape line from anything that shoots. Watch patrol patterns for a few seconds before committing, and spend early upgrades on movement or tornado size rather than raw damage, because surviving longer compounds faster.",
+    faq: [
+      { q: "Do I need to download anything to play?", a: "No. It runs in a browser on desktop and mobile, so you can open it and start a run without installing anything." },
+      { q: "What should I upgrade first?", a: "Start with anything that improves movement or how quickly your whirlwind grows. Bigger, faster storms survive longer and clear buildings sooner, which makes later damage upgrades far more effective." },
+    ],
+  },
+  "race-on-cars-in-moscow": {
+    strategy: "Speed is not the goal early on; survival is. Hold a steady lane and change only when a gap is clearly wide enough, since late swerves cause most crashes. Watch two cars ahead rather than the nearest bumper, and spend upgrades on handling before raw speed so you can correct mistakes in time.",
+    faq: [
+      { q: "Is there a reliable way to avoid collisions in heavy traffic?", a: "Yes: drive predictably and leave room on both sides. Overtake only when the gap ahead is wide, and brake or shift early instead of reacting at the last moment." },
+      { q: "Does tuning carry over between attempts?", a: "Tuning you unlock generally persists across attempts, so each run builds on the last. Spend early upgrades on handling and braking, then move to top speed once you crash less often." },
+    ],
+  },
+  "clicker-knights-vs-dragons": {
+    strategy: "Early on, put every upgrade into raw damage rather than splitting between attack and health — faster kills beat surviving longer. Play actively through the first few stages to bank a head start, then let auto-attack carry the grind. When progress stalls, save for a bigger upgrade instead of buying several cheap ones.",
+    faq: [
+      { q: "Do I need to keep tapping the whole time?", a: "No. Auto-attack keeps damage flowing while you are away, so the game still progresses when you idle. Active tapping simply speeds things up." },
+      { q: "What happens when a stage gets too hard?", a: "Progress slows at tougher stages, which usually signals an upgrade gap rather than a dead end. Idle for a while, bank the earnings, then return with stronger damage." },
+    ],
+  },
+  "the-machinegg": {
+    strategy: "Reinvest early rather than saving for the retirement meter. Each new hen compounds, so buy the cheapest chicken that fits your balance before spending on automation. Automation only pays off once passive output is meaningful, so hold off on expensive machinery until your flock earns consistently on its own.",
+    faq: [
+      { q: "Does the farm keep running when I close the tab?", a: "Yes — the game is built around idle progress. Shut the tab and your hens keep working; when you return, the accumulated eggs are waiting to be collected and put back into the farm." },
+      { q: "Should I buy more chickens or automation first?", a: "Chickens generally come first, since each bird adds immediate output and costs less. Automation makes sense once your flock produces enough eggs on its own to recover the purchase price quickly." },
+    ],
+  },
+  "slice--soar": {
+    strategy: "Chase clean single cuts instead of wide swipes, since a wild swing often drags you into the next obstacle. Watch the gap between object and hazard before committing, and let low-value items fall when the risk is high. Slow, small movements beat fast, broad ones.",
+    faq: [
+      { q: "Does Slice & Soar cost anything to play?", a: "No. It runs in the browser and starts without a download or account, so you can open it, play a round, and close the tab whenever you like." },
+      { q: "What actually ends a run?", a: "Hitting an obstacle ends the round immediately. Missing a sliceable object may just cost points, so the real risk is contact — treat hazards as the one thing to avoid." },
+    ],
+  },
+  "car-parking-driving-game": {
+    strategy: "Speed is your enemy in tight bays. Approach each slot square-on at a crawl, and turn only after your rear axle passes the corner you are aiming around. If you misjudge, brake and reverse instead of forcing it — a two-point correction costs less time than a wall scrape.",
+    faq: [
+      { q: "Is the game free to play in a browser?", a: "Yes. It runs directly in a modern desktop or mobile browser, so there is nothing to download or install before your first mission." },
+      { q: "Do I need a driving wheel or controller?", a: "No. Keyboard or on-screen touch input is enough for every parking challenge, though a controller can feel smoother if you already own one." },
+    ],
+  },
 };

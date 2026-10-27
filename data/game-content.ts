@@ -2061,6 +2061,356 @@ export const GAME_CONTENT: Record<string, GameContent> = {
     controls: "Click or tap to select, buy and sell items.",
   },
 
+  "arrows-out": {
+    tags: ["puzzle"],
+    intro: "Every board in Arrows Out! is a knot of arrows pointing in different directions. Tap one and it flies off the screen — but only if nothing stands between it and the edge. Each board looks simple and turns out to be a small logic trap. Clear the whole screen to move on.",
+    howToPlay: "Look at the direction each arrow points and the space in front of it. Tap an arrow whose path to the edge is clear, and it leaves the board, opening space for the next one. Keep going until no arrows are left.",
+    controls: "Click or tap an arrow to send it sliding off the board.",
+  },
+
+  "basketball-stars": {
+    tags: ["arcade"],
+    intro: "Basketball Stars is a fast arcade take on street hoops: pick a side, take the court as one player, and trade baskets in quick head-to-head matches. The ball physics stay loose and bouncy, so dunks, deep threes and late blocks all feel dramatic.",
+    howToPlay: "Each match is a short race to score. Dribble toward the hoop, shoot from outside for three points, or drive in for a dunk. On defense, shadow your opponent, jump to block shots, and poke the ball loose to steal.",
+    controls: "Click or tap to play.",
+  },
+
+  "combat-guardian-under-attack": {
+    tags: ["action"],
+    intro: "Combat Guardian: Under Attack is a defence shooter built on quick aiming and faster decisions. You hold a position across fifty stages while eight distinct enemy types keep the pressure changing. Between stages you choose upgrades, and those choices matter more than reflexes once the screen fills up.",
+    howToPlay: "You control the guardian, aim at whatever is closing in, and fire before it reaches you. Clearing a stage moves you forward and gives you an upgrade to choose, which should make the next stage easier. Keep going for fifty stages.",
+    controls: "Click or tap to play.",
+  },
+
+  "screw-sort-3d": {
+    tags: ["3d"],
+    intro: "Screw Sort 3D is a puzzle game about taking apart mechanical objects, one fastener at a time. Each level hands you a tangle of plates, hinges and brackets held together by screws, and your job is to free every piece in the right order. It is oddly satisfying.",
+    howToPlay: "Tap a screw to loosen it, then pull it free and drop it into an open slot in the tray. Once the fasteners holding a plate are gone, the plate lifts away. Keep going until the mechanism is empty.",
+    controls: "Click or tap to play.",
+  },
+
+  "robby-double-jump-for-brainrots": {
+    tags: ["obby"],
+    intro: "Robby: Double jump for brainrots is a climbing obstacle course where a character hops between floating platforms to grab scattered brainrots. Each pickup raises your jump slightly and speeds up your run, so the level shifts from careful hops to bold leaps. Miss a platform and you start over.",
+    howToPlay: "Move along each platform, jump the gaps, and press jump again in mid-air to gain a second boost. Collect every brainrot you can reach, since each one upgrades your jump and speed, then push higher. A missed jump sends you back to the start.",
+    controls: "Use the arrow keys or A/D to move and Space to jump, pressing it again in mid-air for the double jump.",
+  },
+
+  "schoolboy-runaway-room-escape": {
+    tags: ["adventure"],
+    intro: "You play a grounded schoolboy whose bedroom door is not going to unlock itself. Search the house for keys, tools, and small clues while two parents patrol the halls, then reach the front door without being spotted. The tension comes from timing, not speed.",
+    howToPlay: "Roam the rooms, pocket anything useful, and watch where your parents are looking. Reading notes and testing items tells you which doors they unlock, so you can plan a quiet route and reach the exit unseen.",
+    controls: "Click or tap to play, then follow the on-screen prompts to move, look around, and interact.",
+  },
+
+  "millionaire-life": {
+    tags: ["simulation"],
+    intro: "Millionaire Life starts with the moment the ticket wins: a huge cash balance and a long list of things you could buy. The interesting part is not the money itself but the choices it creates — what you keep, what you spend, and how long the fortune lasts.",
+    howToPlay: "Start with a cash balance and decide what to buy first. Each purchase changes what you can afford next, so compare prices before committing. Keep choosing to build the life you want, and watch the balance as you go.",
+    controls: "Click or tap to play.",
+  },
+
+  "merge-home-ball-2048": {
+    tags: ["merge"],
+    intro: "A drop-and-merge twist on 2048: you release numbered spheres into a container, and identical pairs that touch fuse into one ball of double the value. Combos keep the space open under pressure, and progress also earns decorations for the home you are building.",
+    howToPlay: "Aim and release a ball above the container. Where it lands matters: identical numbers that touch combine into one ball of double the value. Chain several merges in a row for a combo bonus, and keep the pile low enough that new balls still have room to fall.",
+    controls: "Click or tap to play.",
+  },
+
+  "your-majesty-build-conquer": {
+    tags: ["strategy"],
+    intro: "Your Majesty - Build & Conquer is a kingdom-building strategy game that hands you wreckage and asks for a capital. You clear, construct, and grow your way up from almost nothing, balancing what your people need against what your borders want. The climb from rubble to rule is the whole appeal.",
+    howToPlay: "Clear debris, place basic buildings, and get production running so food and materials keep arriving. Spend what you gather on upgrades and new structures, keep your people housed and happy, then push outward to claim more land. Repeat the cycle as your settlement grows.",
+    controls: "Click or tap to play.",
+  },
+
+  "coffee-color-blocks": {
+    tags: ["mobile"],
+    intro: "Coffee Color Blocks is a calm sorting puzzle where coloured pieces must reach the gate that matches them. Cups wait to be filled, but the grid is tight, so every move reshapes the path behind it. Short levels and a gentle pace make it easy to pick up for a few minutes.",
+    howToPlay: "Move each coloured piece toward the gate that matches its colour to fill the cup waiting there. A piece that settles in the wrong spot can close the route for others, so clear the tight corners before the easy ones.",
+    controls: "Click or tap to play.",
+  },
+
+  "crazy-flying-car": {
+    tags: ["racing"],
+    intro: "Crazy Flying Car hands you a car with wings and a race track with no safety net. You drive across suspended roads above a bottomless drop, glide over broken sections, and shove rivals off the route. It's a race where one bad turn puts you in open air.",
+    howToPlay: "Each race is a short sprint to the finish. Keep your wheels on the track for speed, take to the air when the road breaks, and use short shoves to knock rivals aside. Cross the line first, then restart and try a different route.",
+    controls: "Click or tap to play.",
+  },
+
+  "spin-and-collect": {
+    tags: ["clicker"],
+    intro: "Spin and Collect is a casual browser game built around a wheel that hands out currency and treasure. Every pull adds something to your stash, and the fun comes from watching a scattered collection slowly turn into finished albums. Progress keeps ticking even while you are away, so short visits still feel worthwhile.",
+    howToPlay: "Tap the spin button to receive coins, gems, or a random item. Spend what you earn on extra spins and upgrades, then fill the empty slots in each collection. Finishing an album pays a larger bonus, which funds the next round of pulls.",
+    controls: "Click or tap to play.",
+  },
+
+  "idle-zoo-tycoon": {
+    tags: ["idle"],
+    intro: "Idle Zoo Tycoon puts you in charge of an empty plot and a small budget. Buy enclosures, fill them with animals, and let ticket sales pile up while you are away. The fun lies in balancing what you build next against the income each new habitat brings in.",
+    howToPlay: "Start with a basic enclosure, then spend earnings on more animals and habitat upgrades that raise ticket income. When a habitat reaches its limit, expand or unlock a new species. Progress continues while the game is closed, so return later to collect and reinvest.",
+    controls: "Click or tap to play.",
+  },
+
+  "kick-a-lucky-block-tsunami-waves": {
+    tags: ["skill"],
+    intro: "A timing-based kick-and-run challenge: every strike sends a lucky block flying and rolls a random character. Distance is only half the goal, though — once the roll resolves, a wall of water starts closing in and you have to sprint for safety. Short rounds, fast retries, a little luck.",
+    howToPlay: "Kick the block as far as you can, then survive what comes next. Your result rolls a character and the water starts rising, so move fast before it catches you. Each attempt starts fresh, which makes quick retries easy.",
+    controls: "Click or tap to play.",
+  },
+
+  "police-drift-escape": {
+    tags: ["car"],
+    intro: "Police Drift Escape puts you behind the wheel of a sliding getaway car seen from above. Rather than outrunning the squad cars, you bait them into walls, corners, and each other while scooping up cash scattered around the map. Every clean escape funds another round of chaos.",
+    howToPlay: "Stay moving and keep the drift going. Grab cash pickups to build your score, then steer so pursuing police overshoot the corner or slam into obstacles. A single collision ends the run, so trade risky shortcuts for open space whenever the sirens close in.",
+    controls: "Click or tap to play.",
+  },
+
+  "dead-land-survival": {
+    tags: ["survival"],
+    intro: "A multiplayer survival game set after the world has fallen. You push a single hero through ruined ground, clear out the walking dead, and gather what the old world left behind. Supplies go into a broken shelter you rebuild piece by piece, and that second layer is what keeps you coming back.",
+    howToPlay: "Clear zombies in short combat encounters to earn loot and experience, then spend both before the next fight. Experience makes your hero tougher; materials repair and upgrade the shelter. Better gear and a stronger base unlock harder areas, which pay out more.",
+    controls: "Click or tap to play.",
+  },
+
+  "solitaire-the-collection": {
+    tags: ["cards"],
+    intro: "One collection gathers 33 takes on solitaire, from the familiar Klondike layout to Spider, FreeCell, Pyramid and Yukon. Every variant keeps the same quiet rhythm of dealing, sorting and uncovering cards, but changes how much freedom the tableau gives you. The pleasure is hopping between rule sets until one fits your mood.",
+    howToPlay: "Pick a variant, then build descending sequences in the tableau while moving aces and low cards to the foundations. Flip facedown cards when they block you, keep an eye on empty columns, and win by sending every card to its foundation pile.",
+    controls: "Click or tap to move cards between piles.",
+  },
+
+  "plants-vs-brainrots-2d": {
+    tags: ["tower-defense"],
+    intro: "Brainrots are airborne here, and that single twist reshapes the whole defence. Instead of merely stacking rows of shooters, you build plants that can actually reach the sky, then pace your spending as waves thicken. It is a short, brisk survival puzzle about placement and timing rather than raw firepower.",
+    howToPlay: "You place plants on the lawn to stop brainrots before they cross to your side. Each plant has its own job, and your resources refill as you play. Read the incoming wave, pick the plant that answers it, and hold the line as long as you can.",
+    controls: "Click or tap to select and place plants.",
+  },
+
+  "kind-shelter--animal-care-and-treatment": {
+    tags: ["animals"],
+    intro: "Kind Shelter is a calm browser game about looking after stray animals. You clean, treat, and style pets that arrive at your shelter, then send them off looking their best. The gentle pace and steady stream of new arrivals make it easy to drop in for a few minutes and leave feeling settled.",
+    howToPlay: "Each pet arrives with a problem to fix. Work through the care steps one at a time, cleaning and treating first, then grooming and dressing. Complete the round to move the animal along and welcome the next one.",
+    controls: "Click or tap to play.",
+  },
+
+  "draw-bridge--brain-game": {
+    tags: ["drawing"],
+    intro: "A stranded car, a gap it cannot cross, and a pencil. Each level hands you a vehicle and a goal, then leaves the middle of the route blank. Your drawn line becomes a real, drivable surface, so the challenge is not just reaching the flag but building something the car can actually roll across.",
+    howToPlay: "Look at the distance between the car and the goal, then draw a line from one solid platform to the other. That line becomes a surface. Start the car, watch how it travels, and redraw the path whenever it tips, slips, or comes up short.",
+    controls: "Click or tap and drag to draw a line, then release to finish it.",
+  },
+
+  "3d-acrylic-nail-nail-art-game": {
+    tags: ["girls"],
+    intro: "Shape, paint, and decorate acrylic nails for a steady stream of salon clients. Each visitor arrives with a look in mind, and you build it by hand — filing, choosing colors, adding gems and patterns. The fun comes from matching what a client pictures while growing your own little studio.",
+    howToPlay: "Read each client's request, then sculpt the nail shape, apply color, and layer on decorations until the design matches. Finish the set to collect payment, then spend the earnings on new tools, polish shades, and salon upgrades that unlock tougher requests.",
+    controls: "Click or tap to play.",
+  },
+
+  "flag-painting-game": {
+    tags: ["color"],
+    intro: "Flag Painting Game is a calm colouring session built around national flags. Each one starts as a blank outline, so you read the stripes, crosses and emblems, then fill every section with the right shade. It stays unhurried by design: a quiet stack of countries to work through.",
+    howToPlay: "Pick a flag, study its real pattern, then choose a colour and apply it to the matching section. Work through stripes, crosses and corner details one at a time until the flag is complete, then move to the next country.",
+    controls: "Click or tap a colour, then click or tap an area to fill it.",
+  },
+
+  "collect-brainrot-arena": {
+    tags: ["multiplayer"],
+    intro: "Collect Brainrot Arena drops you into a shared arena where lucky blocks are the only real currency. Grab them before rivals do, spend the loot on upgrades that make your next run faster, and keep one eye on your base, because anything you leave unprotected can walk away in someone else's pocket.",
+    howToPlay: "Run around the arena opening lucky blocks to collect valuables, then bank them at your base. Spend your haul on upgrades and defenses. Rival players can steal from you, so grab what you can, secure it fast, and repeat.",
+    controls: "Click or tap to play.",
+  },
+
+  "battle-hamsters": {
+    tags: ["shooting"],
+    intro: "Battle Hamsters is a turn-based squad shooter where fluffy rodents settle their differences with heavy weaponry. You command a small team, trade shots with an opposing squad across tight maps, and earn new hamsters and arenas as you climb. Simple to pick up, but every shot and every position matters.",
+    howToPlay: "Each round you move your hamsters, then fire at the enemy squad. Destroy every opponent before they wipe out your team. Win battles and you'll add new hamsters with different strengths plus new arenas to fight in, so your options keep growing.",
+    controls: "Click or tap to play.",
+  },
+
+  "bmg-ragdoll-car-race": {
+    tags: ["ragdoll"],
+    intro: "This is a driving game built around spectacular failure: you steer a floppy-limbed dummy in a car across an open map, then watch the crash unfold in slow, physics-driven detail. The fun comes from experimenting with weird ramps, bad landings, and seeing how much damage one run can produce.",
+    howToPlay: "Pick a vehicle, drive out into the map, and look for ramps, drops, and obstacles to launch off. Each run is about building speed and choosing a bad idea on purpose. When you hit something, the body goes loose and the wreck plays out.",
+    controls: "Use the arrow keys or WASD to accelerate, brake, and steer.",
+  },
+
+  "get-tall-and-fall": {
+    tags: ["platform"],
+    intro: "Get Tall And Fall is a climbing game where height is the whole point. Eat snacks, adopt pets and brew potions to stretch your character taller, then use that reach to climb through stacked locations. Every growth spurt opens a route and raises the stakes, so the real skill is knowing when to stop.",
+    howToPlay: "Grow your character, then climb. Grab food and potions to add height, move through each location's platforms, and use the extra reach to get further than before. Compete by pushing your best run higher and faster than other players.",
+    controls: "Click or tap to play.",
+  },
+
+  "sprunki-sandbox-ragdoll-playground-mode-d3fe-1": {
+    tags: ["funny"],
+    intro: "A physics sandbox where floppy ragdoll characters are yours to fling, smash and rebuild. Drop them into explosive traps, test tools on them, or build structures just to watch them collapse. There is no score and no failure, so you can experiment freely and see what chaos the physics engine allows.",
+    howToPlay: "Pick a character, drag it into the scene, then use the available tools to throw it, hit it, blow it up or build around it. Reset the scene whenever you want a clean start.",
+    controls: "Click or tap to play.",
+  },
+
+  "99-nights-in-the-forest-horror-multiplayer": {
+    tags: ["horror"],
+    intro: "A co-op survival horror session where the woods stay dark and something is always listening. You and your friends gather supplies, keep the fire alive, and search for missing kids before each night falls. Tension comes from thin resources and the fact that splitting up is both necessary and dangerous.",
+    howToPlay: "Each round starts at dusk. Scavenge wood, food and tools by day, return to base to keep the fire burning, and use the light to hold off whatever comes after dark. Find the missing boys across the map, then get everyone out together.",
+    controls: "Click or tap to play.",
+  },
+
+  "skate-1-speed": {
+    tags: ["running"],
+    intro: "Skate through a parkour course where every clean landing adds speed, and every trap punishes a rushed jump. It is a momentum game: the faster you go, the further you fly, and the less time you have to read what is coming. Simple to start, hard to keep a clean line.",
+    howToPlay: "Steer your skater down the course, clearing obstacles and traps as they come. Each clean move builds speed, and speed carries you through the next section. Miss a jump or clip a trap and the run ends. Chain clean sections to reach the finish.",
+    controls: "Use the arrow keys to steer and jump, or click or tap on a touch screen.",
+  },
+
+  "city-bus-simulator-driving-games": {
+    tags: ["driving"],
+    intro: "City Bus Simulator puts you behind the wheel of a full-size passenger bus on busy urban streets. Collect riders at marked stops, keep to a schedule, and thread a heavy vehicle through tight corners and traffic without scraping paint. The challenge is patience: smooth stops and clean lines matter more than raw speed.",
+    howToPlay: "Each run starts at the depot. Follow the highlighted route, pull up beside waiting riders, and open the doors long enough for them to board. Then accelerate gently, watch your mirrors, and deliver everyone to the final stop before the timer runs out.",
+    controls: "Arrow keys or WASD to accelerate, steer, and brake.",
+  },
+
+  "bottle-flip": {
+    tags: ["physics"],
+    intro: "Bottle Flip is a timing game built around a single satisfying trick: send a plastic bottle spinning through the air and hope it settles the right way up. Landing flat is the safe goal, balancing on the neck is the brave one, and a raised platform adds a little extra height to the challenge.",
+    howToPlay: "Charge up a flip, let go, and watch the bottle rotate as it travels. A clean landing flat on its base keeps you going; landing on the neck is harder but scores better. Miss, and you set up the next attempt.",
+    controls: "Click or tap to play.",
+  },
+
+  "diamant-match-3-sky-story": {
+    tags: ["match-3"],
+    intro: "Diamant: Match 3 Sky Story is a tile-matching puzzle that doubles as a building project. You swap gems to clear them, and the pieces you collect feed a floating city above the clouds. Combos chain further than expected, and summoned helpers bend the board in your favor.",
+    howToPlay: "Swap two neighboring tiles to line up three or more of the same kind, then collect the cleared pieces and spend them on new structures in your sky city. Each level hands you a target; meeting it unlocks the next stage and, over time, fresh helpers.",
+    controls: "Click or tap to swap two neighboring tiles.",
+  },
+
+  "tetradicemerge--blast-blocks": {
+    tags: ["blocks"],
+    intro: "TetraDice mixes falling-block puzzles with dice. Instead of tetrominoes you drop pip-covered shapes onto a grid, slotting them so complete rows vanish. Each placement shapes what comes next, and an endless mode keeps the board filling long after the standard run ends. Simple to start, tricky to keep clean.",
+    howToPlay: "Shapes fall from the top. Move and rotate each one so it settles into gaps, then fill a whole row to clear it and free space. Repeat until the stack reaches the top, or switch to endless mode and survive as long as you can.",
+    controls: "Click or tap to play.",
+  },
+
+  "age-of-heroes": {
+    tags: ["boys"],
+    intro: "Age of Heroes hands you a fledgling empire where each era brings new troops, tougher towers and bolder rivals. Recruit commanders, shape a fighting force and push your borders outward one hard-won battle at a time. Strategy, timing and a little nerve decide who rules the map.",
+    howToPlay: "Start with a small force, send it into battle to earn gold, then spend that gold on tougher units and stronger tower defenses. Each win opens a new era with fresh enemies, so keep rotating your lineup, upgrading heroes and choosing fights you can actually finish.",
+    controls: "Click or tap to play.",
+  },
+
+  "simple-words": {
+    tags: ["words"],
+    intro: "Simple Words layers word building onto falling blocks. Choose letters from the board to spell a word, and the blocks you use darken; fill an entire row and it clears, letting new letters drop in. It is a patient, low-pressure puzzle that rewards seeing small words quickly.",
+    howToPlay: "Select letters to form a word. Each block you use dims, and clearing every letter in a row removes that row so fresh blocks can fall in. Build words steadily and keep an eye on the space you have left.",
+    controls: "Click or tap letters to build a word.",
+  },
+
+  "wood-blocks-jam": {
+    tags: ["puzzle"],
+    intro: "Wood Blocks Jam is a quiet, timer-free puzzle game about one satisfying act: dragging wooden pieces until they sit exactly where they belong. Every level is handcrafted, so the board is short but never random, and it only clears once all blocks have settled into their matching gates. Slow thinking is welcome here.",
+    howToPlay: "Look at the board and work out which gate each wooden block belongs to. Drag a block toward its matching gate, then repeat for the rest. Blocks clear once they land correctly, and the level ends when the board is empty.",
+    controls: "Drag blocks with your mouse or finger.",
+  },
+
+  "geometry-arrow-2": {
+    tags: ["arcade"],
+    intro: "How far can you push an arrow through a collapsing cavern? Geometry Arrow 2 packs tight corridors, spinning hazards and a fresh wheel-shaped hero into one precise arcade run. Every corridor asks for clean timing and a cool head. One wrong twitch and the run ends; one smooth line and the portal is yours.",
+    howToPlay: "Steer your arrow through each cave, slipping past spikes, moving walls and rotating traps to reach the glowing portal. Touching any hazard restarts the stage instantly. Levels get tighter and faster, so each screen is a short puzzle of timing rather than a long endurance test.",
+    controls: "Click or tap to play.",
+  },
+
+  "grand-shift-auto": {
+    tags: ["action"],
+    intro: "Three missions stand between you and the top of a city that never sleeps. Grand Shift Auto drops you into a shadowy underworld of fast sports cars, loud shootouts and quick getaways. Steal the right ride, keep your nerve in a firefight, and finish each job before the streets turn on you.",
+    howToPlay: "Work through three gangster missions in order. On each one, drive to the marked spot, deal with the rivals waiting there, then grab the sports car and escape. Shooting and driving share the same run, so plan your exit before the bullets start.",
+    controls: "Arrow keys or W, A, S, D to drive and move, mouse to aim and shoot.",
+  },
+
+  "geometry-vibes-3d": {
+    tags: ["3d"],
+    intro: "Geometry Vibes 3D turns a neon tunnel into a test of timing. Blocks, spikes and shifting walls rush at you in step with a driving beat, so every jump and sidestep lands on the music rather than on a countdown. Simple to start, hard to put down.",
+    howToPlay: "Each run sends you forward through a single lane of obstacles. Time a jump or a sideways move to clear what's in front of you, stay alive through the beat drop, and chase a cleaner run than the last one. One hit ends the attempt.",
+    controls: "Click or tap to jump.",
+  },
+
+  "1-speed-escape-prison": {
+    tags: ["obby"],
+    intro: "Every checkpoint in this prison is a small victory, and every speed pad you touch makes the next stretch harder to control. Sprint through cell blocks, jump narrow ledges, and dodge moving hazards while each +1 boost quietly raises the stakes. One clean run is all it takes to break out.",
+    howToPlay: "Reach the exit by clearing obstacle courses checkpoint by checkpoint. Collect +1 speed pads to move faster, but remember that extra speed makes tight jumps and corners riskier. Falling or hitting a hazard sends you back, so learn each section before pushing the pace.",
+    controls: "WASD or arrow keys to move and Space to jump, or tap the on-screen controls on mobile.",
+  },
+
+  "detective-max-mystery-the-disappearance-of-mr-winters": {
+    tags: ["adventure"],
+    intro: "Mr. Winters has vanished, and every answer you get seems to leave something out. Play as Detective Max, working a story-driven case built on observation rather than reflexes: search locations for clues, question the people involved, and slowly assemble the truth behind the disappearance.",
+    howToPlay: "Move between locations, examine anything that looks out of place, and collect the clues you find. Talk to suspects, compare what they tell you, and use the evidence to unlock new lines of inquiry until the case resolves.",
+    controls: "Click or tap to play.",
+  },
+
+  "burger-restaurant-simulator-3d": {
+    tags: ["simulation"],
+    intro: "Burger Restaurant Simulator 3D puts you behind the counter of your own fast-food spot. Take orders, flip patties, stack toppings, and keep hungry customers moving through the queue. Hire help, upgrade equipment, and reinvest profits to turn a tiny counter into a busy restaurant empire.",
+    howToPlay: "Take each customer's order, then grill the patty, add the requested toppings, and hand over the finished burger before patience runs out. Use the money you earn to buy better stations and hire staff, then repeat the cycle as the queue grows.",
+    controls: "Click or tap to play.",
+  },
+
+  "winter-tale-secrets-and-mergings": {
+    tags: ["merge"],
+    intro: "Snow has buried the old forest, and its Christmas spark has gone quiet. Combine what you find — tools, trinkets, treats — into bigger, brighter things, and the clearing slowly wakes. Piece by piece the season returns, and the quiet woodland starts sharing the stories it kept.",
+    howToPlay: "Drag two matching items together to merge them into one upgraded piece. Merging frees board space, so you can keep producing more. Work through the tasks you are given, and each completed merge brings the snowy forest a little closer to its old festive self.",
+    controls: "Drag items together to merge them; tap to select.",
+  },
+
+  "war-groups": {
+    tags: ["strategy"],
+    intro: "War Groups is a browser-based strategy game about slow-burn territorial ambition. Pick a side, push your influence across contested sectors, and gather rare artifacts that tilt the odds. Deals with other players matter as much as battles, so every alliance you join or abandon reshapes the map.",
+    howToPlay: "Claim a starting sector, then expand into neighbouring territory, recruit units and secure artifacts as you go. Balance aggression with negotiation: trade what you don't need, ally where it helps, and consolidate your gains before rivals close in.",
+    controls: "Click or tap to play.",
+  },
+
+  "tornado-fury-of-the-elements": {
+    tags: ["mobile"],
+    intro: "Become a tornado lord and turn quiet streets into spinning chaos. Summon whirlwinds, tear through buildings, and slip past the defences that want you gone. Every run earns power you can pour into upgrades, so each storm hits harder than the last. Simple to start, hard to stop.",
+    howToPlay: "Each level drops you into a city block with a set of targets. Grow your whirlwind as you tear through the streets, flatten the marked buildings, and steer clear of turrets and barriers. Finish the objectives, then spend what you earn on upgrades.",
+    controls: "Click or tap to play.",
+  },
+
+  "race-on-cars-in-moscow": {
+    tags: ["racing"],
+    intro: "Moscow traffic moves fast and rarely forgives. Weave a tuned car through dense city lanes, dodge collisions, and stack up records run after run. Simple steering hides real pressure: one clipped bumper ends the streak. Jump in, learn the flow of the road, and chase a cleaner line every attempt.",
+    howToPlay: "Drive forward through city traffic, steering left and right to slip between slower cars. Each clean pass extends your run; contact resets progress. Collect the tuning rewards you earn, upgrade your car between attempts, and push for a longer distance record than your last run.",
+    controls: "Use the arrow keys or WASD to steer.",
+  },
+
+  "clicker-knights-vs-dragons": {
+    tags: ["clicker"],
+    intro: "Clicker Knights Vs Dragons turns a pixel-art battlefield into an idle grind: tap to strike, let auto-attack cover the gaps, and push deeper stages. The loop stays deliberately simple — upgrade damage when progress stalls, then watch the numbers climb past the wall that stopped you last run.",
+    howToPlay: "Tap the screen to damage the current enemy. Your knight keeps attacking on its own, so stages keep moving while you idle. Reinvest what you earn into attack and survivability upgrades, clear each stage's waves, then advance to tougher ground.",
+    controls: "Click or tap to play.",
+  },
+
+  "the-machinegg": {
+    tags: ["idle"],
+    intro: "The MachinEGG turns a quiet coop into a rolling egg economy. Start with a single hen, gather what she lays, and reinvest the proceeds into more birds and smarter machinery. Progress continues while you are away, so every return feels like collecting a paycheck — keep upgrading until the farm finally pays for your retirement.",
+    howToPlay: "Buy hens, then collect the eggs they produce. Spend that income on additional chickens and automated upgrades that raise output. The farm keeps generating between visits, so return regularly, reinvest everything into faster production, and push toward your retirement goal.",
+    controls: "Click or tap to play.",
+  },
+
+  "slice--soar": {
+    tags: ["skill"],
+    intro: "Slice & Soar turns quick hands into high scores. Objects tumble through the air, and every clean cut adds points while one stray obstacle ends the run. It looks easy for a few seconds, then asks for timing, patience, and restraint. Short rounds, no downloads, and one more try always feels close.",
+    howToPlay: "Cut the falling objects before they drop out of view, and each slice builds your score. Keep your cursor or finger moving in short, controlled passes. Avoid every obstacle in the mix, because a single hit ends the run and resets your progress.",
+    controls: "Click or tap to play.",
+  },
+
+  "car-parking-driving-game": {
+    tags: ["car"],
+    intro: "Squeezing a car into a narrow bay looks simple until the walls close in. This 3D parking sim hands you tight garages, awkward corners and mission objectives that reward patience over speed. Learn each lot, line up early and finish clean.",
+    howToPlay: "Read the mission target, steer through the lot and slot the car into the marked space without scraping paint. Complete each objective to unlock the next challenge, then replay earlier lots and tighten your angles.",
+    controls: "Arrow keys or WASD to drive, accelerate and reverse.",
+  },
+
 };
 
 /** Homepage "Featured Games" — hand-curated, NOT a popularity ranking
