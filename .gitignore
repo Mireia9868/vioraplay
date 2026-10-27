@@ -54,3 +54,11 @@ ops/index-audit-report.md
 # OAuth client secret, refresh token, and generated reports
 /secrets/
 ops/gsc-report-*.md
+
+# outreach targets and generated drafts
+ops/outreach/
+ops/backlink-targets.json
+
+# outreach targets and generated drafts
+ops/outreach/
+ops/backlink-targets.json
