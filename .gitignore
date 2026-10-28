@@ -66,3 +66,4 @@ ops/backlink-targets.json
 ops/tmp/
 
 .npm-cache/
+ops/indexnow-submitted.json
