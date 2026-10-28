@@ -1445,4 +1445,95 @@ export const GAME_DEEP_CONTENT: Record<
       { q: "Do the smallest fruits matter later in the game?", a: "Yes. Small fruits are the only way to fill gaps and trigger low merges, so dropping them carelessly wastes useful material. Keep a few reachable near the surface." },
     ],
   },
+  "capitalist-hunter": {
+    strategy: "Early on, don't overpack. Take one or two clean kills, sell the meat quickly, and put the cash into better storage and a stronger weapon before expanding. Spoiled meat earns nothing, so shorten your routes first. Upgrade capacity only after a full trip stops feeling cramped.",
+    faq: [
+      { q: "Is it better to cook meat or sell it raw?", a: "Cooking often sells for more than raw meat, but it also costs time you could spend hunting. Compare the price of each option before committing a batch." },
+      { q: "What should I upgrade first?", a: "Storage and carrying capacity come first, because they let every trip pay off fully. Weapons and staff matter later, once you can reliably fill what you already carry." },
+    ],
+  },
+  "robby-superhero-obby": {
+    strategy: "Do not rush the first runs. Walk into each new obstacle once just to watch how it moves, then plan a jump rhythm. Line up jumps before you sprint. When a power unlocks, test it on flat ground first, since several abilities change your momentum and can throw off a jump you already know.",
+    faq: [
+      { q: "Do I need to play the courses in order?", a: "The courses build on each other, but checkpoints let you retry a section without starting over, so a failed jump costs you very little time." },
+      { q: "Is it hard for beginners?", a: "Early sections are gentle and teach one idea at a time. Later courses combine powers with tight timing, which is where most players start dying repeatedly." },
+    ],
+  },
+  "tap-away-block-puzzle-3d": {
+    strategy: "Start with blocks on the outside edges, since they usually have the shortest path out. Before tapping, trace the exit line and check nothing blocks it. If a piece will not budge, rotate your view and look for a hidden neighbor. Clearing in layers keeps later moves open and prevents a locked pile.",
+    faq: [
+      { q: "Do I need to move fast?", a: "No. There is no timer or score pressure in the core loop, so you can take as long as you need to plan each tap. Speed only matters if you want it to." },
+      { q: "What happens if a block gets stuck?", a: "Rotate the view first, because the blocking piece is often behind or under the one you selected. Tapping the neighbor that sits in the exit path usually frees it." },
+    ],
+  },
+  "diamond-sort-picture-puzzle": {
+    strategy: "Start with the gems blocking the largest area rather than the ones that are easiest to match. Scan the whole board before moving, because one good move can unlock several groups at once. Leave a pair in reserve so you always have a move available, and avoid clearing clusters that strand a single colour.",
+    faq: [
+      { q: "Do I need to match every gem to finish a level?", a: "Yes — clearing every gem empties the board and reveals the finished artwork, so sorting and uncovering usually happen together rather than as separate steps." },
+      { q: "Does the picture help me solve the board?", a: "It can. The artwork shows how much of the board you have uncovered, and the gaps hint at which areas still hold unsorted gems worth working on next." },
+    ],
+  },
+  "the-queens-jewels": {
+    strategy: "Look at the whole board before your first move, not just the top layer. Free the gems blocking the widest gaps first, since letting pieces cascade opens more matching options than chasing single pairs. Bank a couple of moves for the final push, because the last few jewels are the ones trapped at the bottom.",
+    faq: [
+      { q: "Do I need to match three jewels to score?", a: "Matching in small groups works, but bigger clusters usually clear more of the board and create better cascades. Aim for the largest group you can reach rather than the quickest one." },
+      { q: "What happens if I run out of moves?", a: "The level ends and you can retry it. Use the failed attempt to study which clusters you ignored, then open with those on the next run instead of repeating the same first move." },
+    ],
+  },
+  "electron-dash": {
+    strategy: "Beginners lose speed by flipping too late, so watch the gap before you reach it. Stay in attract mode to build pace on long straights, then repel early to avoid a hard correction. Small taps beat panic spamming, and keeping one escape direction in mind turns near misses into clean runs.",
+    faq: [
+      { q: "Does Electron Dash get harder the longer you survive?", a: "Yes. Speed climbs as you survive, and gaps tighten, so the same flip that worked early will overshoot later. Expect your best runs to come from patience rather than raw reaction." },
+      { q: "Can I recover after a bad flip?", a: "Usually not on a narrow section, so prevention matters more than correction. On open stretches, a quick opposite flip can pull you back toward the line, but it costs you speed." },
+    ],
+  },
+  "2-player-games-mini-games": {
+    strategy: "Protect your side first. Beginners chase the ball and leave the back open, which loses points fast. Move in small adjustments, keep your paddle or cue between the ball and your goal, and wait for a clear opening. When you get one, hit toward the far corner rather than straight back.",
+    faq: [
+      { q: "Can two people play on the same device?", a: "Yes. Both players share one screen and one device, so you can start a match without a second phone, extra account, or download." },
+      { q: "Which game should beginners start with?", a: "Air hockey and tennis are the easiest to pick up because scoring is immediate. Curling and billiards reward patience and aim, so try them once the basics feel comfortable." },
+    ],
+  },
+  "piece-of-cake-merge--bake": {
+    strategy: "Keep a clear section of the board for merging and avoid filling every space, so you always have room to combine. Merge low-level items in pairs rather than spreading them out, and prioritise orders that reward items you already have. Save high-value bakes for when an order specifically requests them.",
+    faq: [
+      { q: "What happens if my board fills up?", a: "When space runs out, merge the lowest-level items first to free up tiles. Completing orders also clears the items you used, so plan a few merges ahead." },
+      { q: "Can I play at my own pace?", a: "Yes. Play in short sessions or long ones; you can merge and bake whenever you have a moment, and the story waits for you to return." },
+    ],
+  },
+  "liquid-sort-puzzle": {
+    strategy: "Start by checking which colours are buried deepest, then free those layers first. Pour onto matching colours whenever it merges two partial glasses into one, and save empty glasses as working space rather than filling them early. Before a pour, ask what it unlocks next; if the answer is nothing, look for a better sequence.",
+    faq: [
+      { q: "Can I pour any colour onto any glass?", a: "No. A pour is allowed only when the target glass is empty or its top layer matches the colour you are pouring, and the glass still has room for the liquid." },
+      { q: "What happens if I get stuck?", a: "You can usually restart or undo the last move. Restarting is often faster than trying to untangle a board where every glass is full of mixed colours." },
+    ],
+  },
+  "find-match-3d": {
+    strategy: "Start with the widest, least crowded area, because open space makes similar shapes easier to compare. Before selecting anything, sweep the whole scene once and note where matching pairs sit. Save tucked-away or partly hidden items for last, and double-check the edges of the screen before you commit to a set.",
+    faq: [
+      { q: "Do I need to match items in a specific order?", a: "No. Any three identical objects can be cleared whenever you find them, so work at your own pace and follow whichever corner of the scene catches your eye first." },
+      { q: "What happens when I clear a set?", a: "The three matched objects disappear from the scene, freeing up room so remaining items are easier to see. That is why clearing crowded areas early tends to make later matches simpler." },
+    ],
+  },
+  "paint-race": {
+    strategy: "Slow down before a gap, not inside it. Look one barrier ahead and aim for the widest opening instead of the shortest line. Small adjustments beat big corrections, and a steady pace beats a reckless sprint. Replay the early levels until your movement feels automatic, then start pushing for speed.",
+    faq: [
+      { q: "How many levels does Paint Race have?", a: "Fifty. The level list grows steadily harder, mixing tighter gaps with quicker patterns, so expect the later stages to demand far more precision than the opening ones." },
+      { q: "What should a beginner focus on first?", a: "Accuracy before speed. Learn each layout at a comfortable pace, memorize where the dark barriers sit, and only chase faster clears once your runs feel consistent and repeatable." },
+    ],
+  },
+  "bottle-color-match-challenge": {
+    strategy: "Free one bottle early and treat it as your working space; sorting is far easier with room to park a colour. Before every move, check whether the top layers of two bottles match, and pour the smaller group onto the larger one so you do not scatter a tidy stack.",
+    faq: [
+      { q: "Do I need to play fast?", a: "Pace matters more than speed here: study the board before each pour instead of tapping quickly. Rushing tends to scatter colours and leave you with fewer usable bottles." },
+      { q: "What should I do when every bottle looks stuck?", a: "Look for a bottle holding only one or two layers and empty it first. A single free container often unlocks a chain of matches you could not see before." },
+    ],
+  },
+  "merge-adventure": {
+    strategy: "Keep your board from filling up before you merge everything you can. Clear small items in groups rather than one at a time, and resist spending coins on the first upgrade you see — save for the repair that unlocks the next area. If the board jams, merge the highest tier you have.",
+    faq: [
+      { q: "How long does a session usually take?", a: "As long as you want. You can merge a couple of items and close the game, or settle in for a longer renovation push. Nothing forces you to finish a room in one sitting." },
+      { q: "What should I do when I run out of obvious matches?", a: "Look for any two identical items, even small ones — merging them frees a square. Sorting your board so similar tiers sit together makes the next match easier to spot." },
+    ],
+  },
 };

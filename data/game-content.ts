@@ -2551,6 +2551,97 @@ export const GAME_CONTENT: Record<string, GameContent> = {
     controls: "Move the pointer to aim, then click to drop the fruit.",
   },
 
+  "capitalist-hunter": {
+    tags: ["simulation"],
+    intro: "Capitalist Hunter turns a quiet woodland into a supply chain. Track animals through the brush, take clean shots, and carry the meat back before it spoils. Sell your haul, cook better cuts, and reinvest the profit into gear and staff until a modest hunting trip becomes a working business.",
+    howToPlay: "Hunt animals for meat, return to camp to cook and sell what you gather, then spend the earnings on upgrades. Each successful trip funds a bigger trip, so the loop is hunt, sell, upgrade, and repeat.",
+    controls: "Click or tap to play.",
+  },
+
+  "robby-superhero-obby": {
+    tags: ["obby"],
+    intro: "Robby Superhero Obby sends you sprinting through bright obstacle courses where checkpoints unlock a new power each time. Ten abilities change how you jump, dash and climb, so the same gap can be crossed in several ways. Expect tight platforms, moving hazards and a few moments that reward patience more than speed.",
+    howToPlay: "Run, jump and climb across each course, reach the checkpoints to unlock new superpowers, and use them to clear obstacles that basic movement cannot beat. Dying sends you back to the last checkpoint, so progress builds as you learn each section.",
+    controls: "Use the arrow keys or WASD to move and space to jump.",
+  },
+
+  "tap-away-block-puzzle-3d": {
+    tags: ["puzzle"],
+    intro: "Tap Away Block Puzzle 3D turns a solid stack of colorful blocks into a quiet challenge. Each tap sends one block sliding out of the structure, and the shape loosens piece by piece. No timer pushes you along, so you can study the pile, pick your angle, and enjoy watching it come apart.",
+    howToPlay: "Look at the 3D structure from the angle that shows clear paths. Tap a block whose route out is unobstructed, and it slides free. Work through the pile, freeing outer pieces first, until the whole structure is cleared and the level is done.",
+    controls: "Click or tap to play.",
+  },
+
+  "diamond-sort-picture-puzzle": {
+    tags: ["puzzle"],
+    intro: "Diamond Sort: Picture Puzzle turns a simple sorting task into a slow reveal. Each board hides artwork behind layers of colourful gems, and every gem you send to its matching slot clears a little more of the scene. Calm, compact and quietly addictive, it works for a two-minute break or a long session.",
+    howToPlay: "Select a gem, then choose where it belongs. Matching colours combine and open up the space beneath them, letting you reach deeper gems. Keep sorting until the picture underneath is fully revealed and the board is clear.",
+    controls: "Click or tap to play.",
+  },
+
+  "the-queens-jewels": {
+    tags: ["puzzle"],
+    intro: "Somewhere in the palace vault, a royal collection has been scattered into glittering piles, and only a steady hand can sort it again. The Queen's Jewels is a casual physics puzzle where gems tumble, settle and snap together across stages that keep rewriting the rules. Easy to pick up, quietly demanding to master.",
+    howToPlay: "Match jewels by dropping, sliding or tapping them into like-coloured groups. Clear each level's target arrangement before you run out of moves, and adapt as new obstacles change how the gems fall.",
+    controls: "Click or tap to play.",
+  },
+
+  "electron-dash": {
+    tags: ["physics"],
+    intro: "Electron Dash turns a tiny charged dot into your whole world. Ride magnetic rails at blistering speed, flicking between pull and push to thread narrow gaps. One wrong polarity and the run ends; one clean line and the momentum carries you further than you thought possible. Short bursts, sharp reflexes, endless replays.",
+    howToPlay: "Guide the charge along the track by switching its polarity. Attract pulls you toward conductors, repel shoves you clear. Time each flip so you slip past obstacles and keep your speed, because the track never slows down for you.",
+    controls: "Click or tap once to flip polarity between attract and repel.",
+  },
+
+  "2-player-games-mini-games": {
+    tags: ["two-player"],
+    intro: "Two players, one screen, four quick contests. Pick tennis, air hockey, curling, or billiards and settle it in a few minutes without leaving the page. Everyone plays from the same device, so the match stays fast, loud, and close. Expect short rallies, sharp angles, and plenty of rematches.",
+    howToPlay: "Choose a sport, then take turns or defend your half depending on the game. Score by getting the ball or puck past your opponent, or by landing closer to the target. First to the agreed score wins the round.",
+    controls: "Click or tap to play.",
+  },
+
+  "piece-of-cake-merge--bake": {
+    tags: ["cozy"],
+    intro: "Piece of Cake: Merge & Bake blends relaxing merge puzzles with a cozy bakery and a mansion full of family secrets. Combine ingredients into new treats, restore forgotten rooms, and keep customers happy. Each chapter reveals a little more of the story while your cafe grows, giving you a gentle rhythm of discovery and progress.",
+    howToPlay: "Merge matching items on the board to craft better ingredients and finished bakes. Fill customer orders with what you produce, then spend the earnings on renovating the mansion and unlocking new recipes that keep the cycle moving.",
+    controls: "Drag and drop items to merge them.",
+  },
+
+  "liquid-sort-puzzle": {
+    tags: ["puzzle"],
+    intro: "Liquid Sort Puzzle turns a simple glass of coloured water into a compact logic problem. Each glass holds layered colours, and you pour, blend and separate until every glass holds a single shade. The rules are easy, but the order of your moves decides whether the board opens up or locks tight.",
+    howToPlay: "Tap a glass to lift the top layer of liquid, then tap another glass to pour it. You can pour only onto an empty glass or onto a matching colour, and only if there is room. Keep pouring until every glass holds one colour.",
+    controls: "Click or tap to play.",
+  },
+
+  "find-match-3d": {
+    tags: ["3d"],
+    intro: "Find Match 3D turns a cluttered room into a calm little hunt. Scan shelves, tables, and corners for three identical objects, then clear them one by one until the scene is tidy. It is gentle, unhurried puzzling that rewards a careful eye more than fast fingers, and it fits neatly into a coffee break.",
+    howToPlay: "Look around the 3D scene for three matching items, then select them together to clear them from the pile. Each cleared set reveals more of the room, so keep scanning until every object is gone.",
+    controls: "Click or tap to play.",
+  },
+
+  "paint-race": {
+    tags: ["unity"],
+    intro: "Paint Race turns speed and precision into a bright arcade challenge. Guide a moving circle through fifty levels, slipping past dark barriers that punish sloppy timing. Each stage rewards smooth, confident movement over frantic reactions. Clear a path, keep your rhythm, and see how quickly clean lines carry you forward.",
+    howToPlay: "Guide your circle through each level, steering around dark barriers without touching them. Complete the course to advance, and keep your line clean from start to finish. Each stage adds tighter gaps and faster patterns, so precision matters as much as speed.",
+    controls: "Click or tap to play.",
+  },
+
+  "bottle-color-match-challenge": {
+    tags: ["color"],
+    intro: "Bottles arrive filled with mixed colours, and your job is to sort every layer until each container holds a single shade. It looks calm and tidy at first, then the last few layers start to fight back. Plenty of small decisions, and a clear finish line waiting at the end.",
+    howToPlay: "Move colour between bottles so matching shades end up together. Combine identical layers, free up space by emptying a container, and keep going until every bottle holds one colour only.",
+    controls: "Click or tap to play.",
+  },
+
+  "merge-adventure": {
+    tags: ["merge"],
+    intro: "Merge Adventure is a gentle puzzler about turning a cluttered space into somewhere worth staying. Combine matching pieces — coffee cups, garden clippings, renovation odds and ends — to grow them into better versions, then spend what you earn tidying up the rooms around you. Unhurried and easy to dip into.",
+    howToPlay: "Pick up two matching items and drop one onto the other to merge them into a single upgraded piece. Each merge frees space on your board and earns coins; spend those coins on repairs and furniture to finish one room, then move on to the next.",
+    controls: "Drag one item onto another to merge them.",
+  },
+
 };
 
 /** Homepage "Featured Games" — hand-curated, NOT a popularity ranking

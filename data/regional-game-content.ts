@@ -182,6 +182,18 @@ export const REGIONAL_GAME_CONTENT: Record<string, Record<string, {
         { "q": "Posso recomeçar?", "a": "Sim; se travar, mude a ordem dos primeiros movimentos antes de repetir." },
       ]
     },
+    "electron-dash": {
+      "title": "Electron Dash — Arcade Magnético em Alta Velocidade",
+      "intro": "Electron Dash é um arcade em alta velocidade onde o magnetismo é a tua única ferramenta de sobrevivência. Atrai e repele para deslizar entre obstáculos, mantém o ritmo e adapta-te ao movimento. Cada segundo conta e um toque fora de tempo acaba a corrida. Simples de começar, difícil de largar, viciante a cada tentativa.",
+      "howToPlay": "Controla uma esfera que corre sem parar. Toca para alternar entre atrair e repelir os polos magnéticos e usa esse impulso para passar por plataformas e blocos. Sobrevive o máximo de tempo possível, evita os espinhos e aprende o padrão de cada obstáculo.",
+      "controls": "Click or tap to play.",
+      "strategy": "No início, concentra-te em perceber o ritmo em vez de reagir a cada obstáculo. Mantém pequenas correções: um toque curto costuma ser suficiente para mudar de direção. Olha sempre um pouco à frente e memoriza as sequências que te fizeram falhar. Repetir as primeiras secções ajuda a ganhar consistência antes de tentares voos longos.",
+      "faq": [
+        { "q": "É difícil jogar Electron Dash?", "a": "É fácil de aprender, mas exigente de dominar. As primeiras tentativas servem para entender o movimento magnético; depois, a dificuldade cresce com a velocidade e com obstáculos mais próximos." },
+        { "q": "Quanto tempo dura uma partida?", "a": "As partidas são curtas por natureza: perdes e recomeças em segundos. Essa repetição rápida é o que torna fácil treinar o ritmo e melhorar aos poucos." },
+      ]
+    },
+
   },
   "es": {
     "arrow-exit-puzzle": {
@@ -468,6 +480,50 @@ export const REGIONAL_GAME_CONTENT: Record<string, Record<string, {
       "faq": [
         { "q": "Bisa diperbaiki?", "a": "Biasanya per run; mengulang lebih cepat daripada melanjutkan rusak." },
         { "q": "Apakah ada level?", "a": "Sebagian versi punya lintasan berganda; lainnya satu lintasan panjang." },
+      ]
+    },
+    "the-machinegg": {
+      "title": "The MachinEGG: Peternakan Telur Idle",
+      "intro": "The MachinEGG adalah game idle santai tentang membangun peternakan telur dari nol. Beli ayam, panen telur, lalu investasikan hasilnya untuk membeli ayam yang lebih produktif dan mesin otomatis. Semakin rapi peternakanmu, semakin banyak telur terkumpul bahkan saat kamu tidak membuka game. Cocok dimainkan beberapa menit sehari, tanpa tekanan.",
+      "howToPlay": "Mulai dengan membeli ayam pertama, lalu kumpulkan telur yang dihasilkan. Jual telur untuk mendapat koin, beli ayam tambahan, dan buka mesin otomatis agar produksi berjalan sendiri. Setelah peternakan stabil, pensiunkan ayam lama dan ulangi dengan bonus lebih besar.",
+      "controls": "Klik atau ketuk untuk bermain.",
+      "strategy": "Prioritaskan membeli ayam termurah lebih dulu agar jumlah produksi cepat naik, baru tingkatkan kualitasnya. Simpan koin untuk mesin otomatis pertama sebelum membeli ayam mahal, karena produksi pasif mempercepat semuanya. Jangan buru-buru pensiun: pastikan bonus pensiun cukup besar untuk melompati beberapa tingkat awal.",
+      "faq": [
+        { "q": "Apakah saya harus terus membuka game agar telur bertambah?", "a": "Tidak. Setelah mesin otomatis aktif, telur biasanya tetap terkumpul meskipun kamu menutup game. Kembali beberapa jam kemudian untuk memanen hasilnya, lalu investasikan lagi ke ayam dan mesin baru." },
+        { "q": "Apakah pensiun menghapus semua progres saya?", "a": "Pensiun mereset peternakan, tetapi kamu mendapat bonus permanen yang mempercepat putaran berikutnya. Gunakan bonus itu untuk membeli ayam dan mesin otomatis sejak awal, lalu ulangi siklusnya." },
+      ]
+    },
+    "2-minute-football-qb-legend": {
+      "title": "2 Minute Football QB Legend: Lemparan Kilat Menuju Touchdown",
+      "intro": "Uji naluri quarterback dalam dua menit terakhir yang menegangkan. Baca pertahanan, pilih penerima yang tepat, dan lepaskan lemparan akurat sebelum waktu habis. Setiap detik berarti, dan satu keputusan buruk bisa menggagalkan drive. Cocok untuk pemain yang menyukai tekanan serta strategi cepat di lapangan.",
+      "howToPlay": "Mulai dari posisi bola di lapangan, lalu jalankan drive singkat menuju end zone. Pilih penerima, atur waktu lemparan, dan hindari tekanan bek lawan. Setiap touchdown menambah skor, sementara waktu terus berkurang. Gunakan sisa waktu sebaik mungkin untuk mencetak poin.",
+      "controls": "Klik atau ketuk untuk bermain.",
+      "strategy": "Jangan terburu-buru melempar ke penerima pertama yang terbuka. Perhatikan posisi bek, lalu pilih target yang punya ruang paling luas. Lemparan pendek dan aman membantu menjaga drive tetap hidup, sedangkan umpan jauh sebaiknya dipakai saat waktu mendesak. Kelola jam dan hindari intersepsi.",
+      "faq": [
+        { "q": "Apakah saya harus memahami aturan American football untuk bermain?", "a": "Tidak perlu. Fokus utamanya adalah melempar bola ke penerima dan mencetak touchdown sebelum waktu habis. Pemain baru bisa langsung mencoba dan memahami ritme permainan setelah beberapa kali mencoba." },
+        { "q": "Apa kesalahan yang paling sering dilakukan pemain pemula?", "a": "Melempar terlalu cepat ke penerima yang dijaga ketat. Luangkan sedikit waktu untuk membaca pergerakan bek, lalu pilih target dengan ruang lebih terbuka agar peluang menyelesaikan umpan meningkat." },
+      ]
+    },
+    "diamond-sort-picture-puzzle": {
+      "title": "Diamond Sort: Picture Puzzle – Susun Permata, Ungkap Gambar",
+      "intro": "Diamond Sort: Picture Puzzle mengubah tugas mengurutkan sederhana menjadi pengungkapan perlahan. Setiap papan menyembunyikan karya seni di balik lapisan permata berwarna, dan setiap permata yang kamu kirim ke slotnya membuka sedikit lebih banyak. Tenang, ringkas, dan bikin ketagihan: pas untuk istirahat dua menit atau sesi panjang.",
+      "howToPlay": "Pilih satu permata, lalu tentukan slot tempatnya kembali. Warna yang cocok akan menyatu dan membuka ruang di bawahnya, sehingga permata lebih dalam bisa dijangkau. Terus urutkan sampai seluruh gambar terbuka dan papan bersih.",
+      "controls": "Klik atau ketuk untuk bermain.",
+      "strategy": "Mulailah dari permata yang menutup area paling luas, bukan yang paling mudah dipasangkan. Amati seluruh papan sebelum melangkah, karena satu langkah tepat bisa membuka beberapa kelompok sekaligus. Sisakan satu pasang sebagai cadangan dan hindari membersihkan kelompok yang membuat satu warna terisolasi.",
+      "faq": [
+        { "q": "Apakah semua permata harus diurutkan untuk menuntaskan level?", "a": "Ya. Membersihkan seluruh permata akan mengosongkan papan sekaligus membuka karya seni utuh, jadi mengurutkan dan mengungkap gambar berjalan bersamaan, bukan dua langkah terpisah." },
+        { "q": "Apakah gambar yang tersembunyi membantu menyelesaikan papan?", "a": "Bisa. Karya seni menunjukkan seberapa besar papan yang sudah terbuka, dan celah yang tersisa memberi petunjuk area mana yang masih menyimpan permata dan layak dikerjakan berikutnya." },
+      ]
+    },
+    "capitalist-hunter": {
+      "title": "Capitalist Hunter: Simulator Berburu & Bisnis Daging",
+      "intro": "Masuki hutan, bidik hewan buruan, lalu olah hasilnya jadi hidangan yang laris. Capitalist Hunter memadukan aksi berburu dengan simulasi bisnis: setiap tembakan dan setiap masakan menentukan untung rugi. Mulai dari pemburu pemula, kumpulkan modal, dan bangun jaringan usaha daging yang terus berkembang.",
+      "howToPlay": "Berburu hewan untuk mendapat daging, kumpulkan hasil buruan, lalu masak dan jual ke pelanggan. Gunakan uangnya untuk membeli peralatan dan membuka area buruan baru. Ulangi putaran ini untuk memperbesar usaha.",
+      "controls": "Click or tap to play.",
+      "strategy": "Jangan langsung mengejar hewan besar; buruan kecil lebih cepat dan menghemat tenaga. Simpan uang untuk membeli peralatan yang lebih baik sebelum memperluas area, karena hasil buruan yang terbuang percuma adalah kerugian. Masak dalam jumlah banyak sekaligus agar biaya per porsi turun, lalu jual bertahap saat permintaan tinggi.",
+      "faq": [
+        { "q": "Apakah saya bisa bermain tanpa membeli apa pun?", "a": "Ya. Seluruh alur berburu, memasak, dan menjual bisa diselesaikan dengan hasil buruan awal. Pembelian hanya mempercepat kemajuan, bukan syarat untuk menikmati permainan." },
+        { "q": "Apa yang harus diprioritaskan lebih dulu?", "a": "Prioritaskan peningkatan peralatan berburu dan pengolahan daging. Keduanya langsung menambah pendapatan per perjalanan, sehingga modal untuk membuka area baru bisa terkumpul lebih cepat." },
       ]
     },
 

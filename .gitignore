@@ -64,3 +64,5 @@ ops/outreach/
 ops/backlink-targets.json
 
 ops/tmp/
+
+.npm-cache/

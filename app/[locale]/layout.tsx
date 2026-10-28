@@ -7,6 +7,7 @@ import { routing, type Locale } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { AdSense } from "@/components/AdSense";
+import { Analytics } from "@vercel/analytics/next";
 import { ConsentBanner } from "@/components/ConsentBanner";
 import { FooterConsentLink } from "@/components/FooterConsentLink";
 import { SiteNav } from "@/components/SiteNav";
@@ -115,6 +116,9 @@ export default async function LocaleLayout({
           <AdSense />
           {/* Analytics consent banner. Ad consent is Google's own message. */}
           <ConsentBanner />
+          {/* Cookieless aggregate traffic, independent of analytics consent.
+              This is the source of truth for "did traffic actually drop?". */}
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
