@@ -2642,6 +2642,139 @@ export const GAME_CONTENT: Record<string, GameContent> = {
     controls: "Drag one item onto another to merge them.",
   },
 
+  "cars-cbdf-1": {
+    tags: ["car"],
+    intro: "Few things feel as immediate as a busy road at speed. Cars turns that thrill into a compact racing challenge: thread through traffic, judge the gaps, and keep your nerve as the pace climbs. It is simple to start, tense to master, and ideal for a quick burst of competitive driving between other tasks.",
+    howToPlay: "Your goal is to keep moving forward while traffic thickens around you. Overtake slower vehicles, slip through openings before they close, and avoid contact that ends the run. Each clean pass builds momentum, and the longer you survive, the faster and denser the road becomes.",
+    controls: "Click or tap to play.",
+  },
+
+  "supercar-battle-arena": {
+    tags: ["car"],
+    intro: "Buckle into a 3D arena where every supercar is a battering ram. Slam rivals into walls, dodge incoming hits, and stay moving while the arena crowds around you. One clean hit can flip the match, so read the traffic, pick your moment, and be the last car rolling.",
+    howToPlay: "Drive around the arena and ram other cars to knock them out. Stay mobile, avoid getting pinned against the walls, and outlast everyone else in the arena to win the round.",
+    controls: "Click or tap to play.",
+  },
+
+  "traffic-racer-3d": {
+    tags: ["racing"],
+    intro: "A sports car, an endless highway, and a wall of traffic waiting to end your run. Traffic Racer 3D turns a simple idea into a tense rhythm: slip between lanes, hold your nerve, and let the speed climb. One mistake sends you spinning, so every clean pass buys a little more road ahead.",
+    howToPlay: "Accelerate down a three-lane highway, weave around slower vehicles, and keep the car intact as speed rises. Near misses and long clean runs build your score, while a single collision ends the attempt and sends you back for another run.",
+    controls: "Use the arrow keys to steer left and right.",
+  },
+
+  "pocket-universe": {
+    tags: ["adventure"],
+    intro: "Pocket Universe hands you a scrap of empty space and a simple promise: fill it. Place a few tiles, watch a pond appear, then coax a village into being around it. Every small choice ripples outward, turning bare ground into a living world you can wander through at your own pace.",
+    howToPlay: "Start with a patch of bare space. Place tiles to create land, water, and structures, then connect them so your world can grow. Each addition unlocks a little more room, and you keep expanding until a tiny planet feels lived in.",
+    controls: "Click or tap to play.",
+  },
+
+  "zap": {
+    tags: ["cards"],
+    intro: "ZAP is a fast, friendly card game about clearing the table before the deck runs dry. Match what you hold to what's on top, watch the colours shift, and plan two moves ahead. Simple to learn, quietly tense to finish, and short enough to replay whenever you have a spare minute.",
+    howToPlay: "Each turn, you play a card from your hand that matches the top of the discard pile by colour or by number. Special cards bend the rules slightly. Play until your hand is empty or the draw pile runs out, and the lowest remaining total wins.",
+    controls: "Click or tap to play.",
+  },
+
+  "police-mom-simulator": {
+    tags: ["arcade"],
+    intro: "Police Mom Simulator mixes two full-time jobs into one chaotic day. You clock in for patrol, answer emergency calls, and keep the streets calm, then rush home to cook dinner, check homework, and tuck the kids in. Every hour you spend on one duty is an hour stolen from the other.",
+    howToPlay: "Each shift hands you a short list of tasks: patrol the neighbourhood, respond to calls, and finish household chores before the clock runs out. Tap an objective to start it, complete the task, then decide what to tackle next.",
+    controls: "Click or tap to play.",
+  },
+
+  "night-lake": {
+    tags: ["fishing"],
+    intro: "Dark water, one lantern, and a rod. Night Lake asks you to row out into the quiet and drop a line where the light thins out. Something down there notices. Keep your nerve, watch the surface, and pull steady — the lake rewards patience far more than speed.",
+    howToPlay: "Row to a spot, lower your lantern over the edge, and cast. Fish gather toward the glow; wait for a tug before you strike. Haul in your catch, then drift on — each stretch of the lake holds something different.",
+    controls: "Click or tap to cast and reel in.",
+  },
+
+  "jumper": {
+    tags: ["arcade"],
+    intro: "Jumper is a bright arcade climb where every leap matters. Guide your character upward, collect unusual bonuses scattered along the route, and slip past obstacles that never hold still. Each run is a short, sharp test of timing and nerve, simple to start and hard to master. Keep climbing as long as your reflexes allow.",
+    howToPlay: "Guide your character upward, timing each jump so you land safely. Collect the bonuses you pass, dodge the obstacles in your path, and keep rising. A single mistimed leap can end the run.",
+    controls: "Click or tap to play.",
+  },
+
+  "sunny-farm-match-3": {
+    tags: ["arcade"],
+    intro: "Sunny Farm wraps a gentle match-3 loop in warm barnyard scenery, spreading 300 levels across three distinct worlds. Each board asks you to swap crops and tools into rows of three, clearing the goals listed at the top. Simple to learn, quietly challenging to master, and easy to enjoy in short sittings.",
+    howToPlay: "Swap two adjacent pieces to line up three or more matching crops. Each match clears those tiles, drops fresh pieces from above, and fills the goal meters for the level. Finish every objective before your moves run out.",
+    controls: "Drag or swipe adjacent pieces to swap them.",
+  },
+
+  "color-sort-puzzle": {
+    tags: ["puzzle"],
+    intro: "Color Sort Puzzle is a calm, self-paced sorting game built around one simple rule: every glass should end up holding a single colour. Pour water between containers, plan your moves, and watch a messy jumble of colours resolve into clean, separate layers.",
+    howToPlay: "Tap a glass to lift its top colour, then tap another glass to pour. Colour only moves onto the same colour or into an empty glass. Repeat until every glass holds one colour.",
+    controls: "Click or tap to play.",
+  },
+
+  "planko": {
+    tags: ["physics"],
+    intro: "Planko turns a simple ball into a study in angles and patience. Each level asks you to build a path from one point to another, and every plank you place bends the ball's route. Small adjustments change everything, so plan before you draw and watch the arc unfold.",
+    howToPlay: "Your goal is to guide the ball from its starting point to the target without losing momentum. Place planks to redirect its fall, then release and watch. Each level gives you a limited set of pieces, so build a route that works before you commit.",
+    controls: "Click or tap to play.",
+  },
+
+  "solitaire-tripeaks": {
+    tags: ["cards"],
+    intro: "Three peaks of cards rise from the seabed, and the only way through is one rank at a time. Each card you turn over opens the next link in the chain, so every decision ripples outward. Calm, deliberate, and quietly absorbing, a deep-sea solitaire round that rewards patience.",
+    howToPlay: "Clear the three peaks by removing cards from the layout. A card can be taken only if it sits one rank above or below the card currently showing on the pile. Turn over the stock when no move is left.",
+    controls: "Click or tap a card to play it.",
+  },
+
+  "merge-mania": {
+    tags: ["puzzle"],
+    intro: "Merge Mania is a number puzzle about patient addition. You drop matching values together, watch them fuse into a single larger tile, and keep the chain climbing. Rounds are quick, the board stays readable, and every merge nudges you toward a new high score. Simple to start, quietly demanding to master.",
+    howToPlay: "Place a number tile on the board next to an equal value. The pair merges into one bigger number and frees space. Keep combining to push the value higher before the grid fills up.",
+    controls: "Click or tap to play.",
+  },
+
+  "petdoku-cozy-puzzle-games": {
+    tags: ["puzzle"],
+    intro: "Petdoku pairs two familiar puzzles with a gentler pace and a cast of animal companions. Fill the grid so every row, column, and block holds each symbol once, then unwind with a second logic challenge built around the same cozy theme. No timers, no pressure — just deductions that click into place.",
+    howToPlay: "Each puzzle gives you a grid and a small set of pet symbols. Tap an empty cell, place a symbol, and use the given clues to rule out the rest. Complete every row, column, and block without duplicates to finish the board.",
+    controls: "Click or tap a cell, then choose a symbol.",
+  },
+
+  "draw-one-line-drawing-puzzle": {
+    tags: ["drawing"],
+    intro: "Every level hands you a picture that is almost complete, and one stroke is the only thing missing. Trace a single unbroken line from start to finish to close the gap, connect the shapes, or complete the outline. Simple to understand, quietly tricky to master, and perfect for a few spare minutes of focus.",
+    howToPlay: "Study the unfinished picture, then drag one continuous line from the marked starting point to the finishing point. The line cannot lift or restart once begun, so plan the route before you commit. Complete the outline correctly to clear the level.",
+    controls: "Click or tap and drag to draw one continuous line.",
+  },
+
+  "crash-test-simulator-3d": {
+    tags: ["driving"],
+    intro: "Buckle up for a physics-driven crash test playground where every impact tells a story. Steer a detailed vehicle toward walls, barriers, and stacked obstacles, then watch the damage unfold in real time. The goal is simple: experiment, observe how metal folds and panels scatter, and learn what happens when speed meets an immovable object.",
+    howToPlay: "Choose a vehicle, press the accelerator, and build speed across an open test area. Aim for barriers, ramps, or stacked objects, then brace for the collision. Inspect the resulting damage, reset, and try a different angle or faster run.",
+    controls: "Click or tap to play.",
+  },
+
+  "machine-eater": {
+    tags: ["management"],
+    intro: "A derelict ship, a few loose resources, and no blueprint worth following. Machine Eater asks you to gather what the wreck still offers, press it into usable blocks, and build outward one structure at a time. Every placement trades space against capacity, so the vessel you finish with is the one you designed.",
+    howToPlay: "Collect resources, convert them into building blocks, then spend those blocks to expand your ship and place new structures. Keep gathering to fund the next addition, and decide which parts of the vessel earn the space.",
+    controls: "Click or tap to gather, build, and place structures.",
+  },
+
+  "circle-car": {
+    tags: ["car"],
+    intro: "Roundabouts look simple until three lanes of traffic want the same exit. Circle Car turns that everyday headache into a quick puzzle: read the flow, pick your moment, and slip through cleanly. It is easy to pick up, hard to master, and strangely satisfying when a busy junction finally clears.",
+    howToPlay: "Cars stream around a busy roundabout. Tap or click the right moment to send each vehicle into the flow, keep spacing, avoid rear-ending anyone, and clear the junction without a collision. One wrong move creates a chain reaction.",
+    controls: "Click or tap to play.",
+  },
+
+  "survival-island": {
+    tags: ["crafting"],
+    intro: "A warm sea, a palm-lined shore and almost nothing else. Survival Island drops you on a tropical beach with empty hands and a body that already needs food and water. Learn the land, gather what it offers, and turn raw materials into a shelter worth sleeping in, one careful decision at a time.",
+    howToPlay: "Gather wood, stone and fruit, then craft the tools that make gathering faster. Eat and drink before your meters empty, build a safe place to sleep, and expand outward as your supplies allow.",
+    controls: "Click or tap to play.",
+  },
+
 };
 
 /** Homepage "Featured Games" — hand-curated, NOT a popularity ranking

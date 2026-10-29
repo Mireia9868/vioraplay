@@ -526,6 +526,28 @@ export const REGIONAL_GAME_CONTENT: Record<string, Record<string, {
         { "q": "Apa yang harus diprioritaskan lebih dulu?", "a": "Prioritaskan peningkatan peralatan berburu dan pengolahan daging. Keduanya langsung menambah pendapatan per perjalanan, sehingga modal untuk membuka area baru bisa terkumpul lebih cepat." },
       ]
     },
+    "machine-eater": {
+      "title": "Machine Eater: Manajemen Kapal & Sumber Daya",
+      "intro": "Machine Eater adalah game manajemen yang menantang Anda mengumpulkan sumber daya, mengolahnya menjadi blok, lalu memperluas kapal dan menempatkan struktur dengan cermat. Setiap keputusan membentuk efisiensi dan pertumbuhan kapal Anda. Cocok untuk pemain yang menyukai perencanaan, pengelolaan ruang, dan pengembangan bertahap dalam satu sesi santai.",
+      "howToPlay": "Kumpulkan sumber daya yang tersedia, ubah menjadi blok, lalu susun blok itu untuk memperluas lambung kapal. Tempatkan struktur pendukung pada ruang yang tepat agar kapal terus tumbuh. Ulangi siklus ini untuk membuka area dan struktur baru.",
+      "controls": "Klik atau ketuk untuk bermain.",
+      "strategy": "Fokus awal pada sumber daya yang paling melimpah, lalu simpan blok untuk struktur yang memberi manfaat jangka panjang. Hindari menempati ruang sempit terlalu cepat karena perluasan berikutnya jadi terbatas. Bagi area kapal sesuai fungsi, dan tinjau ulang tata letak sebelum menambah struktur baru.",
+      "faq": [
+        { "q": "Apakah Machine Eater sulit untuk pemain baru?", "a": "Tidak, alurnya bertahap. Anda mulai dari sumber daya sederhana dan belajar sambil membangun. Kesalahan tata letak bisa diperbaiki pada tahap berikutnya, jadi pemain baru tetap bisa menikmati progres." },
+        { "q": "Berapa lama satu sesi permainan?", "a": "Durasi bergantung pada cara Anda mengelola sumber daya dan memperluas kapal. Sesi singkat sudah cukup untuk merasakan alur intinya, sementara sesi lebih panjang memberi ruang untuk perencanaan." },
+      ]
+    },
+    "obby-1-digging-power-per-click": {
+      "title": "Obby: +1 Kekuatan Menggali per Klik",
+      "intro": "Turun ke dalam tambang dan rasakan kemajuan di setiap klik. Setiap ketukan menambah satu kekuatan menggali, jadi lubang makin cepat terbentuk. Latih kekuatan, kumpulkan sumber daya, dan buka lapisan tanah yang lebih dalam. Cocok untuk sesi singkat yang santai, tanpa perlu strategi rumit.",
+      "howToPlay": "Klik atau ketuk untuk menggali ke bawah. Setiap klik menambah satu kekuatan menggali, sehingga progres makin cepat. Kumpulkan sumber daya yang muncul, lalu gunakan untuk melatih kekuatan. Terus menggali untuk mencapai lapisan yang lebih dalam dan mencatat kemajuan baru.",
+      "controls": "Klik atau ketuk untuk bermain.",
+      "strategy": "Fokus menambah kekuatan menggali lebih dulu agar setiap klik terasa lebih berharga. Jangan berhenti menggali hanya untuk mengumpulkan semua sumber daya; ambil yang dekat jalur dan lanjut turun. Simpan sumber daya untuk peningkatan kekuatan, lalu ulangi siklus ini supaya kemajuan tetap stabil.",
+      "faq": [
+        { "q": "Apakah saya harus menunggu untuk menggali?", "a": "Tidak. Progres terjadi setiap kali kamu klik atau ketuk, jadi kamu bisa menggali sebanyak yang diinginkan. Kecepatan bergantung pada kekuatan menggali yang sudah kamu kumpulkan." },
+        { "q": "Apa gunanya sumber daya yang saya kumpulkan?", "a": "Sumber daya dipakai untuk melatih kekuatan menggali. Kekuatan yang lebih tinggi membuat tiap klik menghasilkan progres lebih besar, sehingga kamu bisa turun lebih dalam dalam waktu singkat." },
+      ]
+    },
 
   },
   "tr": {

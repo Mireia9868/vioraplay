@@ -1536,4 +1536,137 @@ export const GAME_DEEP_CONTENT: Record<
       { q: "What should I do when I run out of obvious matches?", a: "Look for any two identical items, even small ones — merging them frees a square. Sorting your board so similar tiers sit together makes the next match easier to spot." },
     ],
   },
+  "cars-cbdf-1": {
+    strategy: "Resist the urge to weave constantly. Pick a lane with the clearest runway, hold it, and change position only when a gap is wide enough to commit. Look further ahead than the car directly in front, brake early rather than swerve late, and treat every overtake as a decision made two seconds before it happens.",
+    faq: [
+      { q: "Is Cars easy for someone new to racing games?", a: "Yes. The basics take seconds to understand: move forward, pass traffic, avoid collisions. Difficulty comes from rising speed and tighter gaps rather than complicated mechanics." },
+      { q: "What usually ends a run fastest?", a: "Panicking in dense traffic. Sudden swerves into an unexamined gap cause most crashes, so scanning ahead and choosing a stable lane matters more than reacting late." },
+    ],
+  },
+  "supercar-battle-arena": {
+    strategy: "Circling beats charging. Keep a little distance, let rivals collide, then hit the winner while they are still recovering. Aim opponents toward walls rather than open space, and always leave yourself an escape lane before you commit to a big hit.",
+    faq: [
+      { q: "Do I need to download anything?", a: "No. It loads directly in a web browser, so you can start a match right away on desktop or mobile without a separate download." },
+      { q: "How do I win a match?", a: "Stay in the arena longer than every other car. Knock rivals out with well-timed hits, keep moving, and avoid getting trapped against the walls." },
+    ],
+  },
+  "traffic-racer-3d": {
+    strategy: "Resist the urge to chase speed early; the highway gets crowded faster than your reflexes adjust. Pick a lane, watch two cars ahead rather than one, and change lanes only when the gap is clearly open. Small, steady corrections beat late swerves, and a boring clean run outlasts a brave short one.",
+    faq: [
+      { q: "Is Traffic Racer 3D hard for beginners?", a: "The opening pace is forgiving, but traffic thickens quickly. New players do best by staying in one lane early, learning how gaps open and close, and only then pushing for faster, riskier passes." },
+      { q: "What happens when I crash?", a: "A collision ends the current run, and your score stops there. Restart right away; each attempt is short, so treat crashes as information about where traffic clusters and tighten your lane choices." },
+    ],
+  },
+  "pocket-universe": {
+    strategy: "Expand from a single cluster rather than scattering pieces across the map. Connected areas are easier to develop, and keeping one edge open leaves room for whatever unlocks next. Spend early on core structures first, then branch out once your little world can support the growth.",
+    faq: [
+      { q: "Is there a wrong way to build?", a: "Not really. A messy layout still works, though connected clusters tend to grow faster than scattered pieces. Experiment freely; you can always rearrange what you have placed." },
+      { q: "How long does it take to grow a world?", a: "It depends on how much you place each session. Small, frequent visits work just as well as long ones, and nothing in the game pushes you to rush." },
+    ],
+  },
+  "zap": {
+    strategy: "Hold your wild and action cards until they actually rescue you. Early on, keep one colour in reserve so you always have an answer to a bad flip. Track how many cards opponents hold, since dumping a big number onto a nearly-finished rival wastes it. When in doubt, shed high values first.",
+    faq: [
+      { q: "Do I need to match both the colour and the number?", a: "No, one match is enough. A card plays if its colour matches the top card or its number matches it, so you often have two legal options to choose between." },
+      { q: "What happens when the draw pile runs out?", a: "The round ends there. You score whatever is left in your hand, and lower is better, so playing your heaviest cards early protects you from a painful finish." },
+    ],
+  },
+  "police-mom-simulator": {
+    strategy: "Clear timed tasks first, because a missed deadline hurts more than a slow chore. Group objectives in the same area so you spend less time travelling between them, and leave one short household job for gaps between calls. Rushing every task usually ends with two failures instead of one.",
+    faq: [
+      { q: "Should I focus on police work or family tasks first?", a: "Whichever has a visible timer. Untimed chores can wait a few minutes, but a call with a countdown will fail the moment it expires, taking its reward with it." },
+      { q: "Is it better to replay a shift or push on?", a: "Replaying is usually cheaper. One weak shift rarely ruins a run, but repeating a level you understand well builds the rhythm you need for tighter time limits later." },
+    ],
+  },
+  "night-lake": {
+    strategy: "Don't chase the whole lake. Pick a small area, cast close to the boat, and let the lantern do the work — light draws attention. If nothing bites, change depth before changing location. Set the rod down for a moment when the line feels wrong; a calm hand hooks more than a fast one.",
+    faq: [
+      { q: "Do I need to move around the lake to catch anything?", a: "Moving helps, but not constantly. Fish gather near light and cover, so working one area well usually beats racing around. Reposition only when the bites stop coming." },
+      { q: "What should I do when something big pulls the line?", a: "Stay steady and give line slowly rather than fighting it head-on. Short, patient pulls tire a heavy fish faster than jerking does, and panic usually loses the catch." },
+    ],
+  },
+  "jumper": {
+    strategy: "Start slow and watch the spacing between safe landing spots before you commit to a jump. Small adjustments beat big corrections, so tap lightly rather than holding a direction. Collect bonuses that sit on your natural path, not ones that force a risky detour, and stay calm as the pace rises.",
+    faq: [
+      { q: "Is Jumper hard for beginners?", a: "The first jumps are forgiving, so anyone can start within seconds. Difficulty comes from speed and tighter spacing later on, which rewards practice more than raw reaction time." },
+      { q: "Do the bonuses actually matter?", a: "Yes. They give each run a small extra goal beyond survival, and chasing them carefully teaches you to read the layout ahead. Skip any bonus that demands a jump you cannot land." },
+    ],
+  },
+  "sunny-farm-match-3": {
+    strategy: "Start from the bottom of the board. Matches low down cascade more pieces and set off free combinations above. Scan for four- and five-piece lines before spending moves on three-piece swaps, since longer matches charge special tiles. If a goal sits in a corner, work toward it early rather than clearing clusters near the middle.",
+    faq: [
+      { q: "How many levels does Sunny Farm include?", a: "There are 300 levels in total, arranged across three farm-themed worlds. Progress is sequential, so finishing one board opens the next stretch of the map." },
+      { q: "How long does a single level take?", a: "Most boards are built for short sessions. Expect a few minutes per attempt, with longer levels appearing as the goals and board layouts grow more complex." },
+    ],
+  },
+  "color-sort-puzzle": {
+    strategy: "Start by freeing an empty glass, since it gives you a temporary holding space for stray colours. Before pouring, look at how many layers a move will uncover, and avoid filling a glass with a colour whose matching glass is already buried.",
+    faq: [
+      { q: "Do I lose if I run out of moves?", a: "There is no timer forcing your hand, but a badly ordered board can dead-end. If no legal pour helps, restart and plan the first few moves more carefully." },
+      { q: "Can I pour more than one colour at once?", a: "No. Each pour moves a single colour, and only the connected run of that colour at the top of the glass. Splitting a pour is never an option." },
+    ],
+  },
+  "planko": {
+    strategy: "Start by tracing the ball's likely fall before placing anything. Use gentle slopes rather than sharp turns, since a shallow angle keeps speed and a steep one kills it. Save your longest plank for the final stretch, and test early so a failed route costs one piece, not the level.",
+    faq: [
+      { q: "What should I focus on first as a beginner?", a: "Angle control. Before worrying about speed or fancy routes, learn how a shallow slope nudges the ball and how a steep one drops it. That single skill solves most early levels." },
+      { q: "Why does my ball keep stopping short of the target?", a: "Momentum is usually the culprit. Long flat runs bleed speed, and sharp corners kill it outright. Flatten your angles, shorten the distance the ball travels, and give it one clean push toward the goal." },
+    ],
+  },
+  "solitaire-tripeaks": {
+    strategy: "Work from the peaks downward and keep the inner cards exposed, because a buried card blocks everything resting on it. Spend long chains before touching the stock, and count the ranks you have already passed. When two moves look equal, choose the one that uncovers the most of the layout.",
+    faq: [
+      { q: "What happens when no card in the layout can be played?", a: "Draw from the stock. The face-up card enters play and becomes the new reference rank, so a stuck board usually reopens after one or two draws." },
+      { q: "Does the chain wrap between aces and kings?", a: "Yes. Ranks link in a continuous loop, so an ace may be taken after a king and a king after an ace. Both directions count as legal moves." },
+    ],
+  },
+  "merge-mania": {
+    strategy: "Start in one corner and build outward rather than scattering tiles. Keep your largest numbers clustered so future merges stay easy to reach, and leave room to maneuver. Clear small tiles early, avoid filling the grid's center, and plan two moves ahead before every placement.",
+    faq: [
+      { q: "Is Merge Mania easy for beginners?", a: "Yes. The rules take seconds to understand, and early moves are forgiving. Difficulty builds as the board crowds, so you can learn the pacing before space becomes tight." },
+      { q: "What should I do when the board gets full?", a: "Focus on clearing low tiles first, since they block the most space. Look for a single merge that frees two cells, and avoid spreading new numbers into open corners." },
+    ],
+  },
+  "petdoku-cozy-puzzle-games": {
+    strategy: "Start with the rows, columns, or blocks that already hold the most symbols, since fewer gaps mean fewer possibilities. Scan for a symbol that can only fit in one spot, fill it, then repeat. Pencil in candidates when unsure, and never guess — every board resolves through logic alone.",
+    faq: [
+      { q: "What makes this different from a standard number puzzle?", a: "The familiar grid logic stays, but digits become pet symbols, and a second classic puzzle joins the set. The result is the same quiet deduction with a warmer theme." },
+      { q: "Can beginners finish a board without guessing?", a: "Yes. Every puzzle is designed to be solved by logic, so check rows, columns, and blocks for a symbol with only one possible home before you consider anything else." },
+    ],
+  },
+  "draw-one-line-drawing-puzzle": {
+    strategy: "Before touching the screen, trace the whole route with your eyes and find the tightest corner, since that is where a single line most often goes wrong. Start from the end that leaves you the most open space, move steadily rather than fast, and lift only after the shape closes.",
+    faq: [
+      { q: "Can I undo a line once it has been drawn?", a: "Yes. After a stroke ends, the puzzle returns to its unfinished state so you can try a different route, which makes experimenting with unusual angles low risk." },
+      { q: "Do later levels get harder?", a: "They do. Early pictures need only a short connecting line, while later ones demand longer routes with sharper turns and less room for error." },
+    ],
+  },
+  "crash-test-simulator-3d": {
+    strategy: "Start slow and hit a barrier head-on before trying anything flashy. Note how speed changes the damage pattern, then test the same impact from a slight angle to compare. Keep early runs short so you can reset fast, and always watch the vehicle's balance before adding more speed.",
+    faq: [
+      { q: "Can I damage the car in different ways?", a: "Yes. Impact speed, angle, and the object you hit all change the outcome, so the same vehicle can crumple, spin, or shed parts differently on each attempt." },
+      { q: "Do I need to complete levels in order?", a: "No fixed sequence is required. You can experiment freely, returning to earlier obstacles whenever you want a cleaner comparison between two runs or a different approach." },
+    ],
+  },
+  "machine-eater": {
+    strategy: "Resist building everything at once. Convert a resource only when you need blocks, because stockpiles compete with the space structures want. Add cheap, useful pieces first, leave room for the next resource type, and expand the ship before filling it, since a cramped layout is harder to fix than an unfinished one.",
+    faq: [
+      { q: "Is there a wrong way to build my ship?", a: "Not exactly, but cramped layouts are expensive to undo. Structures placed early limit where later ones can go, so leave a little empty space and expand before you fill every slot." },
+      { q: "Should I save blocks or spend them right away?", a: "Spend them on something that improves your resource flow. Held blocks do nothing, and the ship only grows when structures are placed, so idle stockpiles usually cost you more than they protect." },
+    ],
+  },
+  "circle-car": {
+    strategy: "Watch the roundabout before you tap. Track the gap behind each passing car and release into that space, not into the one ahead. Start slow, keep one car moving at a time, and resist queueing several at once. If traffic tightens, wait for a clean stretch rather than forcing a risky merge.",
+    faq: [
+      { q: "How do I avoid collisions?", a: "Release each car into a visible gap and leave room for the car in front to move first. Panic tapping is the main cause of crashes here." },
+      { q: "How do I get better at timing?", a: "Timing is mostly about reading the flow, so a calm approach beats rushing. Practice short sessions, learn how gaps open up, and your reactions improve fast." },
+    ],
+  },
+  "survival-island": {
+    strategy: "Spend your first minutes on water and a simple tool, not on exploring. Stay close to the beach where resources are easy to see, and stockpile before you wander inland. Craft in small batches so a failed attempt never costs everything you gathered.",
+    faq: [
+      { q: "What should I build first on the island?", a: "A basic shelter and a reliable water source come before anything decorative. Both keep your survival meters from draining while you sleep or explore, and neither takes long to assemble." },
+      { q: "How do I keep track of what I need?", a: "Check your crafting menu often; it lists the materials each recipe requires. Gather only what those recipes ask for, and leave the rest on the island until you actually need it." },
+    ],
+  },
 };
