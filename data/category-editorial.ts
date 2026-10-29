@@ -220,8 +220,10 @@ export const CATEGORY_EDITORIAL: Record<string, CategoryEditorial> = {
   "hidden-object": {
     intro: "Hidden object games give you a cluttered scene and a list of things to find. Hidden Object: Clues and Mysteries and Street of Secrets are typical.",
     sections: [
+      { h: "Free, in the browser, no download", p: "Every scene here loads in the browser, so there is nothing to install and no account to create. Most rounds take a few minutes, which makes the category easy to dip into." },
       { h: "The scanning habit", p: "Divide the scene into bands and finish one band before moving on. Re-scanning the same area is the biggest time sink." },
       { h: "Spending hints", p: "Use hints on the last two objects, when fewer hiding places remain. A hint spent early is usually spent on something you would have found." },
+      { h: "Reading the object list first", p: "Before you hunt, read the whole list once. Knowing that a key and a feather are both required stops you from dismissing small shapes that later turn out to be targets." },
     ],
   },
   "ragdoll": {

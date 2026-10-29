@@ -49,6 +49,11 @@ export const CATEGORY_FAQ: Record<string, CategoryFaq> = {
     { q: "How long is a match?", a: "From a few minutes to a longer campaign session. Wave-based strategy titles are the shortest." },
     { q: "Is there a best faction or unit?", a: "Usually not. The best choice counters what the opponent has built, which is why scouting matters more than tier lists." },
   ],
+  "hidden-object": [
+    { q: "Are these hidden object games really free?", a: "Yes. Every game in this category runs in the browser with no download, no install and no account. Open a scene and start looking." },
+    { q: "How do I find objects faster?", a: "Scan the scene in bands, left to right and top to bottom, and finish one band before moving on. Re-scanning the same area is the biggest time sink." },
+    { q: "When should I use a hint?", a: "Save hints for the last two or three objects. By then the remaining hiding places are few, so a hint is worth more than it is at the start." },
+  ],
   racing: [
     { q: "Do I need a controller?", a: "No. Keyboard or touch is enough; a controller can feel smoother but is not required." },
     { q: "Are racing games timed?", a: "Circuit and stunt games usually time each run. Endless traffic games score distance instead." },

@@ -12,7 +12,8 @@
     "gsc:report": "node scripts/gsc-report.mjs",
     "gsc:report:vioraplay": "SITE_KEY=vioraplay node scripts/gsc-report.mjs",
     "gsc:report:pbt": "SITE_KEY=powerbitutorials node scripts/gsc-report.mjs",
-    "indexnow": "node scripts/indexnow.mjs"
+    "indexnow": "node scripts/indexnow.mjs",
+    "report:daily": "node scripts/daily-report.mjs"
   },
   "engines": {
     "node": ">=20.9.0"

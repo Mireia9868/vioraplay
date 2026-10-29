@@ -21,6 +21,7 @@ import { PUZZLE_SEO } from "@/data/regional-seo";
 import { CATEGORY_EDITORIAL } from "@/data/category-editorial";
 import { GAME_CONTENT } from "@/data/game-content";
 import { CATEGORY_FAQ } from "@/data/category-faq";
+import { CATEGORY_SEO } from "@/data/category-seo";
 import { guideForCategory } from "@/lib/guides";
 import { isCategoryIndexable } from "@/lib/indexability";
 import { routing } from "@/i18n/routing";
@@ -65,10 +66,11 @@ export async function generateMetadata({
     return `/${l}/category/${slug}${qs ? `?${qs}` : ""}`;
   };
 
+  const seo = locale === "en" ? CATEGORY_SEO[slug] : undefined;
   return {
     metadataBase,
-    title: puzzleCopy?.title ?? `${fullName} — Play Free Online | VioraPlay`,
-    description: puzzleCopy?.description ?? getCategoryIntro(slug, fullName.toLowerCase()).replace(
+    title: seo?.title ?? puzzleCopy?.title ?? `${fullName} — Play Free Online | VioraPlay`,
+    description: seo?.description ?? puzzleCopy?.description ?? getCategoryIntro(slug, fullName.toLowerCase()).replace(
       /\.$/,
       ""
     ) + ` Browse ${count} free ${fullName.toLowerCase()} — no download, instant play.`,
