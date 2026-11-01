@@ -5,6 +5,7 @@ import { FEATURED_SLUGS } from "@/data/game-content";
 import { SITE_URL } from "@/lib/seo";
 import { isCategoryIndexable, isGameIndexable, indexableGameLocales } from "@/lib/indexability";
 import { GUIDES, isGuideIndexable } from "@/lib/guides";
+import { COLLECTIONS } from "@/data/collections.generated";
 
 /**
  * Per-language URL sets; the sitemap index is served by app/sitemap.xml/route.ts.
@@ -65,6 +66,13 @@ export function buildLocaleSitemap(locale: Locale): MetadataRoute.Sitemap {
   }
 
   if (locale === "en") {
+    for (const collection of Object.values(COLLECTIONS)) {
+      urls.push({
+        url: `${SITE_URL}/en/collections/${collection.slug}`,
+        changeFrequency: "weekly",
+        priority: 0.6,
+      });
+    }
     urls.push({
       url: `${SITE_URL}/en/press`,
       changeFrequency: "yearly",

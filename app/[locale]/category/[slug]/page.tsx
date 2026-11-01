@@ -22,6 +22,7 @@ import { CATEGORY_EDITORIAL } from "@/data/category-editorial";
 import { GAME_CONTENT } from "@/data/game-content";
 import { CATEGORY_FAQ } from "@/data/category-faq";
 import { CATEGORY_SEO } from "@/data/category-seo";
+import { COLLECTIONS } from "@/data/collections.generated";
 import { guideForCategory } from "@/lib/guides";
 import { isCategoryIndexable } from "@/lib/indexability";
 import { routing } from "@/i18n/routing";
@@ -143,6 +144,9 @@ export default async function CategoryPage({
   const heroHead = heroParts.length > 1 ? heroParts.slice(0, -1).join(" ") : "";
   const heroIntro = editorial?.intro ?? puzzleCopy?.intro ?? getCategoryIntro(slug, fullName.toLowerCase());
   const faq = locale === "en" ? CATEGORY_FAQ[slug] : undefined;
+  const collection = locale === "en"
+    ? Object.values(COLLECTIONS).find((x) => x.playHref === `/category/${slug}`)
+    : undefined;
 
   const deviceQs = devices.length ? `device=${devices.join(",")}` : "";
   const pageUrl = (n: number) => {
@@ -247,6 +251,11 @@ export default async function CategoryPage({
             {guide && (
               <Link href={`/guides/${guide.slug}`} className="cat-read-guide">
                 {tc("readGuide")} →
+              </Link>
+            )}
+            {collection && (
+              <Link href={`/collections/${collection.slug}`} className="cat-read-guide">
+                {collection.h1} →
               </Link>
             )}
           </section>

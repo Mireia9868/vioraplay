@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "free-hidden-object-games",
+    "title": "Free Hidden Object Games Online — No Download | VioraPlay",
+    "h1": "Free Hidden Object Games",
+    "description": "Play free hidden object games online with no download. Cluttered scenes, object lists and short rounds, plus a faster scanning method.",
+    "intro": "A hand-picked set of browser hidden object games that need no download and no account. Each scene is a short round: read the list, scan in bands, and save hints for the last few objects.",
+    "filter": { "category": "hidden-object" },
+    "limit": 12,
+    "faq": [
+      { "q": "Are these hidden object games free?", "a": "Yes. Every game runs in the browser with no download, install or account." },
+      { "q": "Do they work on mobile?", "a": "Most do. The device line on each game page says whether it is desktop, Android or iOS ready." }
+    ],
+    "playHref": "/category/hidden-object",
+    "guide": "how-to-play-hidden-object"
+  },
+  {
+    "slug": "2-player-games",
+    "title": "2 Player Games Online Free — Same Screen | VioraPlay",
+    "h1": "2 Player Games",
+    "description": "Free two-player browser games for one keyboard or one phone: sports, fighting, puzzles and party mini-games. No download needed.",
+    "intro": "Two-player browser games built for the same screen: one keyboard, one phone, or pass-and-play. Pick a sport, a duel or a mini-game and settle it in a couple of minutes.",
+    "filter": { "category": "two-player" },
+    "limit": 12,
+    "faq": [
+      { "q": "Can two people play on one keyboard?", "a": "Yes, most titles here use split keys such as WASD and the arrow keys. Check the controls line on the game page." },
+      { "q": "Do these work on phones?", "a": "Some do, with touch controls for each player. The game page lists the supported devices." }
+    ],
+    "playHref": "/category/two-player"
+  },
+  {
+    "slug": "brainrot-games",
+    "title": "Brainrot Games Online Free — Italian Brainrot | VioraPlay",
+    "h1": "Brainrot Games",
+    "description": "Free brainrot games in the browser: obbies, lucky blocks, shooters and collecting games featuring Italian brainrot characters.",
+    "intro": "Brainrot games turn the meme into a genre: short runs, lucky blocks, obbies and collect-a-thons. These picks are browser games, so there is nothing to install before the first run.",
+    "filter": { "titleIncludes": "brainrot" },
+    "limit": 10,
+    "faq": [
+      { "q": "What is a brainrot game?", "a": "A fast, meme-driven browser game built around Italian brainrot characters, lucky blocks or short obstacle runs." },
+      { "q": "Are these games suitable for children?", "a": "Themes vary and some include shooting. Check the individual game page before playing with younger children." }
+    ],
+    "playHref": "/category/funny"
+  },
+  {
+    "slug": "car-games",
+    "title": "Free Car Games Online — Driving & Stunts | VioraPlay",
+    "h1": "Free Car Games",
+    "description": "Play free car games online: parking, drifting, crash tests and open-city stunts. Browser games with no download.",
+    "intro": "A compact set of car games that run in the browser: park, drift, crash or stunt without installing anything. Most rounds are short enough for a coffee break.",
+    "filter": { "category": "car" },
+    "limit": 12,
+    "faq": [
+      { "q": "Do I need a driving wheel?", "a": "No. Keyboard or touch is enough for every game on this list; a controller is optional." },
+      { "q": "Are the car games realistic?", "a": "They range from arcade crashing to parking simulators. The game page describes which style you are opening." }
+    ],
+    "playHref": "/category/car"
+  },
+  {
+    "slug": "free-racing-games",
+    "title": "Free Racing Games Online — No Download | VioraPlay",
+    "h1": "Free Racing Games",
+    "description": "Play free racing games in the browser: traffic racers, stunt bikes, drifting and highway runs. No download or install.",
+    "intro": "Browser racing without the install: highway traffic, stunt bikes, drift runs and arcade circuits. Short races, quick restarts, and a low barrier to the first lap.",
+    "filter": { "category": "racing" },
+    "limit": 12,
+    "faq": [
+      { "q": "Are these racing games free?", "a": "Yes. They run in the browser at no cost and do not require an account." },
+      { "q": "Can I play racing games on mobile?", "a": "Many support touch. Check the device list on the game page for the specific title." }
+    ],
+    "playHref": "/category/racing",
+    "guide": "how-to-play-racing-games"
+  }
+]
