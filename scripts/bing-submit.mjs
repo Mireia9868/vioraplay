@@ -13,7 +13,12 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const SITE = "https://www.vioraplay.com";
-const KEY = process.env.BING_API_KEY;
+let KEY = process.env.BING_API_KEY;
+if (!KEY) {
+  try {
+    KEY = JSON.parse(await fs.readFile(path.join(ROOT, "secrets/bing.json"), "utf8")).apiKey;
+  } catch {}
+}
 const args = process.argv.slice(2);
 const flag = (n) => args.includes(n);
 const value = (n, d = null) => {
