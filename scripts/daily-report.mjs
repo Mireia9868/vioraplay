@@ -10,7 +10,7 @@ const GA4 = "558289372";
 async function jsonFetch(url, init = {}, tries = 3) {
   for (let i = 0; i < tries; i++) {
     try {
-      const res = await fetch(url, init);
+      const res = await fetch(url, { ...init, signal: AbortSignal.timeout(20000) });
       return await res.json();
     } catch (err) {
       if (i === tries - 1) throw err;

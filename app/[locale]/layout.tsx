@@ -39,6 +39,11 @@ export async function generateMetadata({
     // Emits <meta name="google-site-verification" content="1H4ZKk_..." /> on every page.
     verification: {
       google: "1H4ZKk_iaKkO2UluhdMBcS21u5WFjLAaRZDb09l9IwM",
+      // Bing Webmaster verification. Set NEXT_PUBLIC_BING_VERIFICATION to the
+      // content value of the msvalidate.01 tag shown in Bing Webmaster Tools.
+      ...(process.env.NEXT_PUBLIC_BING_VERIFICATION
+        ? { other: { "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION } }
+        : {}),
     },
     alternates: {
       canonical: `/${locale}`,
