@@ -43,7 +43,7 @@ async function urlsFromSitemaps() {
     if (flag("--from-local")) {
       xml = await fs.readFile(path.join(ROOT, `.next/server/app/${name}.body`), "utf8");
     } else {
-      const res = await fetch(`${ORIGIN}/${name}`);
+      const res = await fetch(`${ORIGIN}/${name}`, { signal: AbortSignal.timeout(15000) });
       if (!res.ok) throw new Error(`${name}: HTTP ${res.status}`);
       xml = await res.text();
     }
@@ -82,6 +82,7 @@ if (flag("--dry-run")) {
 }
 
 const res = await fetch(INDEXNOW_ENDPOINT, {
+  signal: AbortSignal.timeout(15000),
   method: "POST",
   headers: { "content-type": "application/json; charset=utf-8" },
   body: JSON.stringify({ host: HOST, key: KEY, keyLocation: KEY_LOCATION, urlList: batch }),

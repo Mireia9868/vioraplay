@@ -4,7 +4,11 @@ import { execFileSync } from "node:child_process";
 
 const run = (args, env = process.env) => {
   console.log(`\n$ ${args.join(" ")}`);
-  execFileSync(args[0], args.slice(1), { stdio: "inherit", env });
+  try {
+    execFileSync(args[0], args.slice(1), { stdio: "inherit", env });
+  } catch (err) {
+    console.log(`[skipped] ${args[1]} failed: ${err.message.split("\n")[0]}`);
+  }
 };
 
 run([process.execPath, "scripts/build-collections.mjs"]);

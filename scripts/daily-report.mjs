@@ -11,7 +11,11 @@ async function jsonFetch(url, init = {}, tries = 3) {
   for (let i = 0; i < tries; i++) {
     try {
       const res = await fetch(url, { ...init, signal: AbortSignal.timeout(20000) });
-      return await res.json();
+      const body = await res.json();
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}: ${body?.error?.message ?? JSON.stringify(body).slice(0, 120)}`);
+      }
+      return body;
     } catch (err) {
       if (i === tries - 1) throw err;
       await new Promise((r) => setTimeout(r, 1500));
