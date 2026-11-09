@@ -49,7 +49,7 @@ if (markUrl) {
 const sitemapUrls = new Set();
 for (const name of ["sitemap-en", "sitemap-pt"]) {
   try {
-    const res = await fetch(`${site}/${name}`, { headers: { "user-agent": "VioraPlay index audit" } });
+    const res = await fetch(`${site}/${name}`, { headers: { "user-agent": "VioraPlay index audit" }, signal: AbortSignal.timeout(10000) });
     const xml = await res.text();
     for (const match of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) sitemapUrls.add(match[1]);
   } catch {
@@ -63,7 +63,7 @@ for (const entry of registry.urls) {
   const row = { ...entry, status: "?", robots: "?", canonical: "?", inSitemap: sitemapUrls.has(entry.url), finalUrl: target, issues: [] };
 
   try {
-    const res = await fetch(target, { redirect: "follow", headers: { "user-agent": "VioraPlay index audit" } });
+    const res = await fetch(target, { redirect: "follow", headers: { "user-agent": "VioraPlay index audit" }, signal: AbortSignal.timeout(10000) });
     row.status = res.status;
     row.finalUrl = res.url;
     const html = await res.text();
