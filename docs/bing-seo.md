@@ -14,13 +14,14 @@ sitemap 已成功抓取（约 782 URL）。
 
 ```bash
 cd repo2
-BING_API_KEY=xxx npm run bing:submit -- --limit 50
+BING_API_KEY=xxx npm run bing:submit -- --priority --limit 20
 BING_API_KEY=xxx npm run bing:submit -- --urls https://www.vioraplay.com/en,https://www.vioraplay.com/en/category/hidden-object
 npm run bing:submit -- --dry-run --from-local   # 不发请求，只看列表
 ```
 
 - 每次部署后提交新增/更新的页面，不要每天重复提交全站。
-- 批量上限 500/次，默认 50。
+- 默认只提交 **20 条/天**，并按 `data/bing-priority-urls.json` 顺序取；已提交的 URL 记在 `ops/bing-submitted.json`。
+- 不要一次把 644 个 URL 全推给 Bing；分多批，优先 hidden-object 集群和 collections。
 - IndexNow（`npm run indexnow`）与 Bing 提交可以同时用，不冲突。
 
 ## Bing 侧检查清单

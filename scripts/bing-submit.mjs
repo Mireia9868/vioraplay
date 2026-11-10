@@ -49,7 +49,22 @@ async function urlsFromSitemaps() {
 
 const explicit = value("--urls");
 const urls = explicit ? explicit.split(",").map((s) => s.trim()).filter(Boolean) : await urlsFromSitemaps();
-const batch = urls.slice(0, Number(value("--limit", "50")));
+const STORE = path.join(ROOT, "ops/bing-submitted.json");
+let submitted = new Set();
+try {
+  submitted = new Set(JSON.parse(await fs.readFile(STORE, "utf8")).urls ?? []);
+} catch {}
+const priority = flag("--priority")
+  ? JSON.parse(await fs.readFile(path.join(ROOT, "data/bing-priority-urls.json"), "utf8"))
+  : null;
+const ordered = priority ?? urls;
+const pending = ordered.filter((u) => !submitted.has(u));
+const batch = pending.slice(0, Number(value("--limit", "20")));
+console.log(`Bing pending ${pending.length}, submitting ${batch.length}`);
+if (!batch.length) {
+  console.log("Nothing new to submit.");
+  process.exit(0);
+}
 console.log(`Submitting ${batch.length} of ${urls.length} URLs to Bing`);
 if (flag("--dry-run")) {
   batch.forEach((u) => console.log("  " + u));
@@ -68,3 +83,5 @@ const res = await fetch(
 const text = await res.text();
 console.log(`Bing: HTTP ${res.status} ${res.ok ? "accepted" : text.slice(0, 300)}`);
 if (!res.ok) process.exit(1);
+await fs.mkdir(path.dirname(STORE), { recursive: true });
+await fs.writeFile(STORE, JSON.stringify({ updatedAt: new Date().toISOString(), urls: [...submitted, ...batch] }, null, 2) + "\n");

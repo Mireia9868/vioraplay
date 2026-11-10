@@ -24,7 +24,7 @@ if (!hasBingKey) {
   } catch {}
 }
 if (hasBingKey) {
-  run([process.execPath, "scripts/bing-submit.mjs", "--limit", "50"]);
+  run([process.execPath, "scripts/bing-submit.mjs", "--priority", "--limit", "20"]);
 } else {
   console.log("\nNo Bing key (env or secrets/bing.json); skipped Bing URL submission.");
 }
