@@ -36,3 +36,36 @@ export const GAME_SEO_OVERRIDES: Record<string, GameSeoOverride> = {
       "Play Car Wash Idle: build a car wash arcade, clean muddy cars and upgrade your bays. Free browser game, no download or install.",
   },
 };
+
+/**
+ * Localized overrides for pages that rank for an English query while their
+ * title is in another language. Search Console showed e.g. /id/game/car-wash-idle
+ * at position 8 for "wash arcade" with a 0.4% CTR: the snippet never contained
+ * the query language. Keep each entry tied to a query the page already ranks for.
+ */
+export const LOCALIZED_GAME_SEO_OVERRIDES: Record<string, Record<string, GameSeoOverride>> = {
+  id: {
+    "car-wash-idle": {
+      title: "Wash Arcade — Car Wash Idle, Cuci Mobil Online | VioraPlay",
+      description:
+        "Wash Arcade / Car Wash Idle: cuci mobil kotor, perluas bay, dan ubah satu garasi menjadi arcade cuci mobil. Game browser gratis, tanpa download.",
+    },
+    "obby-1-digging-power-per-click": {
+      title: "Obby: +1 Digging Power per Click — Main Obby Online | VioraPlay",
+      description:
+        "Main Obby: +1 Digging Power per Click di browser. Setiap klik menambah kekuatan menggali, buka lapisan tanah lebih dalam, dan kumpulkan sumber daya. Gratis, tanpa download.",
+    },
+    "emoji-sort": {
+      title: "Emoji Sort — Puzzle Sortir Emoji Online Gratis | VioraPlay",
+      description:
+        "Emoji Sort: sortir emoji ke wadah yang cocok, selesaikan level, dan latih logika. Game puzzle browser gratis, tanpa download atau akun.",
+    },
+  },
+  vi: {
+    "epic-battle-simulator-2": {
+      title: "Epic Battle Simulator 2 — Chơi Online Miễn Phí | VioraPlay",
+      description:
+        "Chơi Epic Battle Simulator 2 trên trình duyệt: bố trí quân, chọn chiến thuật và đánh bại đối thủ. Miễn phí, không cần tải xuống.",
+    },
+  },
+};

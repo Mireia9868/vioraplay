@@ -22,7 +22,7 @@ import {
 import { GameCard } from "@/components/GameCard";
 import { Link } from "@/i18n/navigation";
 import { guideForGame } from "@/lib/guides";
-import { GAME_SEO_OVERRIDES } from "@/data/game-seo-overrides";
+import { GAME_SEO_OVERRIDES, LOCALIZED_GAME_SEO_OVERRIDES } from "@/data/game-seo-overrides";
 import { GameControls } from "@/components/GameControls";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -59,8 +59,11 @@ export async function generateMetadata({
   const description = content?.intro ?? truncateDescription(game.description, 155);
   const path = (l: string) => `/${l}/game/${game.slug}`;
   const intent = getGameIntent(slug);
-  // English-only, query-driven overrides (see data/game-seo-overrides.ts).
-  const seoOverride = locale === "en" ? GAME_SEO_OVERRIDES[slug] : undefined;
+  // Query-driven overrides (see data/game-seo-overrides.ts). English has its
+  // own map; non-English pages that rank for English queries get localized ones.
+  const seoOverride = locale === "en"
+    ? GAME_SEO_OVERRIDES[slug]
+    : LOCALIZED_GAME_SEO_OVERRIDES[locale]?.[slug];
 
   return {
     metadataBase,
