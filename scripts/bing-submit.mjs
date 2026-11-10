@@ -12,7 +12,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const ROOT = process.cwd();
-const SITE = "https://www.vioraplay.com";
+const SITE = process.env.BING_SITE_URL ?? "https://vioraplay.com";
 let KEY = process.env.BING_API_KEY;
 if (!KEY) {
   try {
@@ -68,6 +68,7 @@ if (!batch.length) {
 console.log(`Submitting ${batch.length} of ${urls.length} URLs to Bing`);
 if (flag("--dry-run")) {
   batch.forEach((u) => console.log("  " + u));
+  console.log(`siteUrl: ${SITE}`);
   process.exit(0);
 }
 

@@ -10,6 +10,13 @@ sitemap 已成功抓取（约 782 URL）。
 2. **提交 sitemap**：`https://www.vioraplay.com/sitemap.xml`（Bing 已抓取，保持即可）。
 3. **API key**：Bing Webmaster → Settings → API access → 生成 API key。
 
+## siteUrl 说明
+
+Bing Webmaster 里验证的是哪个站点，API 的 `siteUrl` 就必须用哪个：
+
+- 属性是 `vioraplay.com` → 默认值即可（脚本默认 `https://vioraplay.com`）
+- 属性是 `www.vioraplay.com` → 设置 `BING_SITE_URL=https://www.vioraplay.com`
+
 ## 提交 URL
 
 ```bash
