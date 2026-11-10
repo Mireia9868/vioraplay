@@ -17,7 +17,8 @@
     "report:email": "node scripts/send-daily-report.mjs",
     "bing:submit": "node scripts/bing-submit.mjs",
     "collections:build": "node scripts/build-collections.mjs",
-    "seo:cycle": "node scripts/seo-cycle.mjs"
+    "seo:cycle": "node scripts/seo-cycle.mjs",
+    "growth:status": "node scripts/growth-status.mjs"
   },
   "engines": {
     "node": ">=20.9.0"
