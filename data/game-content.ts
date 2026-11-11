@@ -2775,6 +2775,20 @@ export const GAME_CONTENT: Record<string, GameContent> = {
     controls: "Click or tap to play.",
   },
 
+  "number-sums": {
+    tags: ["puzzle"],
+    intro: "Number Sums turns arithmetic into a board puzzle: every row, column and coloured region has to add up to the clue beside it. There is no timer and no guessing — just a grid, a set of numbers, and the satisfaction of making every line balance.",
+    howToPlay: "Read the clues around the board, then place the available numbers so each row, column and coloured block reaches its target sum. Numbers can only be used as the puzzle allows, and every placement changes what the remaining lines need.",
+    controls: "Click or tap a cell, then choose a number.",
+  },
+
+  "emoji-sort": {
+    tags: ["puzzle"],
+    intro: "Emoji Sort is a pattern puzzle: each grid has missing emojis, and the only clue is the pattern running through the rows and columns. It looks simple until two patterns overlap. Quiet, compact, and easy to pick up for a few minutes.",
+    howToPlay: "Study the grid and the emojis already placed. Work out the pattern each row or column follows, then fill the empty cells with the emoji that completes it. Every puzzle has one consistent pattern; no guessing is required.",
+    controls: "Click or tap a cell, then pick an emoji.",
+  },
+
 };
 
 /** Homepage "Featured Games" — hand-curated, NOT a popularity ranking

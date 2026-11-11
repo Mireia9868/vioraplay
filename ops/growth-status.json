@@ -1,16 +1,30 @@
 {
-  "updatedAt": "2026-11-10",
+  "updatedAt": "2026-11-11",
   "done": [
     "Bing API key 配置并提交 10 条优先 URL",
     "long-tail collections 5 个上线",
     "本地化标题覆盖（car-wash-idle / obby / emoji / epic-battle）",
     "hidden-object 标题与 FAQ 优化",
     "90 天计划与任务拆分",
-    "每日日报、Bing 提交、周更、30/60/90 检查定时任务"
+    "每日日报、Bing 提交、周更、30/60/90 检查定时任务",
+    "内容深度：number-sums、emoji-sort 补底稿，numicolor 补 strategy/FAQ",
+    "Bing 优先 URL 已提交 20/25"
   ],
   "next": [
-    { "id": "M1", "task": "GSC 请求索引 25 条", "owner": "user" },
-    { "id": "M3", "task": "外链 5 封", "owner": "user" },
-    { "id": "A4", "task": "周三改 3 个已有页面", "owner": "agent" }
+    {
+      "id": "M1",
+      "task": "GSC 请求索引 25 条",
+      "owner": "user"
+    },
+    {
+      "id": "M3",
+      "task": "外链 5 封",
+      "owner": "user"
+    },
+    {
+      "id": "A2",
+      "task": "Bing 剩余 5 条优先 URL",
+      "owner": "agent"
+    }
   ]
 }

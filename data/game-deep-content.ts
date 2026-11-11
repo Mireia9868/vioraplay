@@ -1669,4 +1669,26 @@ export const GAME_DEEP_CONTENT: Record<
       { q: "How do I keep track of what I need?", a: "Check your crafting menu often; it lists the materials each recipe requires. Gather only what those recipes ask for, and leave the rest on the island until you actually need it." },
     ],
   },
+
+  "number-sums": {
+    strategy: "Start with the lines that have the fewest possible combinations — a high clue with small numbers, or a low clue with large ones. Fill those first, then let the eliminated numbers narrow the rest. If two lines look possible, pick the one that also completes a coloured region.",
+    faq: [
+      { q: "Do I need to guess?", a: "No. Every puzzle has a logical path; guessing usually creates a contradiction a few moves later. Start from the most constrained line." },
+      { q: "Is there a timer?", a: "No. Number Sums is untimed, so you can work through the board at your own pace." },
+    ],
+  },
+  "emoji-sort": {
+    strategy: "Find the row or column with the most emojis filled in — that is where the pattern is easiest to read. Solve that line first, then use the same emoji positions to test the crossing lines. If two options fit, check which one also satisfies the column.",
+    faq: [
+      { q: "Are the puzzles random?", a: "Each grid follows a fixed pattern rather than random placement, so the same puzzle can be solved by logic every time." },
+      { q: "Can I undo a placement?", a: "Most versions let you change a filled cell before submitting. If not, restart the puzzle; they are short." },
+    ],
+  },
+  "numicolor": {
+    strategy: "Work in small sections instead of jumping around the picture. Fill the largest colour areas first to see the shape, then use the numbered cells to place the remaining shades. Zooming in helps on detailed areas, but zoom out after each section to check the overall balance.",
+    faq: [
+      { q: "Do I need to follow the numbers exactly?", a: "The numbers indicate which colour belongs in each cell. Following them keeps the picture consistent; choosing freely is possible in some modes but changes the result." },
+      { q: "Is Numicolor timed?", a: "No. It is a relaxing colour-by-number game with no countdown, so you can leave and return to the same picture." },
+    ],
+  },
 };
