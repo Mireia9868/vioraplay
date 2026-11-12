@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-12",
   "done": [
     "Bing API key 配置并提交 10 条优先 URL",
     "long-tail collections 5 个上线",
@@ -8,7 +8,8 @@
     "90 天计划与任务拆分",
     "每日日报、Bing 提交、周更、30/60/90 检查定时任务",
     "内容深度：number-sums、emoji-sort 补底稿，numicolor 补 strategy/FAQ",
-    "Bing 优先 URL 已提交 20/25"
+    "Bing 优先 URL 已提交 20/25",
+    "Bing 25 条优先 URL 全部提交完成（HTTP 200）"
   ],
   "next": [
     {
@@ -22,8 +23,8 @@
       "owner": "user"
     },
     {
-      "id": "A2",
-      "task": "Bing 剩余 5 条优先 URL",
+      "id": "B1",
+      "task": "观察 Bing 索引 3–7 天，再决定下一批 50 页",
       "owner": "agent"
     }
   ]
