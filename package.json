@@ -18,7 +18,8 @@
     "bing:submit": "node scripts/bing-submit.mjs",
     "collections:build": "node scripts/build-collections.mjs",
     "seo:cycle": "node scripts/seo-cycle.mjs",
-    "growth:status": "node scripts/growth-status.mjs"
+    "growth:status": "node scripts/growth-status.mjs",
+    "report:daily:guarded": "node scripts/with-timeout.mjs 120 node scripts/daily-report.mjs"
   },
   "engines": {
     "node": ">=20.9.0"
