@@ -59,10 +59,13 @@ for (const c of checks) {
       const loc = res.headers.get("location") || "";
       const normalized = loc.replace(/^https?:\/\/[^/]+/, "");
       row.detail = loc;
-      ok = normalized === c.redirectTo || loc.endsWith(c.redirectTo);
+      // Absolute targets must match fully; relative ones only need the path to match.
+      ok = c.redirectTo.startsWith("http")
+        ? loc === c.redirectTo || normalized === c.redirectTo.replace(/^https?:\/\/[^/]+/, "")
+        : normalized === c.redirectTo;
     }
 
-    if (ok && c.expect === 200) {
+    if (ok && c.expect === 200 && (res.headers.get("content-type") || "").includes("text/html")) {
       const body = await res.text();
       if (!/<title>[^<]+<\/title>/i.test(body)) {
         ok = false;

@@ -1,0 +1,11 @@
+name = "vioraplay-proxy"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+
+routes = [
+  { pattern = "www.vioraplay.com/*", zone_name = "vioraplay.com" },
+  { pattern = "vioraplay.com/*", zone_name = "vioraplay.com" }
+]
+
+[triggers]
+crons = ["*/14 * * * *"]
