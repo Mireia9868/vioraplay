@@ -1,0 +1,34 @@
+{
+  "targets": [
+    {
+      "name": "VioraPlay",
+      "url": "https://www.vioraplay.com/en",
+      "mustContain": "VioraPlay",
+      "maxMs": 20000
+    },
+    {
+      "name": "Power BI Tutorials",
+      "url": "https://powerbitutorials.com/",
+      "mustContain": "Power BI Tutorials",
+      "maxMs": 10000
+    },
+    {
+      "name": "GlowSelf",
+      "url": "https://glowself.cn/",
+      "mustContain": "GlowSelf",
+      "maxMs": 10000
+    },
+    {
+      "name": "AI GeoLens",
+      "url": "https://aigeolens.com/",
+      "mustContain": "GeoLens",
+      "maxMs": 10000
+    },
+    {
+      "name": "AdRadarHub",
+      "url": "https://adradarhub.com/",
+      "mustContain": "AdRadarHub",
+      "maxMs": 10000
+    }
+  ]
+}

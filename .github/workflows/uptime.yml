@@ -1,7 +1,7 @@
 name: uptime
 
-# 每 15 分钟检查一次生产站点；挂了自动开 issue（GitHub 会发邮件），
-# 恢复了自动评论并关闭。2026-11 那次 402 挂了两天才被发现，就是缺这一层。
+# 每 15 分钟巡检全部站点；异常自动开 issue（GitHub 邮件通知），恢复后自动关闭。
+# 2026-11 那次 vioraplay 402 挂了两天才被发现，就是缺这一层。
 on:
   schedule:
     - cron: "*/15 * * * *"
@@ -16,8 +16,7 @@ permissions:
   issues: write
 
 env:
-  TARGET: https://www.vioraplay.com
-  ISSUE_TITLE: "🔴 生产站点不可用: vioraplay.com"
+  ISSUE_TITLE: "🔴 站点巡检异常"
 
 jobs:
   check:
@@ -29,28 +28,46 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Verify production
-        id: verify
+      # 各站点状态 + 内容 + 耗时（ops/targets.json 定义清单）
+      - name: Check all sites
+        id: sites
         continue-on-error: true
         run: |
           set -o pipefail
-          node scripts/verify-deploy.mjs "$TARGET" --canonical 2>&1 | tee verify.txt
+          node scripts/uptime-check.mjs 2>&1 | tee sites.txt
+
+      # vioraplay 深检：8 个语种、分类/游戏页、sitemap、robots、locale 308、apex 301
+      - name: Deep check vioraplay
+        id: deep
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          node scripts/verify-deploy.mjs https://www.vioraplay.com --canonical 2>&1 | tee deep.txt
 
       - name: Open or update incident
-        if: steps.verify.outcome == 'failure'
+        if: steps.sites.outcome == 'failure' || steps.deep.outcome == 'failure'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           {
-            echo "自动巡检发现站点异常。"
+            echo "自动巡检发现异常。"
             echo
-            echo "- 目标: $TARGET"
             echo "- 时间(UTC): $(date -u +'%Y-%m-%d %H:%M')"
             echo "- 触发: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-            echo
-            echo '```'
-            tail -20 verify.txt
-            echo '```'
+            if [ "${{ steps.sites.outcome }}" = "failure" ]; then
+              echo
+              echo "### 多站点巡检"
+              echo '```'
+              tail -25 sites.txt
+              echo '```'
+            fi
+            if [ "${{ steps.deep.outcome }}" = "failure" ]; then
+              echo
+              echo "### vioraplay 深检"
+              echo '```'
+              tail -25 deep.txt
+              echo '```'
+            fi
           } > body.md
 
           NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
@@ -61,16 +78,16 @@ jobs:
           fi
 
       - name: Close incident on recovery
-        if: steps.verify.outcome == 'success'
+        if: steps.sites.outcome == 'success' && steps.deep.outcome == 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
           if [ -n "$NUM" ]; then
-            gh issue comment "$NUM" --body "已恢复，自动关闭。时间(UTC): $(date -u +'%Y-%m-%d %H:%M')"
+            gh issue comment "$NUM" --body "全部站点已恢复，自动关闭。时间(UTC): $(date -u +'%Y-%m-%d %H:%M')"
             gh issue close "$NUM"
           fi
 
       - name: Fail the job when unhealthy
-        if: steps.verify.outcome == 'failure'
+        if: steps.sites.outcome == 'failure' || steps.deep.outcome == 'failure'
         run: exit 1
