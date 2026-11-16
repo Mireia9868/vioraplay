@@ -2,8 +2,8 @@ services:
   - type: web
     name: vioraplay
     runtime: node
-    # starter = 常驻不冷启动（$7/月）；先可用 free 试，SEO 站点建议 starter
-    plan: starter
+    # free = 免费、闲置 15 分钟休眠；验证通过后在 Render 后台升级 starter（常驻不冷启动）
+    plan: free
     region: singapore
     buildCommand: npm ci && npm run build
     startCommand: npm start
