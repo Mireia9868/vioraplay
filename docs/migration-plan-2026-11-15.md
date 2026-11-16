@@ -114,3 +114,30 @@ Vercel 项目先别删，等 Netlify 稳定 1–2 周。
 2. 迁移目标确认（Netlify / 新 Vercel / 其他）
 3. Cloudflare 改 DNS 的权限：你自己改，还是给我一个只含 `Zone.DNS:Edit` 的 API Token
 4. `vioraplay.netlify.app` 那个静态页是不是你的
+
+---
+
+## 最终结果（2026-11-16 凌晨）
+
+Netlify 方案作废：Netlify 账号处于 suspended 状态，GitHub 登录直接报
+`Your account has been suspended`。最终采用 **Render + Cloudflare Worker 反代**：
+
+```
+访客 → Cloudflare (vioraplay.com / www.vioraplay.com)
+        ├─ apex  → Worker 直接 301 到 www
+        └─ www   → Worker fetch → vioraplay.onrender.com（Host 由 URL 决定）
+```
+
+- Render 服务：`srv-dbt67sgae00c739pqf30`，region singapore，plan free
+- Blueprint：`render.yaml`（改动会随 main 自动同步）
+- Worker：`infra/cloudflare-worker/`，路由 `www.vioraplay.com/*` + `vioraplay.com/*`，
+  cron `*/14 * * * *` 保活，避免免费实例休眠后 50 秒冷启动
+- 验收：`node scripts/verify-deploy.mjs https://www.vioraplay.com --canonical` → 16/16
+
+### 未解决 / 待办
+
+1. `www.glowself.cn` 在迁移过程中被移除（当时误判为「腾名额」），现在因为
+   Render「超过 2 个自定义域名需要付款方式」无法加回。`glowself.cn` 本身正常。
+   绑定任一支付方式后可立刻恢复。
+2. Render 免费实例仍会休眠，冷启动由 cron 保活缓解；长期建议升级 Starter（$7/月）。
+3. 需要在 GSC / Bing 重新提交 `https://www.vioraplay.com/sitemap.xml`。
