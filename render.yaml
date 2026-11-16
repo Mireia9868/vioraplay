@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: vioraplay
+    runtime: node
+    # starter = 常驻不冷启动（$7/月）；先可用 free 试，SEO 站点建议 starter
+    plan: starter
+    region: singapore
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /en
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://www.vioraplay.com
+      - key: NEXT_PUBLIC_GA4_ID
+        value: G-TBB4KBRL2D
+      - key: NEXT_PUBLIC_BING_VERIFICATION
+        sync: false
+      - key: NEXT_PUBLIC_ADSENSE_CLIENT
+        sync: false
