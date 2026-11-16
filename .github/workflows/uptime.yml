@@ -1,0 +1,76 @@
+name: uptime
+
+# 每 15 分钟检查一次生产站点；挂了自动开 issue（GitHub 会发邮件），
+# 恢复了自动评论并关闭。2026-11 那次 402 挂了两天才被发现，就是缺这一层。
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: uptime
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  TARGET: https://www.vioraplay.com
+  ISSUE_TITLE: "🔴 生产站点不可用: vioraplay.com"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify production
+        id: verify
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          node scripts/verify-deploy.mjs "$TARGET" --canonical 2>&1 | tee verify.txt
+
+      - name: Open or update incident
+        if: steps.verify.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          {
+            echo "自动巡检发现站点异常。"
+            echo
+            echo "- 目标: $TARGET"
+            echo "- 时间(UTC): $(date -u +'%Y-%m-%d %H:%M')"
+            echo "- 触发: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo
+            echo '```'
+            tail -20 verify.txt
+            echo '```'
+          } > body.md
+
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body-file body.md
+          else
+            gh issue create --title "$ISSUE_TITLE" --body-file body.md
+          fi
+
+      - name: Close incident on recovery
+        if: steps.verify.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "已恢复，自动关闭。时间(UTC): $(date -u +'%Y-%m-%d %H:%M')"
+            gh issue close "$NUM"
+          fi
+
+      - name: Fail the job when unhealthy
+        if: steps.verify.outcome == 'failure'
+        run: exit 1
