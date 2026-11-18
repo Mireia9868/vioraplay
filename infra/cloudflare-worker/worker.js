@@ -12,11 +12,12 @@
  */
 
 const ORIGIN = "https://vioraplay.onrender.com";
+const CACHE_TTL_SECONDS = 300;
 const APEX = "vioraplay.com";
 const WWW = "www.vioraplay.com";
 
 export default {
-  async fetch(request) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
     // Apex -> www, permanent, preserving path and query.
@@ -28,6 +29,28 @@ export default {
         status: 301,
         headers: { location: target.toString() },
       });
+    }
+
+    // Edge-cache anonymous HTML for a short TTL. Render's free instance is slow
+    // (TTFB 3-10s); a 5-minute edge copy keeps crawlers and repeat visitors on
+    // Cloudflare instead of hitting the origin every time.
+    const cacheable =
+      request.method === "GET" &&
+      !url.search &&
+      !url.pathname.startsWith("/api") &&
+      !url.pathname.startsWith("/_next") &&
+      !url.pathname.startsWith("/sitemap") &&
+      url.pathname !== "/robots.txt";
+    const cache = caches.default;
+    const cacheKey = new Request(url.toString(), { method: "GET" });
+
+    if (cacheable) {
+      const hit = await cache.match(cacheKey);
+      if (hit) {
+        const headers = new Headers(hit.headers);
+        headers.set("x-vp-cache", "HIT");
+        return new Response(hit.body, { status: hit.status, headers });
+      }
     }
 
     const origin = new URL(ORIGIN);
@@ -54,6 +77,24 @@ export default {
     out.delete("host");
     out.delete("connection");
     out.delete("transfer-encoding");
+
+    if (
+      cacheable &&
+      response.status === 200 &&
+      (out.get("content-type") ?? "").includes("text/html") &&
+      !out.has("set-cookie")
+    ) {
+      const cached = response.clone();
+      const cachedHeaders = new Headers(cached.headers);
+      cachedHeaders.set("cache-control", `public, s-maxage=${CACHE_TTL_SECONDS}`);
+      ctx.waitUntil(
+        cache.put(
+          cacheKey,
+          new Response(cached.body, { status: 200, headers: cachedHeaders })
+        )
+      );
+      out.set("x-vp-cache", "MISS");
+    }
 
     return new Response(response.body, {
       status: response.status,
