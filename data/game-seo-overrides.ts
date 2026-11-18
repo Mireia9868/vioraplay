@@ -15,6 +15,17 @@ export type GameSeoOverride = {
 };
 
 export const GAME_SEO_OVERRIDES: Record<string, GameSeoOverride> = {
+  "crazy-flying-car": {
+    title: "Crazy Flying Car — Flying Car Racing Game | VioraPlay",
+    description:
+      "Play Crazy Flying Car: race a winged car over the abyss, shove rivals on narrow sections and land clean. Free browser racing game, no download.",
+  },
+  "draw-the-perfect-shape": {
+    title: "Draw the Perfect Shape — Free Shape Drawing Game | VioraPlay",
+    description:
+      "Play Draw the Perfect Shape: trace circles, squares and curves as accurately as you can. Free browser drawing game, no download or account.",
+  },
+
   "rivals-fps-online-shooter": {
     title: "RIVALS FPS: Browser FPS Games — Play Free Online | VioraPlay",
     description:
@@ -45,6 +56,11 @@ export const GAME_SEO_OVERRIDES: Record<string, GameSeoOverride> = {
  */
 export const LOCALIZED_GAME_SEO_OVERRIDES: Record<string, Record<string, GameSeoOverride>> = {
   id: {
+    "machine-eater": {
+      title: "Machine Eater — Game Manajemen Kapal Online | VioraPlay",
+      description:
+        "Machine Eater: kumpulkan sumber daya, ubah jadi blok, dan perluas kapal. Game manajemen browser gratis, tanpa download atau akun.",
+    },
     "car-wash-idle": {
       title: "Wash Arcade — Car Wash Idle, Cuci Mobil Online | VioraPlay",
       description:

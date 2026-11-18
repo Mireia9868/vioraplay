@@ -872,12 +872,12 @@ export const GAME_DEEP_CONTENT: Record<
     ],
   },
   "chess-royale": {
-    strategy: "King powers change trades: bait a piece, then use the power to win the exchange. Keep the king behind pawns until the power is ready.",
+    strategy: "King powers change trades: bait a piece, then use the power to win the exchange. Keep the king behind pawns until the power is ready. Do not spend the power on the first available capture; save it for a fork or a check you cannot otherwise escape.",
     faq: [
-      { q: "Is it normal chess?", a: "Movement is chess; the king powers are the variant." },
-      { q: "Which power first?", a: "The one that saves the king from a fork." },
-    ],
-  },
+      { q: "Is it normal chess?", a: "Movement is standard chess; the king powers are the variant. Learn the power timing before playing for rating." },
+      { q: "Which power first?", a: "The one that saves the king from a fork. A defensive power keeps the game alive; an aggressive one only helps if you are already ahead." },
+      { q: "How long is a match?", a: "Most games run 5–15 minutes depending on the time control. There is no campaign to finish; each match starts fresh." },
+    ], },
   "hotel-manager-simulator": {
     strategy: "Fix the bottleneck: if guests complain about food, upgrade the kitchen; if rooms are dirty, hire cleaning. Likes compound into bookings, so a happy guest is worth more than a cheap one.",
     faq: [
@@ -907,12 +907,12 @@ export const GAME_DEEP_CONTENT: Record<
     ],
   },
   "draw-the-perfect-shape": {
-    strategy: "Slow down at the corners; most score loss happens there. Start from the same point every time so your hand learns the path.",
+    strategy: "Slow down at the corners; most score loss happens there. Start from the same point every time so your hand learns the path. Trace the outline once before committing, then draw in one steady stroke rather than correcting halfway. On symmetrical shapes, use the centre line as a guide.",
     faq: [
-      { q: "Does speed matter?", a: "No, accuracy does; fast strokes wobble." },
-      { q: "Which shape first?", a: "Circle; it has no corners." },
-    ],
-  },
+      { q: "Does speed matter?", a: "No, accuracy does. Fast strokes wobble; a slower, even line scores higher even if it takes longer." },
+      { q: "Which shape should I start with?", a: "The circle: no corners, so you can focus on a smooth curve before adding straight edges and angles." },
+      { q: "Is there a timer?", a: "No. The challenge is accuracy, not speed, so you can take as long as you need on each shape." },
+    ], },
   "durak": {
     strategy: "Attack with your lowest non-trump first and keep trumps for defence. When you cannot defend, take the pile rather than burning a trump you will need.",
     faq: [
@@ -1026,12 +1026,12 @@ export const GAME_DEEP_CONTENT: Record<
     ],
   },
   "crazy-flying-car": {
-    strategy: "Stay on the road through the early corners: track speed beats a flashy detour you can't land. Save your wings for gaps that are actually broken, and aim your shoves at rivals on narrow sections, where they have no room to recover. Land straight.",
+    strategy: "Stay on the road through the early corners: track speed beats a flashy detour you cannot land. Save your wings for gaps that are actually broken, and aim your shoves at rivals on narrow sections where they have no room to recover. Land straight, then accelerate before the next corner.",
     faq: [
       { q: "Do I lose if I fly off the track?", a: "Usually yes, or you drop far behind while recovering. Treat the air as a shortcut with a cost: only leave the road when the gap is short and your landing looks flat." },
-      { q: "What's the fastest way to pass opponents?", a: "Wait for a narrow stretch or a jump, then shove as they commit. Passing in the air rarely works, because both cars lose control and the one who lands straightest wins." },
-    ],
-  },
+      { q: "What is the fastest way to pass opponents?", a: "Wait for a narrow stretch or a jump, then shove as they commit. Passing in the air rarely works, because both cars lose control." },
+      { q: "Can I play on mobile?", a: "Yes, touch controls work. The game page lists the supported devices for the specific version." },
+    ], },
   "spin-and-collect": {
     strategy: "Pick one collection and push it to completion instead of spreading attention across every album. Keep the coins from early spins in reserve so a missing piece never leaves you stuck, and claim your away-time earnings each time you log back in. Small, frequent sessions beat one long grind.",
     faq: [
