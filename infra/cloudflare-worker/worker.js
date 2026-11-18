@@ -81,12 +81,14 @@ export default {
     if (
       cacheable &&
       response.status === 200 &&
-      (out.get("content-type") ?? "").includes("text/html") &&
-      !out.has("set-cookie")
+      (out.get("content-type") ?? "").includes("text/html")
     ) {
       const cached = response.clone();
       const cachedHeaders = new Headers(cached.headers);
       cachedHeaders.set("cache-control", `public, s-maxage=${CACHE_TTL_SECONDS}`);
+      // NEXT_LOCALE is a locale preference, not user data. Keep it on the
+      // first response but not in the shared edge copy.
+      cachedHeaders.delete("set-cookie");
       ctx.waitUntil(
         cache.put(
           cacheKey,
