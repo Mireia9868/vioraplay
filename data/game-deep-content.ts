@@ -1691,4 +1691,145 @@ export const GAME_DEEP_CONTENT: Record<
       { q: "Is Numicolor timed?", a: "No. It is a relaxing colour-by-number game with no countdown, so you can leave and return to the same picture." },
     ],
   },
+
+  "arrow-cube-3d": {
+    strategy: "Work from the outside in. Arrows on the visible faces are usually clear, and removing them exposes paths that were blocked on an inner face. Before tapping, rotate the cube and check whether the arrow behind your target still points at another arrow.",
+    faq: [
+      { q: "Does tapping a blocked arrow cost anything?", a: "No. An arrow only leaves when its path is clear, so a blocked selection simply does nothing. The cost is the rotation time you spend, not a life or a move." },
+      { q: "Can I undo a removal?", a: "There is no undo, but because arrows only clear when unobstructed you cannot lock yourself out with one bad tap. Change the viewing angle and look again if the board stops responding." },
+    ],
+  },
+  "plants-vs-zombies-fusion-edition": {
+    strategy: "Sun is the real clock. Plant cheap sun producers early, keep one lane ahead of the wave with a fast shooter, and only spend on heavy defenders once income per wave covers the cost. One expensive plant placed too early leaves the other lanes open.",
+    faq: [
+      { q: "Why does one lane keep collapsing?", a: "Waves get denser rather than faster. The fix is usually a blocker in front of the shooter rather than more damage behind it, because the zombies reach the shooters before they can fire enough." },
+      { q: "Should I upgrade or add a new plant?", a: "Add coverage first. A new shooter in an empty lane prevents more damage than an upgrade in a lane that already holds two." },
+    ],
+  },
+  "click-clicker-playgama": {
+    strategy: "Early on, clicking is your only income, so buy the first per-click upgrade the moment you can afford it. Switch to idle generators only when the next click upgrade costs more than roughly ten seconds of passive income — before that point generators are slower than your hand.",
+    faq: [
+      { q: "Does clicking faster help?", a: "Only up to the rate the game registers. Once upgrades produce more per second than you can click, time is better spent buying the next upgrade." },
+      { q: "What should I buy first?", a: "Anything that raises per-click value. Idle generators only pay off after your base click is worth something, so buying them first just slows the start." },
+    ],
+  },
+  "idle-tower-defense-be01-1": {
+    strategy: "Place towers where the path bends twice: a tower covering two segments fires for twice as long on every wave. Spend idle income on a tower you already own before adding another — a level-three tower in one spot usually beats two level-one towers beside it.",
+    faq: [
+      { q: "Do I have to play to earn income?", a: "No. Idle income accumulates while the page is closed. Come back, collect it, and spend it on upgrades before starting the next wave." },
+      { q: "Why do later waves break through?", a: "Enemy health scales faster than a single tower's damage. Spread upgrades across two or three towers covering the longest path segment instead of maxing one." },
+    ],
+  },
+  "hidden-objects-island-secrets": {
+    strategy: "Read the whole list before tapping anything. Scan in bands — top to bottom, left to right — so your eye does not re-check the same corner. Objects here hide in texture and shadow, so look for an outline that does not belong rather than for the colour named in the list.",
+    faq: [
+      { q: "What happens if I tap the wrong object?", a: "Most scenes apply a short penalty to the timer or the hint meter instead of ending the round, so a stray tap costs a few seconds rather than the run." },
+      { q: "Are hints limited?", a: "Yes. Save them for the last two or three objects, when the obvious shapes have already been cleared and the remaining ones are hidden in clutter." },
+    ],
+  },
+  "pregnant-mom-simulator-family-life": {
+    strategy: "Do the timed care tasks first; they expire, while shopping and decorating can wait. Keep enough budget for the next required task before spending on optional items, otherwise you stall one chapter later with nothing left to spend.",
+    faq: [
+      { q: "Do my choices change the story?", a: "They change the scenario you get next rather than the overall goal, and you can replay a chapter to try a different path." },
+      { q: "Can I fail a chapter?", a: "There is usually no hard fail. Missing a task costs progress or a reward instead of ending the run, so a messy chapter is still recoverable." },
+    ],
+  },
+  "sprunki-2c27-1": {
+    strategy: "Build in layers. Start with a steady beat, add one melodic character at a time, and solo a track before adding the next so you can hear what it contributes. When a layer clashes, mute it rather than removing it — you keep the arrangement and can bring it back.",
+    faq: [
+      { q: "Do I need musical experience?", a: "No. Each character plays a fixed loop, so the game is about which loops you combine rather than about timing notes." },
+      { q: "Why does my mix sound muddy?", a: "Too many layers in the same register. Drop one of the busiest characters and let the beat sit underneath instead of competing with it." },
+    ],
+  },
+  "solitaire-": {
+    strategy: "Turn over the deck before you need to. Winning deals usually come from exposing face-down tableau cards early, so prefer a move that flips a card over one that merely tidies a suit. Keep at least one column empty as a staging area for long sequences.",
+    faq: [
+      { q: "Is every deal winnable?", a: "No. Classic solitaire deals vary and some cannot be won in any order. If the first pass through the deck achieves nothing, restart rather than grinding it." },
+      { q: "Should I empty a column or build a foundation?", a: "Empty the column first. A free column is a temporary storage space you will use several times, while one extra foundation card rarely changes the next move." },
+    ],
+  },
+  "mahjong-3": {
+    strategy: "Clear the top layer first: tiles stacked above others free the most options when removed. When two identical tiles are both playable, take the one with more neighbours — removing it opens more of the board than removing the outer tile.",
+    faq: [
+      { q: "What counts as a free tile?", a: "Only tiles with nothing touching their left or right side can be selected. A tile with a neighbour on either side stays locked until that neighbour leaves." },
+      { q: "I have no moves left — did I lose?", a: "A stuck board means an order mistake rather than a broken game. Use undo or restart, and prioritise edge tiles earlier next time." },
+    ],
+  },
+  "bubble-pop-fairyland": {
+    strategy: "Aim at the wall, not at the cluster: banked shots reach colours the direct line cannot. Every few shots, check the colour along the ceiling — clearing the top rows drops everything beneath them, which is worth far more than a match at the bottom.",
+    faq: [
+      { q: "What happens when the bubbles reach the bottom?", a: "The level ends. Clear the low rows early rather than chasing matches in the middle of the board." },
+      { q: "How do I earn three stars?", a: "Stars come from clearing the board with shots to spare. Side-wall banks are the cheapest way to save them, because one banked shot can reach a colour two direct shots would miss." },
+    ],
+  },
+  "soccer-random": {
+    strategy: "The ball and both players wobble, so aim where the ball is going rather than where it is. Short taps beat held keys: a nudge keeps your player under the ball, while a long press carries you straight past it.",
+    faq: [
+      { q: "Can two people play on one keyboard?", a: "Yes. This is a local two-player game with one set of keys per side, and touch controls on mobile." },
+      { q: "Why do I keep scoring own goals?", a: "Momentum carries your player into the ball. Tap once to redirect and then stop pressing — holding the direction is what pushes it over your own line." },
+    ],
+  },
+  "ragdoll-soccer": {
+    strategy: "Your player is a ragdoll, so flailing is the mechanic: a well-timed flop sends the ball further than a clean kick. Stay between the ball and your goal, and let the opponent overshoot before you commit to a tackle.",
+    faq: [
+      { q: "Is there a goalkeeper?", a: "There is no dedicated keeper. The last player back is the keeper, so keep one body near your own goal rather than both players chasing the ball." },
+      { q: "How do I hit the ball hard?", a: "Contact at full stretch. Time the flop so a limb meets the ball at the end of the swing rather than at the start, when there is no momentum behind it." },
+    ],
+  },
+  "bubble-word-jam": {
+    strategy: "Spell the longest word the board allows before clearing short ones — every letter you remove early is a letter you cannot reuse. If two words are available, take the one that opens a column of new bubbles instead of the one nearest the top.",
+    faq: [
+      { q: "What if I cannot find a word?", a: "Look for short prefixes and suffixes you already know. Most boards leave a two- or three-letter word in a corner as an escape hatch." },
+      { q: "Do longer words score more?", a: "Yes, and they clear more bubbles, so one four-letter word is worth more than two three-letter ones." },
+    ],
+  },
+  "car-smash-simulator-crash--tune": {
+    strategy: "Crash tests are cheapest at low speed. Hit the wall at an angle so damage spreads across panels instead of writing off one corner, and spend the first earnings on tyres and brakes before power — a car that stops straight survives more runs.",
+    faq: [
+      { q: "Do I lose the car when it is destroyed?", a: "No. Damage is the point of the mode: repair or rebuild the car and go again with what you learned about the arena." },
+      { q: "Which upgrades should I buy first?", a: "Tyres and brakes. They change how the car behaves in every run, while engine upgrades only pay off on the long straights." },
+    ],
+  },
+  "hair-salon": {
+    strategy: "Follow the client's request in order — wash, then cut, then colour — because each step locks the one before it. Cut conservatively: you can always take more off, and there is no way to put it back.",
+    faq: [
+      { q: "Can I undo a bad cut?", a: "Not within a single client. The tools only move forward, so restart the client if the shape goes wrong rather than trying to hide it." },
+      { q: "Does the order of tools matter?", a: "Yes. Each tool does one job, and using it out of sequence wastes the step instead of damaging the result." },
+    ],
+  },
+  "my-castle-merge--story": {
+    strategy: "Match near the bottom of the board first: pieces fall, and a match low down can trigger a chain you did not plan. Keep two empty spaces for incoming pieces so you are never forced into a swap you do not want.",
+    faq: [
+      { q: "What do I do with the resources I earn?", a: "They feed the castle rebuild. Merge pieces before placing them so one slot does the work of several." },
+      { q: "What happens when I run out of moves?", a: "The level restarts. Spend the last few moves clearing space instead of chasing one more match you cannot reach." },
+    ],
+  },
+  "hero-merge": {
+    strategy: "Merge two heroes of the same level before deploying anything: a level-two hero takes one slot and hits twice as hard as two level-ones. Keep half the board empty so you always have room to merge the next pair.",
+    faq: [
+      { q: "Can I move a hero after deploying it?", a: "Usually not — placement is the decision. Read the wave layout before committing your strongest hero to a lane." },
+      { q: "Which heroes should I merge first?", a: "The ones you already hold two of. Chasing a rare hero leaves the board full of singles that cannot fight." },
+    ],
+  },
+  "real-parking-game": {
+    strategy: "Reverse into the space: lining up the rear of the car is easier than swinging the nose in. Go slower than feels necessary and pause before each turn — a half-second stop is what keeps the mirrors clear of the walls.",
+    faq: [
+      { q: "Do I fail if I scrape the car?", a: "Damage is tolerated in most levels. A hard hit ends the attempt, but slow contact usually only costs the bonus rather than the run." },
+      { q: "Is there a time limit?", a: "Some levels are timed. When there is a clock, plan the entry line before starting the engine — hesitation at the wheel costs more than a slow approach." },
+    ],
+  },
+  "snake-of-bullets-collect-and-shoot": {
+    strategy: "Grow before you fight: in a head-on clash the shorter snake is cut first. Circle the edge of the arena to collect bullets safely, and only cut across the middle when you have a clear length advantage.",
+    faq: [
+      { q: "What happens when I hit another snake?", a: "The shorter snake loses segments. Approach only when you are longer, and fire first so the contact happens on your terms." },
+      { q: "Can I shoot backwards?", a: "Shots follow your direction of travel, so turning is how you aim. Steer toward a rival before firing rather than firing and then turning." },
+    ],
+  },
+  "word-solitaire": {
+    strategy: "Free the tableau before chasing bonus words: the words are a bonus, the card order is the win condition. Build descending sequences in alternating colours and keep one column empty for a king.",
+    faq: [
+      { q: "Do words replace cards?", a: "No. The cards still have to be sorted; spelling a word clears space and scores, but it does not finish the board." },
+      { q: "What if no word is available?", a: "Keep sorting. Word chances appear as cards are exposed, so a move that looks pointless can open a word two moves later." },
+    ],
+  },
 };
