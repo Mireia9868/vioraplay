@@ -20,10 +20,10 @@
 
 没有这一层，内容/外链的收益都会被 CWV 和抓取预算吃掉。
 
-- [ ] 二选一：
+- [x] 二选一：
   - **Render Starter $7/月**（常驻、CPU 更好），或
   - **Worker 边缘缓存 HTML**（免费，5–10 分钟 TTL，跳过 query 和 sitemap/robots）
-- [ ] `npm run perf:check` 中位 TTFB < **1.5s**，否则不进入内容阶段
+- [x] `npm run perf:check` 中位 TTFB < **1.5s**（实测 977ms）
 - [ ] 确认 Worker 的 keep-alive 每 14 分钟一次，Render 不睡眠
 - [ ] 检查 5xx/冷启动告警（仓库已有 15 分钟 uptime check）
 

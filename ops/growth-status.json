@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-20",
   "done": [
     "Bing API key 配置并提交 10 条优先 URL",
     "long-tail collections 5 个上线",
@@ -11,23 +11,24 @@
     "Bing 优先 URL 已提交 20/25",
     "Bing 25 条优先 URL 全部提交完成（HTTP 200）",
     "外链：新增 5 个目标并写好草稿（ops/outreach/drafts-2026-11-13.md）",
-    "内容深度：crazy-flying-car / draw-the-perfect-shape / chess-royale 补 FAQ 与摘要"
+    "内容深度：crazy-flying-car / draw-the-perfect-shape / chess-royale 补 FAQ 与摘要",
+    "P0 性能：Worker 边缘缓存生效，perf:check 通过（最差中位 977ms）"
   ],
   "next": [
     {
       "id": "M1",
-      "task": "GSC 请求索引 25 条",
+      "task": "GSC 重新授权并补拉 11/09–11/19 数据",
       "owner": "user"
+    },
+    {
+      "id": "P1",
+      "task": "GSC/Bing 重新提交 sitemap，检查抓取错误",
+      "owner": "agent"
     },
     {
       "id": "M3",
       "task": "发送 5 封外链邮件",
       "owner": "user"
-    },
-    {
-      "id": "B1",
-      "task": "观察 Bing 索引 3–7 天",
-      "owner": "agent"
     }
   ]
 }
