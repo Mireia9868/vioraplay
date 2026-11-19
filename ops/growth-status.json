@@ -12,22 +12,18 @@
     "Bing 25 条优先 URL 全部提交完成（HTTP 200）",
     "外链：新增 5 个目标并写好草稿（ops/outreach/drafts-2026-11-13.md）",
     "内容深度：crazy-flying-car / draw-the-perfect-shape / chess-royale 补 FAQ 与摘要",
-    "P0 性能：Worker 边缘缓存生效，perf:check 通过（最差中位 977ms）"
+    "P0 性能：Worker 边缘缓存生效，perf:check 通过（最差中位 977ms）",
+    "进入恢复冻结期：sitemap 重提、AdSense 重提，暂停内容改动"
   ],
   "next": [
     {
-      "id": "M1",
-      "task": "GSC 重新授权并补拉 11/09–11/19 数据",
-      "owner": "user"
-    },
-    {
-      "id": "P1",
-      "task": "GSC/Bing 重新提交 sitemap，检查抓取错误",
+      "id": "F1",
+      "task": "每日检查 200 / TTFB / indexed / AdSense 状态",
       "owner": "agent"
     },
     {
-      "id": "M3",
-      "task": "发送 5 封外链邮件",
+      "id": "F2",
+      "task": "冻结期结束前不改页面与结构",
       "owner": "user"
     }
   ]
