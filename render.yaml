@@ -17,6 +17,8 @@ services:
         value: https://www.vioraplay.com
       - key: NEXT_PUBLIC_GA4_ID
         value: G-TBB4KBRL2D
+      - key: NEXT_PUBLIC_CONTACT_EMAIL
+        value: contact@vioraplay.com
       - key: NEXT_PUBLIC_BING_VERIFICATION
         sync: false
       - key: NEXT_PUBLIC_ADSENSE_CLIENT
