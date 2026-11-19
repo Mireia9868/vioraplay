@@ -170,6 +170,21 @@ export default async function GamePage({
         breadcrumb: { "@id": `${SITE_URL}${path(locale)}#breadcrumb` },
         inLanguage: locale,
       },
+      // FAQPage only when the FAQ block is actually rendered on the page, so the
+      // structured data never claims content the visitor cannot see.
+      ...(showDeep && content?.faq?.length
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${SITE_URL}${path(locale)}#faq`,
+              mainEntity: content.faq.map((item) => ({
+                "@type": "Question",
+                name: item.q,
+                acceptedAnswer: { "@type": "Answer", text: item.a },
+              })),
+            },
+          ]
+        : []),
     ],
   };
 
