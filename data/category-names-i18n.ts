@@ -1,0 +1,170 @@
+/**
+ * Localized category display names for the H1 on /[locale]/category/[slug].
+ *
+ * Why this exists (2026-11-24, growth TODO #6): Search Console showed
+ * `/pt/category/hidden-object` ranking with an H1 of "Hidden Object Games" —
+ * the English `fullName` from lib/games.ts. The non-English category pages
+ * render a localized shell but an English heading, which is a relevance and
+ * CTR mismatch. Only `puzzle` had localized copy (via PUZZLE_SEO); every other
+ * category fell back to English.
+ *
+ * Scope: category H1 + hero copy only. Metadata titles/descriptions for the
+ * indexable set are governed by CATEGORY_SEO / PUZZLE_SEO and are untouched.
+ * Missing slugs fall back to the existing English `fullName`, so this map is
+ * purely additive — no category stops working if it is not listed here.
+ *
+ * Translation convention: "<Genre> Games" in each language, matching the
+ * English heroHead/heroTail split (last word = tail, highlighted). Names are
+ * plain editorial translations, not keyword-volume claims.
+ */
+export const CATEGORY_NAMES_I18N: Record<string, Record<string, string>> = {
+  pt: {
+    "hidden-object": "Jogos de Objetos Ocultos",
+    "tower-defense": "Jogos de Torre de Defesa",
+    zombie: "Jogos de Zumbis",
+    obby: "Jogos de Obby",
+    clicker: "Jogos de Clique",
+    car: "Jogos de Carros",
+    blocks: "Jogos de Blocos",
+    brain: "Jogos de Raciocínio",
+    boys: "Jogos para Meninos",
+    girls: "Jogos para Meninas",
+    physics: "Jogos de Física",
+    racing: "Jogos de Corrida",
+    action: "Jogos de Ação",
+    adventure: "Jogos de Aventura",
+    arcade: "Jogos de Arcade",
+    puzzle: "Jogos de Puzzle",
+    simulation: "Jogos de Simulação",
+    sports: "Jogos Esportivos",
+    shooting: "Jogos de Tiro",
+    strategy: "Jogos de Estratégia",
+    cooking: "Jogos de Cozinha",
+    fashion: "Jogos de Moda",
+    multiplayer: "Jogos Multijogador",
+    "two-player": "Jogos para Dois Jogadores",
+    mahjong: "Jogos de Mahjong",
+    snake: "Jogos de Snake",
+    sudoku: "Jogos de Sudoku",
+    match3: "Jogos de Combinar",
+  },
+  id: {
+    "hidden-object": "Game Objek Tersembunyi",
+    "tower-defense": "Game Tower Defense",
+    zombie: "Game Zombie",
+    obby: "Game Obby",
+    clicker: "Game Klik",
+    car: "Game Mobil",
+    blocks: "Game Blok",
+    brain: "Game Otak",
+    boys: "Game untuk Anak Laki-laki",
+    girls: "Game untuk Anak Perempuan",
+    physics: "Game Fisika",
+    racing: "Game Balapan",
+    action: "Game Aksi",
+    adventure: "Game Petualangan",
+    arcade: "Game Arcade",
+    puzzle: "Game Puzzle",
+    simulation: "Game Simulasi",
+    sports: "Game Olahraga",
+    shooting: "Game Tembak",
+    strategy: "Game Strategi",
+    cooking: "Game Memasak",
+    fashion: "Game Mode",
+    multiplayer: "Game Multiplayer",
+    "two-player": "Game Dua Pemain",
+    mahjong: "Game Mahjong",
+    snake: "Game Ular",
+    sudoku: "Game Sudoku",
+    match3: "Game Cocokkan",
+  },
+  vi: {
+    "hidden-object": "Trò Chơi Tìm Vật Ẩn",
+    "tower-defense": "Trò Chơi Tháp Phòng Thủ",
+    zombie: "Trò Chơi Zombie",
+    obby: "Trò Chơi Obby",
+    clicker: "Trò Chơi Bấm Liên Tục",
+    car: "Trò Chơi Xe Hơi",
+    blocks: "Trò Chơi Khối",
+    brain: "Trò Chơi Trí Não",
+    boys: "Trò Chơi Cho Bé Trai",
+    girls: "Trò Chơi Cho Bé Gái",
+    physics: "Trò Chơi Vật Lý",
+    racing: "Trò Chơi Đua Xe",
+    action: "Trò Chơi Hành Động",
+    adventure: "Trò Chơi Phiêu Lưu",
+    arcade: "Trò Chơi Arcade",
+    puzzle: "Trò Chơi Giải Đố",
+    simulation: "Trò Chơi Mô Phỏng",
+    sports: "Trò Chơi Thể Thao",
+    shooting: "Trò Chơi Bắn Súng",
+    strategy: "Trò Chơi Chiến Thuật",
+    cooking: "Trò Chơi Nấu Ăn",
+    fashion: "Trò Chơi Thời Trang",
+    multiplayer: "Trò Chơi Nhiều Người",
+    "two-player": "Trò Chơi Hai Người",
+    mahjong: "Trò Chơi Mahjong",
+    snake: "Trò Chơi Rắn",
+    sudoku: "Trò Chơi Sudoku",
+    match3: "Trò Chơi Ghép Đôi",
+  },
+  tr: {
+    "hidden-object": "Gizli Nesne Oyunları",
+    "tower-defense": "Kule Savunma Oyunları",
+    zombie: "Zombi Oyunları",
+    obby: "Obby Oyunları",
+    clicker: "Tıklama Oyunları",
+    car: "Araba Oyunları",
+    blocks: "Blok Oyunları",
+    brain: "Zeka Oyunları",
+    boys: "Erkek Çocuk Oyunları",
+    girls: "Kız Çocuk Oyunları",
+    physics: "Fizik Oyunları",
+    racing: "Yarış Oyunları",
+    action: "Aksiyon Oyunları",
+    adventure: "Macer Oyunları",
+    arcade: "Arcade Oyunları",
+    puzzle: "Bulmaca Oyunları",
+    simulation: "Simülasyon Oyunları",
+    sports: "Spor Oyunları",
+    shooting: "Atış Oyunları",
+    strategy: "Strateji Oyunları",
+    cooking: "Yemek Oyunları",
+    fashion: "Moda Oyunları",
+    multiplayer: "Çok Oyunculu Oyunlar",
+    "two-player": "İki Kişilik Oyunlar",
+    mahjong: "Mahjong Oyunları",
+    snake: "Yılan Oyunları",
+    sudoku: "Sudoku Oyunları",
+    match3: "Eşleştirme Oyunları",
+  },
+  es: {
+    "hidden-object": "Juegos de Objetos Ocultos",
+    "tower-defense": "Juegos de Defensa de Torres",
+    zombie: "Juegos de Zombis",
+    obby: "Juegos de Obby",
+    car: "Juegos de Coches",
+    puzzle: "Juegos de Puzzle",
+  },
+  pl: {
+    "hidden-object": "Gry z Ukrytymi Obiektami",
+    "tower-defense": "Gry Wieżyczkowe",
+    zombie: "Gry z Zombie",
+    obby: "Gry Obby",
+    car: "Gry Samochodowe",
+    puzzle: "Gry Logiczne",
+  },
+  ar: {
+    "hidden-object": "ألعاب الأشياء المخفية",
+    "tower-defense": "ألعاب الدفاع عن البرج",
+    zombie: "ألعاب الزومبي",
+    obby: "ألعاب أوبي",
+    car: "ألعاب السيارات",
+    puzzle: "ألعاب الألغاز",
+  },
+};
+
+/** Returns the localized H1 name, or undefined to fall back to English. */
+export function localizedCategoryName(locale: string, slug: string): string | undefined {
+  return CATEGORY_NAMES_I18N[locale]?.[slug];
+}

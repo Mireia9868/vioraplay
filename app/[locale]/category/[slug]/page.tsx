@@ -22,6 +22,7 @@ import { CATEGORY_EDITORIAL } from "@/data/category-editorial";
 import { GAME_CONTENT } from "@/data/game-content";
 import { CATEGORY_FAQ } from "@/data/category-faq";
 import { CATEGORY_SEO } from "@/data/category-seo";
+import { localizedCategoryName } from "@/data/category-names-i18n";
 import { COLLECTIONS } from "@/data/collections.generated";
 import { guideForCategory } from "@/lib/guides";
 import { isCategoryIndexable } from "@/lib/indexability";
@@ -138,7 +139,10 @@ export default async function CategoryPage({
   // deliberately excluded here rather than stacked with a second intro.
   const editorial = locale === "en" && slug !== "puzzle" ? CATEGORY_EDITORIAL[slug] : undefined;
   const guide = locale === "en" ? guideForCategory(slug) : undefined;
-  const heroName = puzzleCopy?.name ?? fullName;
+  // Non-English category H1s used to fall back to the English fullName (e.g.
+  // /pt/category/hidden-object showed "Hidden Object Games"). Use the localized
+  // name when available; puzzle keeps its richer PUZZLE_SEO copy as before.
+  const heroName = puzzleCopy?.name ?? localizedCategoryName(locale, slug) ?? fullName;
   const heroParts = heroName.split(" ");
   const heroTail = heroParts.length > 1 ? heroParts[heroParts.length - 1] : heroName;
   const heroHead = heroParts.length > 1 ? heroParts.slice(0, -1).join(" ") : "";

@@ -7,6 +7,7 @@ import {
 } from "@/lib/games";
 import { GameCard } from "@/components/GameCard";
 import { PersonalGames } from "@/components/PersonalGames";
+import { RecentViews } from "@/components/RecentViews";
 import { Link } from "@/i18n/navigation";
 import { PortalIcon } from "@/components/PortalIcon";
 
@@ -98,6 +99,7 @@ export default async function HomePage({
 
       {/* Client-only: reads localStorage, hidden when empty, drops dead slugs. */}
       <PersonalGames games={allGames.map(({slug, title, thumb, category}) => ({slug, title, thumb, category}))} />
+      <RecentViews games={allGames.map(({slug, title, thumb, category}) => ({slug, title, thumb, category}))} />
 
       <section className="section">
         <h2>{t("popularCategories")}</h2>
