@@ -1,0 +1,150 @@
+{
+  "how-to-play-sudoku": {
+    "category": "puzzle",
+    "icon": "guide-sudoku"
+  },
+  "how-to-play-chess": {
+    "category": "board",
+    "icon": "guide-chess"
+  },
+  "how-to-play-gomoku": {
+    "category": "board",
+    "icon": "guide-gomoku"
+  },
+  "how-to-play-mahjong": {
+    "category": "puzzle",
+    "icon": "guide-mahjong"
+  },
+  "how-to-play-bubble-shooter": {
+    "category": "arcade",
+    "icon": "guide-bubble-shooter"
+  },
+  "how-to-play-tower-defense": {
+    "category": "strategy",
+    "icon": "guide-tower-defense"
+  },
+  "how-to-play-snake": {
+    "category": "arcade",
+    "icon": "guide-snake"
+  },
+  "how-to-play-2048": {
+    "category": "puzzle",
+    "icon": "guide-2048"
+  },
+  "how-to-play-solitaire": {
+    "category": "board",
+    "icon": "guide-solitaire"
+  },
+  "how-to-play-crossword": {
+    "category": "word",
+    "icon": "guide-crosswords"
+  },
+  "how-to-play-racing-games": {
+    "category": "arcade",
+    "icon": "guide-racing"
+  },
+  "how-to-play-hidden-object": {
+    "category": "word",
+    "icon": "guide-hidden-object"
+  },
+  "how-to-play-2-player-games": {
+    "category": "casual",
+    "icon": "guide-2-player"
+  },
+  "how-to-play-backgammon": {
+    "category": "board",
+    "icon": "guide-backgammon"
+  },
+  "how-to-play-clicker-games": {
+    "category": "strategy",
+    "icon": "guide-clicker"
+  },
+  "how-to-play-colour-puzzles": {
+    "category": "puzzle",
+    "icon": "guide-colour"
+  },
+  "how-to-play-cooking-games": {
+    "category": "casual",
+    "icon": "guide-cooking"
+  },
+  "how-to-play-drawing-games": {
+    "category": "casual",
+    "icon": "guide-drawing"
+  },
+  "how-to-play-dress-up-games": {
+    "category": "casual",
+    "icon": "guide-dress-up"
+  },
+  "how-to-play-horror-games": {
+    "category": "arcade",
+    "icon": "guide-horror"
+  },
+  "how-to-play-idle-games": {
+    "category": "strategy",
+    "icon": "guide-idle"
+  },
+  "how-to-play-io-games": {
+    "category": "arcade",
+    "icon": "guide-io"
+  },
+  "how-to-play-ludo": {
+    "category": "board",
+    "icon": "guide-ludo"
+  },
+  "how-to-play-match-3": {
+    "category": "puzzle",
+    "icon": "guide-match3"
+  },
+  "how-to-play-obby-games": {
+    "category": "arcade",
+    "icon": "guide-obby"
+  },
+  "how-to-play-platform-games": {
+    "category": "arcade",
+    "icon": "guide-platform"
+  },
+  "how-to-play-shooting-games": {
+    "category": "arcade",
+    "icon": "guide-shooting"
+  },
+  "how-to-play-simulation-games": {
+    "category": "casual",
+    "icon": "guide-simulation"
+  },
+  "how-to-play-sorting-puzzles": {
+    "category": "puzzle",
+    "icon": "guide-sorting"
+  },
+  "how-to-play-sports-games": {
+    "category": "casual",
+    "icon": "guide-sports"
+  },
+  "how-to-play-strategy-games": {
+    "category": "strategy",
+    "icon": "guide-strategy"
+  },
+  "how-to-play-survival-games": {
+    "category": "arcade",
+    "icon": "guide-survival"
+  },
+  "how-to-play-tic-tac-toe": {
+    "category": "board",
+    "icon": "guide-tic-tac-toe"
+  },
+  "how-to-play-tycoon-games": {
+    "category": "strategy",
+    "icon": "guide-tycoon"
+  },
+  "how-to-play-word-search": {
+    "category": "word",
+    "icon": "guide-word-search"
+  },
+  "merge-and-sort-puzzle-guide": {
+    "category": "puzzle",
+    "icon": "guide-merge-sort"
+  },
+  "what-are-unblocked-games": {
+    "category": "casual",
+    "icon": "guide-unblocked"
+  }
+}

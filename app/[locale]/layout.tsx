@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Outfit, DM_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
@@ -14,6 +15,20 @@ import { SearchBar } from "@/components/SearchBar";
 import { metadataBase, buildLanguageAlternates } from "@/lib/seo";
 import "../globals.css";
 import "../retro.css";
+
+// Site-wide type decision: Outfit for display, DM Sans for body/UI.
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["500", "700", "800"],
+  variable: "--font-display",
+  display: "swap",
+});
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -79,7 +94,7 @@ export default async function LocaleLayout({
   const tSearch = await getTranslations("search");
 
   return (
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} className={`${outfit.variable} ${dmSans.variable}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
           <header className="site-header">

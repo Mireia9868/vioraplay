@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="436" height="168" viewBox="0 0 436 168" fill="none">
+  <rect x="1" y="1" width="434" height="166" rx="10" fill="#FFF4D5" stroke="#171713" stroke-width="2"/>
+  <g stroke="#171713" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="rotate(-7 130 86)">
+      <path d="M62 52H110V40C110 34 122 34 122 40V52H170V76H180C188 76 188 90 180 90H170V124H62V98H52C44 98 44 84 52 84H62V52Z" fill="#FFDF39" transform="translate(5 5)" stroke="none" opacity=".16"/>
+      <path d="M62 52H110V40C110 34 122 34 122 40V52H170V76H180C188 76 188 90 180 90H170V124H62V98H52C44 98 44 84 52 84H62V52Z" fill="#FFDF39"/>
+      <circle cx="92" cy="78" r="9" fill="#FFFDF7" stroke-width="2.5"/>
+      <circle cx="134" cy="104" r="7" fill="#FF806B" stroke-width="2.5"/>
+    </g>
+    <g transform="rotate(6 302 86)">
+      <path d="M240 52H288V40C288 34 300 34 300 40V52H348V76H358C366 76 366 90 358 90H348V124H240V98H230C222 98 222 84 230 84H240V52Z" fill="#171713" transform="translate(5 5)" stroke="none" opacity=".16"/>
+      <path d="M240 52H288V40C288 34 300 34 300 40V52H348V76H358C366 76 366 90 358 90H348V124H240V98H230C222 98 222 84 230 84H240V52Z" fill="#0055EE"/>
+      <rect x="262" y="66" width="18" height="18" rx="2" fill="#48C995" stroke-width="2"/>
+      <rect x="280" y="66" width="18" height="18" rx="2" fill="#FFFDF7" stroke-width="2"/>
+      <rect x="298" y="66" width="18" height="18" rx="2" fill="#FFFDF7" stroke-width="2"/>
+      <rect x="262" y="84" width="18" height="18" rx="2" fill="#FFFDF7" stroke-width="2"/>
+      <rect x="280" y="84" width="18" height="18" rx="2" fill="#0055EE" stroke-width="2"/>
+      <rect x="298" y="84" width="18" height="18" rx="2" fill="#FFFDF7" stroke-width="2"/>
+      <rect x="262" y="102" width="18" height="18" rx="2" fill="#FFFDF7" stroke-width="2"/>
+      <rect x="280" y="102" width="18" height="18" rx="2" fill="#FF806B" stroke-width="2"/>
+      <rect x="298" y="102" width="18" height="18" rx="2" fill="#48C995" stroke-width="2"/>
+    </g>
+    <path d="M390 26V40M383 33H397M402 124V134M397 129H407" stroke-width="2.5"/>
+  </g>
+</svg>

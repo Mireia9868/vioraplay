@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="436" height="168" viewBox="0 0 436 168" fill="none">
+  <rect x="1" y="1" width="434" height="166" rx="10" fill="#FFF4D5" stroke="#171713" stroke-width="2"/>
+  <g stroke="#171713" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="rotate(-6 118 88)">
+      <rect x="62" y="56" width="50" height="58" rx="6" fill="#171713" transform="translate(4 4)" stroke="none" opacity=".16"/>
+      <rect x="62" y="56" width="50" height="58" rx="6" fill="#FFFDF7"/>
+      <text x="87" y="100" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="34" font-weight="800" fill="#171713" stroke="none">A</text>
+    </g>
+    <rect x="124" y="52" width="50" height="58" rx="6" fill="#FFDF39"/>
+    <text x="149" y="96" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="34" font-weight="800" fill="#171713" stroke="none">B</text>
+    <g transform="rotate(7 234 88)">
+      <rect x="206" y="56" width="50" height="58" rx="6" fill="#48C995"/>
+      <text x="231" y="100" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="34" font-weight="800" fill="#171713" stroke="none">C</text>
+    </g>
+    <circle cx="312" cy="74" r="34" fill="#E8EFFf" stroke-width="4"/>
+    <circle cx="312" cy="74" r="21" fill="#FFFDF7" stroke-width="2.5"/>
+    <path d="M337 100L366 130" stroke-width="12"/>
+    <path d="M354 26V38M348 32H360" stroke-width="2.5"/>
+  </g>
+</svg>
