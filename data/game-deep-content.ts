@@ -1832,4 +1832,33 @@ export const GAME_DEEP_CONTENT: Record<
       { q: "What if no word is available?", a: "Keep sorting. Word chances appear as cards are exposed, so a move that looks pointless can open a word two moves later." },
     ],
   },
+
+  "ultimate-evolution": {
+    strategy: "Merge pairs before you spend on unlocking anything. Every creature you leave sitting alone takes a board slot and produces nothing, so the board fills with singles long before you run out of tiers. Keep two of each form until you can merge them, and hold the unlock cost until merging genuinely stops paying.",
+    faq: [
+      { q: "Why does progress stall halfway up the chain?", a: "The board is full of unpaired creatures. A single creature cannot merge with anything, so clear a slot by merging the pair you already have instead of adding another form." },
+      { q: "Should I unlock a new stage as soon as I can afford it?", a: "Only when the current tier cannot merge any further. Unlocking early spends the resources you need to finish the pair that is blocking the board." },
+    ],
+  },
+  "pregnant-mother-simulator": {
+    strategy: "Timed care tasks come first; decorating the nursery can wait. Keep enough budget for the next required task before spending on optional items, otherwise you reach a scene that needs a purchase with nothing left. Read the choice options before tapping — they set the next scene, not just the reaction.",
+    faq: [
+      { q: "Do my choices change the story?", a: "They steer which scenes come next rather than ending the run. You can replay a chapter to see the other branch." },
+      { q: "Can I fail a chapter?", a: "There is no hard fail. Missing a care task costs progress or a reward, so a messy chapter is still recoverable." },
+    ],
+  },
+  "tap-3d-wood-block-away": {
+    strategy: "Rotate before you tap. A wooden piece only leaves along the one axis its cut-out allows, so the question is never which piece looks loose but which direction that piece can travel. Work from the outer layers inward, because the pieces at the edge are the ones with nothing pinning their exit.",
+    faq: [
+      { q: "Why does tapping a block do nothing?", a: "Its exit path is still blocked by a piece in front of it. The block is not stuck — the route is. Turn the puzzle until you find the axis that piece can move along." },
+      { q: "Is there an undo?", a: "Usually not. Clear the pieces that have no blockers at all first, and the board opens up enough that a wrong choice no longer matters." },
+    ],
+  },
+  "screw-match": {
+    strategy: "Screws are a resource, so spend the scarce colour, not the abundant one. Removing a plate drops whatever sat on top of it, which exposes new holes and new colours at the same time. Before each removal, check what the plate is resting on — the order of the panels matters more than the order of a single colour run.",
+    faq: [
+      { q: "Can the board jam permanently?", a: "It can jam if a plate falls and covers the holes you still needed. Clear the plate that other plates rest on before finishing the colour you happen to hold most of." },
+      { q: "How do I get more of a colour I have run out of?", a: "By opening new holes. A colour only exists where the plates have been lifted, so remove the top layer and the missing colour usually turns up underneath." },
+    ],
+  },
 };
